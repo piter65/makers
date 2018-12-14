@@ -1,0 +1,123 @@
+body {
+	background-color: #242464;
+}
+
+.lighter_color {
+	background-color: #456424;
+}
+
+h2 {
+	color: #ffffff;
+	margin-top: 30px;
+}
+
+h3 {
+	color: #ffff00;
+	margin-left: 20px;
+	margin-right: 60px;
+	font-size: 25px;
+}
+
+div {
+	/*text-align: center;*/
+}
+
+a {
+	color: #54ef06;
+	font-size: 25px;
+}
+
+.indent {
+	margin-left: 35px;
+	text-indent: 50px;
+}
+
+p {
+	color: cyan;
+	font-size: 22px;
+	margin: 15px;
+	text-align: justify;
+	text-justify: auto;
+}
+
+span.brightpink {
+	font-size: 40px;
+	color: #ffd0ff;
+}
+
+span.brightgreen {
+	font-size: 30px;
+	color: #c4ffa6;
+}
+
+ul li {
+color: #ff80ff;
+	font-size: 25px;
+}
+
+ul li ul li {
+	color: #ff4040;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	font-size: 23px;
+}
+
+ul li ul li ul li{
+	color: #92ed94;
+	margin-top: 3px;
+	font-size: 19px;
+}
+
+li {
+	/*color: #ff80ff;*/
+}
+
+code {
+	color: #00ffff;
+	font-size: medium;
+}
+
+input {
+	color: #000000;
+}
+
+.centerit {
+	text-align: center;
+}
+
+.wide {
+	width: 400px;
+}
+
+.center-block {
+  margin: auto;
+  display: block;
+}
+
+.blockit {
+	display: block;
+	//margin-left: 40px;
+	margin-top: 5px;
+	font-size: 20px;
+}
+
+.nobullets {
+	list-style-type: none;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+	cursor: pointer; /* "hand" cursor */
+}
+
+#chooseafile {
+	text-decoration: underline;
+}

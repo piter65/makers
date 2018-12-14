@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8"/>
+<html>
+	<head>
+		<link rel=stylesheet type="text/css" href='main.css'>
+		<title>Chatter Client</title>
+		<!-- <script src="engw/common/json/serialize.js"></script> -->
+		<script src="engw/common/json/json2.js"></script>
+		<script src="engw/common/polyfill/polyfill.js"></script>
+		<script src="chatter_client.js"></script>
+		<script src="socket.io/socket.io.js"></script>
+	</head>
+	<body class="lighter_color">
+		<h2 class = "centerit">
+			Chatter Client
+		</h2>
+		
+		<p class="centerit">Output</p>
+		<br>
+		
+		<input id = "clear_conversation" style = "font-size: 16px;"  class="center-block" type="button" value="Clear output" />
+		<br>
+		<textarea id = "conversation" style = "font-size: 16px;" class="center-block" rows="20" cols="80" readonly="readonly"></textarea>
+		
+		<p class="centerit">
+			Type here.
+		</p>
+		<input id="human_input" type="text" class="center-block wide blockit centerit"/> 
+	</body>
+</html>
