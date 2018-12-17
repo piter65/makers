@@ -1,0 +1,60 @@
+
+
+The Three Box AI system
+
+High concept:
+ Break down server into three ai components (boxes).
+ Each component has a specific purpose.
+
+
+Rules (for now):  
+ Always keep raw input for reference.
+ All (almost all) logic for lower case (until otherwise)
+
+
+
+Box 1:  Pre-processing.
+ This is box is mostly responsible for filtering the initial text,
+ mostly a series of string replacements to simplify possible outcomes.
+ Long term this box will be used for things like counting stall phrases, "em",
+  counting power words, other scoring outside of NLP stuff.
+
+ Think in terms of the 3-5 types of replacements.
+  Type 1: Drop articles and nonsense phrases
+   "_a_" replace with "_"
+   "_the_" replace with "_"
+
+  Type 2: Synonyms
+   "canine" -> "dog"
+   "feline" -> "cat"
+   
+  Type 3: Idioms -- Might want to be done before others-
+   "let_the_cat_out_of_the_bag" ->"reveal"
+
+  Type 4: intentions - This is a stop-gap to fake Box 2, peter believes with ENOUGH phrasing, (1000s),
+    we could fake 90% of it.  Takes a processed string and generates an intent and 
+  "Sounds goood to me" -> agreement
+  "I want anchoves" -> desire anchovies
+
+-- If we stick with this, we may have huge #'s of these, and need to consider 
+-- high tech (low tech) options, such as hash tables, etc.
+
+ For starters, we should probably just do this in JS, with JSON translation files.
+
+Box 2: 
+ RASA - convert text string into intents, entities, etc.
+
+
+Box 3:
+ Logic:  Given intent and entities, 
+    what reply to we play,
+    Do we advance to next act,
+     What scoring do we keep.
+ 
+Im guessing we write specific javascript code with dozens of if statments?
+
+
+ Send back reply to client!
+
+  
+// end of box notes!  

@@ -1,0 +1,44 @@
+{
+	"intents":
+	[
+		{
+			"name": "order_pizza",
+			"template_sentences":
+			[
+				"I'd like a %toppings pizza",
+				"I'd like a %toppings pizza with %toppings",
+				"I'd like a %toppings pizza on %sauce",
+				"Give me a %toppings pizza",
+				"Give me a %toppings pizza with %toppings",
+				"Give me a %toppings pizza on %sauce",
+				"I'd like a pizza with %toppings",
+				"I'd like a pizza with %toppings on %sauce",
+				"I'd like a pizza with %toppings with %sauce"
+			],
+			"entities":
+			{
+				"toppings":
+				[
+					"pepperoni",
+					"sausage",
+					"beef",
+					"chicken",
+					"olives",
+					"tomatoes",
+					"garlic",
+					"anchovies"
+				],
+				"sauce":
+				[
+					"marinara",
+					"alfredo",
+					"garlic sauce",
+					"red sauce",
+					"white sauce",
+					"barbeque sauce",
+					"BBQ sauce"
+				],
+			}
+		}
+	]
+}

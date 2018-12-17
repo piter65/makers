@@ -1,5 +1,6 @@
 var express = require('express');
 var path = require('path');
+var fs = require('fs');
 var app = express();
 
 app.get('/', function(req, res)
@@ -27,6 +28,10 @@ app.get('/ai', function(req, res)
 
 	console.log("\tQuery 'command': " + command);
 
+	command = synonym_sub(command);
+
+	console.log("\tSynonym 'command': " + command);
+
 	switch (command)
 	{
 		case 'system test':
@@ -53,3 +58,20 @@ var server = app.listen(80, function()
 	console.log('Server live');
 	console.log('Listening on port %d', server.address().port);
 });
+
+function synonym_sub(text)
+{
+	var json_syn = fs.readFileSync('synonyms.json');
+
+	console.log("JSON:\n" + json_syn);
+
+	var synonyms = JSON.parse(json_syn);
+
+	for (var key in synonyms)
+	{
+		var value = synonyms[key];
+		text = text.replace(key, value);
+	}
+
+	return text;
+}
