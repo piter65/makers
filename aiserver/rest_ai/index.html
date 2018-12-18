@@ -1,10 +1,176 @@
 <html>
 <head>
-	<title>REST AI</title>
+
+<title>REST AI</title>
+
+<style>
+
+*
+{
+	box-sizing: border-box;
+}
+
+body
+{
+	font-size: 18px;
+}
+
+.chat-app
+{
+	position: absolute;
+	background: #77ff77;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+.chat-log
+{
+	overflow-y: auto;
+	width: 300px;
+	height: 400px;
+	background: #fff;
+	margin-bottom: 10px;
+	padding: 20px;
+	border-radius: 20px;
+}
+
+
+.chat-log div
+{
+	width: 200px;
+	border-radius: 16px;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+}
+
+.chat-log .me
+{
+	float: right;
+	text-align: right;
+	background: #7799ff;
+	border-bottom-right-radius: 0;
+}
+
+.chat-log .them
+{
+	float: left;
+	text-align: left;
+	background: #ff7777;
+	border-bottom-left-radius: 0;
+}
+
+.chat-input
+{
+	width: 300px;
+	height: 50px;
+}
+
+.chat-input input
+{
+	float: left;
+	width: 205px;
+	height: 50px;
+	padding: 10px;
+	font-size: 18px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border: none;
+	outline: none;
+}
+
+.chat-input button
+{
+	float: right;
+	width: 90px;
+	height: 50px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border: none;
+	background: #7799ff;
+	color: #fff;
+	font-weight: bold;
+	outline: none;
+	cursor: pointer;
+}
+
+
+</style>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function()
+{
+	// If enter key is pressed, trigger send button.
+	$('#input_text').keypress(function(e)
+	{
+		if(e.keyCode==13)
+		{
+			$('#btn_send').click();
+			return false;
+		}
+	});
+});
+
+function send_to_ai()
+{
+	console.log('send_to_ai');
+
+	var $input = $('#input_text');
+	var text = $input.val();
+
+	log_me(text);
+
+	$.get("/ai", {command: text}, function(data, status)
+	{
+		console.log("Data: " + data + "\nStatus: " + status);
+
+		log_them(data);
+	});
+
+	$input.val('');
+	$input.focus();
+}
+
+function log_me(text)
+{
+	// debugger;
+
+	var $log = $('.chat-log');
+	var elem_log = $log[0];
+
+	var dom = '<div class="me">'+text+'</div>';
+	$log.append(dom);
+	$log.scrollTop(elem_log.scrollHeight);
+}
+
+function log_them(text)
+{
+	var $log = $('.chat-log');
+	var elem_log = $log[0];
+
+	var dom = '<div class="them">'+text+'</div>';
+	$log.append(dom);
+	$log.scrollTop(elem_log.scrollHeight);
+}
+
+</script>
+
 </head>
 <body>
-	<div>Hello World</div>
-	<br>
-	<div>Try this <a href="http://localhost/ai/?command=howdy">http://localhost/ai/?command=howdy</a></div>
+
+<div class="chat-app">
+	<div class="chat-log">
+		<div class="me">Hello there</div>
+		<div class="them">How are you?</div>
+	</div>
+	<div class="chat-input">
+		<input id="input_text" type="text" />
+		<button id="btn_send" type="button" onclick="javascript: send_to_ai();">SEND</button>
+	</div>
+</div>
+
 </body>
 </html>
