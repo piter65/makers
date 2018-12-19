@@ -123,7 +123,7 @@ function send_to_ai()
 
 	log_me(text);
 
-	$.get("/ai", {command: text}, function(data, status)
+	$.get("/ai", {text: text}, function(data, status)
 	{
 		console.log("Data: " + data + "\nStatus: " + status);
 

@@ -14,25 +14,25 @@ app.get('/ai', function(req, res)
 
 	console.log("query: " + JSON.stringify(req.query));
 
-	var command = req.query.command;
+	var text = req.query.text;
 	var reply = '';
 
-	if(!command)
+	if(!text)
 	{
-		console.log("\tQuery 'command' not set");
+		console.log("\tQuery 'text' not set");
 		console.log("\tRequest aborted");
 
 		res.send(reply);
 		return;
 	}
 
-	console.log("\tQuery 'command': " + command);
+	console.log("\tQuery 'text': " + text);
 
-	command = synonym_sub(command);
+	text = synonym_sub(text);
 
-	console.log("\tSynonym 'command': " + command);
+	console.log("\tSynonym 'text': " + text);
 
-	switch (command)
+	switch (text)
 	{
 		case 'system test':
 			reply = '[rp_a0_0]system is functional';
@@ -44,7 +44,7 @@ app.get('/ai', function(req, res)
 			reply = '[rp_a0_99]Hey there cowboy';
 			break;
 		default:
-			reply = command;
+			reply = text;
 			break;
 	}
 

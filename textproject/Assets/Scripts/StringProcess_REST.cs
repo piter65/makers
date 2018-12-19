@@ -8,7 +8,7 @@ public class StringProcess_REST : MonoBehaviour
 
 	private IEnumerator GetReplyFromAI(string command)
 	{
-		string url = @"http://localhost/ai/?command=" + command;
+		string url = @"http://localhost/ai/?text=" + command;
 		using (WWW www = new WWW(url))
 		{
 			yield return www;
