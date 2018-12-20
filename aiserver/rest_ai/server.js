@@ -1,6 +1,31 @@
 var express = require('express');
 var path = require('path');
 var fs = require('fs');
+var util = require('util');
+
+// Setup file logging.
+var log_file = fs.createWriteStream(__dirname + '/debug.log', {flags : 'w'});
+var log_stdout = process.stdout;
+
+function log(d)
+{
+	// Logs to file 'debug.log'.
+	log_file.write(util.format.apply(d, arguments) + '\n');
+
+	// Logs to console.
+	log_stdout.write(util.format.apply(d, arguments) + '\n');
+};
+
+// Load 'synonyms.json'.
+var synonyms = {};
+{
+	var json_syn = fs.readFileSync('synonyms.json');
+	log("Synonyms JSON:\n" + json_syn);
+
+	synonyms = JSON.parse(json_syn);
+}
+
+
 var app = express();
 
 app.get('/', function(req, res)
@@ -10,63 +35,63 @@ app.get('/', function(req, res)
 
 app.get('/ai', function(req, res)
 {
-	console.log("Get request for '/ai' received:")
+	log("Get request for '/ai' received:")
 
-	console.log("query: " + JSON.stringify(req.query));
+	log("query: " + JSON.stringify(req.query));
 
 	var text = req.query.text;
-	var reply = '';
+	var reply =
+	{
+		success: false
+	};
 
 	if(!text)
 	{
-		console.log("\tQuery 'text' not set");
-		console.log("\tRequest aborted");
+		log("\tQuery 'text' not set");
+		log("\tRequest aborted");
+
+		reply.error = "Query 'text' not set. Request aborted.";
 
 		res.send(reply);
 		return;
 	}
 
-	console.log("\tQuery 'text': " + text);
+	log("\tQuery 'text': " + text);
 
 	text = synonym_sub(text);
 
-	console.log("\tSynonym 'text': " + text);
+	log("\tSynonym 'text': " + text);
 
 	switch (text)
 	{
 		case 'system test':
-			reply = '[rp_a0_0]system is functional';
+			reply.text = '[rp_a0_0]system is functional';
 			break;
 		case 'system check':
-			reply = '[rp_a0_0]system is functional';
+			reply.text = '[rp_a0_0]system is functional';
 			break;
 		case 'howdy':
-			reply = '[rp_a0_99]Hey there cowboy';
+			reply.text = '[rp_a0_99]Hey there cowboy';
 			break;
 		default:
-			reply = text;
+			reply.text = text;
 			break;
 	}
 
-	console.log("\tReply: " + reply);
+	log("\tReply: " + reply.text);
+	reply.success = true;
 	res.send(reply);
 });
 
 // Start the server
 var server = app.listen(80, function()
 { 
-	console.log('Server live');
-	console.log('Listening on port %d', server.address().port);
+	log('Server live');
+	log('Listening on port %d', server.address().port);
 });
 
 function synonym_sub(text)
 {
-	var json_syn = fs.readFileSync('synonyms.json');
-
-	console.log("JSON:\n" + json_syn);
-
-	var synonyms = JSON.parse(json_syn);
-
 	for (var key in synonyms)
 	{
 		var value = synonyms[key];
