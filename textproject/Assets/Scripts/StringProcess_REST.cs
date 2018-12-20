@@ -10,9 +10,9 @@ public class StringProcess_REST : MonoBehaviour
 
 	private IEnumerator GetReplyFromAI(string strValue)
 	{
-		string strURL = @"http://localhost/ai/?text=" + strValue;
-		//string strURL = @"http://54.202.22.196/ai/?text=" + strValue;
-		
+		//string strURL = @"http://localhost/ai/?text=" + strValue;
+		string strURL = @"http://54.202.22.196/ai/?text=" + strValue;
+
 		using (UnityWebRequest www = UnityWebRequest.Get(strURL))
         {
             yield return www.SendWebRequest();

@@ -3,24 +3,75 @@ var path = require('path');
 var fs = require('fs');
 var util = require('util');
 
+var log_path = '/debug.log';
+var is_dev = true;
+
+var is_logging = false;
+var log_buffer = [];
+
+var port = 80;
+if (is_dev)
+	port = 3000;
+
 // Setup file logging.
 // var log_file = fs.createWriteStream(__dirname + '/debug.log', {flags : 'w'});
 // var log_stdout = process.stdout;
 
-// function log(d)
-// {
-// 	// Logs to file 'debug.log'.
-// 	// log_file.write(util.format.apply(d, arguments) + '\n');
+function log_clear()
+{
+	fs.writeFileSync(__dirname + log_path, '');
+}
 
-// 	// Logs to console.
-// 	log_stdout.write(util.format.apply(d, arguments) + '\n');
-// };
+function log(d)
+{
+	var message = util.format.apply(d, arguments);
+
+	// Logs to file 'debug.log'.
+	// var file_stream = fs.createWriteStream(__dirname + log_path, {flags : 'a'});
+	// file_stream.write(util.format.apply(d, arguments) + '\n');
+	// file_stream.end();
+
+	if (is_logging)
+	{
+		log_buffer.push(message)
+	}
+	else
+	{
+		// is_logging = true;
+
+
+
+		// Logs to console.
+		// process.stdout.write(message + '\n');
+		console.log(message);
+
+
+
+		// fs.appendFile(__dirname + log_path, message + '\n', (err) =>
+		// {
+		// 	if (err)
+		// 		throw err;
+
+		// 	is_logging = false;
+
+		// 	// If we have buffered messages, pop one out now.
+		// 	if (log_buffer.length > 0)
+		// 	{
+		// 		var message = log_buffer.splice(0, 1)[0];
+		// 		log(message);
+		// 	}
+		// });
+	}
+};
+
+
+log_clear();
 
 // Load 'synonyms.json'.
 var synonyms = {};
 {
 	var json_syn = fs.readFileSync('synonyms.json');
-	console.log("Synonyms JSON:\n" + json_syn);
+	log("Synonyms JSON:\n" + json_syn);
 
 	synonyms = JSON.parse(json_syn);
 }
@@ -35,11 +86,11 @@ app.get('/', function(req, res)
 
 app.get('/ai', function(req, res)
 {
-	console.log("Get request for '/ai' received:")
+	log("Get request for '/ai' received:")
 
-	console.log("query: " + JSON.stringify(req.query));
+	log("query: " + JSON.stringify(req.query));
 
-	var text = req.query.text;
+	var text = req.query.text.toLowerCase();
 	var reply =
 	{
 		success: false
@@ -47,8 +98,8 @@ app.get('/ai', function(req, res)
 
 	if(!text)
 	{
-		console.log("\tQuery 'text' not set");
-		console.log("\tRequest aborted");
+		log("\tQuery 'text' not set");
+		log("\tRequest aborted");
 
 		reply.error = "Query 'text' not set. Request aborted.";
 
@@ -56,11 +107,15 @@ app.get('/ai', function(req, res)
 		return;
 	}
 
-	console.log("\tQuery 'text': " + text);
+	log("\tQuery 'text': " + text);
 
-	text = synonym_sub(text);
+	text = parse_pass_1(text);
 
-	console.log("\tSynonym 'text': " + text);
+	log("\tParse Pass 1 'text': " + text);
+
+	text = parse_pass_2(text);
+
+	log("\tParse Pass 2 'text': " + text);
 
 	switch (text)
 	{
@@ -78,17 +133,29 @@ app.get('/ai', function(req, res)
 			break;
 	}
 
-	console.log("\tReply: " + reply.text);
+	log("\tReply: " + reply.text);
 	reply.success = true;
 	res.send(reply);
 });
 
 // Start the server
-var server = app.listen(80, function()
-{ 
-	console.log('Server live');
-	console.log('Listening on port %d', server.address().port);
+var server = app.listen(port, function()
+{
+	log('Server live');
+	log('Listening on port %d', server.address().port);
 });
+
+
+function parse_pass_1(text)
+{
+	return synonym_sub(text);
+}
+
+function parse_pass_2(text)
+{
+	return synonym_sub(text);
+}
+
 
 function synonym_sub(text)
 {

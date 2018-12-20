@@ -10,8 +10,15 @@ launch server:
 	cd /home/ubuntu/rest_ai
 	node server &
 
-kill server:
+list running node processes:
+	ps aux | grep node
+
+kill specific server instance:
+	sudo kill -s 15 [process_id]
+
+kill all server instances:
 	sudo killall node
+
 
 SCP:
 ip: 54.202.22.196
