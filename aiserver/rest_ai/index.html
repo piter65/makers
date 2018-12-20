@@ -123,11 +123,23 @@ function send_to_ai()
 
 	log_me(text);
 
-	$.get("/ai", {command: text}, function(data, status)
+	$.get("/ai", {text: text}, function(data, status)
 	{
-		console.log("Data: " + data + "\nStatus: " + status);
+		console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
 
-		log_them(data);
+		if (status != "success")
+		{
+			log_them("ERROR - NETWORK: " + status);
+		}
+		else
+		if (data.success)
+		{
+			log_them(data.text);
+		}
+		else
+		{
+			log_them("ERROR - SERVER: " + data.error);
+		}
 	});
 
 	$input.val('');

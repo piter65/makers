@@ -1,0 +1,21 @@
+
+Putty:
+ip: 54.202.22.196
+port: 22
+u: ubuntu
+p: [none]
+
+launch server:
+	sudo -i
+	cd /home/ubuntu/rest_ai
+	node server &
+
+kill server:
+	sudo killall node
+
+SCP:
+ip: 54.202.22.196
+port: 22
+u: ubuntu
+p: [none]
+shell: sudu su -
