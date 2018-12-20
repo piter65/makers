@@ -1,5 +1,41 @@
 {
-	 "dog":"dog"
+	"idioms for first":"idioms"
+	,"grab the bull by the horns":"decide"
+	,"let the cat out of the bag":"reveal"
+
+
+	,"greetings":"greeting"
+	,"hows it hanging":"greeting"
+	,"come on in":"greeting"
+	,"make yourself at home":"greeting"
+	,"hello there":"greeting"
+	,"hi":"greeting"
+	,"hello":"greeting"
+	,"whats up":"greeting"
+	,"howdy doo":"greeting"
+	,"welcome":"greeting"
+
+	,"you've come to the right place":"greeting"
+
+	,"looking sharp":"compliment"
+	,"dressed nicely":"compliment"
+	,"look lovely":"compliment"
+
+	,"I'd suggest":"suggest"
+	,"have you considerred":"suggest"
+
+	,"hawaiin":"hawaiin"
+	,"pineapple and ham":"hawaiin"
+	,"ham and pineapple":"hawaiin"
+	,"barbecue":"hawaiin"
+
+	,"anchovies":"fish"
+	,"sardines":"fish"
+	,"calamari":"hawaiin"
+
+	,"dog":"dog"
+	,"golden retriever":"dog"
+	,"puppy":"dog"
 	,"doggy":"dog"
 	,"doggie":"dog"
 	,"doggo":"dog"
@@ -8,16 +44,40 @@
 	,"k9":"dog"
 	,"mutt":"dog"
 	,"pup":"dog"
-	,"puppy":"dog"
 	,"pupper":"dog"
 	,"dalmation":"dog"
 	,"husky":"dog"
 	,"shih tzu":"dog"
 	,"poodle":"dog"
-	,"golden retriever":"dog"
 	,"dachshund":"dog"
 	,"weiner dog":"dog"
 	,"pit bull":"dog"
 	,"pug":"dog"
 	,"hound":"dog"
+
+	,"dog poop":"crap"
+	,"poop":"crap"
+	,"crap":"crap"
+	,"shit":"crap"
+
+	,"fuck":"cuss"
+	,"fucker":"cuss"
+	,"asshole":"cuss"
+	,"jerk":"cuss"
+	," ass ":" cuss "
+
+	,"dinkleberry":"insult"
+	,"fatso":"insult"
+	,"idiot":"insult"
+	,"idiot":"insult"
+
+
+	," a ":" "
+	," an ":" "
+	,"the ":" "
+
+
+
+
+
 }
