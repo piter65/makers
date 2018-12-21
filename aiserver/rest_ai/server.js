@@ -22,10 +22,19 @@ logger.log_clear();
 // Load 'synonyms.json'.
 var synonyms = {};
 {
-	var json_syn = fs.readFileSync('synonyms.json');
-	logger.log("Synonyms JSON:\n" + json_syn);
+	var json = fs.readFileSync('syn1.json');
+	logger.log("Synonyms JSON:\n" + json);
 
-	synonyms = JSON.parse(json_syn);
+	synonyms = JSON.parse(json);
+}
+
+// Load 'intents.json'.
+var intents = {};
+{
+	var json = fs.readFileSync('intents.json');
+	logger.log("Intents JSON:\n" + json);
+
+	intents = JSON.parse(json);
 }
 
 
@@ -100,12 +109,24 @@ var server = app.listen(port, function()
 
 function parse_pass_1(text)
 {
-	return synonym_sub(text);
+	for (var key in synonyms)
+	{
+		var value = synonyms[key];
+		text = text.replace(key, value);
+	}
+
+	return text;
 }
 
 function parse_pass_2(text)
 {
-	return synonym_sub(text);
+	for (var key in intents)
+	{
+		var value = intents[key];
+		text = text.replace(key, value);
+	}
+
+	return text;
 }
 
 function process(text)
@@ -118,16 +139,4 @@ function process(text)
 		default:
 			return '[No Intent Matched] ' + text;
 	}
-}
-
-
-function synonym_sub(text)
-{
-	for (var key in synonyms)
-	{
-		var value = synonyms[key];
-		text = text.replace(key, value);
-	}
-
-	return text;
 }

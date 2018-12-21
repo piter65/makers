@@ -33,18 +33,19 @@
 	,"sardines":"fish"
 	,"calamari":"hawaiin"
 
-	,"dog":"dog"
 	,"golden retriever":"dog"
 	,"puppy":"dog"
 	,"doggy":"dog"
 	,"doggie":"dog"
 	,"doggo":"dog"
+	,"dog":"dog"
 	,"canine":"dog"
 	,"k-9":"dog"
 	,"k9":"dog"
 	,"mutt":"dog"
-	,"pup":"dog"
 	,"pupper":"dog"
+	,"puppy":"dog"
+	,"pup":"dog"
 	,"dalmation":"dog"
 	,"husky":"dog"
 	,"shih tzu":"dog"
@@ -60,8 +61,8 @@
 	,"crap":"crap"
 	,"shit":"crap"
 
-	,"fuck":"cuss"
 	,"fucker":"cuss"
+	,"fuck":"cuss"
 	,"asshole":"cuss"
 	,"jerk":"cuss"
 	," ass ":" cuss "
@@ -75,9 +76,4 @@
 	," a ":" "
 	," an ":" "
 	,"the ":" "
-
-
-
-
-
 }
