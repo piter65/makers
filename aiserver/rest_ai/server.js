@@ -8,8 +8,11 @@ var act_10 = require('./act_10');
 
 var state =
 {
+	direction: null,
 	act: 10,
-	trust: 0
+	trust: 0,
+	count_compliment_dress: 0,
+	count_insult: 0,
 };
 
 var is_dev = false;
