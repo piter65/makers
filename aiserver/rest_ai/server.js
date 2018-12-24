@@ -2,18 +2,26 @@ var express = require('express');
 var path = require('path');
 var fs = require('fs');
 var util = require('util');
+var _ = require('underscore');
 
+var state_templates = require('./state_templates');
 var logger = require('./logger');
+var nlu = require('./nlu');
 var act_10 = require('./act_10');
+var act_20 = require('./act_20');
 
-var state =
-{
-	direction: null,
-	act: 10,
-	trust: 0,
-	count_compliment_dress: 0,
-	count_insult: 0,
-};
+// var state =
+// {
+// 	intents: [],
+// 	entities: [],
+// 	direction: null,
+// 	act: 10,
+// 	trust: 0,
+// 	count_compliment_dress: 0,
+// 	count_insult: 0,
+// };
+
+var state = {};
 
 var is_dev = false;
 var port = 80;
@@ -54,52 +62,68 @@ app.get('/ai', function(req, res)
 
 	logger.log("query: " + JSON.stringify(req.query));
 
-	var text = req.query.text.toLowerCase();
-	var reply =
-	{
-		success: false
-	};
+	// If the state is unset, initialize 
+	//   it with the default session data.
+	if (!state.session)
+		state.session = _.clone(state_templates.session_defaults);
 
-	if(!text)
+	// Reset the state's result data.
+	state.result = _.clone(state_templates.result_defaults);
+	logger.log("\tResult - Start: \n" + JSON.stringify(state.result, null, 4));
+
+	state.result.text_origin = req.query.text.toLowerCase();
+	state.result.text = state.result.text_origin;
+
+	if(!state.result.text)
 	{
 		logger.log("\tQuery 'text' not set");
 		logger.log("\tRequest aborted");
 
-		reply.error = "Query 'text' not set. Request aborted.";
+		state.result.error = "Query 'text' not set. Request aborted.";
 
-		res.send(reply);
+		res.send(state.result);
 		return;
 	}
 
-	logger.log("\tQuery 'text': " + text);
+	logger.log("\tQuery 'text': " + state.result.text);
 
-	text = parse_pass_1(text);
+	parse_pass_1(state);
 
-	logger.log("\tParse Pass 1 'text': " + text);
+	logger.log("\tParse Pass 1 'text': " + state.result.text);
 
-	text = parse_pass_2(text);
+	parse_pass_2(state);
 
-	logger.log("\tParse Pass 2 'text': " + text);
+	logger.log("\tParse Pass 2 'text': " + state.result.text);
 
-	switch (text)
+	// Extract intent and entities.
+	nlu.process(state);
+
+	switch (state.result.text)
 	{
-		case 'system test':
-			reply.text = '[rp_a0_0]system is functional';
+		case 'system reset':
+			// Reset the session.
+			state.session = _.clone(state_templates.session_defaults);
+
+			state.result.code = 'rp_a0_10';
+			state.result.reply = 'system reset';
 			break;
+		case 'system test':
 		case 'system check':
-			reply.text = '[rp_a0_0]system is functional';
+			state.result.code = 'rp_a0_0';
+			state.result.reply = 'system is functional';
 			break;
 		case 'howdy':
-			reply.text = '[rp_a0_99]Hey there cowboy';
+			state.result.code = 'rp_a0_99';
+			state.result.reply = 'Hey there cowboy';
 			break;
 		default:
-			reply.text = process(text);
+			state = process(state);
 			break;
 	}
 
-	logger.log("\tReply: " + reply.text);
-	reply.success = true;
-	res.send(reply);
+	logger.log("\tResult: \n" + JSON.stringify(state.result, null, 4));
+	state.result.success = true;
+	res.send(state.result);
 });
 
 // Start the server
@@ -110,36 +134,42 @@ var server = app.listen(port, function()
 });
 
 
-function parse_pass_1(text)
+function parse_pass_1(state)
 {
 	for (var key in synonyms)
 	{
 		var value = synonyms[key];
-		text = text.replace(key, value);
+		state.result.text = state.result.text.replace(key, value);
 	}
 
-	return text;
+	return state;
 }
 
-function parse_pass_2(text)
+function parse_pass_2(state)
 {
 	for (var key in intents)
 	{
 		var value = intents[key];
-		text = text.replace(key, value);
+		state.result.text = state.result.text.replace(key, value);
 	}
 
-	return text;
+	return state;
 }
 
-function process(text)
+function process(state)
 {
-	switch (state.act)
+	switch (state.session.act)
 	{
 		case 10:
-			state = act_10.process(state, text);
-			return state.reply;
+			state = act_10.process(state);
+			break;
+		case 20:
+			state = act_20.process(state);
+			break;
 		default:
-			return '[No Intent Matched] ' + text;
+			state.result.error = 'Act Out of Range';
+			break;
 	}
+
+	return state;
 }

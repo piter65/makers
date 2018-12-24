@@ -5,7 +5,12 @@ port: 22
 u: ubuntu
 p: [none]
 
-launch server:
+launch server WITH logging:
+	sudo -i
+	cd /home/ubuntu/rest_ai
+	node server |& tee debug.log &
+
+launch server WITHOUT logging:
 	sudo -i
 	cd /home/ubuntu/rest_ai
 	node server &

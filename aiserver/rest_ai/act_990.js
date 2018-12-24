@@ -1,97 +1,121 @@
 var logger = require('./logger');
 var randomInt = require('random-int');
 
-exports.process = function(state, text)
+exports.process = function(state)
 {
 	// logger.log('ACT 10 - start');
 
-	if (text.includes('compliment dress'))
+	if (   state.result.intent == 'compliment'
+		&& state.result.entities.includes('dress'))
 	{
-		if (state.count_compliment_dress == 0)
+		if (state.session.count_compliment_dress == 0)
 		{
-			state.reply = 'Thanks. I got it at Brooks Brothers.';
-			state.direction = 'appreciative';
-			state.trust += 1;
+			state.result.code = 'rp_990_20';
+			state.result.reply = 'Thanks. I got it at Brooks Brothers.';
+			state.result.direction = 'appreciative';
+			state.session.trust += 1;
 		}
 		else
 		{
-			state.reply = 'Enough about my shirt. Can we get on with my pizza?';
-			state.direction = 'somewhat annoyed';
-			state.trust += -1;
+			state.result.code = 'rp_990_21';
+			state.result.reply = 'Enough about my shirt. Can we get on with my pizza?';
+			state.result.direction = 'somewhat annoyed';
+			state.session.trust += -1;
 		}
 
-		++state.count_compliment_dress;
+		++state.session.count_compliment_dress;
 	}
 	else
-	if (text.includes('insult'))
+	if (state.result.entities.includes('insult'))
 	{
-		if (state.count_compliment_dress == 0)
+		if (state.session.count_compliment_dress == 0)
 		{
-			state.reply = 'Excuse me?';
-			state.direction = 'insulted';
-			state.trust += -2;
+			state.result.code = 'rp_990_30';
+			state.result.reply = 'Excuse me?';
+			state.result.direction = 'insulted';
+			state.session.trust += -2;
 		}
 		else
 		{
-			state.reply = 'I think I\'ll go somewhere else for lunch.';
-			state.direction = 'very insulted';
-			state.trust += -3;
-			state.game_over = true;
+			state.result.code = 'rp_990_31';
+			state.result.reply = 'I think I\'ll go somewhere else for lunch.';
+			state.result.direction = 'very insulted';
+			state.session.trust += -3;
+			state.session.game_over = true;
 		}
 
-		++state.count_insult;
+		++state.session.count_insult;
 	}
 	else
-	if (text.includes('super insult'))
+	if (state.result.entities.includes('super insult'))
 	{
 		{
-			state.reply = 'I\'m leaving!';
-			state.direction = 'very insulted';
-			state.trust += -3;
-			state.game_over = true;
+			state.result.code = 'rp_990_40';
+			state.result.reply = 'I\'m leaving!';
+			state.result.direction = 'very insulted';
+			state.session.trust += -3;
+			state.session.game_over = true;
 		}
 
-		++state.count_insult;
+		++state.session.count_insult;
 	}
 	else
-	if (text.includes('disgusting phrases'))
+	if (state.result.entities.includes('cuss'))
 	{
 		{
-			state.reply = 'I\'m leaving!';
-			state.direction = 'very insulted';
-			state.trust += -3;
-			state.game_over = true;
+			state.result.code = 'rp_990_50';
+			state.result.reply = 'I\'m leaving!';
+			state.result.direction = 'very insulted';
+			state.session.trust += -3;
+			state.session.game_over = true;
 		}
 	}
 	else
-	if (text.includes('small talk sports'))
+	if (   state.result.intent == 'smalltalk'
+		&& state.result.entities.includes('sports'))
 	{
 		{
-			state.reply = 'I don\'t really follow sports.';
-			state.direction = 'awkward';
-			state.trust += 0;
+			state.result.code = 'rp_990_60';
+			state.result.reply = 'I don\'t really follow sports.';
+			state.result.direction = 'awkward';
+			state.session.trust += 0;
 		}
 	}
 	else
-	if (text.includes('small talk weather'))
+	if (   state.result.intent == 'smalltalk'
+		&& state.result.entities.includes('weather'))
 	{
 		{
-			state.reply = 'Um, yeah, I guess so.';
-			state.direction = 'awkward';
-			state.trust += 0;
+			state.result.code = 'rp_990_70';
+			state.result.reply = 'Um, yeah, I guess so.';
+			state.result.direction = 'awkward';
+			state.session.trust += 0;
 		}
 	}
 	else
-	if (text.includes('greet'))
+	if (state.result.intent == 'greeting')
 	{
 		{
-			state.reply = 'Huh!?';
-			state.direction = 'confused';
-			state.trust += 0;
+			state.result.code = 'rp_990_90';
+			state.result.reply = 'Yeah, we\'ve already met.';
+			state.result.direction = 'somewhat annoyed';
+			state.session.trust += -1;
+		}
+
+		++state.session.count_greeting;
+	}
+	else
+	if (state.result.intent == 'offerhelp')
+	{
+		{
+			state.result.code = 'rp_990_90';
+			state.result.reply = 'Yeah, we\'ve already met.';
+			state.result.direction = 'somewhat annoyed';
+			state.session.trust += -1;
 		}
 	}
 	else
-	// if (text.includes('unintelligible'))
+	// if (state.result.text.includes('unintelligible'))
 	{
 		{
 			const replies = 
@@ -100,13 +124,14 @@ exports.process = function(state, text)
 				'Didn\'t catch that. Can you speak more slowly and clearly?'
 			];
 
-			state.reply = replies[randomInt(replies.length - 1)];
-			state.direction = 'confused';
-			state.trust += 0;
+			state.result.code = 'rp_990_80';
+			state.result.reply = replies[randomInt(replies.length - 1)];
+			state.result.direction = 'confused';
+			state.session.trust += 0;
 		}
 	}
 
-	logger.log('ACT 990 - processed: ' + state.reply);
+	logger.log('ACT 990 - processed');
 
 
 	return state;

@@ -31,7 +31,7 @@ public class StringProcess_REST : MonoBehaviour
 				JObject jobj_root = JObject.Parse(json);
 				if (jobj_root["success"].Value<bool>())
 				{
-					Debug.LogFormat("Reply: {0}", jobj_root["text"].Value<string>());
+					Debug.LogFormat("Reply: {0}", jobj_root["reply"].Value<string>());
 				}
 				else
 				{
