@@ -86,6 +86,9 @@
 	,"styling":"fine"
 	,"glowing":"fine"
 	,"hot":"fine"
+	,"great":"fine"
+	,"quite":"fine"
+
 
 	,"fine dresser yourself":"compliment"
 	,"looking fine":"compliment"
@@ -93,6 +96,7 @@
 	,"look fine":"compliment"
 	,"dress fine":"compliment"
 	,"fine outfit":"compliment"
+	,"you look fine":"compliment"
 
 	,"enjoy":"like"
 	,"favor":"like"

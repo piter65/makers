@@ -121,6 +121,10 @@ exports.process = function(state)
 			state.result.code = 'rp_990_80';
 			state.result.reply = replies[randomInt(replies.length - 1)];
 			state.session.trust += 0;
+
+			logger.log('_fail_\''+ state.result.text_origin+'\'');
+
+
 		}
 	}
 
