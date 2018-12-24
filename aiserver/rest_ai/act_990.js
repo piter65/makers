@@ -5,21 +5,18 @@ exports.process = function(state)
 {
 	// logger.log('ACT 10 - start');
 
-	if (   state.result.intent == 'compliment'
-		&& state.result.entities.includes('dress'))
+	if (   state.result.intent == 'compliment')
 	{
 		if (state.session.count_compliment_dress == 0)
 		{
 			state.result.code = 'rp_990_20';
 			state.result.reply = 'Thanks. I got it at Brooks Brothers.';
-			state.result.direction = 'appreciative';
 			state.session.trust += 1;
 		}
 		else
 		{
 			state.result.code = 'rp_990_21';
-			state.result.reply = 'Enough about my shirt. Can we get on with my pizza?';
-			state.result.direction = 'somewhat annoyed';
+			state.result.reply = 'Enough about me. Can we get on with my pizza?';
 			state.session.trust += -1;
 		}
 
@@ -28,7 +25,7 @@ exports.process = function(state)
 	else
 	if (state.result.entities.includes('insult'))
 	{
-		if (state.session.count_compliment_dress == 0)
+		if (state.session.count_insult == 0)
 		{
 			state.result.code = 'rp_990_30';
 			state.result.reply = 'Excuse me?';
@@ -52,7 +49,6 @@ exports.process = function(state)
 		{
 			state.result.code = 'rp_990_40';
 			state.result.reply = 'I\'m leaving!';
-			state.result.direction = 'very insulted';
 			state.session.trust += -3;
 			state.session.game_over = true;
 		}
@@ -126,7 +122,6 @@ exports.process = function(state)
 
 			state.result.code = 'rp_990_80';
 			state.result.reply = replies[randomInt(replies.length - 1)];
-			state.result.direction = 'confused';
 			state.session.trust += 0;
 		}
 	}

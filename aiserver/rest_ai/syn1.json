@@ -5,6 +5,11 @@
 	,"grab the bull by the horns":"decide"
 	,"let the cat out of the bag":"reveal"
 
+	,"thank you":"thankyou"
+	,"i appreciate that":"thankyou"
+	,"thats very nice of you":"thankyou"
+	,"thats very nice of you":"thankyou"
+
 	,"care for":"want"
 	," do you":" you"
 	,"desire":"craving"
@@ -38,6 +43,11 @@
 	,"what are you craving":"offerhelp"
 	,"what are you thinking of":"offerhelp"
 	,"what are you in the mood for":"offerhelp"
+	,"whats your order":"offerhelp"
+	,"what's your order":"offerhelp"
+
+
+	,"shit":"crap"
 
 	,"greetings":"greeting"
 	,"hows it hanging":"greeting"
@@ -51,18 +61,17 @@
 	,"welcome":"greeting"
 	,"hola":"greeting"
 
-	,"restaurant":"pizzaria"
-	,"pizza place":"pizzaria"
-	,"kitchen":"pizzaria"
+	,"restaurant":"kitchen"
+	,"pizza place":"kitchen"
+	,"kitchen":"kitchen"
 
-	,"Paizanos":"pizzaria namedrop"
+	,"Paizanos":"pizzeria"
 	,"best pizza":"brag"
 	,"tastiest pizza":"brag"
 	,"hottest pizza":"brag"
 	,"spicyest pizza":"brag"
 
-
-	,"you've come to the right place":"greeting"
+	,"you've come to the right place":"greeting brag"
 
 	,"nice":"fine"
 	,"sharp":"fine"
@@ -187,6 +196,9 @@
 	,"fatty":"insult"
 	,"obese":"insult"
 	,"bloody":"insult"
+
+	,"you look like crap":"insult"
+	,"you look fat":"insult"
 
 	,"hot ass":"rude"
 	,"sexy":"rude"

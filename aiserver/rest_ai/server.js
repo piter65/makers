@@ -100,12 +100,16 @@ app.get('/ai', function(req, res)
 
 	switch (state.result.text)
 	{
-		case 'system reset':
+		case 'system restart':
+		case 'system new game':
+		case 'system newgame':
+		case 'newgame':
 			// Reset the session.
 			state.session = _.clone(state_templates.session_defaults);
-
+// Brent, I'm assuming the line above resets defaults?
+// Looks like entities list is not always reset...
 			state.result.code = 'rp_a0_10';
-			state.result.reply = 'system reset';
+			state.result.reply = 'new game started\nHi.  Great looking uniform you got.';
 			break;
 		case 'system test':
 		case 'system check':

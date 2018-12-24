@@ -1,5 +1,11 @@
 var logger = require('./logger');
 
+
+// Questions for Brent,
+// Should we consider an intent list, and an entity list, and looping through?
+// Also, long term, we're gonna need multiple intents and entities, so we probably don't need the elses
+// Ideally tied together.
+
 exports.process = function(state)
 {
 	if (state.result.text.includes('offerhelp'))
@@ -53,6 +59,11 @@ exports.process = function(state)
 		state.result.intent = 'empathy';
 	}
 
+	if (state.result.text.includes('thankyou'))
+	{
+		state.result.intent = 'thankyou';
+	}
+
 	if (state.result.text.includes('craving'))
 	{
 		state.result.entities.push('craving');
@@ -61,13 +72,9 @@ exports.process = function(state)
 	{
 		state.result.entities.push('pizza');
 	}
-	if (state.result.text.includes('pizzaria namedrop'))
+	if (state.result.text.includes('pizzeria'))
 	{
-		state.result.entities.push('pizzaria namedrop');
-	}
-	if (state.result.text.includes('pizzaria'))
-	{
-		state.result.entities.push('pizzaria');
+		state.result.entities.push('pizzeria');
 	}
 	if (state.result.text.includes('brag'))
 	{
