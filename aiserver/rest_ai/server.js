@@ -71,6 +71,8 @@ app.get('/ai', function(req, res)
 	state.result = _.clone(state_templates.result_defaults);
 	logger.log("\tResult - Start: \n" + JSON.stringify(state.result, null, 4));
 
+	state.result.entities=[];		// peter was here.  BC double check
+
 	state.result.text_origin = req.query.text.toLowerCase();
 	state.result.text = state.result.text_origin;
 
@@ -108,6 +110,9 @@ app.get('/ai', function(req, res)
 			state.session = _.clone(state_templates.session_defaults);
 // Brent, I'm assuming the line above resets defaults?
 // Looks like entities list is not always reset...
+
+
+
 			state.result.code = 'rp_a0_10';
 			state.result.reply = 'new game started\nHi.  Great looking uniform you got.';
 			break;

@@ -96,10 +96,37 @@ exports.process = function(state)
 	{
 		state.result.entities.push('fish');
 	}
+
+	if (state.result.text.includes('combo'))
+	{
+		state.result.entities.push('combo');
+	}
+
+	if (state.result.text.includes('bird'))
+	{
+		state.result.entities.push('bird');
+	}
+
 	if (state.result.text.includes('meat'))
 	{
 		state.result.entities.push('meat');
 	}
+
+	if (state.result.text.includes('sausage'))
+	{
+		state.result.entities.push('sausage');
+	}
+
+	if (state.result.text.includes('mushroom'))
+	{
+		state.result.entities.push('mushroom');
+	}
+
+	if (state.result.text.includes('herbs'))
+	{
+		state.result.entities.push('herbs');
+	}
+
 	if (state.result.text.includes('dog'))
 	{
 		state.result.entities.push('dog');

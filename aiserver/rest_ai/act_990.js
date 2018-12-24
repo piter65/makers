@@ -29,14 +29,12 @@ exports.process = function(state)
 		{
 			state.result.code = 'rp_990_30';
 			state.result.reply = 'Excuse me?';
-			state.result.direction = 'insulted';
 			state.session.trust += -2;
 		}
 		else
 		{
 			state.result.code = 'rp_990_31';
 			state.result.reply = 'I think I\'ll go somewhere else for lunch.';
-			state.result.direction = 'very insulted';
 			state.session.trust += -3;
 			state.session.game_over = true;
 		}
@@ -44,11 +42,11 @@ exports.process = function(state)
 		++state.session.count_insult;
 	}
 	else
-	if (state.result.entities.includes('super insult'))
+	if (state.result.entities.includes('superinsult'))
 	{
 		{
 			state.result.code = 'rp_990_40';
-			state.result.reply = 'I\'m leaving!';
+			state.result.reply = 'Fuck you and the horse you rode in on.\'m leaving!';
 			state.session.trust += -3;
 			state.session.game_over = true;
 		}

@@ -9,6 +9,8 @@
 	,"i appreciate that":"thankyou"
 	,"thats very nice of you":"thankyou"
 	,"thats very nice of you":"thankyou"
+	,"thanks":"thankyou"
+
 
 	,"care for":"want"
 	," do you":" you"
@@ -123,7 +125,11 @@
 	,"Are you vegetarian":"dietary"
 	,"Are you vegan":"dietary"
 
+	,"combination":"combo"
+	,"deluxe":"combo"
+	,"all meat":"combo"
 
+	,"canadian bacon":"ham"
 
 	,"hawaiin":"hawaiin"
 	,"pineapple and ham":"hawaiin"
@@ -140,6 +146,30 @@
 	,"ham":"meat"
 	,"salami":"meat"
 	,"spicy sausage":"meat"
+	,"bacon":"meat"
+	,"deer":"meat"
+	,"lamb":"meat"
+
+	,"chicken":"bird"
+	,"duck":"bird"
+	,"goose":"bird"
+	,"turkey":"bird"
+	,"pheasant":"bird"
+	,"quayle":"bird"
+	,"pidgeon":"bird"
+	,"blackbird":"bird"
+	,"crow":"bird"
+	,"gull":"bird"
+	,"pelican":"bird"
+
+	,"fungus":"mushroom"
+	,"shitake":"mushroom"
+	,"crapake":"mushroom"
+	,"portabella":"mushroom"
+
+	,"kielbasa":"sausage"
+	,"linguisa":"sausage"
+	,"chorizo":"sausage"
 
 	,"golden retriever":"dog"
 	,"puppy":"dog"

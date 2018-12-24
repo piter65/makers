@@ -1,0 +1,208 @@
+{
+
+	"idioms for first":"idioms"
+	,"can i ":"may i "
+	,"grab the bull by the horns":"decide"
+	,"let the cat out of the bag":"reveal"
+
+	,"thank you":"thankyou"
+	,"i appreciate that":"thankyou"
+	,"thats very nice of you":"thankyou"
+	,"thats very nice of you":"thankyou"
+
+	,"care for":"want"
+	," do you":" you"
+	,"desire":"craving"
+	,"poison":"craving"
+	,"hungry for":"craving"
+	,"desires":"craving"
+
+
+	,"slice of pie":"pizza"
+	,"slice of pizza pie":"pizza"
+	,"slice":"pizza"
+
+
+	," a ":" "
+	," an ":" "
+	,"the ":" "
+	," some ":" "
+
+	,"want some pizza":"offerhelp"
+	,"may i take your order":"offerhelp"
+	,"may i have your order":"offerhelp"
+	,"may i help you":"offerhelp"
+	,"what you want":"rude offerhelp"
+	,"you want pizza":"offerhelp"
+	,"want pizza":"offerhelp"
+	,"whats your craving":"offerhelp"
+	,"what do you craving":"offerhelp"
+	,"name your craving":"offerhelp"
+	,"what may i do you for":"offerhelp"
+	,"what may i do for you":"offerhelp"
+	,"what are you craving":"offerhelp"
+	,"what are you thinking of":"offerhelp"
+	,"what are you in the mood for":"offerhelp"
+	,"whats your order":"offerhelp"
+	,"what's your order":"offerhelp"
+
+
+	,"shit":"crap"
+
+	,"greetings":"greeting"
+	,"hows it hanging":"greeting"
+	,"come on in":"greeting"
+	,"make yourself at home":"greeting"
+	,"hello there":"greeting"
+	,"hi":"greeting"
+	,"hello":"greeting"
+	,"whats up":"greeting"
+	,"howdy doo":"greeting"
+	,"welcome":"greeting"
+	,"hola":"greeting"
+
+	,"restaurant":"kitchen"
+	,"pizza place":"kitchen"
+	,"kitchen":"kitchen"
+
+	,"Paizanos":"pizzeria"
+	,"best pizza":"brag"
+	,"tastiest pizza":"brag"
+	,"hottest pizza":"brag"
+	,"spicyest pizza":"brag"
+
+	,"you've come to the right place":"greeting brag"
+
+	,"nice":"fine"
+	,"sharp":"fine"
+	,"snappy":"fine"
+	,"lovely":"fine"
+	,"impressive":"fine"
+	,"stylish":"fine"
+	,"cute":"fine"
+	,"attractive":"fine"
+	,"styling":"fine"
+	,"glowing":"fine"
+	,"hot":"fine"
+
+	,"fine dresser yourself":"compliment"
+	,"looking fine":"compliment"
+	,"dressed nicely":"compliment"
+	,"look fine":"compliment"
+	,"dress fine":"compliment"
+	,"fine outfit":"compliment"
+
+	,"enjoy":"like"
+	,"favor":"like"
+	,"fancy":"like"
+	,"want":"like"
+
+	,"I'd suggest":"suggest"
+	,"have you considerred":"suggest"
+	,"people like":"suggest"
+	,"is popular":"suggest"
+	,"why not try":"suggest"
+	,"try":"suggest"
+
+
+	,"tell me what":"what"
+	,"do you remember what":"what"
+	,"what pizza":"what"
+
+	,"what type of pizza do you like":"discover"
+	,"what do you like":"discover"
+	,"whats your favorite":"discover"
+	,"what did you have last time":"discover"
+	,"do you like vegetables":"discover"
+	,"do you like meat":"discover"
+	,"do you like":"discover"
+
+	,"do you have any dietary restrictions":"dietary"
+	,"Are you ok with glutten":"dietary"
+	,"glutten":"dietary"
+	,"Are you vegetarian":"dietary"
+	,"Are you vegan":"dietary"
+
+
+
+	,"hawaiin":"hawaiin"
+	,"pineapple and ham":"hawaiin"
+	,"ham and pineapple":"hawaiin"
+	,"barbecue":"hawaiin"
+	,"pineapple":"hawaiin"
+	,"pacific islander":"hawaiin"
+
+	,"anchovies":"fish"
+	,"sardines":"fish"
+	,"calamari":"fish"
+
+	,"pepperoni":"meat"
+	,"ham":"meat"
+	,"salami":"meat"
+	,"spicy sausage":"meat"
+
+	,"golden retriever":"dog"
+	,"puppy":"dog"
+	,"doggy":"dog"
+	,"doggie":"dog"
+	,"doggo":"dog"
+	,"dog":"dog"
+	,"canine":"dog"
+	,"k-9":"dog"
+	,"k9":"dog"
+	,"mutt":"dog"
+	,"pupper":"dog"
+	,"puppy":"dog"
+	,"pup":"dog"
+	,"dalmation":"dog"
+	,"husky":"dog"
+	,"shih tzu":"dog"
+	,"poodle":"dog"
+	,"dachshund":"dog"
+	,"weiner dog":"dog"
+	,"pit bull":"dog"
+	,"pug":"dog"
+	,"hound":"dog"
+
+	,"sorry":"empathy"
+	,"unfortunate":"empathy"
+	,"must be difficult":"empathy"
+	,"too bad":"empathy"
+
+	,"dog poop":"crap"
+	,"poop":"crap"
+	,"crap":"crap"
+	,"shit":"crap"
+
+	,"fucker":"cuss"
+	,"fuck":"cuss"
+	,"asshole":"cuss"
+	,"jerk":"cuss"
+	," ass ":" cuss "
+	,"shag":"cuss"
+	,"blowjob":"cuss"
+	,"handjob":"cuss"
+	,"handjob":"cuss"
+
+
+
+
+	,"knucklehead":"insult"
+	,"dinkleberry":"insult"
+	,"fatso":"insult"
+	,"idiot":"insult"
+	,"moron":"insult"
+	,"fathead":"insult"
+	,"fatty":"insult"
+	,"obese":"insult"
+	,"bloody":"insult"
+
+	,"you look like crap":"insult"
+	,"you look fat":"insult"
+
+	,"hot ass":"rude"
+	,"sexy":"rude"
+	,"smoking":"rude"
+	,"kissable":"rude"	
+
+}
