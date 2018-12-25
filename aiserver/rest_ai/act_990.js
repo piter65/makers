@@ -3,15 +3,16 @@ var randomInt = require('random-int');
 
 exports.process = function(state)
 {
-	// logger.log('ACT 10 - start');
+	 logger.log('ACT 10 - start');
 
-	if (   state.result.intent == 'compliment')
+	if (   state.result.intent == 'i_compliment')
 	{
 		if (state.session.count_compliment_dress == 0)
 		{
 			state.result.code = 'rp_990_20';
 			state.result.reply = 'Thanks. I got it at Brooks Brothers.';
 			state.session.trust += 1;
+			logger.log('compliment logged');
 		}
 		else
 		{
@@ -23,7 +24,7 @@ exports.process = function(state)
 		++state.session.count_compliment_dress;
 	}
 	else
-	if (state.result.entities.includes('insult'))
+	if (state.result.entities.includes('i_insult'))
 	{
 		if (state.session.count_insult == 0)
 		{
@@ -42,7 +43,7 @@ exports.process = function(state)
 		++state.session.count_insult;
 	}
 	else
-	if (state.result.entities.includes('superinsult'))
+	if (state.result.entities.includes('i_superinsult'))
 	{
 		{
 			state.result.code = 'rp_990_40';
@@ -54,7 +55,7 @@ exports.process = function(state)
 		++state.session.count_insult;
 	}
 	else
-	if (state.result.entities.includes('cuss'))
+	if (state.result.entities.includes('i_cuss'))
 	{
 		{
 			state.result.code = 'rp_990_50';
@@ -65,7 +66,7 @@ exports.process = function(state)
 		}
 	}
 	else
-	if (   state.result.intent == 'smalltalk'
+	if (   state.result.intent == 'i_smalltalk'
 		&& state.result.entities.includes('sports'))
 	{
 		{
@@ -76,7 +77,7 @@ exports.process = function(state)
 		}
 	}
 	else
-	if (   state.result.intent == 'smalltalk'
+	if (   state.result.intent == 'i_smalltalk'
 		&& state.result.entities.includes('weather'))
 	{
 		{
@@ -87,7 +88,7 @@ exports.process = function(state)
 		}
 	}
 	else
-	if (state.result.intent == 'greeting')
+	if (state.result.intent == 'i_greeting')
 	{
 		{
 			state.result.code = 'rp_990_90';
@@ -99,15 +100,13 @@ exports.process = function(state)
 		++state.session.count_greeting;
 	}
 	else
-	if (state.result.intent == 'offerhelp')
-	{
+	if (state.result.entities.includes('rude'))
 		{
-			state.result.code = 'rp_990_90';
-			state.result.reply = 'Yeah, we\'ve already met.';
-			state.result.direction = 'somewhat annoyed';
+			state.result.code = 'rp_990_70';
+			state.result.reply = 'Um, I not quite comfortable with that.';
 			state.session.trust += -1;
 		}
-	}
+
 	else
 	// if (state.result.text.includes('unintelligible'))
 	{

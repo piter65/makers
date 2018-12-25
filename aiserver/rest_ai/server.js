@@ -9,6 +9,10 @@ var logger = require('./logger');
 var nlu = require('./nlu');
 var act_10 = require('./act_10');
 var act_20 = require('./act_20');
+var act_22 = require('./act_22');
+var act_30 = require('./act_30');
+
+
 
 // var state =
 // {
@@ -87,6 +91,7 @@ app.get('/ai', function(req, res)
 		return;
 	}
 
+	logger.log("_story_Player:'"+state.result.text_origin+"'")
 	logger.log("\tQuery 'text': " + state.result.text);
 
 	parse_pass_1(state);
@@ -113,16 +118,16 @@ app.get('/ai', function(req, res)
 
 
 
-			state.result.code = 'rp_a0_10';
+			state.result.code = 'rp_0_10';
 			state.result.reply = 'new game started\nHi.  Great looking uniform you got.';
 			break;
 		case 'system test':
 		case 'system check':
-			state.result.code = 'rp_a0_0';
+			state.result.code = 'rp_0_0';
 			state.result.reply = 'system is functional';
 			break;
 		case 'howdy':
-			state.result.code = 'rp_a0_99';
+			state.result.code = 'rp_0_99';
 			state.result.reply = 'Hey there cowboy';
 			break;
 		default:
@@ -131,6 +136,9 @@ app.get('/ai', function(req, res)
 	}
 
 	logger.log("\tResult: \n" + JSON.stringify(state.result, null, 4));
+	logger.log("_story_AI:'"+state.result.reply+"'");
+
+
 	state.result.success = true;
 	res.send(state.result);
 });
@@ -175,6 +183,13 @@ function process(state)
 		case 20:
 			state = act_20.process(state);
 			break;
+		case 22:
+			state = act_22.process(state);
+			break;
+		case 30:
+			state = act_30.process(state);
+			break;
+
 		default:
 			state.result.error = 'Act Out of Range';
 			break;
