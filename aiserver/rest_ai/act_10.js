@@ -10,6 +10,7 @@ exports.process = function(state)
 			state.result.code = 'rp_10_30';
 			state.result.reply = 'You are very welcome.';
 			state.session.trust += 1;
+				logger.log('thanked');
 		}
 
 
@@ -57,6 +58,15 @@ exports.process = function(state)
 			state.result.reply = 'I was thinking about getting a slice.';
 
 		}
+	else
+	if (state.result.intent == 'i_insult')
+		{
+			state.result.code = 'rp_10_40';
+			state.result.reply = 'Im not sure I like this place or you.';
+		state.session.trust -= 2;
+		}
+
+
 	else
 	{
 		state = act_990.process(state);

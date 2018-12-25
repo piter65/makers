@@ -141,9 +141,9 @@ exports.process = function(state)
 	{
 		state.result.entities.push('e_cuss');
 	}
-	if (state.result.text.includes('e_insult'))
+	if (state.result.text.includes('i_insult'))
 	{
-		state.result.entities.push('e_insult');
+		state.result.entities.push('i_insult');
 	}
 	if (state.result.text.includes('i_rude'))
 	{

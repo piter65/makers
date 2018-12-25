@@ -55,7 +55,7 @@ exports.process = function(state)
 		++state.session.count_insult;
 	}
 	else
-	if (state.result.entities.includes('i_cuss'))
+	if (state.result.entities.includes('e_cuss'))
 	{
 		{
 			state.result.code = 'rp_990_50';

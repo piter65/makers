@@ -38,7 +38,7 @@ logger.log_clear();
 var synonyms = {};
 {
 	var json = fs.readFileSync('syn1.json');
-	logger.log("Synonyms JSON:\n" + json);
+// skip says peter	logger.log("Synonyms JSON:\n" + json);
 
 	synonyms = JSON.parse(json);
 }
@@ -47,7 +47,7 @@ var synonyms = {};
 var intents = {};
 {
 	var json = fs.readFileSync('intents.json');
-	logger.log("Intents JSON:\n" + json);
+// skip says peter	logger.log("Intents JSON:\n" + json);
 
 	intents = JSON.parse(json);
 }

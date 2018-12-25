@@ -1,5 +1,235 @@
 {
-	"idioms for first":"idioms"
-	,"grab the bull by the horns":"decide"
-	,"let the cat out of the bag":"reveal"
+	
+	"the intents.json file is intended (get it), to convert phrases into intents or entities":"After simplification in the syn file"
+
+	,"thanks for sharing":"i_nothing"
+
+	,"tellme favorite veggie":"i_offerhelp"
+	,"tellme order":"i_offerhelp"
+	,"tellme order":"i_offerhelp"
+
+	,"really":"i_nothing"
+	,"is that so":"i_nothing"
+	,"so you say":"i_nothing"
+
+	,"thankyou":"i_thankyou"
+	,"thank you":"i_thankyou"
+	,"i appreciate that":"i_thankyou"
+	,"thats very nice of you":"i_thankyou"
+	,"thats very nice of you":"i_thankyou"
+	,"thanks":"i_thankyou"
+
+	,"gracias":"i_thankyou"
+	,"i_thankyou for sharing":"i_nothing"
+	,"so do you":"i_nothing"
+
+
+	,"fucker":"e_cuss"
+	,"fuck":"e_cuss"
+	,"asshole":"e_cuss"
+	,"jerk":"e_cuss"
+	," ass ":" e_cuss "
+	,"shag":"e_cuss"
+	,"blowjob":"e_cuss"
+	,"handjob":"e_cuss"
+	,"rimjob":"e_cuss"
+
+	,"craving pizza":"i_offerhelp"
+
+	,"order please":"i_offerhelp"
+	,"may i take your order":"i_offerhelp"
+	,"may i have your order":"i_offerhelp"
+	,"may i help you":"i_offerhelp"
+	,"what you want":"e_rude i_offerhelp"
+	,"what do you want":"e_rude i_offerhelp"
+	,"you want pizza":"i_offerhelp"
+	,"want pizza":"i_offerhelp"
+	,"whats your craving":"i_offerhelp"
+	,"what do you craving":"i_offerhelp"
+	,"name your craving":"i_offerhelp"
+	,"what may i do you for":"i_offerhelp"
+	,"what may i do for you":"i_offerhelp"
+	,"what are you craving":"i_offerhelp"
+	,"what are you thinking of":"i_offerhelp"
+	,"what are you in the mood for":"i_offerhelp"
+	,"whats your order":"i_offerhelp"
+	,"what's your order":"i_offerhelp"
+	,"pizza are you craving":"i_offerhelp"
+	,"what you craving":"i_offerhelp"
+	,"what can I get you":"i_offerhelp"
+
+
+
+	,"pretty dresser yourself":"i_compliment"
+	,"looking pretty":"i_compliment"
+	,"dressed nicely":"i_compliment"
+	,"look pretty":"i_compliment"
+	,"dress pretty":"i_compliment"
+	,"pretty outfit":"i_compliment"
+	,"yoube pretty":"i_compliment"
+	,"yoube slutty":"i_insult"
+
+
+
+
+	,"I'd i_suggest":"i_suggest"
+	,"have you considerred":"i_suggest"
+	,"people desire":"i_suggest"
+	,"is popular":"i_suggest"
+	,"why not try":"i_suggest"
+	,"try":"i_suggest"
+
+
+	,"vegetable":"e_veggie"
+	,"vegetable topping":"e_veggie"
+
+	,"Paizanos":"e_pizzeria"
+	,"best pizza":"i_brag"
+	,"tastiest pizza":"i_brag"
+	,"hottest pizza":"i_brag"
+	,"spicyest pizza":"i_brag"
+
+	,"you've come to the right place":"i_greeting i_brag"
+
+	,"hello":"i_greeting"
+
+
+
+
+	,"combination":"e_combo"
+	,"deluxe":"e_combo"
+	,"all meat":"e_combo"
+	,"combo":"e_combo"
+
+	,"canadian bacon":"e_ham"
+
+	,"hawaiin":"e_hawaiin"
+	,"pineapple and ham":"e_hawaiin"
+	,"ham and pineapple":"e_hawaiin"
+	,"barbecue":"e_hawaiin"
+	,"pineapple":"e_hawaiin"
+	,"pacific islander":"e_hawaiin"
+
+	,"anchovies":"e_fish"
+	,"sardines":"e_fish"
+	,"calamari":"e_fish"
+
+	,"pepperoni":"e_meat"
+	,"ham":"e_meat"
+	,"salami":"e_meat"
+	,"spicy sausage":"e_meat"
+	,"bacon":"e_meat"
+	,"deer":"e_meat"
+	,"lamb":"e_meat"
+	,"meatball":"e_meat"
+	,"meat ball":"e_meat"
+
+	,"sausage":"e_sausage"
+
+	,"chicken":"e_bird"
+	,"duck":"e_bird"
+	,"goose":"e_bird"
+	,"turkey":"e_bird"
+	,"pheasant":"e_bird"
+	,"quayle":"e_bird"
+	,"pidgeon":"e_bird"
+	,"blacke_bird":"e_bird"
+	,"crow":"e_bird"
+	,"gull":"e_bird"
+	,"pelican":"e_bird"
+
+	,"mushroom":"e_mushroom"
+	,"fungus":"e_mushroom"
+	,"shitake":"e_mushroom"
+	,"crapake":"e_mushroom"
+	,"portabella":"e_mushroom"
+
+	,"kielbasa":"e_sausage"
+	,"linguisa":"e_sausage"
+	,"chorizo":"e_sausage"
+
+	,"cheese":"e_topping"
+	,"red sauce":"e_topping"
+	,"white sauce":"e_topping"
+
+	,"peppers":"e_veggie"
+	,"onions":"e_veggie"
+	,"onion":"e_veggie"
+	,"tomatoes":"e_veggie"
+	,"tomato":"e_veggie"
+	,"tomato":"e_veggie"
+
+	,"basil":"e_herb"
+	,"pepper":"e_herb"
+
+	,"golden retriever":"e_dog"
+	,"puppy":"e_dog"
+	,"doggy":"e_dog"
+	,"doggie":"e_dog"
+	,"doggo":"e_dog"
+	,"dog":"e_dog"
+	,"canine":"e_dog"
+	,"k-9":"e_dog"
+	,"k9":"e_dog"
+	,"mutt":"e_dog"
+	,"pupper":"e_dog"
+	,"puppy":"e_dog"
+	,"pup":"e_dog"
+	,"dalmation":"e_dog"
+	,"husky":"e_dog"
+	,"shih tzu":"e_dog"
+	,"poodle":"e_dog"
+	,"dachshund":"e_dog"
+	,"weiner e_dog":"e_dog"
+	,"pit bull":"e_dog"
+	,"pug":"e_dog"
+	,"hound":"e_dog"
+
+	,"sorry":"e_empathy"
+	,"unfortunate":"e_empathy"
+	,"must be hard":"e_empathy"
+	,"too bad":"e_empathy"
+
+	,"dog poop":"e_crap"
+	,"poop":"e_crap"
+	,"crap":"e_crap"
+	,"shit":"e_crap"
+
+	,"what type of pizza do you desire":"i_discover"
+	,"what do you desire":"i_discover"
+	,"whats your favorite":"i_discover"
+	,"what did you have last time":"i_discover"
+	,"do you desire":"i_discover"
+
+	,"do you have any dietary restrictions":"i_dietary"
+	,"Are you ok with glutten":"i_dietary"
+	,"glutten":"i_dietary"
+	,"Are you vegetarian":"i_dietary"
+	,"Are you vegan":"i_dietary"
+
+
+	,"make up your mind":"e_rude i_nothing"
+	,"please decide":"e_rude i_nothing"
+	,"hurry up already":"e_rude i_nothing"
+
+	,"knucklehead":"i_insult"
+	,"dinkleberry":"i_insult"
+	,"fatso":"i_insult"
+	,"idiot":"i_insult"
+	,"moron":"i_insult"
+	,"fathead":"i_insult"
+	,"fatty":"i_insult"
+	,"obese":"i_insult"
+	,"bloody":"i_insult"
+
+	,"you look like crap":"i_insult"
+	,"you look fat":"i_insult"
+
+	,"hot ass":"i_rude"
+	,"sexy":"i_rude"
+	,"smoking":"i_rude"
+	,"kissable":"i_rude"
+
+
+
 }
