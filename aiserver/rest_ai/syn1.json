@@ -61,8 +61,8 @@
 
 	," which ":" "
 	," to order":" your order"
-	," would you":"you"
-	," for you":"you"
+	," would you":" you"
+	," for you":" you"
 	,"i think ":""
 	,"i believe ":""
 
@@ -104,6 +104,9 @@
 	,"fine":"pretty"
 
 	,"sexy":"slutty"
+	,"horny":"slutty"
+	,"bitchy":"slutty"
+
 	,"curvy":"slutty"
 	,"the bomb":"slutty"
 

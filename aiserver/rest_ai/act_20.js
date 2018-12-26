@@ -96,7 +96,7 @@ exports.process = function(state)
 		{
 			state.result.code = 'rp_10_30';
 			state.result.reply = 'Birds of a feather, flock together, and I will eat that pizza- NEVER!';
-			session.count_tries++;
+			state.session.count_tries++;
 			state.session.trust -= 1;
 		}
 

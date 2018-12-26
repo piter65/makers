@@ -176,6 +176,8 @@ function parse_pass_2(state)
 
 function process(state)
 {
+
+	logger.log('gonna process:'+state.session.act);
 	switch (state.session.act)
 	{
 		case 10:
