@@ -5,7 +5,7 @@ exports.process = function(state)
 {
 	logger.log('process act 10 - pa');
 
-	if (   state.result.intent == 'i_thankyou' )
+	if (   state.result.entities.includes( 'i_thankyou') )
 		{
 			state.result.code = 'rp_10_30';
 			state.result.reply = 'You are very welcome.';
@@ -14,7 +14,7 @@ exports.process = function(state)
 		}
 
 
-	else if (   state.result.intent == 'i_greeting'
+	else if (   state.result.entities.includes( 'i_greeting')
 		&& state.session.count_greeting == 0)
 	{
 		if (state.result.entities.includes('e_pizzeria'))
@@ -44,7 +44,7 @@ exports.process = function(state)
 		++state.session.count_greeting;
 	}
 	else
-	if (state.result.intent == 'i_offerhelp')
+	if (state.result.entities.includes( 'i_offerhelp') )
 	{
 		state.result.code = 'rp_10_60';
 		state.result.reply = 'I\'d like a slice with no drink, but I can\'t decide on the topping. What do you suggest?';
@@ -52,14 +52,14 @@ exports.process = function(state)
 		state.session.act = 20;  // move on!
 	}
 	else 
-	if (state.result.intent == 'i_nothing')
+	if (state.result.entities.includes( 'i_nothing') )
 		{
 			state.result.code = 'rp_10_40';
 			state.result.reply = 'I was thinking about getting a slice.';
 
 		}
 	else
-	if (state.result.intent == 'i_insult')
+	if (state.result.entities.includes( 'i_insult') )
 		{
 			state.result.code = 'rp_10_40';
 			state.result.reply = 'Im not sure I like this place or you.';

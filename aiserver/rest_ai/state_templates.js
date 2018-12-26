@@ -5,6 +5,8 @@ exports.session_defaults =
 	count_compliment_dress: 0,
 	count_insult: 0,
 	count_greeting: 0,
+	count_tries: 0,
+	choicedone: false,
 	game_over: false,
 };
 

@@ -10,58 +10,86 @@ exports.process = function(state)
 {
 	if (state.result.text.includes('i_offerhelp'))
 	{
-		state.result.intent = 'i_offerhelp';
+		state.result.entities.push('i_offerhelp');
 	}
 	else
 	if (state.result.text.includes('i_greeting'))
 	{
-		state.result.intent = 'i_greeting';
+		state.result.entities.push('i_greeting');
 	}
 	else
 	if (state.result.text.includes('i_decide'))
 	{
-		state.result.intent = 'i_decide';
+		state.result.entities.push('i_decide');
 	}
 	else
 	// Seems like 'what' should result in 'decide'.
 	if (state.result.text.includes('what'))
 	{
-		state.result.intent = 'i_decide';
+		state.result.entities.push('i_decide');
 	}
 	else
 	if (state.result.text.includes('i_reveal'))
 	{
-		state.result.intent = 'i_reveal';
+		state.result.entities.push('i_reveal');
 	}
 	else
 	if (state.result.text.includes('i_compliment'))
 	{
-		state.result.intent = 'i_compliment';
+		state.result.entities.push('i_compliment');
 	}
 	else
 	if (state.result.text.includes('i_suggest'))
 	{
-		state.result.intent = 'i_suggest';
+		state.result.entities.push('i_suggest');
 	}
 	else
 	if (state.result.text.includes('i_discover'))
 	{
-		state.result.intent = 'i_discover';
+		state.result.entities.push('i_discover');
 	}
 	else
 	if (state.result.text.includes('i_dietary'))
 	{
-		state.result.intent = 'i_dietary';
+		state.result.entities.push('i_dietary');
 	}
 	else
 	if (state.result.text.includes('i_empathy'))
 	{
-		state.result.intent = 'i_empathy';
+		state.result.entities.push('i_empathy');
 	}
 
 	if (state.result.text.includes('i_thankyou'))
 	{
-		state.result.intent = 'i_thankyou';
+		state.result.entities.push('i_thankyou');
+	}
+	if (state.result.text.includes('i_brag'))
+	{
+		state.result.entities.push('i_brag');
+	}
+	if (state.result.text.includes('i_like'))
+	{
+		state.result.entities.push('i_like');
+	}
+	if (state.result.text.includes('i_insult'))
+	{
+		state.result.entities.push('i_insult');
+	}
+	if (state.result.text.includes('i_rude'))
+	{
+		state.result.entities.push('i_rude');
+	}
+	if (state.result.text.includes('i_nothing'))
+	{
+		state.result.entities.push('i_nothing');
+	}
+	if (state.result.text.includes('i_sorry'))
+	{
+		state.result.entities.push('i_sorry');
+	}
+	if (state.result.text.includes('i_noglutten'))
+	{
+		state.result.entities.push('i_noglutten');
 	}
 
 	if (state.result.text.includes('e_pizza'))
@@ -72,14 +100,7 @@ exports.process = function(state)
 	{
 		state.result.entities.push('e_pizzeria');
 	}
-	if (state.result.text.includes('i_brag'))
-	{
-		state.result.entities.push('i_brag');
-	}
-	if (state.result.text.includes('like'))
-	{
-		state.result.entities.push('like');
-	}
+
 	if (state.result.text.includes('e_hawaiin'))
 	{
 		state.result.entities.push('e_hawaiin');
@@ -141,18 +162,8 @@ exports.process = function(state)
 	{
 		state.result.entities.push('e_cuss');
 	}
-	if (state.result.text.includes('i_insult'))
-	{
-		state.result.entities.push('i_insult');
-	}
-	if (state.result.text.includes('i_rude'))
-	{
-		state.result.entities.push('i_rude');
-	}
-	if (state.result.text.includes('i_nothing'))
-	{
-		state.result.entities.push('i_nothing');
-	}
+
+
 
 	logger.log('NLU - processed:');
 	logger.log('\tIntent: %s', state.result.intent);

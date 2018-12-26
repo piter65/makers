@@ -6,7 +6,8 @@
 
 	,"tellme favorite veggie":"i_offerhelp"
 	,"tellme order":"i_offerhelp"
-	,"tellme order":"i_offerhelp"
+	,"what you desire":"i_discover i_offerhelp"
+
 
 	,"really":"i_nothing"
 	,"is that so":"i_nothing"
@@ -68,16 +69,26 @@
 	,"pretty outfit":"i_compliment"
 	,"yoube pretty":"i_compliment"
 	,"yoube slutty":"i_insult"
+	,"yoube crap":"i_insult"
 
 
+	,"i sorry":"i_sorry"
+	,"my bad":"i_sorry"
+	,"excuse me":"i_sorry"
+	,"i apologize":"i_sorry"
+	,"forgive me":"i_sorry"
 
-
-	,"I'd i_suggest":"i_suggest"
+	,"i suggest":"i_suggest"
+	,"i suggest":"i_suggest"
+	,"i'd suggest":"i_suggest"
+	,"id suggest":"i_suggest"
 	,"have you considerred":"i_suggest"
 	,"people desire":"i_suggest"
 	,"is popular":"i_suggest"
 	,"why not try":"i_suggest"
 	,"try":"i_suggest"
+	,"consider":"i_suggest"
+
 
 
 	,"vegetable":"e_veggie"
@@ -133,7 +144,7 @@
 	,"pheasant":"e_bird"
 	,"quayle":"e_bird"
 	,"pidgeon":"e_bird"
-	,"blacke_bird":"e_bird"
+	,"blackbird":"e_bird"
 	,"crow":"e_bird"
 	,"gull":"e_bird"
 	,"pelican":"e_bird"
@@ -143,6 +154,8 @@
 	,"shitake":"e_mushroom"
 	,"crapake":"e_mushroom"
 	,"portabella":"e_mushroom"
+
+	,"crap":"e_crap"
 
 	,"kielbasa":"e_sausage"
 	,"linguisa":"e_sausage"
@@ -158,6 +171,7 @@
 	,"tomatoes":"e_veggie"
 	,"tomato":"e_veggie"
 	,"tomato":"e_veggie"
+	,"veggie":"e_veggie"	
 
 	,"basil":"e_herb"
 	,"pepper":"e_herb"
@@ -184,16 +198,17 @@
 	,"pit bull":"e_dog"
 	,"pug":"e_dog"
 	,"hound":"e_dog"
+	,"cocker spaniel":"e_dog"
+	,"german shepherd":"e_dog"
+	,"vizla":"e_dog"
+
 
 	,"sorry":"e_empathy"
 	,"unfortunate":"e_empathy"
 	,"must be hard":"e_empathy"
 	,"too bad":"e_empathy"
 
-	,"dog poop":"e_crap"
-	,"poop":"e_crap"
-	,"crap":"e_crap"
-	,"shit":"e_crap"
+
 
 	,"what type of pizza do you desire":"i_discover"
 	,"what do you desire":"i_discover"
@@ -229,7 +244,15 @@
 	,"sexy":"i_rude"
 	,"smoking":"i_rude"
 	,"kissable":"i_rude"
+	,"craving kiss":"i_rude"
 
+
+	,"Ill write that up.":"i_close"
+	,"Ill write that up.":"i_close"
+
+	,"glutten free option":"i_noglutten"
+	,"glutten free":"i_noglutten"
+	,"no glutten":"i_noglutten"
 
 
 }

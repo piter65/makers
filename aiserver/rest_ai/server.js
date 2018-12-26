@@ -11,6 +11,7 @@ var act_10 = require('./act_10');
 var act_20 = require('./act_20');
 var act_22 = require('./act_22');
 var act_30 = require('./act_30');
+var act_32 = require('./act_32');
 
 
 
@@ -92,7 +93,7 @@ app.get('/ai', function(req, res)
 	}
 
 	logger.log("_story_Player:'"+state.result.text_origin+"'")
-	logger.log("\tQuery 'text': " + state.result.text);
+//	logger.log("\tQuery 'text': " + state.result.text);
 
 	parse_pass_1(state);
 
@@ -189,6 +190,11 @@ function process(state)
 		case 30:
 			state = act_30.process(state);
 			break;
+		case 32:
+			state = act_32.process(state);
+			break;
+
+
 
 		default:
 			state.result.error = 'Act Out of Range';

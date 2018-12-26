@@ -4,6 +4,13 @@
 	," a ":" "
 	," an ":" "
 	," the ":" "
+	," am ":" "
+
+	," trifle ":" "
+	," tiny bit ":" "
+	," bit ":" "
+	," just little ":" "
+
 
 	,"can i ":"may i "
 	,"what is":"whats"
@@ -16,6 +23,10 @@
 	,"do you know":"understand"
 	,"did you know":"understand"
 	,"can you believe":"understand"
+
+	,"piece":"slice"
+
+	,"wheat allergy":"glutten reaction"
 
 	,"love":"craving"
 	,"like":"craving"
@@ -96,11 +107,14 @@
 	,"curvy":"slutty"
 	,"the bomb":"slutty"
 
+
 	,"you look":"yoube"
 	,"you are":"yoube"
 	,"you appear":"yoube"
 	,"you seem":"yoube"
 
+	,"yoube like":"yoube"
+	,"yoube bit ":"yoube "
 
 	,"hearts desire":"desire"
 	,"enjoy":"desire"

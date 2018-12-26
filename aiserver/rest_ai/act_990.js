@@ -5,7 +5,7 @@ exports.process = function(state)
 {
 	 logger.log('ACT 10 - start');
 
-	if (   state.result.intent == 'i_compliment')
+	if (   state.result.entities.includes( 'i_compliment') )
 	{
 		if (state.session.count_compliment_dress == 0)
 		{
@@ -66,7 +66,7 @@ exports.process = function(state)
 		}
 	}
 	else
-	if (   state.result.intent == 'i_smalltalk'
+	if (   state.result.entities.includes( 'i_smalltalk')
 		&& state.result.entities.includes('sports'))
 	{
 		{
@@ -77,7 +77,7 @@ exports.process = function(state)
 		}
 	}
 	else
-	if (   state.result.intent == 'i_smalltalk'
+	if (   state.result.entities.includes( 'i_smalltalk')
 		&& state.result.entities.includes('weather'))
 	{
 		{
@@ -88,7 +88,7 @@ exports.process = function(state)
 		}
 	}
 	else
-	if (state.result.intent == 'i_greeting')
+	if (state.result.entities.includes( 'i_greeting') )
 	{
 		{
 			state.result.code = 'rp_990_90';
@@ -100,7 +100,7 @@ exports.process = function(state)
 		++state.session.count_greeting;
 	}
 	else
-	if (state.result.entities.includes('rude'))
+	if (state.result.entities.includes('i_rude'))
 		{
 			state.result.code = 'rp_990_70';
 			state.result.reply = 'Um, I not quite comfortable with that.';

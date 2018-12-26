@@ -1,16 +1,22 @@
 var logger = require('./logger');
 var act_990 = require('./act_990');
 
+// In this act, the player has decided on the sausage, but is not sure of the veggie.
+
 exports.process = function(state)
 {
    logger.log('ACT 22 - start');
 
 
-   	if (state.result.entities.includes('e_mushroom') )
+   	if (state.result.entities.includes('e_mushroom')
+   							||
+				(state.session.count_tries>=3)
+   	 )
 		{
 			state.result.code = 'rp_10_30';
 			state.result.reply = 'Yeah, thats about right. Ill have a slice of sausage and mushroom';
 			state.session.act = 30;  // move on!
+			state.choicedone = true;
 		}
    	else if (	
    			state.result.entities.includes('e_meat') ||
@@ -21,11 +27,12 @@ exports.process = function(state)
 		{
 			state.result.code = 'rp_10_30';
 			state.result.reply = 'Arent you listening, I want sausage and a veggie';
+			state.session.count_tries++;
 		}
    	else if (	
    			state.result.entities.includes('e_crap') ||
    			state.result.entities.includes('e_dog') ||
-   			state.result.intent== 'i_insult'
+   			state.result.entities.includes( 'i_insult' )
    		)
 		{
 			state.result.code = 'rp_10_30';
@@ -40,6 +47,7 @@ exports.process = function(state)
 			state.result.code = 'rp_10_30';
 			state.result.reply = 'Almost, you know what I think. Ill have a slice of sausage and mushroom';
 			state.session.act = 30;  // move on!
+			state.choicedone = true;
 
 		}
 	else
