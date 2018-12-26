@@ -100,7 +100,7 @@ exports.process = function(state)
 		++state.session.count_greeting;
 	}
 	else
-	if (state.result.entities.includes('i_rude'))
+	if (state.result.entities.includes('e_rude'))
 		{
 			state.result.code = 'rp_990_70';
 			state.result.reply = 'Um, I not quite comfortable with that.';
