@@ -55,6 +55,7 @@
 	,"what are you in the mood for":"i_offerhelp"
 	,"whats your order":"i_offerhelp"
 	,"what's your order":"i_offerhelp"
+	,"what would you like to order":"i_offerhelp"
 	,"pizza are you craving":"i_offerhelp"
 	,"what you craving":"i_offerhelp"
 	,"what can I get you":"i_offerhelp"
@@ -242,11 +243,13 @@
 	,"you look like crap":"i_insult"
 	,"you look fat":"i_insult"
 
-	,"hot ass":"i_rude"
-	,"sexy":"i_rude"
-	,"smoking":"i_rude"
-	,"kissable":"i_rude"
-	,"craving kiss":"i_rude"
+	,"hot ass":"e_rude"
+	,"sexy":"e_rude"
+	,"smoking":"e_rude"
+	,"kissable":"e_rude"
+	,"craving kiss":"e_rude"
+	,"craving body":"e_rude"
+	,"craving your smile":"e_rude"
 
 
 	,"Ill write that up.":"i_close"

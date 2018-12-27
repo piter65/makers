@@ -49,4 +49,6 @@ Temporary Items
 # My Ignores
 Library
 Temp
+obj
+.vs
 .suo

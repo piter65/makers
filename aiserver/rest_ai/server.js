@@ -13,7 +13,12 @@ var act_22 = require('./act_22');
 var act_30 = require('./act_30');
 var act_32 = require('./act_32');
 
-
+// This function will work so long as 'obj' 
+//   does not contain any cyclic references.
+function deepClone(obj)
+{
+	return JSON.parse(JSON.stringify(obj));
+}
 
 // var state =
 // {
@@ -70,13 +75,14 @@ app.get('/ai', function(req, res)
 	// If the state is unset, initialize 
 	//   it with the default session data.
 	if (!state.session)
-		state.session = _.clone(state_templates.session_defaults);
+		state.session = deepClone(state_templates.session_defaults);
 
 	// Reset the state's result data.
-	state.result = _.clone(state_templates.result_defaults);
+	state.result = deepClone(state_templates.result_defaults);
 	logger.log("\tResult - Start: \n" + JSON.stringify(state.result, null, 4));
 
-	state.result.entities=[];		// peter was here.  BC double check
+	// BChance: Shouldn't be needed anymore.
+	// state.result.entities=[];		// peter was here.  BC double check
 
 	state.result.text_origin = req.query.text.toLowerCase();
 	state.result.text = state.result.text_origin;
@@ -113,12 +119,7 @@ app.get('/ai', function(req, res)
 		case 'system newgame':
 		case 'newgame':
 			// Reset the session.
-			state.session = _.clone(state_templates.session_defaults);
-// Brent, I'm assuming the line above resets defaults?
-// Looks like entities list is not always reset...
-
-
-
+			state.session = deepClone(state_templates.session_defaults);
 			state.result.code = 'rp_0_10';
 			state.result.reply = 'new game started\nHi.  Great looking uniform you got.';
 			break;
@@ -136,11 +137,11 @@ app.get('/ai', function(req, res)
 			break;
 	}
 
+	state.result.success = true;
+
 	logger.log("\tResult: \n" + JSON.stringify(state.result, null, 4));
 	logger.log("_story_AI:'"+state.result.reply+"'");
 
-
-	state.result.success = true;
 	res.send(state.result);
 });
 
