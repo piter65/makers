@@ -1,11 +1,23 @@
 {
 	"syns are supposed to simplify language.  beautiful=pretty.":"Generally reduce permutations"
 
+
+	,"glutten":"gluten"
+
+
 	,"c1":"order please"
 	,"c2":"sausage and mushroom"
-	,"c3":"glutten free options"
-	,"c4":"glutten free options"
+	,"c3":"gluten free options"
+	,"c4":"gluten free options"
 	,"c5":"sausage and mushroom"
+	,"c6":"sausage, mushroom, and gluten free"
+
+
+	,"d1":"may I take your order"
+	,"d2":"sausage and mushroom"
+	,"d3":"glad we decided"
+	,"d4":"allergies"
+	,"d5":"sausage, mushroom, and gluten free"
 
 
 
@@ -51,7 +63,7 @@
 
 	,"piece":"slice"
 
-	,"wheat allergy":"glutten reaction"
+	,"wheat allergy":"gluten reaction"
 
 	,"love":"craving"
 	,"like":"craving"

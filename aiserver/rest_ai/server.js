@@ -12,7 +12,7 @@ var act_20 = require('./act_20');
 var act_22 = require('./act_22');
 var act_30 = require('./act_30');
 var act_32 = require('./act_32');
-var act_40 = require('./act_32');
+var act_40 = require('./act_40');
 
 // This function will work so long as 'obj' 
 //   does not contain any cyclic references.
@@ -119,8 +119,8 @@ app.get('/ai', function(req, res)
 			break;
 		case 'system state':
 			state.result.code = 'rp_0_0';
-			// state.result.reply = 'ACT:'+state.session.act;
-			state.result.reply = 'SYSTEM STATE:\n' + JSON.stringify(state_prev, null, 4);
+			state.result.reply = 'ACT:'+state.session.act+'\n';
+			state.result.reply += JSON.stringify(state_prev, null, 4);
 			break;
 		case 'howdy':
 			state.result.code = 'rp_0_99';
@@ -193,7 +193,6 @@ function process(state)
 			state = act_30.process(state);
 			break;
 		case 32:
-			logger.log('Dis is 32!');
 			state = act_32.process(state);
 			break;
 		case 40:
