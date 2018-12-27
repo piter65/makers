@@ -1,6 +1,14 @@
 {
 	"syns are supposed to simplify language.  beautiful=pretty.":"Generally reduce permutations"
 
+	,"c1":"order please"
+	,"c2":"sausage and mushroom"
+	,"c3":"glutten free options"
+	,"c4":"glutten free options"
+	,"c5":"sausage and mushroom"
+
+
+
 	," a ":" "
 	," an ":" "
 	," the ":" "
@@ -10,11 +18,28 @@
 	," tiny bit ":" "
 	," bit ":" "
 	," just little ":" "
-
+	," probably ":" "
+	," consider ":" "
+	," very ":" "
 
 	,"can i ":"may i "
 	,"what is":"whats"
 	,"what's":"whats"
+	,"that is":"thats"
+	,"that's":"thats"
+
+	,"never":"not"
+
+	,"shouldn't":"shouldnt"
+	,"shouldnt eat":"should skip"
+	,"shouldnt have":"should skip"
+	,"should avoid":"should skip"
+
+	,"i appreciate that":"thankyou"
+	,"thats nice of you":"thankyou"
+	,"thats kind of you":"thankyou"
+	,"nice of you":"thankyou"
+	,"kind of you":"thankyou"
 
 	,"idioms are early":"so exacting phrases are exactly translated"
 	,"grab bull by horns":"decide"
@@ -51,6 +76,9 @@
 	,"slice of pizza pie":"slice"
 	,"slice":"slice"
 
+	,"you should skip slice":"nopizza"
+
+
 	,"the ":""
 
 	," any ":" "
@@ -60,8 +88,8 @@
 	," to order":" your order"
 	," would you":" you"
 	," for you":" you"
-	,"i think ":""
-	,"i believe ":""
+	,"i think":""
+	,"i believe":""
 
 	
 	,"tell me your":"tellme"

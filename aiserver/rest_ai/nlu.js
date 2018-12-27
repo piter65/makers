@@ -17,7 +17,11 @@ exports.intents =
 	'i_insult',
 	'i_nothing',
 	'i_sorry',
-	'i_noglutten',
+	'i_nopizza',
+	'i_5sec',
+	'i_9sec',
+
+
 ];
 
 exports.entities =
@@ -38,6 +42,8 @@ exports.entities =
 	'e_rude',
 	'e_crap',
 	'e_cuss',
+	'e_noglut',
+
 ];
 
 exports.process = function(state)

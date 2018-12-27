@@ -3,7 +3,7 @@ var randomInt = require('random-int');
 
 exports.process = function(state)
 {
-	 logger.log('ACT 10 - start');
+	 logger.log('ACT 99 - start');
 
 	if (   state.result.entities.includes( 'i_compliment') )
 	{
@@ -106,7 +106,12 @@ exports.process = function(state)
 			state.result.reply = 'Um, I not quite comfortable with that.';
 			state.session.trust += -1;
 		}
-
+	else if (state.result.entities.includes( 'i_9sec') )
+		{
+			state.result.code = 'rp_990_86';
+			state.result.reply = 'I wont be visiting here again.  Good day.';
+		   	state.session.game_over = true;
+		}
 	else
 	// if (state.result.text.includes('unintelligible'))
 	{

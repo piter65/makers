@@ -15,9 +15,8 @@
 
 	,"thankyou":"i_thankyou"
 	,"thank you":"i_thankyou"
-	,"i appreciate that":"i_thankyou"
-	,"thats very nice of you":"i_thankyou"
-	,"thats very nice of you":"i_thankyou"
+
+
 	,"thanks":"i_thankyou"
 
 	,"gracias":"i_thankyou"
@@ -106,7 +105,10 @@
 	,"hello":"i_greeting"
 
 
+	,"nopizza":"i_nopizza"
 
+	,"5sec":"i_5sec"
+	,"9sec":"i_9sec"
 
 	,"combination":"e_combo"
 	,"deluxe":"e_combo"
@@ -224,6 +226,10 @@
 	,"glutten":"i_dietary"
 	,"Are you vegetarian":"i_dietary"
 	,"Are you vegan":"i_dietary"
+
+	,"i_dietary free":"e_noglut"
+
+
 
 
 	,"make up your mind":"e_rude i_nothing"

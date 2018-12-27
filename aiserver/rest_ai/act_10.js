@@ -65,7 +65,20 @@ exports.process = function(state)
 			state.result.reply = 'Im not sure I like this place or you.';
 		state.session.trust -= 2;
 		}
-
+	else
+	if (state.result.entities.includes( 'i_5sec') )
+		{
+			state.result.code = 'rp_10_85';
+			state.result.reply = 'Are you gonna take my order or something?';
+			state.session.trust -= 2;
+		}
+	else
+	if (state.result.entities.includes( 'i_9sec') )
+		{
+			state.result.code = 'rp_10_85';
+			state.result.reply = 'The service here stinks. Im gone.';
+			state.session.game_over = true;
+		}
 
 	else
 	{

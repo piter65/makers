@@ -6,22 +6,31 @@ var act_990 = require('./act_990');
 
 exports.process = function(state)
 {
-   logger.log('ACT 32 - start');
+   logger.log('ACT 32 - start after christmas');
 
 
- 	if (state.result.entities.includes('e_noglutten')
- 					||
- 				(true)
-
-
+ 	if (state.result.entities.includes('e_noglut')
  		)
    	{
-			state.result.code = 'rp_32_00';
+			state.result.code = 'rp_32_99';
 			state.result.reply =
 			"A no gluten option? Oh, that's fantastic.  Lets do that!  Can you write up my order?"
 			state.session.act = 40;  // move on!
    	}
 
+   	else
+ 	if (state.result.entities.includes('i_nopizza') 
+ 		    ||
+ 		state.result.entities.includes( 'i_5sec')
+ 		    ||
+ 		state.result.entities.includes( 'e_rude')		    
+ 		)
+   	{
+			state.result.code = 'rp_32_99';
+			state.result.reply ="I guess this was a bad idea.  Thanks for your time."
+			state.session.trust += -3;
+			state.session.game_over = true;
+   	}
 
 	else
 	{

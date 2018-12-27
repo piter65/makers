@@ -12,6 +12,7 @@ var act_20 = require('./act_20');
 var act_22 = require('./act_22');
 var act_30 = require('./act_30');
 var act_32 = require('./act_32');
+var act_40 = require('./act_32');
 
 // This function will work so long as 'obj' 
 //   does not contain any cyclic references.
@@ -121,13 +122,22 @@ app.get('/ai', function(req, res)
 			// Reset the session.
 			state.session = deepClone(state_templates.session_defaults);
 			state.result.code = 'rp_0_10';
-			state.result.reply = 'new game started\nHi.  Great looking uniform you got.';
+			state.result.reply = "new game started\nHi. I Great looking uniform you got.";
 			break;
 		case 'system test':
 		case 'system check':
 			state.result.code = 'rp_0_0';
 			state.result.reply = 'system is functional';
 			break;
+		case 'system state':
+// BChance    If you can easily display last list of intents/entities/whatever list here,
+// it would be really helpful to Jeff as he can't see server.
+			state.result.code = 'rp_0_0';
+			state.result.reply = 'ACT:'+state.session.act;
+			break;
+
+
+
 		case 'howdy':
 			state.result.code = 'rp_0_99';
 			state.result.reply = 'Hey there cowboy';
@@ -194,9 +204,12 @@ function process(state)
 			state = act_30.process(state);
 			break;
 		case 32:
+			logger.log('Dis is 32!');
 			state = act_32.process(state);
 			break;
-
+		case 40:
+			state = act_40.process(state);
+			break;
 
 
 		default:
