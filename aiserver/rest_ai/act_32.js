@@ -9,7 +9,7 @@ exports.process = function(state)
    logger.log('ACT 32 - start after christmas');
 
 
- 	if (state.result.entities.includes('e_noglut')
+ 	if (state.result.tokens.includes('e_noglut')
  		)
    	{
 			state.result.code = 'rp_32_99';
@@ -19,11 +19,11 @@ exports.process = function(state)
    	}
 
    	else
- 	if (state.result.entities.includes('i_nopizza') 
+ 	if (state.result.tokens.includes('i_nopizza') 
  		    ||
- 		state.result.entities.includes( 'i_5sec')
+ 		state.result.tokens.includes( 'i_5sec')
  		    ||
- 		state.result.entities.includes( 'e_rude')		    
+ 		state.result.tokens.includes( 'e_rude')		    
  		)
    	{
 			state.result.code = 'rp_32_99';

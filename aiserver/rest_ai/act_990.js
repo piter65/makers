@@ -5,7 +5,7 @@ exports.process = function(state)
 {
 	 logger.log('ACT 99 - start');
 
-	if (   state.result.entities.includes( 'i_compliment') )
+	if (   state.result.tokens.includes( 'i_compliment') )
 	{
 		if (state.session.count_compliment_dress == 0)
 		{
@@ -24,7 +24,7 @@ exports.process = function(state)
 		++state.session.count_compliment_dress;
 	}
 	else
-	if (state.result.entities.includes('i_insult'))
+	if (state.result.tokens.includes('i_insult'))
 	{
 		if (state.session.count_insult == 0)
 		{
@@ -43,7 +43,7 @@ exports.process = function(state)
 		++state.session.count_insult;
 	}
 	else
-	if (state.result.entities.includes('i_superinsult'))
+	if (state.result.tokens.includes('i_superinsult'))
 	{
 		{
 			state.result.code = 'rp_990_40';
@@ -55,7 +55,7 @@ exports.process = function(state)
 		++state.session.count_insult;
 	}
 	else
-	if (state.result.entities.includes('e_cuss'))
+	if (state.result.tokens.includes('e_cuss'))
 	{
 		{
 			state.result.code = 'rp_990_50';
@@ -66,8 +66,8 @@ exports.process = function(state)
 		}
 	}
 	else
-	if (   state.result.entities.includes( 'i_smalltalk')
-		&& state.result.entities.includes('sports'))
+	if (   state.result.tokens.includes( 'i_smalltalk')
+		&& state.result.tokens.includes('sports'))
 	{
 		{
 			state.result.code = 'rp_990_60';
@@ -77,8 +77,8 @@ exports.process = function(state)
 		}
 	}
 	else
-	if (   state.result.entities.includes( 'i_smalltalk')
-		&& state.result.entities.includes('weather'))
+	if (   state.result.tokens.includes( 'i_smalltalk')
+		&& state.result.tokens.includes('weather'))
 	{
 		{
 			state.result.code = 'rp_990_70';
@@ -88,7 +88,7 @@ exports.process = function(state)
 		}
 	}
 	else
-	if (state.result.entities.includes( 'i_greeting') )
+	if (state.result.tokens.includes( 'i_greeting') )
 	{
 		{
 			state.result.code = 'rp_990_90';
@@ -100,13 +100,13 @@ exports.process = function(state)
 		++state.session.count_greeting;
 	}
 	else
-	if (state.result.entities.includes('e_rude'))
+	if (state.result.tokens.includes('e_rude'))
 		{
 			state.result.code = 'rp_990_70';
 			state.result.reply = 'Um, I not quite comfortable with that.';
 			state.session.trust += -1;
 		}
-	else if (state.result.entities.includes( 'i_9sec') )
+	else if (state.result.tokens.includes( 'i_9sec') )
 		{
 			state.result.code = 'rp_990_86';
 			state.result.reply = 'I wont be visiting here again.  Good day.';

@@ -9,9 +9,9 @@ exports.process = function(state)
    logger.log('ACT 40 - start');
 
 
- 	if ( ( state.result.entities.includes('e_noglut') &&
- 		state.result.entities.includes('e_sausage') &&
- 		state.result.entities.includes('e_mushroom')
+ 	if ( ( state.result.tokens.includes('e_noglut') &&
+ 		state.result.tokens.includes('e_sausage') &&
+ 		state.result.tokens.includes('e_mushroom')
  		)
    	{
 			state.result.code = 'rp_40_99';
@@ -23,8 +23,8 @@ exports.process = function(state)
 
    	else
  	if (
- 		state.result.entities.includes('e_sausage') &&
- 		state.result.entities.includes('e_mushroom')
+ 		state.result.tokens.includes('e_sausage') &&
+ 		state.result.tokens.includes('e_mushroom')
  		)
    	{
 			state.result.code = 'rp_40_99';

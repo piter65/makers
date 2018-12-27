@@ -9,9 +9,9 @@ exports.process = function(state)
    logger.log('ACT 30 - start');
 
 
-//  	if (state.result.entities.includes('e_close') ||
+//  	if (state.result.tokens.includes('e_close') ||
 
-   	if (state.result.entities.includes( 'i_5sec') )
+   	if (state.result.tokens.includes( 'i_5sec') )
 		{
 			state.result.code = 'rp_30_99';
 			state.result.reply = "I'm changing my mind,  last time I had pizza, I think I had a bad reaction.  Im suspicious it might be the gluten.";

@@ -9,6 +9,8 @@ launch server WITH logging:
 	sudo -i
 	cd /home/ubuntu/rest_ai
 	node server |& tee debug.log &
+(ref):
+	https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
 
 launch server WITHOUT logging:
 	sudo -i
@@ -23,6 +25,9 @@ kill specific server instance:
 
 kill all server instances:
 	sudo killall node
+
+get transcript of server log:
+	grep _story_ debug.log
 
 
 SCP:

@@ -49,25 +49,25 @@ exports.entities =
 exports.process = function(state)
 {
 	const self = this;
-	logger.log('nlu: %s', JSON.stringify(self, null, 4));
+	// logger.log('nlu: %s', JSON.stringify(self, null, 4));
 
 	for (var index_intent = 0; index_intent < self.intents.length; ++index_intent)
 	{
 		var intent = self.intents[index_intent];
 		if (state.result.text.includes(intent))
-			state.result.entities.push(intent);
+			state.result.tokens.push(intent);
 	}
 
 	for (var index_entity = 0; index_entity < self.entities.length; ++index_entity)
 	{
 		var entity = self.entities[index_entity];
 		if (state.result.text.includes(entity))
-			state.result.entities.push(entity);
+			state.result.tokens.push(entity);
 	}
 
 	logger.log('NLU - processed:');
 	// logger.log('\tIntent: %s', state.result.intent);
-	logger.log('\tEntities: %s', JSON.stringify(state.result.entities).replace('\n', '\n\t'));
+	logger.log('\tTokens: %s', JSON.stringify(state.result.tokens).replace('\n', '\n\t'));
 
 	return state;
 };

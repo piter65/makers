@@ -16,7 +16,6 @@ exports.result_defaults =
 	text_origin: null,
 	text: null,
 	reply: null,
-	// intent: null,
-	entities: [],
+	tokens: [],
 	direction: null,
 };

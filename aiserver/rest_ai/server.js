@@ -21,18 +21,8 @@ function deepClone(obj)
 	return JSON.parse(JSON.stringify(obj));
 }
 
-// var state =
-// {
-// 	intents: [],
-// 	entities: [],
-// 	direction: null,
-// 	act: 10,
-// 	trust: 0,
-// 	count_compliment_dress: 0,
-// 	count_insult: 0,
-// };
-
 var state = {};
+var state_prev = {};
 
 var is_dev = false;
 var port = 80;
@@ -45,7 +35,7 @@ logger.log_clear();
 var synonyms = {};
 {
 	var json = fs.readFileSync('syn1.json');
-// skip says peter	logger.log("Synonyms JSON:\n" + json);
+	//logger.log("Synonyms JSON:\n" + json);
 
 	synonyms = JSON.parse(json);
 }
@@ -54,7 +44,7 @@ var synonyms = {};
 var intents = {};
 {
 	var json = fs.readFileSync('intents.json');
-// skip says peter	logger.log("Intents JSON:\n" + json);
+	//logger.log("Intents JSON:\n" + json);
 
 	intents = JSON.parse(json);
 }
@@ -82,9 +72,6 @@ app.get('/ai', function(req, res)
 	state.result = deepClone(state_templates.result_defaults);
 	logger.log("\tResult - Start: \n" + JSON.stringify(state.result, null, 4));
 
-	// BChance: Shouldn't be needed anymore.
-	// state.result.entities=[];		// peter was here.  BC double check
-
 	state.result.text_origin = req.query.text.toLowerCase();
 	state.result.text = state.result.text_origin;
 
@@ -100,7 +87,7 @@ app.get('/ai', function(req, res)
 	}
 
 	logger.log("_story_Player:'"+state.result.text_origin+"'")
-//	logger.log("\tQuery 'text': " + state.result.text);
+	// logger.log("\tQuery 'text': " + state.result.text);
 
 	parse_pass_1(state);
 
@@ -113,6 +100,7 @@ app.get('/ai', function(req, res)
 	// Extract intent and entities.
 	nlu.process(state);
 
+	var backup_state = false;
 	switch (state.result.text)
 	{
 		case 'system restart':
@@ -130,24 +118,25 @@ app.get('/ai', function(req, res)
 			state.result.reply = 'system is functional';
 			break;
 		case 'system state':
-// BChance    If you can easily display last list of intents/entities/whatever list here,
-// it would be really helpful to Jeff as he can't see server.
 			state.result.code = 'rp_0_0';
-			state.result.reply = 'ACT:'+state.session.act;
+			// state.result.reply = 'ACT:'+state.session.act;
+			state.result.reply = 'SYSTEM STATE:\n' + JSON.stringify(state_prev, null, 4);
 			break;
-
-
-
 		case 'howdy':
 			state.result.code = 'rp_0_99';
 			state.result.reply = 'Hey there cowboy';
 			break;
 		default:
 			state = process(state);
+			backup_state = true;
 			break;
 	}
 
 	state.result.success = true;
+
+	// Save a backup of the current state if we're flagged to do so.
+	if (backup_state)
+		state_prev = deepClone(state);
 
 	logger.log("\tResult: \n" + JSON.stringify(state.result, null, 4));
 	logger.log("_story_AI:'"+state.result.reply+"'");

@@ -5,7 +5,7 @@ exports.process = function(state)
 {
 	logger.log('process act 10 - pa');
 
-	if (   state.result.entities.includes( 'i_thankyou') )
+	if (   state.result.tokens.includes( 'i_thankyou') )
 		{
 			state.result.code = 'rp_10_30';
 			state.result.reply = 'You are very welcome.';
@@ -14,10 +14,10 @@ exports.process = function(state)
 		}
 
 
-	else if (   state.result.entities.includes( 'i_greeting')
+	else if (   state.result.tokens.includes( 'i_greeting')
 		&& state.session.count_greeting == 0)
 	{
-		if (state.result.entities.includes('e_pizzeria'))
+		if (state.result.tokens.includes('e_pizzeria'))
 		{
 			state.result.code = 'rp_10_30';
 			state.result.reply = 'Hi! This seemed like a nice place to eat.';
@@ -25,7 +25,7 @@ exports.process = function(state)
 	//		state.session.act = 20;
 		}
 		else
-		if (state.result.entities.includes('e_rude'))
+		if (state.result.tokens.includes('e_rude'))
 		{
 			state.result.code = 'rp_10_50';
 			state.result.reply = 'That\'s not a nice way to greet a customer! Anyway, I\'d like a slice with no drink, but I can\'t decide on the topping. What do you suggest?';
@@ -44,7 +44,7 @@ exports.process = function(state)
 		++state.session.count_greeting;
 	}
 	else
-	if (state.result.entities.includes( 'i_offerhelp') )
+	if (state.result.tokens.includes( 'i_offerhelp') )
 	{
 		state.result.code = 'rp_10_60';
 		state.result.reply = 'I\'d like a slice with no drink, but I can\'t decide on the topping. What do you suggest?';
@@ -52,28 +52,28 @@ exports.process = function(state)
 		state.session.act = 20;  // move on!
 	}
 	else 
-	if (state.result.entities.includes( 'i_nothing') )
+	if (state.result.tokens.includes( 'i_nothing') )
 		{
 			state.result.code = 'rp_10_40';
 			state.result.reply = 'I was thinking about getting a slice.';
 
 		}
 	else
-	if (state.result.entities.includes( 'i_insult') )
+	if (state.result.tokens.includes( 'i_insult') )
 		{
 			state.result.code = 'rp_10_40';
 			state.result.reply = 'Im not sure I like this place or you.';
 		state.session.trust -= 2;
 		}
 	else
-	if (state.result.entities.includes( 'i_5sec') )
+	if (state.result.tokens.includes( 'i_5sec') )
 		{
 			state.result.code = 'rp_10_85';
 			state.result.reply = 'Are you gonna take my order or something?';
 			state.session.trust -= 2;
 		}
 	else
-	if (state.result.entities.includes( 'i_9sec') )
+	if (state.result.tokens.includes( 'i_9sec') )
 		{
 			state.result.code = 'rp_10_85';
 			state.result.reply = 'The service here stinks. Im gone.';
