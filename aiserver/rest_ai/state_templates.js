@@ -6,7 +6,7 @@ exports.session_defaults =
 	count_insult: 0,
 	count_greeting: 0,
 	count_tries: 0,
-	choicedone: false,
+	choice_done: false,
 	game_over: false,
 };
 

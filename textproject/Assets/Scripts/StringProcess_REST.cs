@@ -7,11 +7,37 @@ using Newtonsoft.Json.Linq;
 public class StringProcess_REST : MonoBehaviour
 {
 	public InputField input_text;
+	public string id_session = null;
+
+	private const string serverURL = @"http://localhost";
+	//private const string serverURL = @"http://54.202.22.196";
+
+	private IEnumerator Start()
+	{
+		Debug.LogFormat("Requesting Session Start...");
+
+		// Get a new session ID.
+		string strURL = serverURL + @"/ai/start-session";
+		using (UnityWebRequest www = UnityWebRequest.Get(strURL))
+		{
+			yield return www.SendWebRequest();
+
+			if (www.isNetworkError || www.isHttpError)
+			{
+				Debug.LogErrorFormat("ERROR - NETWORK: {0}", www.error);
+			}
+			else
+			{
+				id_session = www.downloadHandler.text;
+
+				Debug.LogFormat("Session Started. ID: {0}", id_session);
+			}
+		}
+	}
 
 	private IEnumerator GetReplyFromAI(string strValue)
 	{
-		//string strURL = @"http://localhost/ai/?text=" + strValue;
-		string strURL = @"http://54.202.22.196/ai/?text=" + strValue;
+		string strURL = serverURL + @"/ai/?id_session=" + id_session + "&text=" + strValue;
 
 		using (UnityWebRequest www = UnityWebRequest.Get(strURL))
         {

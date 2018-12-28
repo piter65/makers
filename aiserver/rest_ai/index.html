@@ -103,8 +103,25 @@ body
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
 
+var id_session = null;
+
 $(document).ready(function()
 {
+	// Request a new session with the server.
+	$.get("/ai/start-session", function(data, status)
+	{
+		console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
+
+		if (status != "success")
+		{
+			log_them("ERROR - NETWORK: " + status);
+		}
+		else
+		{
+			id_session = data;
+		}
+	});
+
 	// If enter key is pressed, trigger send button.
 	$('#input_text').keypress(function(e)
 	{
@@ -124,8 +141,12 @@ function send_to_ai()
 	var text = $input.val();
 
 	log_me(text);
-
-	$.get("/ai", {text: text}, function(data, status)
+	var query_vars =
+	{
+		id_session: id_session,
+		text: text
+	};
+	$.get("/ai", query_vars, function(data, status)
 	{
 		console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
 

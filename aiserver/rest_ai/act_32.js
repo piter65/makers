@@ -34,10 +34,7 @@ exports.process = function(state)
 
 	else
 	{
-		state = act_990.process(state);
+		act_990.process(state);
 	}
 	logger.log('ACT 32 - processed');
-
-
-	return state;
 };

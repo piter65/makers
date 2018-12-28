@@ -133,7 +133,4 @@ exports.process = function(state)
 	}
 
 	logger.log('ACT 990 - processed');
-
-
-	return state;
 };

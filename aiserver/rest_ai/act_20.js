@@ -13,7 +13,7 @@ exports.process = function(state)
 		state.result.code = 'rp_20_99';
 		state.result.reply = 'Yeah, thats about right. Ill have a slice of sausage and mushroom';
 		state.session.act = 30;  // move on!
-		state.choicedone = true;
+		state.session.choice_done = true;
 	}
 	else
 	if (   state.result.tokens.includes('e_mushroom')
@@ -22,7 +22,7 @@ exports.process = function(state)
 		state.result.code = 'rp_20_99';
 		state.result.reply = 'Mushrooms sound good. Ill have a slice of sausage and mushroom';
 		state.session.act = 30;  // move on!
-		state.choicedone = true;
+		state.result.choice_done = true;
 	}
 	else
 	if (state.result.tokens.includes('e_sausage'))
@@ -119,10 +119,8 @@ exports.process = function(state)
 	}
 	else
 	{
-		state = act_990.process(state);
+		act_990.process(state);
 	}
 
 	logger.log('ACT 20 - processed');
-
-	return state;
 };

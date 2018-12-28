@@ -23,9 +23,9 @@ exports.process = function(state)
 
 /*
  	if ( 
- 		state.result.entities.includes('e_noglut') &&
- 		state.result.entities.includes('e_sausage') &&
- 		state.result.entities.includes('e_mushroom')
+ 		state.result.tokens.includes('e_noglut') &&
+ 		state.result.tokens.includes('e_sausage') &&
+ 		state.result.tokens.includes('e_mushroom')
  		)
    	{
 
@@ -41,8 +41,8 @@ exports.process = function(state)
 
    	else
  	if (
- 		state.result.entities.includes('e_sausage') &&
- 		state.result.entities.includes('e_mushroom')
+ 		state.result.tokens.includes('e_sausage') &&
+ 		state.result.tokens.includes('e_mushroom')
  		)
    	{
 			state.result.code = 'rp_40_99';
@@ -51,10 +51,8 @@ exports.process = function(state)
    	}
 	else
 	{
-		state = act_990.process(state);
+		act_990.process(state);
 	}
 	logger.log('ACT 40 - processed');
 */
-
-	return state;
 };

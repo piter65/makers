@@ -13,7 +13,7 @@ exports.process = function(state)
 		state.result.code = 'rp_22_99';
 		state.result.reply = 'Yeah, thats about right. Ill have a slice of sausage and mushroom';
 		state.session.act = 30;  // move on!
-		state.choicedone = true;
+		state.result.choice_done = true;
 	}
 	else
 	if (   state.result.tokens.includes('e_meat')
@@ -40,15 +40,12 @@ exports.process = function(state)
 		state.result.code = 'rp_22_99';
 		state.result.reply = 'Almost, you know what I think. Ill have a slice of sausage and mushroom';
 		state.session.act = 30;  // move on!
-		state.choicedone = true;
+		state.result.choice_done = true;
 	}
 	else
 	{
-		state = act_990.process(state);
+		act_990.process(state);
 	}
 
 	logger.log('ACT 22 - processed');
-
-
-	return state;
 };
