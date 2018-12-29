@@ -1,0 +1,36 @@
+/*
+
+FACE:
+0	f_neutral		neutral
+1	f_smile		Smile with eyebrows up
+2	f_frown		Frown with eyebrows down
+3	f_confuse	Furrowed brow looking confused
+4	f_angry		angry
+5	f_sad     - isn't in doc
+		
+BODY
+0	b_normal	normal
+1	b_engage	lean forward with phone in left hand put right hand on counter. 
+2	b_bored		step back from counter removing right hand as if anoyed or bored
+3	b_tapping	tap on counter with right hand fingers left arm with phone at side
+4	b_phone		look at phone with right hand on counter like she is losing interest
+5	b_angry	 	Hands on hips and shaking head like she's annoyed or angry
+
+*/
+
+======PLAN A============
+
+'rp_10_30'
+'You are very welcome.:f_smile:b_normal:0';
+
+'rp_10_35'
+'Hi! This seemed like a nice place to eat.:f_smile:b_normal:0';
+
+======PLAN B============
+
+'rp_10_thanks'
+'rp_10_30:You are very welcome.:f_smile:b_normal:0';
+
+'rp_10_greet'
+'rp_10_35:Hi! This seemed like a nice place to eat.:f_smile:b_normal:0';
+

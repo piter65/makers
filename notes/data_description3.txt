@@ -1,0 +1,40 @@
+
+
+FACE:
+0	f_neutral		neutral
+1	f_smile		Smile with eyebrows up
+2	f_frown		Frown with eyebrows down
+3	f_confuse	Furrowed brow looking confused
+4	f_angry		angry
+5	f_sad     - isn't in doc
+		
+BODY
+0	b_normal	normal
+1	b_engage	lean forward with phone in left hand put right hand on counter. 
+2	b_bored		step back from counter removing right hand as if anoyed or bored
+3	b_tapping	tap on counter with right hand fingers left arm with phone at side
+4	b_phone		look at phone with right hand on counter like she is losing interest
+5	b_angry	 	Hands on hips and shaking head like she's annoyed or angry
+
+
+response id
+text in audio file correct way you want it displayed (" \n for line break can use <b></b> for bold<u></u>underline<i></i>italics<color =  hexidecimal></color>") 
+facial expression to use
+body animation to use
+seperated with :
+
+
+
+EXAMPLE Single Animation:
+rp_10_10:Hi there, you got a cool uniform!:f_smile:b_normal:0
+
+Proposed Dual Animiation - separated by miliseconds before animation switch.
+
+EXAMPLE Dual Animationf_:
+rp_20_20:Why thank you.  Now what should I eat?:f_smile:b_normal:2600:f_confuse:b_tapping:0
+
+(2600 = 2.6 seconds, 0=until end of animation)
+
+
+
+

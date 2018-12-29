@@ -4,6 +4,7 @@ const fs = require('fs');
 const util = require('util');
 const _ = require('underscore');
 const uuid_by_timestamp = require('uuid/v1')
+const strReplaceAll = require('str-replace-all')
 
 const state_templates = require('./state_templates');
 const logger = require('./logger');
@@ -40,14 +41,14 @@ var synonyms = {};
 	synonyms = JSON.parse(json);
 }
 
-// Load 'intents.json'.
-var intents = {};
-{
-	var json = fs.readFileSync('intents.json');
-	//logger.log("Intents JSON:\n" + json);
+// // Load 'intents.json'.
+// var intents = {};
+// {
+// 	var json = fs.readFileSync('intents.json');
+// 	//logger.log("Intents JSON:\n" + json);
 
-	intents = JSON.parse(json);
-}
+// 	intents = JSON.parse(json);
+// }
 
 
 var app = express();
@@ -142,12 +143,10 @@ app.get('/ai', function(req, res)
 	// logger.log("\tQuery 'text': " + state.result.text);
 
 	parse_pass_1(state);
-
 	logger.log("\tParse Pass 1 'text': " + state.result.text);
 
-	parse_pass_2(state);
-
-	logger.log("\tParse Pass 2 'text': " + state.result.text);
+	// parse_pass_2(state);
+	// logger.log("\tParse Pass 2 'text': " + state.result.text);
 
 	// Extract intent and entities.
 	nlu.process(state);
@@ -211,17 +210,18 @@ function parse_pass_1(state)
 	{
 		var value = synonyms[key];
 		state.result.text = state.result.text.replace(key, value);
+		state.result.text = strReplaceAll(key, value, state.result.text);
 	}
 }
 
-function parse_pass_2(state)
-{
-	for (var key in intents)
-	{
-		var value = intents[key];
-		state.result.text = state.result.text.replace(key, value);
-	}
-}
+// function parse_pass_2(state)
+// {
+// 	for (var key in intents)
+// 	{
+// 		var value = intents[key];
+// 		state.result.text = state.result.text.replace(key, value);
+// 	}
+// }
 
 function process(state)
 {

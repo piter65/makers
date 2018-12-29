@@ -9,8 +9,8 @@ Employee Guidebook.
      "Welcome to Paizanos, home of the best slice in town.  Can I take your order?"
 #3. Help confused customers explore their desires, "What type of slice would you like?"
 #4. Don't forget we have Vegan, Lactose Free, and Gluten Free options!
-#5. While service dogs are welcome, no other dogs allowed at Paizanos.
-#6. When the customer is finished orderring, always repeat back the order to the customer before preparing slice.
+#5. While service dogs are welcome, no other dogs are allowed at Paizanos.
+#6. When the customer is finished ordering, always repeat back the order to the customer before preparing to slice.
 #7. The customer is always right, and ANY choice of Paizano's pizza is always the PERFECT slice!
 
 Most Popular Meat Choices:

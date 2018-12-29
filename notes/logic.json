@@ -1,0 +1,23 @@
+{
+	"act_10":
+	[
+		{
+			 "if": "e_rude"
+			,"code": "rp_10_50_rude"
+			,"face": "f_frown"
+			,"body": "b_angry"
+			,"reply": "That's not a nice way to greet a customer! Anyway, I'd like a slice with no drink, but I can\'t decide on the topping. What do you suggest?"
+			,"trust": -1
+			,"act": 20
+		},
+		{
+			 "if": "i_multi e_condition"
+			,"code": "rp_80_10_example"
+			,"face": "f_smile"
+			,"body": "b_normal"
+			,"reply": "This is a response which triggers on multiple intents/entities."
+			,"trust": 100
+			,"act": 10
+		}
+	]
+}

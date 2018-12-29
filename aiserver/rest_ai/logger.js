@@ -1,5 +1,5 @@
-var fs = require('fs');
-var util = require('util');
+const fs = require('fs');
+const util = require('util');
 
 const log_path = '/debug.log';
 

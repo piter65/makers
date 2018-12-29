@@ -3,3 +3,4 @@ npm install path
 npm install random-int
 npm install underscore
 npm install uuid
+npm install str-replace-all
