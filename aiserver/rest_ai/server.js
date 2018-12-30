@@ -32,26 +32,13 @@ if (is_dev)
 
 logger.log_clear();
 
-// Load 'synonyms.json'.
-var synonyms = {};
-{
-	var json = fs.readFileSync('syn1.json');
-	//logger.log("Synonyms JSON:\n" + json);
-
-	synonyms = JSON.parse(json);
-}
-
-// // Load 'intents.json'.
-// var intents = {};
-// {
-// 	var json = fs.readFileSync('intents.json');
-// 	//logger.log("Intents JSON:\n" + json);
-
-// 	intents = JSON.parse(json);
-// }
+const subs_1 = JSON.parse(fs.readFileSync('subs_1.json'));
+const subs_2 = JSON.parse(fs.readFileSync('subs_2.json'));
+const subs_3 = JSON.parse(fs.readFileSync('subs_3.json'));
+const subs_4 = JSON.parse(fs.readFileSync('subs_4.json'));
 
 
-var app = express();
+const app = express();
 
 app.get('/', function(req, res)
 {
@@ -126,7 +113,7 @@ app.get('/ai', function(req, res)
 	logger.log("\tResult - Start: \n" + JSON.stringify(state.result, null, 4));
 
 	state.result.text_origin = req.query.text.toLowerCase();
-	state.result.text = state.result.text_origin;
+	state.result.text = ' ' + state.result.text_origin;
 
 	if(!state.result.text)
 	{
@@ -142,11 +129,17 @@ app.get('/ai', function(req, res)
 	logger.log("_story_Player:'"+state.result.text_origin+"'")
 	// logger.log("\tQuery 'text': " + state.result.text);
 
-	parse_pass_1(state);
-	logger.log("\tParse Pass 1 'text': " + state.result.text);
+	sub_pass(state, subs_1);
+	logger.log("\tSub Pass 1 'text': '%s'", state.result.text);
 
-	// parse_pass_2(state);
-	// logger.log("\tParse Pass 2 'text': " + state.result.text);
+	sub_pass(state, subs_2);
+	logger.log("\tSub Pass 2 'text': '%s'", state.result.text);
+	
+	sub_pass(state, subs_3);
+	logger.log("\tSub Pass 3 'text': '%s'", state.result.text);
+	
+	sub_pass(state, subs_4);
+	logger.log("\tSub Pass 4 'text': '%s'", state.result.text);
 
 	// Extract intent and entities.
 	nlu.process(state);
@@ -204,11 +197,11 @@ var server = app.listen(port, function()
 });
 
 
-function parse_pass_1(state)
+function sub_pass(state, subs)
 {
-	for (var key in synonyms)
+	for (var key in subs)
 	{
-		var value = synonyms[key];
+		var value = subs[key];
 		state.result.text = state.result.text.replace(key, value);
 		state.result.text = strReplaceAll(key, value, state.result.text);
 	}

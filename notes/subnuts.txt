@@ -1,0 +1,28 @@
+Request #1. Can we add a space at the start of any sentence?
+  so "thank you very much" 
+     becomes
+     " thank you very much"
+
+     This will help reduce false subs in certain cases.
+
+Request #2.  I think we could use 4=5 passes at subs.  (subs is probably better than syns)
+      subfirst.json = first obvious low risk permuutation or simplifications,
+                             articles, simple safe words (lousy->bad), etc.
+      sublits,json = literal substituions - idioms, early complex substitutions.
+            Jeff wants to help, and he can fill many of these out.
+      submid.json = This is where we start to get clever, similar to what we got now in syn1.
+   ----------- long termm, around this stage, eventually we might be using RITA/    to 
+   		look at part of speach, etc., for more intelligent parsing.
+      lastsub.json = This is where we put either clever fixes, or problem statements.
+
+      intents.json = similar to what we got now.
+
+Why so many layers?
+     division of tasks.   Right now, it's mostly a mess, and the order is in my
+  head for certain purposes.  
+     division of labor.   Jeff really wants to enter stuff, and I want him someplace safe and simple.
+     division of tasks 2. As we add smarter stuff, we have key places in the chain.
+     
+
+    
+                              
