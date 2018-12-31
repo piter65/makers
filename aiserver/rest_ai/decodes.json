@@ -1,5 +1,5 @@
 {
-	"rp_10_30_welcome":
+	"rp_10_welcome":
 	{
 		"text":
 			"You are very welcome."
@@ -13,7 +13,7 @@
 			}
 		]
 	}
-	,"rp_10_30_greet":
+	,"rp_10_greet":
 	{
 		"text":
 			"Hi! This seemed like a nice place to eat."
@@ -27,7 +27,7 @@
 			}
 		]
 	}
-	,"rp_10_40_first_time":
+	,"rp_10_first_time":
 	{
 		"text":
 			"Yep first time I've enterred the place."
@@ -41,7 +41,7 @@
 			}
 		]
 	}
-	,"rp_10_40_customer_initiates":
+	,"rp_10_customer_initiates":
 	{
 		"text":
 			"I was thinking about getting a slice."
@@ -55,7 +55,7 @@
 			}
 		]
 	}
-	,"rp_10_40_insulted":
+	,"rp_10_insulted":
 	{
 		"text":
 			"I'm not sure I like this place or you."
@@ -69,7 +69,7 @@
 			}
 		]
 	}
-	,"rp_10_50_rude":
+	,"rp_10_rude":
 	{
 		"text":
 			"That's not a nice way to greet a customer! Anyway, I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?"
@@ -89,7 +89,7 @@
 			}
 		]
 	}
-	,"rp_10_60_offeredhelp":
+	,"rp_10_offeredhelp":
 	{
 		"text":
 			"I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?"
@@ -103,7 +103,7 @@
 			}
 		]
 	}
-	,"rp_10_85_impatient":
+	,"rp_10_impatient":
 	{
 		"text":
 			"Are you gonna take my order or something?"
@@ -117,7 +117,7 @@
 			}
 		]
 	}
-	,"rp_10_86_fed_up":
+	,"rp_10_fed_up":
 	{
 		"text":
 			"The service here stinks. I'm gone."
