@@ -1,7 +1,6 @@
 const logger = require('./logger');
 const fs = require('fs');
 const util = require('util');
-const randomInt = require('random-int');
 
 exports.code_data = JSON.parse(fs.readFileSync('decodes.json'));
 

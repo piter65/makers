@@ -16,11 +16,6 @@ const act_30 = require('./act_30');
 const act_32 = require('./act_32');
 const act_40 = require('./act_40');
 
-var string1="";
-var string2="";
-var string3="";
-
-
 // This function will work so long as 'obj' 
 //   does not contain any cyclic references.
 function deepClone(obj)
@@ -131,27 +126,24 @@ app.get('/ai', function(req, res)
 		return;
 	}
 
-	logger.log("_story_Player:'"+state.result.text_origin+"'")
-	// logger.log("\tQuery 'text': " + state.result.text);
+	logger.log("_story_Player: '%s'", state.result.text_origin);
 
 	sub_pass(state, subs_1);
 	logger.log("\tSub Pass 1 'text': '%s'", state.result.text);
-	ling1=string1;   // peter being lazy
-	string1=state.result.text;			// for system
+	state.result.text_1 = state.result.text;
 
 	sub_pass(state, subs_2);
 	logger.log("\tSub Pass 2 'text': '%s'", state.result.text);
-	ling2=string2;   // peter being lazy
-	string2=state.result.text;			// for system
+	state.result.text_2 = state.result.text;
 
 
 	sub_pass(state, subs_3);
 	logger.log("\tSub Pass 3 'text': '%s'", state.result.text);
-	ling3=string3;  // peter being lazy	
-	string3=state.result.text;			// for system
+	state.result.text_3 = state.result.text;
 
 	sub_pass(state, subs_4);
 	logger.log("\tSub Pass 4 'text': '%s'", state.result.text);
+	// state.result.text_4 = state.result.text;
 
 	
 	// Extract intent and entities.
@@ -179,12 +171,6 @@ app.get('/ai', function(req, res)
 		case 'system last':
 			state.result.code = 'rp_0_0';
 			state.result.reply = 'ACT:'+state.session.act+'\n';
-			state.result.reply += '1:'+ling1+'\n';
-			state.result.reply += '2:'+ling2+'\n';
-// peter is thinking reply4 = result.  3 might be better.
-			state.result.reply += '3:'+ling3+'\n';
-
-
 			state.result.reply += JSON.stringify(state_prev, null, 4);
 			break;
 		case 'howdy':
