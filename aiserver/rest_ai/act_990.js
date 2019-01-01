@@ -106,14 +106,14 @@ exports.process = function(state)
 	else
 	if (state.result.tokens.length > 0)
 	{
-		state.result.code = 'rp_990_non_seq';  // not germane.
+		state.result.code = 'rp_990_nonseq';  // not germane.
 		state.session.game_over = true;
 	}
 
 	// Input not understood.
 	else
 	{
-			state.result.code = 'rp_990_not_understand';  //'I wont be visiting here again.  Good day.';
+			state.result.code = 'rp_990_not_understand';  // hard of hearing
 			logger.log('_fail_\''+ state.result.text_origin+'\'');
 	}
 

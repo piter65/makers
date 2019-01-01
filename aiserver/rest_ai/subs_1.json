@@ -7,7 +7,6 @@
 	,"glutten":"gluten"
 
 
-
 	," a ":" "
 	," an ":" "
 	," the ":" "
@@ -28,18 +27,17 @@
 	," bit ":" "
 	," just little ":" "
 	," probably ":" "
-	," consider ":" "
 	," very ":" "
+
+	,"should not":"shouldnt"
+	,"wouldnt":"shouldnt"
+	,"would not":"shouldnt"
 
 	," can i ":" may i "
 	," what is ":" whats "
-	," what's ":" whats "
 	," that is ":" thats "
 	," that's ":" thats "
 	," i will ":" ill "
-	," i'll ":" ill "
-
-
-	,"shouldn't":"shouldnt"
+	," you would ":" youd "
 
 }

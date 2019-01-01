@@ -20,42 +20,48 @@
 	,"d5":"sausage, mushroom, and gluten free"
 
 
+	," i think ":" "
+	," i believe ":" "
+	," any ":" "
+	," some ":" "
+	," which ":" "
 
-	," a ":" "
-	," an ":" "
-	," the ":" "
-	," am ":" "
-
-	," trifle ":" "
-	," tiny bit ":" "
-	," bit ":" "
-	," just little ":" "
-	," probably ":" "
-	," consider ":" "
-	," very ":" "
 
 	,"can i ":"may i "
 	,"what is":"whats"
-	,"what's":"whats"
 	,"that is":"thats"
-	,"that's":"thats"
+
 
 	,"never":"not"
+	,"should not":"shouldnt"
 
-	,"shouldn't":"shouldnt"
 	,"shouldnt eat":"should skip"
 	,"shouldnt have":"should skip"
 	,"should avoid":"should skip"
+
+	,"you look ":"yoube "
+	,"you are ":"yoube "
+	,"you appear ":"yoube "
+	,"you seem ":"yoube "
+
+	,"yoube like ":"yoube "
+	,"yoube bit ":"yoube "
+
+	,"we are ":"webe "
+	,"we're ":"webe "
+	,"we pride ourselves ":"webe "
+	,"we're proud ":"webe "
+	,"we are proud ":"webe "
 
 	,"i appreciate that":"thankyou"
 	,"thats nice of you":"thankyou"
 	,"thats kind of you":"thankyou"
 	,"nice of you":"thankyou"
 	,"kind of you":"thankyou"
+	,"so very nice of you":"thankyou"
+	,"very nice of you":"thankyou"
 
 	,"idioms are early":"so exacting phrases are exactly translated"
-	,"grab bull by horns":"decide"
-	,"let cat out of bag":"reveal"
 
 	,"do you know":"understand"
 	,"did you know":"understand"
@@ -76,13 +82,18 @@
 	,"want":"craving"
 	,"wanna":"craving"
 
-	,"your big eyes":"body"
-	,"your thighs":"body"
+
+	," big eyes ":" body "
+	," thighs ":" body "
+	," body ":" body "
+	," eyes ":" body "
+	," butt ":" body "
+	," breast ":" body "
+	," hair ":" body "
+	," hips ":" body "
+
 	,"your body":"body"
-	,"your eyes":"body"
-	,"your butt":"body"
-	,"your breast":"body"
-	,"your hair":"body"
+	
 
 	,"slice of pie":"slice"
 	,"slice of pizza pie":"slice"
@@ -90,20 +101,10 @@
 
 	,"you should skip slice":"nopizza"
 
-
-	,"the ":""
-
-	," any ":" "
-	," some ":" "
-
-	," which ":" "
 	," to order":" your order"
 	," would you":" you"
 	," for you":" you"
-	,"i think":""
-	,"i believe":""
 
-	
 	,"tell me your":"tellme"
 	,"whats your":"tellme"
 	,"decribe your":"tellme"
@@ -147,15 +148,6 @@
 	,"curvy":"slutty"
 	,"the bomb":"slutty"
 
-
-	,"you look ":"yoube "
-	,"you are ":"yoube "
-	,"you appear ":"yoube "
-	,"you seem ":"yoube "
-
-	,"yoube like ":"yoube "
-	,"yoube bit ":"yoube "
-
 	,"hearts desire":"desire"
 	,"enjoy":"desire"
 	,"favor":"desire"
@@ -194,9 +186,8 @@
 	,"turd":"crap"
 	,"doodoo":"crap"
 
-
 	,"we are proud of our uniforms at paizanos":"brag"
-	,"you’re dressed nicely too":""
+	,"you’re dressed nicely too":"you too"
 	,"what you desire":"order please"
 
 	,"yoube ugly":"iinsult"
@@ -210,5 +201,6 @@
 	,"yoube fatty":"i_insult"
 	,"yoube obese":"i_insult"
 	,"yoube bloody":"i_insult"
+	,"yoube obese ":"i_insult "	
 
 }

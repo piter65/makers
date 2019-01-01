@@ -14,7 +14,7 @@ exports.process = function(state)
 
    	if (state.result.tokens.includes( 'i_5sec') )
 	{
-		state.result.code = 'rp_30_99_time_to_reconsider';
+		state.result.code = 'rp_30_time_to_reconsider';
 		// state.result.reply = "I'm changing my mind,  last time I had pizza, I think I had a bad reaction.  Im suspicious it might be the gluten.";
 		state.session.trust -= 2;
 		state.session.act = 32;  // move on!
@@ -22,7 +22,7 @@ exports.process = function(state)
 	}
    	else if (true)
    	{
-		state.result.code = 'rp_30_99_considering_gluten';
+		state.result.code = 'rp_30_remember_gluten';
 		// state.result.reply = "Now, but come to think of it, last time I had pizza, I think I had a bad reaction.  Im suspicious it might be the gluten."
 		state.session.act = 32;  // move on!
    	}

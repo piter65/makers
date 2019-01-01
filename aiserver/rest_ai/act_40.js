@@ -13,7 +13,7 @@ exports.process = function(state)
 	{
 		logger.log('ACT 40 - perfect');
 
-		state.result.code = 'rp_40_99_finished';
+		state.result.code = 'rp_40_finished';
 		// state.result.reply = "Perfect.  I have to say I'm very pleased with the service here at Paizanos!";
 		state.session.trust += 4;
 		state.session.game_over = true;

@@ -11,7 +11,7 @@ exports.process = function(state)
 	if (   state.result.tokens.includes('e_mushroom')
 		|| state.session.count_tries >= 3)
 	{
-		state.result.code = 'rp_22_99_decided_mushroom';
+		state.result.code = 'rp_22_decided_mushroom';
 		// state.result.reply = 'Yeah, thats about right. Ill have a slice of sausage and mushroom';
 		state.session.act = 30;  // move on!
 		state.result.choice_done = true;
@@ -22,7 +22,7 @@ exports.process = function(state)
 		|| state.result.tokens.includes('e_hawaiin')
 		|| state.result.tokens.includes('e_fish') )
 	{
-		state.result.code = 'rp_22_99_wrong_toppings';
+		state.result.code = 'rp_22_wrong_toppings';
 		// state.result.reply = 'Arent you listening, I want sausage and a veggie';
 		state.session.count_tries++;
 	}
@@ -31,18 +31,33 @@ exports.process = function(state)
 		|| state.result.tokens.includes('e_dog')
 		|| state.result.tokens.includes('i_insult') )
 	{
-		state.result.code = 'rp_22_99_disgusted';
+		state.result.code = 'rp_22_disgusted';
 		// state.result.reply = 'I dont like your sense of humour.  Good day.';
 		state.session.game_over = true;
 	}
 	else 
 	if (state.result.tokens.includes('e_veggie') )	
 	{
-		state.result.code = 'rp_22_99_veg';
+		state.result.code = 'rp_22_veg';
 		// state.result.reply = 'Almost, you know what I think. Ill have a slice of sausage and mushroom';
 		state.session.act = 30;  // move on!
 		state.result.choice_done = true;
 	}
+	if (state.result.tokens.includes( 'i_5sec') )
+	{
+		state.result.code = 'rp_22_impatient';  // 'I just dont know what toppings.';
+		state.session.trust -= 2;
+	}
+	else
+	if (state.result.tokens.includes( 'i_9sec') )
+	{
+		state.result.code = 'rp_20_fed_up';  // 'I wont be visiting here again.  Good day.';
+		state.session.trust -= 2;
+		state.session.game_over = true;
+	}
+
+
+
 	else
 	{
 		act_990.process(state);
