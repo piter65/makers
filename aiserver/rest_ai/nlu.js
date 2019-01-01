@@ -51,40 +51,39 @@ const fs = require('fs');
 // Load 'tokens.json'.
 exports.tokens = JSON.parse(fs.readFileSync('tokens.json'));
 
+// logger.log(JSON.stringify(exports.tokens, null, 4));
+
 exports.process = function(state)
 {
 	let self = this;
-	// logger.log('nlu: %s', JSON.stringify(self, null, 4));
 
+	let matches = [];
 	for (let match in self.tokens)
 	{
+		// matches.push(match+": "+state.result.text.indexOf(match));
+
 		// If the text holds a match, and we don't 
 		//   already have the token, add the token.
-		if (state.result.text.includes(match))
+		if (state.result.text.indexOf(match) > -1)
 		{
-			let token = self.tokens[match];
-			if (!state.result.tokens.includes(token))
-				state.result.tokens.push(token);
+			matches.push(match+" : "+self.tokens[match]);
+
+			let match_tokens = self.tokens[match].split(' ');
+			for (let index_token = 0; index_token < match_tokens.length; ++index_token)
+			{
+				let token = match_tokens[index_token];
+				if (!state.result.tokens.includes(token))
+					state.result.tokens.push(token);
+			}
 		}
 	}
 
-	// for (var index_intent = 0; index_intent < self.intents.length; ++index_intent)
-	// {
-	// 	var intent = self.intents[index_intent];
-	// 	if (state.result.text.includes(intent))
-	// 		state.result.tokens.push(intent);
-	// }
-
-	// for (var index_entity = 0; index_entity < self.entities.length; ++index_entity)
-	// {
-	// 	var entity = self.entities[index_entity];
-	// 	if (state.result.text.includes(entity))
-	// 		state.result.tokens.push(entity);
-	// }
-
+	logger.log('---');
 	logger.log('NLU - processed:');
-	// logger.log('\tIntent: %s', state.result.intent);
-	logger.log('\tTokens: %s', JSON.stringify(state.result.tokens).replace('\n', '\n\t'));
+	logger.log('Index: %d', (" youve come to right place").indexOf("youve come to right place"));
+	logger.log('Matches: %s', JSON.stringify(matches, null, 4));
+	logger.log('Tokens: %s', JSON.stringify(state.result.tokens, null, 4));
+	logger.log('---');
 
 	return state;
 };
