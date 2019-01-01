@@ -14,9 +14,6 @@ exports.result_defaults =
 {
 	success: false,
 	text_origin: null,
-	text_1: null,
-	text_2: null,
-	text_3: null,
 	text: null,
 	reply: null,
 	tokens: [],

@@ -148,12 +148,12 @@
 	,"the bomb":"slutty"
 
 
-	,"you look":"yoube"
-	,"you are":"yoube"
-	,"you appear":"yoube"
-	,"you seem":"yoube"
+	,"you look ":"yoube "
+	,"you are ":"yoube "
+	,"you appear ":"yoube "
+	,"you seem ":"yoube "
 
-	,"yoube like":"yoube"
+	,"yoube like ":"yoube "
 	,"yoube bit ":"yoube "
 
 	,"hearts desire":"desire"
@@ -193,5 +193,22 @@
 	,"shit":"crap"
 	,"turd":"crap"
 	,"doodoo":"crap"
+
+
+	,"we are proud of our uniforms at paizanos":"brag"
+	,"you’re dressed nicely too":""
+	,"what you desire":"order please"
+
+	,"yoube ugly":"iinsult"
+	,"yoube fat":"iinsult"
+	,"yoube knucklehead":"i_insult"
+	,"yoube dinkleberry":"i_insult"
+	,"yoube fatso":"i_insult"
+	,"yoube idiot":"i_insult"
+	,"yoube moron":"i_insult"
+	,"yoube fathead":"i_insult"
+	,"yoube fatty":"i_insult"
+	,"yoube obese":"i_insult"
+	,"yoube bloody":"i_insult"
 
 }

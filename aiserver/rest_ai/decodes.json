@@ -497,7 +497,7 @@
 
 
 
-	,"rp_990_20_complimented":
+	,"rp_990_complimented":
 	{
 		"text":
 			"Thanks. I got it at Brooks Brothers."
@@ -511,7 +511,7 @@
 			}
 		]
 	}
-	,"rp_990_21_complimented_too_much":
+	,"rp_990_complimented_too_much":
 	{
 		"text":
 			"Enough about me. Can we get on with my pizza?"
@@ -525,7 +525,7 @@
 			}
 		]
 	}
-	,"rp_990_30_insulted":
+	,"rp_990_insulted":
 	{
 		"text":
 			"Excuse me?"
@@ -539,7 +539,7 @@
 			}
 		]
 	}
-	,"rp_990_31_insulted_too_much":
+	,"rp_990_insulted_too_much":
 	{
 		"text":
 			"I think I'll go somewhere else for lunch."
@@ -553,7 +553,7 @@
 			}
 		]
 	}
-	,"rp_990_40_super_insulted":
+	,"rp_990_super_insulted":
 	{
 		"text":
 			"Fuck you and the horse you rode in on! I'm leaving!"
@@ -567,7 +567,7 @@
 			}
 		]
 	}
-	,"rp_990_50_cussed_out":
+	,"rp_990_cussed_out":
 	{
 		"text":
 			"I'm leaving!"
@@ -581,7 +581,7 @@
 			}
 		]
 	}
-	,"rp_990_60_smalltalk_sports":
+	,"rp_990_smalltalk_sports":
 	{
 		"text":
 			"I don't really follow sports."
@@ -595,7 +595,7 @@
 			}
 		]
 	}
-	,"rp_990_60_smalltalk_weather":
+	,"rp_990_smalltalk_weather":
 	{
 		"text":
 			"Um, yeah, I guess so."
@@ -609,7 +609,7 @@
 			}
 		]
 	}
-	,"rp_990_70_rude":
+	,"rp_990_rude":
 	{
 		"text":
 			"Um, I not quite comfortable with that."
@@ -623,7 +623,7 @@
 			}
 		]
 	}
-	,"rp_990_80_hard_of_hearing":
+	,"rp_990_hard_of_hearing":
 	{
 		"text":
 			"Excuse me. I'm a little hard of hearing. Can you speak more slowly and clearly, please?"
@@ -637,7 +637,7 @@
 			}
 		]
 	}
-	,"rp_990_80_didnt_catch_that":
+	,"rp_990_not_understand":
 	{
 		"text":
 			"Didn't catch that. Can you speak more slowly and clearly?"
@@ -651,7 +651,7 @@
 			}
 		]
 	}
-	,"rp_990_86_fed_up":
+	,"rp_990_fed_up":
 	{
 		"text":
 			"I wont be visiting here again.  Good day."
@@ -665,7 +665,24 @@
 			}
 		]
 	}
-	,"rp_990_90_regreeted":
+	,"rp_990_nonseq":
+	{
+		"text":
+			"What does that have to do with the price of peas in China?"
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
+	}
+
+
+
+	,"rp_990_regreeted":
 	{
 		"text":
 			"Yeah, we've already met."

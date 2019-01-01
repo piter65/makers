@@ -8,8 +8,7 @@ exports.process = function(state)
 
 	if (state.result.tokens.includes( 'i_thankyou') )
 	{
-		state.result.code = 'rp_10_welcome';
-		// state.result.reply = 'You are very welcome.';
+		state.result.code = 'rp_10_welcome';    //  'You are very welcome.''
 		state.session.trust += 1;
 		logger.log('thanked');
 	}
@@ -19,59 +18,51 @@ exports.process = function(state)
 	{
 		if (state.result.tokens.includes('e_storebrand'))
 		{
-			state.result.code = 'rp_10_greet';
-			// state.result.reply = 'Hi! This seemed like a nice place to eat.';
+			state.result.code = 'rp_10_greet';    //'Hi! This seemed like a nice place to eat.';
 			state.session.trust += 1;
 	//		state.session.act = 20;
 		}
 		else
 		if (state.result.tokens.includes('e_rude'))
 		{
-			state.result.code = 'rp_10_rude';
-			// state.result.reply = 'That\'s not a nice way to greet a customer! Anyway, I\'d like a slice with no drink, but I can\'t decide on the topping. What do you suggest?';
+			state.result.code = 'rp_10_rude';  //'That's not a nice.   I can\'t decide.  do you suggest?';
 			state.session.trust += -1;
 			state.session.act = 20;
 		}
 		else
 		{
-			state.result.code = 'rp_10_first_time';
-			// state.result.reply = 'Yep first time I\'ve enterred the place.';
+			state.result.code = 'rp_10_first_time'; // 'Yep first time I\'ve enterred the place.';
 		}
 		++state.session.count_greeting;
 	}
 	else
 	if (state.result.tokens.includes( 'i_offerhelp') )
 	{
-		state.result.code = 'rp_10_offeredhelp';
-		// state.result.reply = 'I\'d like a slice with no drink, but I can\'t decide on the topping. What do you suggest?';
+		state.result.code = 'rp_10_offeredhelp';   //'I'd like a slice, but I can't decide. What do you suggest?';
 		state.session.trust += 0;
 		state.session.act = 20;  // move on!
 	}
 	else 
 	if (state.result.tokens.includes( 'i_nothing') )
 	{
-		state.result.code = 'rp_10_customer_initiates';
-		// state.result.reply = 'I was thinking about getting a slice.';
+		state.result.code = 'rp_10_customer_initiates';   //'I was thinking about getting a slice.';
 	}
 	else
 	if (state.result.tokens.includes( 'i_insult') )
 	{
-		state.result.code = 'rp_10_insulted';
-		// state.result.reply = 'Im not sure I like this place or you.';
+		state.result.code = 'rp_10_insulted';    // 'Im not sure I like this place or you.';
 		state.session.trust -= 2;
 	}
 	else
 	if (state.result.tokens.includes( 'i_5sec') )
 	{
-		state.result.code = 'rp_10_impatient';
-		// state.result.reply = 'Are you gonna take my order or something?';
+		state.result.code = 'rp_10_impatient';   // 'Are you gonna take my order or something?';
 		state.session.trust -= 2;
 	}
 	else
 	if (state.result.tokens.includes( 'i_9sec') )
 	{
-		state.result.code = 'rp_10_fed_up';
-		// state.result.reply = 'The service here stinks. Im gone.';
+		state.result.code = 'rp_10_fed_up';  // 'The service here stinks. Im gone.';
 		state.session.game_over = true;
 	}
 	else
