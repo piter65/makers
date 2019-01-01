@@ -92,28 +92,26 @@ exports.process = function(state)
 	}
 	else
 	if (state.result.tokens.includes('e_rude'))
-		{
-			state.result.code = 'rp_990_rude';  // 'Um, I not quite comfortable with that.';
-			state.session.trust += -1;
-		}
-	else if (state.result.tokens.includes( 'i_9sec') )
-		{
-			state.result.code = 'rp_990_fed_up';  //'I wont be visiting here again.  Good day.';
-		   	state.session.game_over = true;
-		}
-
-// BC Brent, help me with this.  pa
-// At this point, the we found an intent or entity, and it's not germane.
-// can you fix my if below?
-	else if (state.result.tokens.includes( 'any_else') )
-		{
-			state.result.code = 'rp_990_non_seq';  // not germane.
-		   	state.session.game_over = true;
-		}
-
-
+	{
+		state.result.code = 'rp_990_rude';  // 'Um, I not quite comfortable with that.';
+		state.session.trust += -1;
+	}
 	else
-	// if (state.result.text.includes('unintelligible'))
+	if (state.result.tokens.includes( 'i_9sec') )
+	{
+		state.result.code = 'rp_990_fed_up';  //'I wont be visiting here again.  Good day.';
+		state.session.game_over = true;
+	}
+	// If we have any tokens at all, fall thru here.
+	else
+	if (state.result.tokens.length > 0)
+	{
+		state.result.code = 'rp_990_non_seq';  // not germane.
+		state.session.game_over = true;
+	}
+
+	// Input not understood.
+	else
 	{
 			state.result.code = 'rp_990_not_understand';  //'I wont be visiting here again.  Good day.';
 			logger.log('_fail_\''+ state.result.text_origin+'\'');
