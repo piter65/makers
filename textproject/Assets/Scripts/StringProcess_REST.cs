@@ -14,7 +14,7 @@ public class StringProcess_REST : MonoBehaviour
 
 	private IEnumerator Start()
 	{
-		Debug.LogFormat("Requesting Session Start...");
+		Logger.Log("Requesting Session Start...");
 
 		// Get a new session ID.
 		string strURL = serverURL + @"/ai/start-session";
@@ -24,13 +24,13 @@ public class StringProcess_REST : MonoBehaviour
 
 			if (www.isNetworkError || www.isHttpError)
 			{
-				Debug.LogErrorFormat("ERROR - NETWORK: {0}", www.error);
+				Logger.LogError("ERROR - NETWORK: {0}", www.error);
 			}
 			else
 			{
 				id_session = www.downloadHandler.text;
 
-				Debug.LogFormat("Session Started. ID: {0}", id_session);
+				Logger.Log("Session Started. ID: {0}", id_session);
 			}
 		}
 	}
@@ -45,23 +45,23 @@ public class StringProcess_REST : MonoBehaviour
 
             if (www.isNetworkError || www.isHttpError)
             {
-                Debug.LogErrorFormat("ERROR - NETWORK: {0}", www.error);
+                Logger.LogError("ERROR - NETWORK: {0}", www.error);
             }
             else
 			{
 				// Get JSON response
 				string json = www.downloadHandler.text;
 
-				Debug.LogFormat("JSON: {0}", json);
+				Logger.Log("JSON: {0}", json);
 
 				JObject jobj_root = JObject.Parse(json);
 				if (jobj_root["success"].Value<bool>())
 				{
-					Debug.LogFormat("Reply: {0}", jobj_root["reply"].Value<string>());
+					Logger.Log("Reply: {0}", jobj_root["reply"].Value<string>());
 				}
 				else
 				{
-					Debug.LogErrorFormat("ERROR - SERVER: {0}", jobj_root["error"].Value<string>());
+					Logger.LogError("ERROR - SERVER: {0}", jobj_root["error"].Value<string>());
 				}
 			}
         }
@@ -70,7 +70,7 @@ public class StringProcess_REST : MonoBehaviour
 	public void OnSubmit()
 	{
 		string strValue = input_text.text.Trim();
-		Debug.LogFormat("Player Text: {0}", strValue);
+		Logger.Log("Player Text: {0}", strValue);
 
 		// Get a reply from the AI server.
 		StartCoroutine(GetReplyFromAI(strValue));
