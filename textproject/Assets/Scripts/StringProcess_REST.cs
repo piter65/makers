@@ -9,8 +9,8 @@ public class StringProcess_REST : MonoBehaviour
 	public InputField input_text;
 	public string id_session = null;
 
-	private const string serverURL = @"http://localhost";
-	//private const string serverURL = @"http://54.202.22.196";
+	//private const string serverURL = @"http://localhost";
+	private const string serverURL = @"http://54.202.22.196";
 
 	private IEnumerator Start()
 	{
