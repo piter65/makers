@@ -12,6 +12,11 @@ exports.process = function(state)
 		state.session.trust += 1;
 		logger.log('thanked');
 	}
+	else if (state.result.tokens.includes( 'i_mirror') )
+	{
+		state.result.code = 'rp_10_welcome';    //  'You are very welcome.''
+		state.session.trust += 1;
+	}
 	else
 	if (   state.result.tokens.includes( 'i_greeting')
 		&& state.session.count_greeting == 0)

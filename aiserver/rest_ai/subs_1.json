@@ -34,10 +34,36 @@
 	,"would not":"shouldnt"
 
 	," can i ":" may i "
+	," as well " : " too "
+
 	," what is ":" whats "
 	," that is ":" thats "
 	," that's ":" thats "
 	," i will ":" ill "
+	," what will ":"whatll "
+
 	," you would ":" youd "
+
+	," slice of pizza ":" slice "
+	," pizza ":" slice "
+
+	," do you want today ":" would you like "
+	," do you want ":" would you like "
+
+	," what may i do you for":" order please"
+	," what may i do for you":" order please"
+    ," what type of slice would you like":" order please"
+    ," what may I get for you":" order please"
+    ," how may I help you":" order please"
+    ," may I offer you something to eat":" order please"
+    ," may I offer you slice":" order please"
+    ," do you want to try":" order please"
+    ," do you want slice": " order please"
+    ," can i offer you slice":" order please"
+
+	," look cool":" dress pretty"
+	," looking cool":" dress pretty"
+
+	
 
 }

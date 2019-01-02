@@ -5,21 +5,6 @@
 	,"glutten":"gluten"
 
 
-	,"c1":"order please"
-	,"c2":"sausage and mushroom"
-	,"c3":"gluten free options"
-	,"c4":"gluten free options"
-	,"c5":"sausage and mushroom"
-	,"c6":"sausage, mushroom, and gluten free"
-
-
-	,"d1":"may I take your order"
-	,"d2":"sausage and mushroom"
-	,"d3":"glad we decided"
-	,"d4":"allergies"
-	,"d5":"sausage, mushroom, and gluten free"
-
-
 	," i think ":" "
 	," i believe ":" "
 	," any ":" "
@@ -32,6 +17,9 @@
 	,"that is":"thats"
 
 
+	,"wonderful":"great"
+
+
 	,"never":"not"
 	,"should not":"shouldnt"
 
@@ -39,8 +27,13 @@
 	,"shouldnt have":"should skip"
 	,"should avoid":"should skip"
 
+	,"pizza is not for you":"go away"
+	,"pizza isnt for you":"go away"
+
 	,"you look ":"yoube "
 	,"you are ":"yoube "
+	,"youre ":"yoube "
+
 	,"you appear ":"yoube "
 	,"you seem ":"yoube "
 
@@ -62,6 +55,11 @@
 	,"very nice of you":"thankyou"
 
 	,"idioms are early":"so exacting phrases are exactly translated"
+	,"you dress well too":"yoube pretty"
+	,"yours is cool too":"yoube pretty"
+	,"your have cool clothes":"yoube pretty"
+
+
 
 	,"do you know":"understand"
 	,"did you know":"understand"
@@ -121,6 +119,7 @@
 	,"choice":"options"
 
 
+	,"dressed nicely":"pretty"
 	,"nice":"pretty"
 	,"sharp":"pretty"
 	,"snappy":"pretty"
@@ -140,6 +139,9 @@
 	,"beautiful":"pretty"
 	,"pretty":"pretty"
 	,"fine":"pretty"
+	,"dressed well":"pretty"
+
+
 
 	,"sexy":"slutty"
 	,"horny":"slutty"
@@ -187,7 +189,6 @@
 	,"doodoo":"crap"
 
 	,"we are proud of our uniforms at paizanos":"brag"
-	,"you’re dressed nicely too":"you too"
 	,"what you desire":"order please"
 
 	,"yoube ugly":"iinsult"
@@ -201,6 +202,10 @@
 	,"yoube fatty":"i_insult"
 	,"yoube obese":"i_insult"
 	,"yoube bloody":"i_insult"
-	,"yoube obese ":"i_insult "	
+	,"yoube obese ":"i_insult"	
+
+	,"you too":"i_mirror"	
+	,"you as well":"i_mirror"	
+	,"yours is cool too":"i_mirror"	
 
 }
