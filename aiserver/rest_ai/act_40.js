@@ -9,52 +9,27 @@ exports.process = function(state)
 {
 	logger.log('ACT 40 - start pa');
 
-	if ( true )
-	{
-		logger.log('ACT 40 - perfect');
+	if (state.result.tokens.includes('i_nogluten')&&
+		state.result.tokens.includes('i_sausage')&&
+		state.result.tokens.includes('i_mushroom')
+		)
 
+	{
 		state.result.code = 'rp_40_finished';
-		// state.result.reply = "Perfect.  I have to say I'm very pleased with the service here at Paizanos!";
-		state.session.trust += 4;
-		state.session.game_over = true;
-		logger.log('ACT 40 - gameover = set');
 	}
 
-/*
-	if ( 
-		state.result.tokens.includes('e_noglut') &&
+	else if (
 		state.result.tokens.includes('e_sausage') &&
 		state.result.tokens.includes('e_mushroom')
 		)
 	{
-
-		   logger.log('ACT 40 - perfect');
-
-			state.result.code = 'rp_40_99';
-			state.result.reply =
-			"Perfect.  I have to say I'm very pleased with the service here at Paizanos!";
-			state.session.trust += 4;
-			state.session.game_over = true;
-			logger.log('ACT 40 - gameover = set');
-	}
-
-	else
-	if (
-		state.result.tokens.includes('e_sausage') &&
-		state.result.tokens.includes('e_mushroom')
-		)
-	{
-			state.result.code = 'rp_40_99';
-			state.result.reply ="Don't forget glutten free.  Please write that down and read it all back to me.";
+			state.result.code = 'rp_40_dont_forget';  //"Don't forget glutten free.
 			state.session.trust += -1;
 	}
-	else
+	else 
 	{
-		act_990.process(state);
+		state.result.code = 'rp_40_restate_order';  //"Don't forget glutten free.
 	}
-	logger.log('ACT 40 - processed');
-*/
-
 	// Decode the reply.
 	state.result.reply = decoder.decode_reply(state.result.code);
 };

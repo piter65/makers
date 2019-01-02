@@ -495,9 +495,35 @@
 		]
 	}
 
+	,"rp_40_dont_forget":
+	{
+		"text": "Don't forget glutten free.  Please write that down and read it all back to me."
 
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
+	}
 
+	,"rp_40_restate_order":
+	{
+		"text": "How hard can it be?>  I want a glutten free slice of sausage and mushrom.  Can you please write it down and read it back to me?"
 
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
+	}
 
 	,"rp_990_complimented":
 	{
