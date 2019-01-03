@@ -58,6 +58,7 @@ app.get('/ai/start-session', function(req, res)
 
 	logger.log("Session generated. ID: %s", id_session);
 
+	res.set('Access-Control-Allow-Origin', '*');
 	res.send(id_session);
 });
 
@@ -158,32 +159,33 @@ app.get('/ai', function(req, res)
 		case 'newgame':
 			// Reset the session.
 			state.session = deepClone(state_templates.session_defaults);
-			state.result.code = 'rp_0_10';
+			save_state = true;
+			state.result.code = 'rp_0_new_game';
 			state.result.reply = 
-				"new game started\nHi. I Great looking uniform you got.";
+				state.result.code+":new game started\nHi. I Great looking uniform you got.";
 			break;
 		case 'system test':
 		case 'system check':
-			state.result.code = 'rp_0_0';
-			state.result.reply = 'system is functional';
+			state.result.code = 'rp_0_check';
+			state.result.reply = state.result.code+':system is functional';
 			break;
 		case 'system state':
 		case 'system last':
-			state.result.code = 'rp_0_0';
-			state.result.reply = 'ACT:'+state.session.act+'\n';
+			state.result.code = 'rp_0_state';
+			state.result.reply = state.result.code+':ACT:'+state.session.act+'\n';
 			state.result.reply += JSON.stringify(state_prev, null, 4);
 			break;
 
 		case 'ibjeff':
-			state.result.code = 'rp_0_0';
-			state.result.reply = 'ACT:'+state.session.act+'\n';
+			state.result.code = 'rp_0_ibjeff';
+			state.result.reply = state.result.code+':ACT:'+state.session.act+'\n';
 			state.result.reply += state_prev.result.text_1+'\n';
 			state.result.reply += state_prev.result.text_2+'\n';		
 			break;
 
 		case 'howdy':
-			state.result.code = 'rp_0_99';
-			state.result.reply = 'Hey there cowboy';
+			state.result.code = 'rp_0_howdy';
+			state.result.reply = state.result.code+':Hey there cowboy';
 			break;
 		default:
 			process(state);
@@ -200,6 +202,7 @@ app.get('/ai', function(req, res)
 	logger.log("\tResult: \n" + JSON.stringify(state.result, null, 4));
 	logger.log("_story_AI:'"+state.result.reply+"'");
 
+	res.set('Access-Control-Allow-Origin', '*');
 	res.send(state.result);
 });
 

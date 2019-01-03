@@ -28,7 +28,7 @@ exports.decode_reply = function(code)
 
 	const reply = util.format
 	(
-		"%s\n%s%s"
+		"%s:%s%s"
 		,code
 		,data.text
 		,anim_strings.join('')
