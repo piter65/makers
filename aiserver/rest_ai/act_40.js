@@ -28,7 +28,7 @@ exports.process = function(state)
 	}
 	else 
 	{
-		state.result.code = 'rp_40_restate_order';  //"Don't forget glutten free.
+		state.result.code = 'rp_40_restate_order';  //sausage, mushrroom, and glutten free.
 	}
 	// Decode the reply.
 	state.result.reply = decoder.decode_reply(state.result.code);

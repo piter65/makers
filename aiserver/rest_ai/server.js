@@ -173,6 +173,14 @@ app.get('/ai', function(req, res)
 			state.result.reply = 'ACT:'+state.session.act+'\n';
 			state.result.reply += JSON.stringify(state_prev, null, 4);
 			break;
+
+		case 'ibjeff':
+			state.result.code = 'rp_0_0';
+			state.result.reply = 'ACT:'+state.session.act+'\n';
+			state.result.reply += state_prev.result.text_1+'\n';
+			state.result.reply += state_prev.result.text_2+'\n';		
+			break;
+
 		case 'howdy':
 			state.result.code = 'rp_0_99';
 			state.result.reply = 'Hey there cowboy';
