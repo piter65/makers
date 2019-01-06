@@ -1,5 +1,23 @@
 {
-	"rp_10_welcome":
+	"comment":"f_smile f_frown f_confused f_angry f_sad f_neutral body:b_normal b_engaged b_bored b_tapping b_phone b_angry"
+
+	,"rp_5_intro":
+	{
+		"text":
+			"Hi there.  I've been wondering about this place, it's been a while since I've had some pizza.  I figured this would be a nice place to try out. By the way, nice uniform you got there."
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
+	}
+
+
+	,"rp_10_welcome":
 	{
 		"text":
 			"You are very welcome."
@@ -132,6 +150,23 @@
 		]
 	}
 
+	,"rp_10_notgermane":
+	{
+		"text":
+			"I'm really not sure what you're going on about, are you gonna take my order?"
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
+	}
+
+
+
 
 
 
@@ -153,7 +188,7 @@
 	,"rp_20_decided_mushrooms":
 	{
 		"text":
-			"Mushrooms sound good. I'll have a slice of sausage and mushroom."
+			"Mushrooms sound good. Now what meat goes with mushrooms?"
 		,"animations":
 		[
 			{
@@ -167,7 +202,7 @@
 	,"rp_20_decided_sausage":
 	{
 		"text":
-			"Sausage sounds perfect, but I want a veggie too."
+			"Sausage sounds perfect, but I want a veggie too.  Can you suggest a veggie?"
 		,"animations":
 		[
 			{
@@ -178,10 +213,10 @@
 			}
 		]
 	}
-	,"rp_20_decided_meat_veg":
+	,"rp_20_decide_sausage_veg":
 	{
 		"text":
-			"Maybe one meat, one veggie?  I got it.  Sausage and one veggie?  Any suggestion on the veggie?"
+			"Some meat sounds good.  Maybe one meat, one veggie?  I got it.  Sausage and one veggie?  Any suggestion on the veggie?"
 		,"animations":
 		[
 			{
@@ -192,6 +227,16 @@
 			}
 		]
 	}
+
+	,"rp_20_decide_mushroom_meat":
+	{
+		"text":
+			"Some veggie sounds good.  But I want some meat too. I got it.  Mushroom and one meat?  Any suggestion on the meat?"
+		,"animations":
+		[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+
 	,"rp_20_considering_topping":
 	{
 		"text":
@@ -347,11 +392,7 @@
 		]
 	}
 
-
-
-
-
-	,"rp_22_decided_mushroom":
+	,"rp_22_correct":
 	{
 		"text":
 			"Yeah, thats about right. I'll have a slice of sausage and mushroom."
@@ -407,11 +448,73 @@
 			}
 		]
 	}
-	,"rp_22_impatient":
+
+
+	,"rp_20_nodrink":
 	{
-		"text": "Can you help me pick the veggie?"
+		"text": "I've already said I want sausage and one vegetable.Can you help me pick a vegetable?"
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
+
+	,"rp_22_frustrated":
+	{
+		"text": "I've already said I want sausage and one vegetable.Can you help me pick a vegetable?"
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+
+	,"rp_22_veg_hint":
+	{
+		"text": "Not quite right.  What goes good with sausage?"
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+	,"rp_22_veg_giveup":
+	{
+		"text": "Awe, I give up.  Just get me sausage and mushroom."
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+
+
+	,"rp_22_impatient":
+	{
+		"text": "I am certain I want sausage.  Can you help me pick the veggie?"
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+
+	,"rp_24_impatient":
+	{
+		"text": "I am certain I want mushroom.  Can you help me pick a meat?"
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+	,"rp_24_correct":
+	{
+		"text": "Yeah, that sounds good.  I'll go with sausage and mushroom."
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+	,"rp_24_meat_hint":
+	{
+		"text": "Not quite right.  What goes good with mushrooms?"
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+	,"rp_24_meat_giveup":
+	{
+		"text": "Awe, I give up.  Just get me sausage and mushroom."
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+	,"rp_24_frustrated":
+	{
+		"text": "I've already said I want mushroom and one meat.Can you help me pick a meat?"
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+
 
 	,"rp_30_time_to_reconsider":
 	{

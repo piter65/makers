@@ -18,11 +18,11 @@ exports.process = function(state)
 	}
 	else
 	if (   state.result.tokens.includes('e_mushroom')
-		|| state.session.count_tries >= 2)
+		|| state.session.count_tries >= 4)
 	{
 		state.result.code = 'rp_20_decided_mushrooms';
 		// state.result.reply = 'Mushrooms sound good. Ill have a slice of sausage and mushroom';
-		state.session.act = 30;  // move on!
+		state.session.act = 24;  // move on!
 		state.result.choice_done = true;
 	}
 	else
@@ -33,13 +33,23 @@ exports.process = function(state)
 		state.session.act = 22;  // move on!
 	}
 	else
-	if (   state.result.tokens.includes('e_meat')
-		|| state.result.tokens.includes('e_veggie') )
+	if (   state.result.tokens.includes('e_meat') )
 	{
-		state.result.code = 'rp_20_decided_meat_veg';
+		state.result.code = 'rp_20_decide_sausage_veg';
 		// state.result.reply = 'Maybe one meat, one veggie?  I got it.  Sausage and one veggie?  Any suggestion on the veggie?';
 		state.session.act = 22;  // move on!
 	}
+
+	else
+	if ( state.result.tokens.includes('e_veggie') )
+	{
+		state.result.code = 'rp_20_decide_mushroom_meat';
+		// state.result.reply = 'Maybe one meat, one veggie?  I got it.  Sausage and one veggie?  Any suggestion on the veggie?';
+		state.session.act = 24;  // move on!
+	}
+
+
+
 	else
 	if (state.result.tokens.includes('e_topping'))
 	{
@@ -73,6 +83,14 @@ exports.process = function(state)
 		state.session.trust -= 1;
 	}
 	else
+	if (state.result.tokens.includes('e_herb'))
+	{
+		state.result.code = 'rp_20_considering_crap';
+		// state.result.reply = 'Maybe you like that type of thing, but not for me.';
+		state.session.count_tries++;
+	}
+
+	else
 	if (state.result.tokens.includes('e_fish'))
 	{
 		state.result.code = 'rp_20_considering_fish';
@@ -103,6 +121,17 @@ exports.process = function(state)
 		state.session.trust += 2;
 	}
 	else
+	if (state.result.tokens.includes('e_drink'))
+	{
+		state.result.code = 'rp_20_no_drink';
+		// state.result.reply = 'You know, I do not usually eat pizza so it has been a while, but lets see. How about sausage and a veggie?';
+		state.session.trust --;
+		score_listen--;
+	}
+	else
+
+
+
 	if (state.result.tokens.includes( 'i_5sec') )
 	{
 		state.result.code = 'rp_20_impatient';  // 'I just dont know what toppings.';

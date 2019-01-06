@@ -5,6 +5,8 @@ const util = require('util');
 const _ = require('underscore');
 const uuid_by_timestamp = require('uuid/v1')
 const strReplaceAll = require('str-replace-all')
+const decoder = require('./decoder');
+
 
 const state_templates = require('./state_templates');
 const logger = require('./logger');
@@ -12,6 +14,8 @@ const nlu = require('./nlu');
 const act_10 = require('./act_10');
 const act_20 = require('./act_20');
 const act_22 = require('./act_22');
+const act_24 = require('./act_24');
+
 const act_30 = require('./act_30');
 const act_32 = require('./act_32');
 const act_40 = require('./act_40');
@@ -31,6 +35,8 @@ if (is_dev)
 	port = 3000;
 
 logger.log_clear();
+logger.log("did clear ");
+
 
 const subs_1 = JSON.parse(fs.readFileSync('subs_1.json'));
 const subs_2 = JSON.parse(fs.readFileSync('subs_2.json'));
@@ -43,6 +49,8 @@ const app = express();
 app.get('/', function(req, res)
 {
 	res.sendFile(path.join(__dirname + '/index.html'));
+
+	logger.log("sending index pa ");
 });
 
 app.get('/ai/start-session', function(req, res)
@@ -160,9 +168,10 @@ app.get('/ai', function(req, res)
 			// Reset the session.
 			state.session = deepClone(state_templates.session_defaults);
 			save_state = true;
-			state.result.code = 'rp_0_new_game';
-			state.result.reply = 
-				state.result.code+":new game started\nHi. I Great looking uniform you got.";
+
+			state.result.code = "rp_5_intro";
+		// Decode the reply.
+			state.result.reply = decoder.decode_reply(state.result.code);		
 			break;
 		case 'system test':
 		case 'system check':
@@ -179,8 +188,12 @@ app.get('/ai', function(req, res)
 		case 'ibjeff':
 			state.result.code = 'rp_0_ibjeff';
 			state.result.reply = state.result.code+':ACT:'+state.session.act+'\n';
-			state.result.reply += state_prev.result.text_1+'\n';
-			state.result.reply += state_prev.result.text_2+'\n';		
+			state.result.reply += '"'+state_prev.result.text_1+'"\n';
+			state.result.reply += '"'+state_prev.result.text_2+'"\n';
+			state.result.reply += state_prev.result.tokens[0]+'\n';
+			state.result.reply += state_prev.result.tokens[1]+'\n';
+			state.result.reply += state_prev.result.tokens[2]+'\n';
+			state.result.reply += state_prev.result.tokens[3]+'\n';
 			break;
 
 		case 'howdy':
@@ -248,6 +261,10 @@ function process(state)
 		case 22:
 			act_22.process(state);
 			break;
+		case 24:
+			act_24.process(state);
+			break;
+
 		case 30:
 			act_30.process(state);
 			break;

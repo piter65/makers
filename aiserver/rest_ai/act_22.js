@@ -9,22 +9,22 @@ exports.process = function(state)
 	logger.log('ACT 22 - start');
 
 	if (   state.result.tokens.includes('e_mushroom')
-		|| state.session.count_tries >= 3)
+		|| state.session.count_tries >= 6)
 	{
-		state.result.code = 'rp_22_decided_mushroom';
+		state.result.code = 'rp_22_correct';
 		// state.result.reply = 'Yeah, thats about right. Ill have a slice of sausage and mushroom';
 		state.session.act = 30;  // move on!
 		state.result.choice_done = true;
 	}
 	else
-	if (   state.result.tokens.includes('e_meat')
+	if (   state.result.tokens.includes('e_herb')
 		|| state.result.tokens.includes('e_bird')
 		|| state.result.tokens.includes('e_hawaiin')
 		|| state.result.tokens.includes('e_fish') )
 	{
 		state.result.code = 'rp_22_wrong_toppings';
+		score_listen--;
 		// state.result.reply = 'Arent you listening, I want sausage and a veggie';
-		state.session.count_tries++;
 	}
 	else 
 	if (   state.result.tokens.includes('e_crap')
@@ -36,14 +36,35 @@ exports.process = function(state)
 		state.session.game_over = true;
 	}
 	else 
+	if (state.result.tokens.includes('e_meat') )	
+	{
+			state.result.code = 'rp_22_frustrated';  // I' already told you
+	}
+
+	else 
 	if (state.result.tokens.includes('e_veggie') )	
 	{
-		state.result.code = 'rp_22_veg';
-		// state.result.reply = 'Almost, you know what I think. Ill have a slice of sausage and mushroom';
-		state.session.act = 30;  // move on!
-		state.result.choice_done = true;
+		state.session.veg_tries++;
+
+		if (state.session.veg_tries<3)
+		{
+			state.result.code = 'rp_22_veg_hint';
+		}
+		else 
+		{
+			state.result.code = 'rp_22_veg_giveup';
+			state.session.act = 30;  // move on!
+			state.result.choice_done = true;
+		}
 	}
-	if (state.result.tokens.includes( 'i_5sec') )
+	else 
+	if ( (state.result.tokens.length <2) &&		// bc - this doesn't work for me...
+		 (state.result.tokens.includes('e_sausage') )  )	
+	{
+			state.result.code = 'rp_22_frustrated';  // I' already told you
+	}
+
+	else if (state.result.tokens.includes( 'i_5sec') )
 	{
 		state.result.code = 'rp_22_impatient';  // 'I just dont know what toppings.';
 		state.session.trust -= 2;
