@@ -165,6 +165,7 @@ app.get('/ai', function(req, res)
 		case 'system new game':
 		case 'system newgame':
 		case 'newgame':
+		case 'new game':
 			// Reset the session.
 			state.session = deepClone(state_templates.session_defaults);
 			save_state = true;
