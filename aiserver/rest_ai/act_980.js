@@ -37,8 +37,8 @@ exports.process = function(state)
 	if (state.result.tokens.includes('e_rude'))
 	{
 		state.session.score_exec-=2;
-		state.session.trust += -1;
+		state.session.trust -= 1;
 	}
 
-	logger.log('ACT 990 - processed');
+	logger.log('ACT 980 - processed');
 };

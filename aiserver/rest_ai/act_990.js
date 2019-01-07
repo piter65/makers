@@ -7,10 +7,9 @@ exports.process = function(state)
 
 	if (   state.result.tokens.includes( 'i_compliment') )
 	{
-		if (state.session.count_compliment_dress == 0)
+		if (state.session.count_compliment_dress <3 )
 		{
 			state.result.code = 'rp_990_complimented';  // 'Thanks. I got it at Brooks Brothers.';
-			state.session.trust += 1;
 			logger.log('compliment logged');
 		}
 		else
@@ -19,7 +18,7 @@ exports.process = function(state)
 			state.session.trust += -1;
 		}
 
-		++state.session.count_compliment_dress;
+//		++state.session.count_compliment_dress;
 	}
 	else
 	if (state.result.tokens.includes('i_insult'))
@@ -38,7 +37,8 @@ exports.process = function(state)
 
 		++state.session.count_insult;
 	}
-	if (state.result.tokens.includes('i_nopizza'))
+
+	else if (state.result.tokens.includes('i_nopizza'))
 	{
 		state.result.code = 'rp_990_insulted';  //'Excuse me?';
 		state.session.trust--;

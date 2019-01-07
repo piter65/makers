@@ -28,8 +28,11 @@
 	,"shouldnt have":"should skip"
 	,"should avoid":"should skip"
 
-	,"pizza is not for you":"go away"
-	,"pizza isnt for you":"go away"
+	,"slice is not for you":"go away"
+	,"slice isnt for you":"go away"
+
+	,"you are looking ":"yoube "
+	,"youre looking ":"yoube "
 
 	,"you look ":"yoube "
 	,"you are ":"yoube "
@@ -40,6 +43,10 @@
 
 	,"yoube like ":"yoube "
 	,"yoube bit ":"yoube "
+
+	,"arent you ":"yoube "
+	,"are you not ":"yoube "
+
 
 	,"we are ":"webe "
 	,"we're ":"webe "
@@ -55,12 +62,10 @@
 	,"so very nice of you":"thankyou"
 	,"very nice of you":"thankyou"
 
-	,"idioms are early":"so exacting phrases are exactly translated"
+
 	,"you dress well too":"yoube pretty"
 	,"yours is cool too":"yoube pretty"
 	,"your have cool clothes":"yoube pretty"
-
-
 
 	,"do you know":"understand"
 	,"did you know":"understand"
@@ -92,6 +97,13 @@
 	," hips ":" body "
 
 	,"your body":"body"
+
+
+	,"chubby":"fat"
+	,"obese":"fat"
+	,"too fat":"fat"
+
+
 	
 
 	,"slice of pie":"slice"
