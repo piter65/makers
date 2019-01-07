@@ -39,6 +39,17 @@ exports.process = function(state)
 		state.session.score_exec-=2;
 		state.session.trust -= 1;
 	}
+	if (state.result.tokens.includes('e_bbrother'))
+	{
+		if (state.session.act == 10)	// only give boost in act 10.
+		{
+			state.session.score_listen++;
+			state.session.trust += 1;
+		}
+	}
+
+
+
 
 	logger.log('ACT 980 - processed');
 };

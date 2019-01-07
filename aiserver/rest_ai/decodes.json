@@ -31,6 +31,13 @@
 			}
 		]
 	}
+
+	,"rp_10_past_reaction":
+	{
+		"text": "I sorta got sick last time I had pizza.  I'm not sure what happened, but today I saw your nice looking store, and I decided I'm going to try a slice of something." 
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
 	,"rp_10_greet":
 	{
 		"text":
@@ -166,7 +173,11 @@
 	}
 
 
-
+	,"rp_20_asked_twice":
+	{
+		"text": "Like I said, I do not want a drink, I want a slice.  And I don't know about the toppings." 
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
 
 
 
@@ -213,6 +224,34 @@
 			}
 		]
 	}
+
+	,"rp_20_pizza_prefer":
+	{
+		"text": "Oh my, you actually cares about my preferences?  That is so refreshing! So, since you asked, I love sausage and mushroom.  But last time I had pizza I got sick, so I'm a bit afraid to try again." 
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+
+	,"rp_20_carno_prefer":
+	{
+		"text": "Oh thank you for asking.  Actually, I just want a little of each, I'm thinking one meat, one veggie." 
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+
+
+	,"rp_20_prefer_or_want":
+	{
+		"text": "Are you asking what pizza I want today?  Or what I've had in the past.  Can you be more clear for me?" 
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+	,"rp_20_meat1":
+	{
+		"text": "Some meat sounds good.   Any other meats good here?" 
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
 	,"rp_20_decide_sausage_veg":
 	{
 		"text":
@@ -228,6 +267,23 @@
 		]
 	}
 
+	,"rp_20_veg1":
+	{
+		"text": "Some veggie sounds good.   Any other vegetable good here?" 
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+	,"rp_20_veg_uprefer":
+	{
+		"text": "Oh, thanks for asking.  Actually, I've always enjoyed mushrooms and .. well, some kind of meat."
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+	,"rp_20_meat_uprefer":
+	{
+		"text": "Oh, thanks for asking.  Actually, I've always enjoyed sausage and .. well, some kind of veggie."
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
 	,"rp_20_decide_mushroom_meat":
 	{
 		"text":
@@ -236,6 +292,13 @@
 		[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
+	,"rp_20_glutten_disclose":
+	{
+		"text":
+			"You know, the last time I had pizza I felt horrible hours later.  My uncle had the same problem, it turned out he had a glutten allergy.  Come to think of it, maybe I do too?  Maybe I should just avoid pizza."
+		,"animations":
+		[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
 
 	,"rp_20_considering_topping":
 	{
@@ -449,10 +512,23 @@
 		]
 	}
 
+	,"rp_22_what_veg":
+	{
+		"text": "Oh, thanks for asking.  Actually, I've always enjoyed mushrooms and .. well, some kind of meat."
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
 
 	,"rp_20_nodrink":
 	{
 		"text": "I've already said I want sausage and one vegetable.Can you help me pick a vegetable?"
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+
+
+	,"rp_24_what_veg":
+	{
+		"text": "Oh, thanks for asking.  Actually, I've always enjoyed mushrooms and .. well, some kind of meat."
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 

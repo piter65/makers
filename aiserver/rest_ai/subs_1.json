@@ -5,6 +5,14 @@
 	,"'":""
 	,"?":" ?"
 	,".":" ."
+	,"!":" !"
+
+	,"--comment":"should handle up to 6ish spaces. "
+
+	,"   ":" "
+	,"  ":" "
+	,"   ":" "
+	,"  ":" "
 
 
 	,"glutten":"gluten"
@@ -32,9 +40,10 @@
 	," probably ":" "
 	," very ":" "
 
+
+	,"would":"should"
 	,"should not":"shouldnt"
-	,"wouldnt":"shouldnt"
-	,"would not":"shouldnt"
+
 
 	," can i ":" may i "
 	," as well " : " too "
@@ -54,6 +63,7 @@
 
 	," do you want today ":" would you like "
 	," do you want ":" would you like "
+
 
 
 	," cops":" police"
@@ -78,7 +88,8 @@
     ," are you ready to order":" order please"
     ," what may I get you":" order please"
     ," what may I get for you":" order please"
-
+    ," what should you like":" order please"
+ 
 
     ," get out":" iinsult"
 	," please leave":" iinsult"
@@ -102,6 +113,9 @@
 
 	," selection of toppings":" selection"
 
+	," weve ":" we have "
+	," weve got ":" weve "
+
 	," we have excellent selection":" ibrag"
 	," we have great selection":" ibrag"
 	," we have wide selection":" ibrag"
@@ -109,6 +123,69 @@
 	," we have delicios selection":" ibrag"
 	," we have tasty selection":" ibrag"
 
+	,"xcomment":"Gonna work on 'what type of pizza do you like' here.  "
+	," kind of toppings ":" toppings "
+
+	," what type ":" wtype "
+	," what style ":" wtype "
+	," what slice ":" wtype "
+	," what toppings ":" wtype "
+
+	," wtype of toppings ":" wtype "
+	," wtype of ":" wtype "
+	," wtype toppings ":" wtype "
+
+	," we can put any toppings on ":" wtype "
+	," any toppings on ":" wtype "
+
+	," what do you like":" wtype prefer"
+	," what do you prefer":" wtype prefer"
+
+	," do you have preference":"prefer"
+
+	," do you like":" prefer"
+	," do you fancy":" prefer"
+	," is your favorite":" prefer"
+	," do you enjoy":" prefer"
+
+	," have you liked":" prefer"
+	," have you enjoyed":" prefer"
+	," have you tried":" prefer"
+
+	," floats your boat":" prefer"
+	," floats your boat":" prefer"
+
+
+
+
+	,"---------- xcomment":"Gonna work on 'why has it been a long time' here.  "
+	," how come ":" why "
+	," why would ":" why "
+
+	," has it been ":" "
+	," did you wait ":" "
+
+	," such long time":" longtime"
+	," long time":" longtime"
+	," so time":" longtime"
+	," so much time":" longtime"
+	," so long":" longtime"
+
+
+	,"----------- xcomment":"Gonna work on 'are you a vegetarian' here.  "
+	," are you ":" beyou "
+	," do you happen to be ":" beyou "
+	," do you consider yourself ":" beyou "
+
+
+	,"------ xcomment":"do you have allergies' here.  "
+	," do you have allergies":" gluten "
+	," do you have gluten allergies":" gluten "
+	," do you issues with gluten ":" beyou "
+
+
+
+	,"xcomment":"----- end of file -----"
 
 
 }

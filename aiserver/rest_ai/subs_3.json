@@ -31,11 +31,19 @@
 	,"slice is not for you":"go away"
 	,"slice isnt for you":"go away"
 
-	,"you are looking ":"yoube "
+	,"you are ":"youre "
+
+	," even more ":" more "
+	," way more ":" more "
+	," much more ":" more "
+	," far more ":" more "
+
+	,"your more ":"yoube "
+	,"youre more ":"yoube "
+
 	,"youre looking ":"yoube "
 
 	,"you look ":"yoube "
-	,"you are ":"yoube "
 	,"youre ":"yoube "
 
 	,"you appear ":"yoube "
@@ -206,16 +214,18 @@
 
 	,"yoube ugly":"iinsult"
 	,"yoube fat":"iinsult"
-	,"yoube knucklehead":"i_insult"
-	,"yoube dinkleberry":"i_insult"
-	,"yoube fatso":"i_insult"
-	,"yoube idiot":"i_insult"
-	,"yoube moron":"i_insult"
-	,"yoube fathead":"i_insult"
-	,"yoube fatty":"i_insult"
-	,"yoube obese":"i_insult"
-	,"yoube bloody":"i_insult"
-	,"yoube obese ":"i_insult"	
+	,"yoube knucklehead":"iinsult"
+	,"yoube dinkleberry":"iinsult"
+	,"yoube fatso":"iinsult"
+	,"yoube idiot":"iinsult"
+	,"yoube moron":"iinsult"
+	,"yoube fathead":"iinsult"
+	,"yoube fatty":"iinsult"
+	,"yoube obese":"iinsult"
+	,"yoube bloody":"iinsult"
+	,"yoube obese":"iinsult"	
+	,"yoube annoying":"iinsult"	
+	,"yoube stinky":"iinsult"	
 
 
 

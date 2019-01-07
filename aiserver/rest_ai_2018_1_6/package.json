@@ -1,0 +1,15 @@
+{
+  "name": "rest_ai",
+  "version": "1.0.0",
+  "description": "AI server for 'makers' project using REST services.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brent Chance",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}

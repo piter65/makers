@@ -23,7 +23,7 @@ exports.process = function(state)
 		|| state.result.tokens.includes('e_fish') )
 	{
 		state.result.code = 'rp_22_wrong_toppings';
-		score_listen--;
+		state.session.score_listen--;
 		// state.result.reply = 'Arent you listening, I want sausage and a veggie';
 	}
 	else 

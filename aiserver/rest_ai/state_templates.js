@@ -8,7 +8,8 @@ exports.session_defaults =
 	count_tries: 0,
 	veg_tries: 0,
 	meat_tries: 0,
-
+	veg_offers: 0,
+	meat_offers: 0,
 
 	gluten_known: 0,
 

@@ -11,10 +11,80 @@ exports.process = function(state)
 	if (   state.result.tokens.includes('e_sausage')
 		&& state.result.tokens.includes('e_mushroom'))
 	{
-		state.result.code = 'rp_20_decided_full';
-		// state.result.reply = 'Yeah, thats about right. Ill have a slice of sausage and mushroom';
+		state.result.code = 'rp_20_decided_full';  //'Yeah, . Ill have sausage and mushroom';
 		state.session.act = 30;  // move on!
 		state.session.choice_done = true;
+	}
+
+	else
+	if (   state.result.tokens.includes('i_offerhelp')		)
+	{
+		state.result.code = 'rp_20_asked_twice';  // Um.   yeah...
+		state.session.score_understand--;
+	}
+
+	else
+	if (   state.result.tokens.includes('e_slice')
+		&& state.result.tokens.includes('e_wtype')
+		&& state.result.tokens.includes('i_prefer')
+		)
+	{
+		state.result.code = 'rp_20_pizza_prefer';  // you actually care!
+		state.session.choice_done = true;
+		state.session.score_understand+=2;
+			logger.log('ACT 20 home run');
+	}
+
+	else if ( state.result.tokens.includes('e_wtype')
+		&& state.result.tokens.includes('i_prefer')
+		)
+	{
+		state.result.code = 'rp_20_pizza_prefer';  // you actually care!
+		state.session.choice_done = true;
+		state.session.score_understand+=2;
+			logger.log('ACT 20 home run');
+	}
+	else if ( state.result.tokens.includes('i_prefer')
+		&&	state.result.tokens.includes('e_veggie') 
+		&&	state.result.tokens.includes('e_meat') 	)
+
+	{
+		state.result.code = 'rp_20_carno_prefer';  // you actually sorta care!
+		state.session.score_understand+=1;
+	}
+	else
+
+	if (   state.result.tokens.includes('e_slice')
+		&& state.result.tokens.includes('i_prefer')
+		)
+	{
+		state.result.code = 'rp_20_prefer_or_want';  // you almost actually care!
+	}
+	else
+	if ( state.result.tokens.includes('i_prefer')
+		&&	state.result.tokens.includes('e_veggie') )
+	{
+		state.result.code = 'rp_20_veg_uprefer';  // you almost actually care!
+		state.session.score_understand+=1;
+		state.session.act = 24;  // veggie decided!  move on!
+	}
+	else
+
+	if ( state.result.tokens.includes('i_prefer')
+		&&	state.result.tokens.includes('e_meat') )
+	{
+		state.result.code = 'rp_20_meat_uprefer';  // you almost actually care!
+		state.session.score_understand+=1;
+		state.session.act = 22;  // meat decided!  move on!
+	}
+	else
+	if (   state.result.tokens.includes('e_sick')
+		&& state.result.tokens.includes('e_gluten')
+		)
+	{
+		state.result.code = 'rp_20_gluten_disclose';  // now that you mention it.
+		state.session.score_understand+=2;
+		state.session.glutten_known=1;
 	}
 	else
 	if (   state.result.tokens.includes('e_mushroom')
@@ -35,17 +105,32 @@ exports.process = function(state)
 	else
 	if (   state.result.tokens.includes('e_meat') )
 	{
-		state.result.code = 'rp_20_decide_sausage_veg';
-		// state.result.reply = 'Maybe one meat, one veggie?  I got it.  Sausage and one veggie?  Any suggestion on the veggie?';
-		state.session.act = 22;  // move on!
+		if (state.session.meat_offers<1)
+		{
+			state.result.code = 'rp_20_meat1';
+		}
+		else
+		{
+			state.result.code = 'rp_20_decide_sausage_veg';
+			state.session.act = 22;  // move on!
+		}
+		state.session.meat_offers++;
+	
 	}
 
 	else
 	if ( state.result.tokens.includes('e_veggie') )
 	{
-		state.result.code = 'rp_20_decide_mushroom_meat';
-		// state.result.reply = 'Maybe one meat, one veggie?  I got it.  Sausage and one veggie?  Any suggestion on the veggie?';
-		state.session.act = 24;  // move on!
+		if (state.session.veg_offers<1)
+		{
+			state.result.code = 'rp_20_veg1';
+		}
+		else
+		{
+			state.result.code = 'rp_20_decide_mushroom_meat';
+			state.session.act = 24;  // move on!
+		}
+		state.session.veg_offers++;
 	}
 
 
@@ -126,7 +211,7 @@ exports.process = function(state)
 		state.result.code = 'rp_20_no_drink';
 		// state.result.reply = 'You know, I do not usually eat pizza so it has been a while, but lets see. How about sausage and a veggie?';
 		state.session.trust --;
-		score_listen--;
+		state.session.score_listen--;
 	}
 	else
 

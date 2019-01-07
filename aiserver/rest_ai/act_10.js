@@ -9,6 +9,17 @@ exports.process = function(state)
 
 	act_980.process(state);		// do commmon scoring...
 
+
+
+	if (state.result.tokens.includes( 'i_why')
+		&& state.result.tokens.includes( 'e_longtime')
+	 )
+	{
+		state.result.code = 'rp_10_past_reaction';    //  bad reaction in past, but I'm gonna get a slice.
+		state.session.score_understands += 1;
+		logger.log('thanked');
+	}
+	else
 	if (state.result.tokens.includes( 'i_thankyou') )
 	{
 		state.result.code = 'rp_10_welcome';    //  'You are very welcome.''

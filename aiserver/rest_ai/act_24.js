@@ -23,7 +23,7 @@ exports.process = function(state)
 	{
 		state.result.code = 'rp_22_wrong_toppings';   // 'Arent you listening,
 		state.session.count_tries++;
-		score_listen--;
+		state.session.score_listen--;
 
 	}
 	else 
