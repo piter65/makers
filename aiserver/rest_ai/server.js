@@ -38,6 +38,8 @@ if (is_dev)
 logger.log_clear();
 logger.log("did clear ");
 
+var extratext="This is extra!";
+
 
 const subs_1 = JSON.parse(fs.readFileSync('subs_1.json'));
 const subs_2 = JSON.parse(fs.readFileSync('subs_2.json'));
@@ -136,6 +138,9 @@ app.get('/ai', function(req, res)
 		return;
 	}
 
+// peter wants a extra text, used for feedback now.
+	state.result.extra =":";
+
 	logger.log("_story_Player: '%s'", state.result.text_origin);
 
 	sub_pass(state, subs_1);
@@ -154,7 +159,6 @@ app.get('/ai', function(req, res)
 	sub_pass(state, subs_4);
 	logger.log("\tSub Pass 4 'text': '%s'", state.result.text);
 	// state.result.text_4 = state.result.text;
-
 	
 	// Extract intent and entities.
 	nlu.process(state);
@@ -162,19 +166,6 @@ app.get('/ai', function(req, res)
 	var save_state = false;
 	switch (state.result.text_origin)
 	{
-		case 'system restart':
-		case 'system new game':
-		case 'system newgame':
-		case 'newgame':
-		case 'new game':
-			// Reset the session.
-			state.session = deepClone(state_templates.session_defaults);
-			save_state = true;
-
-			state.result.code = "rp_5_intro";
-		// Decode the reply.
-			state.result.reply = decoder.decode_reply(state.result.code);		
-			break;
 		case 'system test':
 		case 'system check':
 			state.result.code = 'rp_0_check';
@@ -196,9 +187,6 @@ app.get('/ai', function(req, res)
 			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
 			break;
 
-
-
-
 		case 'ibjeff':
 			state.result.code = 'rp_0_ibjeff';
 			state.result.reply = state.result.code+':ACT:'+state.session.act+'\n';
@@ -209,8 +197,6 @@ app.get('/ai', function(req, res)
 			state.result.reply += state_prev.result.tokens[2]+'\n';
 			state.result.reply += state_prev.result.tokens[3]+'\n';
 			break;
-
-
 
 		case 'howdy':
 			state.result.code = 'rp_0_howdy';
@@ -228,8 +214,22 @@ app.get('/ai', function(req, res)
 	if (save_state)
 		sessions[id_session] = state;
 
+	state.result.reply+=state.result.extra;	// pa
+
+    if (state.result.tokens.includes('e_newgame'))
+    {
+			// Reset the session.
+			state.session = deepClone(state_templates.session_defaults);
+			save_state = true;
+
+			state.result.code = "rp_5_intro";
+			state.result.reply = decoder.decode_reply(state.result.code);		
+    }
+
 	logger.log("\tResult: \n" + JSON.stringify(state.result, null, 4));
 	logger.log("_story_AI:'"+state.result.reply+"'");
+
+
 
 	res.set('Access-Control-Allow-Origin', '*');
 	res.send(state.result);

@@ -7,16 +7,13 @@ exports.process = function(state)
 {
 	logger.log('process act 10 - pa');
 
-
-
-
 	if (state.result.tokens.includes( 'i_why')
 		&& state.result.tokens.includes( 'e_longtime')
 	 )
 	{
 		state.result.code = 'rp_10_past_reaction';    //  bad reaction in past, but I'm gonna get a slice.
 		state.session.score_understands += 1;
-		logger.log('thanked');
+	   state.session.empathy_opportunity=true;
 	}
 	else
 	if (state.result.tokens.includes( 'i_thankyou') )
@@ -53,6 +50,11 @@ exports.process = function(state)
 		}
 		++state.session.count_greeting;
 	}
+	else
+		if (state.result.tokens.includes('e_bbrother'))
+		{
+			state.result.code = 'rp_10_first_time';  // first time I\'ve enterred the place.'
+		}
 	else
 	if (state.result.tokens.includes( 'i_offerhelp') 
 					||

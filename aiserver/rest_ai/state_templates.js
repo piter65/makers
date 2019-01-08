@@ -19,11 +19,16 @@ exports.session_defaults =
 	score_understand:5,
 	score_empathy:5,
 
+
+
 	achieve_closedeal:0,
 
 	next_act:5,
 
+	empathy_opportunity:false,
 	game_over: false,
+	
+
 };
 
 exports.result_defaults =
@@ -37,4 +42,5 @@ exports.result_defaults =
 	reply: null,
 	tokens: [],
 	direction: null,
+	extra:null,
 };

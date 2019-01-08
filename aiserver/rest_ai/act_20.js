@@ -11,7 +11,7 @@ exports.process = function(state)
 	if (   state.result.tokens.includes('e_sausage')
 		&& state.result.tokens.includes('e_mushroom'))
 	{
-		state.result.code = 'rp_20_decided_full';  //'Yeah, . Ill have sausage and mushroom';
+		state.result.code = 'rp_20_decided_both';  //'Yeah, . Ill have sausage and mushroom';
 		state.session.act = 30;  // move on!
 		if (state.session.glutten_known>0) state.session.act = 40;  // move on!
 
@@ -89,7 +89,7 @@ exports.process = function(state)
 	{
 		state.result.code = 'rp_20_gluten_disclose';  // now that you mention it.
 		state.session.score_understand+=2;
-
+		state.session.empathy_opportunity=true;   // looking for sory
 		state.session.next_act=20;	// come back here
 		state.session.act = 32;  // move to glutten decided!  move on!
 	}
@@ -148,37 +148,31 @@ exports.process = function(state)
 		state.result.code = 'rp_20_considering_topping';
 		// state.result.reply = 'Maybe just one meat and a veggie.';
 		state.session.count_tries++;
-		state.session.trust += 1;
+
 	}
 	else
 	if (state.result.tokens.includes('e_hawaiin'))
 	{
-		state.result.code = 'rp_20_considering_hawaiin';
-		// state.result.reply = 'Yech- way too sweet for me.';
-		state.session.trust += 1;
+		state.result.code = 'rp_20_considering_hawaiin';  // 'Yech- way too sweet for me.';
 		state.session.count_tries++;
 	}
 	else
 	if (state.result.tokens.includes('e_combo'))
 	{
-		state.result.code = 'rp_20_considering_combo';
-		// state.result.reply = 'Too much stuff.  Something simpler.';
-		state.session.trust -= 1;
+		state.result.code = 'rp_20_considering_combo';  // 'Too much stuff.  Something simpler.';
 		state.session.count_tries++;
 	}
 	else
 	if (state.result.tokens.includes('e_crap'))
 	{
-		state.result.code = 'rp_20_considering_crap';
-		// state.result.reply = 'Maybe you like that type of thing, but not for me.';
+		state.result.code = 'rp_20_considering_crap';// 'Maybe you like that type of thing, but not for me.';
 		state.session.count_tries++;
-		state.session.trust -= 1;
+		state.session.score_exec--;
 	}
 	else
 	if (state.result.tokens.includes('e_herb'))
 	{
-		state.result.code = 'rp_20_considering_crap';
-		// state.result.reply = 'Maybe you like that type of thing, but not for me.';
+		state.result.code = 'rp_20_considering_crap';  // 'Maybe you like that type of thing, but not for me.';
 		state.session.count_tries++;
 	}
 

@@ -115,7 +115,7 @@
 		,"animations": [{"face":"f_confused","body":"b_normal","delay":0,"duration":250}]
 	}
 
-	,"rp_20_decided_full":
+	,"rp_20_decided_both":
 	{
 		"text":
 			"Yeah, thats about right. I'll have a slice of sausage and mushroom."
@@ -208,32 +208,27 @@
 	}
 	,"rp_20_considering_hawaiin":
 	{
-		"text":
-			"Yech- way too sweet for me."
+		"text":"Yech- way too sweet for me."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_considering_combo":
 	{
-		"text":
-			"Too much stuff.  Something simpler."
+		"text":"Too much stuff.  Something simpler."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_considering_crap":
 	{
-		"text":
-			"Maybe you like that type of thing, but that's not for me."
+		"text":"Maybe you like that type of thing, but that's not for me."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_considering_fish":
 	{
-		"text":
-			"Fish and pizza do not go together."
+		"text":"Fish and pizza do not go together."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_considering_fish":
 	{
-		"text":
-			"Fish and pizza do not go together."
+		"text":"Fish and pizza do not go together."
 		,"animations":
 		[
 			{
@@ -246,20 +241,17 @@
 	}
 	,"rp_20_considering_dog":
 	{
-		"text":
-			"You gotta be joking, no one eats a dog pizza."
+		"text":"You gotta be joking, no one eats a dog pizza."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_considering_bird":
 	{
-		"text":
-			"Birds of a feather, flock together, and I will eat that pizza- NEVER!"
+		"text":"Birds of a feather, flock together, and I will eat that pizza- NEVER!"
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_self_discovery":
 	{
-		"text":
-			"You know, I do not usually eat pizza so it has been a while, but lets see. How about sausage and a veggie?"
+		"text":"You know, I do not usually eat pizza so it has been a while, but lets see. How about sausage and a veggie?"
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_impatient":
