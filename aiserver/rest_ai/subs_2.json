@@ -30,12 +30,12 @@
 
   	," by the way":" "
   	," you are what you eat":" "
-	," let me go out on a limb":" "
+	," let me go out on limb":" "
 
 
-    ," arent you too heavy for pizza":" yoube fat "
-	," arent you too fat for pizza":" yoube fat "
-	," you obviously have had more than enough pizza":" yoube fat "
+    ," arent you too heavy for slice":" yoube fat "
+	," arent you too fat for slice":" yoube fat "
+	," you obviously have had more than enough slice":" yoube fat "
 
 
 	," looks like the pizza went straight to your thighs ":" yoube fat "
@@ -43,11 +43,11 @@
 	," whatll it be ":" order please"
 	," what would you like ":" order please"
 	," whats it gonna be ":" order please"
-	," what can i get you ":" order please"
+	," what may i get you ":" order please"
 	," would you like a slice ":" order please"
-	," how can I help you ":" order please"
-	," what can I do you for ":" order please"
-	," how can I be of assistance ":" order please"
+	," how may I help you ":" order please"
+	," what may I do you for ":" order please"
+	," how may I be of assistance ":" order please"
 
 	," how about some pizza ":" order please"
 	," how about chowing down on some pizza ":" order please"
