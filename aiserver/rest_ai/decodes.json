@@ -60,18 +60,20 @@
 			"That's not a nice way to greet a customer! Anyway, I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?"
 		,"animations":
 		[
-			{
-				 "face":"f_smile"
-				,"body":"b_normal"
-				,"delay":0
-				,"duration":250
-			},
+
 			{
 				 "face":"f_frown"
 				,"body":"b_angry"
 				,"delay":2200
 				,"duration":250
 			}
+			{
+				 "face":"f_neutral"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			},
+
 		]
 	}
 	,"rp_10_offeredhelp":
@@ -202,9 +204,8 @@
 
 	,"rp_20_considering_topping":
 	{
-		"text":
-			"Maybe just one meat and a veggie."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text": "Maybe just one meat and a veggie."
+		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_considering_hawaiin":
 	{
@@ -482,9 +483,9 @@
 			"I think I'll go somewhere else for lunch."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
-	,"rp_990_super_insulted":
+	,"rp_990_angry_leaving":
 	{
-		"text": "Screw you and the horse you rode in on! I'm leaving!"
+		"text": "Seriously, what is wrong with you?  I am never returning to PieZanos.  Good Day."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_990_cussed_out":
