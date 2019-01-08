@@ -28,6 +28,7 @@ function deepClone(obj)
 	return JSON.parse(JSON.stringify(obj));
 }
 
+// Start server with empty object of sessions.
 var sessions = {};
 
 var is_dev = false;
@@ -54,19 +55,25 @@ app.get('/', function(req, res)
 	logger.log("sending index pa ");
 });
 
+// Creates a new session and sends back the session ID.
 app.get('/ai/start-session', function(req, res)
 {
 	logger.log("Get request for '/ai/start-session' received:");
 
 	logger.log("query: " + JSON.stringify(req.query));
 
+	// Create a new session ID based on timestamp.
+	//   We shouldn't have conflicts because node 
+	//   is single threaded by default.
 	const id_session = uuid_by_timestamp();
 	var state = {};
 
+	// Save the new session's blank state by the session ID.
 	sessions[id_session] = state;
 
 	logger.log("Session generated. ID: %s", id_session);
 
+	// Send back the session ID to the client.
 	res.set('Access-Control-Allow-Origin', '*');
 	res.send(id_session);
 });
