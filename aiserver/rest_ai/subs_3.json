@@ -139,6 +139,9 @@
 	,"choice":"options"
 	,"choice":"options"
 
+	,"your clothes":"dress"
+	,"your outfit":"dress"
+
 
 	,"dressed nicely":"pretty"
 	,"nice":"pretty"
@@ -178,6 +181,8 @@
 	,"want":"desire"
 	,"desire":"desire"
 	,"like":"desire"
+	,"admire":"desire"
+
 
 	,"tell me what":"what"
 	,"do you remember what":"what"
@@ -227,6 +232,19 @@
 	,"yoube annoying":"iinsult"	
 	,"yoube stinky":"iinsult"	
 
+	," coke " : " drink "
+	," water " : " drink "
+	," cola " : " drink "
+	," rootbeer " : " drink "
+	," pepsi " : " drink "
+	," icewater " : " drink "
+	," lemonade " : " drink "
+	," lemonade " : " drink "
+
+	," no drink " : " "
+	," without drink " : " "
+	," hold drink " : " "
+	," skip drink " : " "
 
 
 }

@@ -27,12 +27,13 @@ exports.process = function(state)
 		{
 			state.result.code = 'rp_990_insulted';  //'Excuse me?';
 			state.session.trust += -2;
+			state.session.score_understand-=2;
 		}
 		else
 		{
 			state.result.code = 'rp_990_insulted_too_much';   // 'I think I'll go somewhere else for lunch.';
-			state.session.trust += -3;
 			state.session.game_over = true;
+			state.session.score_exec-=2;
 		}
 
 		++state.session.count_insult;
@@ -41,7 +42,7 @@ exports.process = function(state)
 	else if (state.result.tokens.includes('i_nopizza'))
 	{
 		state.result.code = 'rp_990_insulted';  //'Excuse me?';
-		state.session.trust--;
+		state.session.score_understand-=2;
 	}
 
 	else
@@ -62,6 +63,10 @@ exports.process = function(state)
 			state.result.code = 'rp_990_cussed_out';  //'I\'m leaving!';
 			state.result.direction = 'very insulted';
 			state.session.trust += -3;
+			state.session.score_exec=0;
+			state.session.score_listen-=2;
+			state.session.score_understand-=2;
+
 			state.session.game_over = true;
 		}
 	}
@@ -81,8 +86,6 @@ exports.process = function(state)
 	{
 		{
 			state.result.code = 'rp_990_smalltalk_weather';   // 'Um, yeah, I guess so.';
-			state.result.direction = 'awkward';
-			state.session.trust += 0;
 		}
 	}
 	else
@@ -90,7 +93,6 @@ exports.process = function(state)
 	{
 		{
 			state.result.code = 'rp_990_regreeted';  //'Yeah, we\'ve already met.';
-			state.result.direction = 'somewhat annoyed';
 			state.session.trust += -1;
 		}
 

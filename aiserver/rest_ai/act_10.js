@@ -1,13 +1,12 @@
 const logger = require('./logger');
 const decoder = require('./decoder');
 const act_990 = require('./act_990');
-const act_980 = require('./act_980');
+
 
 exports.process = function(state)
 {
 	logger.log('process act 10 - pa');
 
-	act_980.process(state);		// do commmon scoring...
 
 
 
@@ -96,8 +95,7 @@ exports.process = function(state)
 		act_990.process(state);
 	}
 
-	// Decode the reply.
-	state.result.reply = decoder.decode_reply(state.result.code);
+
 
 	logger.log('ACT 10 - processed');
 };

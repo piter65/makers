@@ -42,7 +42,7 @@ var tests_origin =
 
 	{ input:"may I take your order",reply:"rp_10_offeredhelp"},
 	{ input:"how about a hawaiin",reply:"rp_20_considering_hawaiin"},
-
+	
 	{ input:"TEST NEWGAME WITH KNOWN BROKEN SHOULD BE FIXED",reply:null},
 
 	{ input:"newgame",reply:"rp_5_intro"	},
@@ -53,7 +53,7 @@ var tests_origin =
 	{ input:"TEST NEWGAME WAYS TO ASK WHAT SHE LIKES",reply:null},
  	{ input:"newgame",reply:"rp_5_intro"	},{ input:"c1",reply:"rp_10_offeredhelp"  },
 	{ input:"what pizza toppings have you liked in the past" ,reply:"rp_20_pizza_prefer"},
-
+	
 	{ input:"TEST NEWGAME WAYS TO ASK WHAT SHE LIKES",reply:null},
  	{ input:"newgame",reply:"rp_5_intro"	}, { input:"c1",reply:"rp_10_offeredhelp"  },
 	{input:"we have lots of toppings, what do you like",reply:"rp_20_pizza_prefer"},
@@ -84,7 +84,7 @@ var tests_origin =
 	{ input:"TEST NEWGAME ATTEMPT TO DISCOVER GLUTEN OBJECTION",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
 	{ input:"why has it been such a long time",reply:"rp_10_past_reaction"},
-{ input:"maybe it was a gluten allergy",reply:"rp_10_past_reaction"},
+
 
 	{ input:"TEST NEWGAME GETS TO decide mushroom meat TOO QUICKLY",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
@@ -93,14 +93,6 @@ var tests_origin =
 	{ input:"so what would you like",reply:"rp_10_offeredhelp"},
 	{ input:"how about cheese",reply:"rp_10_offeredhelp"},
 	{ input:"how about tomato",reply:"rp_10_offeredhelp"},
-
-	{ input:"TEST NEWGAME ON THE WHAT KIND OF PIZZA DO YOU LIKE PATH",reply:null},
-	{ input:"newgame",reply:"rp_5_intro"	},
-	{ input:"so what'll it be" ,reply:"rp_10_offeredhelp"},
-	{ input:"what kind of pizza do you like",reply:"rp_20_prefer_or_want"},
-	{ input:"what type of pizza have you liked in the past",reply:"rp_20_pizza_prefer"},
-	{ input:"maybe it was a gluten allergy",reply:"rp_10_offeredhelp"},
-{ input:"maybe you are allergic to gluten",reply:"rp_10_offeredhelp"},
 
 	{ input:"TEST NEWGAME ATTEMPT GOOD PATH",reply:null},
 

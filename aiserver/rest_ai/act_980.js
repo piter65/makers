@@ -11,11 +11,11 @@ exports.process = function(state)
 	{
 		if (state.session.count_compliment_dress == 0)
 		{
-			state.session.trust += 1;
+			state.session.empathy += 1;
 		}
 		else
 		{
-			state.session.trust += -1;
+			state.session.empathy += -1;
 		}
 		++state.session.count_compliment_dress;
 	}
@@ -37,14 +37,25 @@ exports.process = function(state)
 	if (state.result.tokens.includes('e_rude'))
 	{
 		state.session.score_exec-=2;
-		state.session.trust -= 1;
+
 	}
 	if (state.result.tokens.includes('e_bbrother'))
 	{
 		if (state.session.act == 10)	// only give boost in act 10.
 		{
 			state.session.score_listen++;
-			state.session.trust += 1;
+
+		}
+	}
+	if ( 
+		state.result.tokens.includes('e_shock') ||
+        state.result.tokens.includes('e_empathy')
+		)
+	{
+		if ( (state.session.act > 29) && (state.session.act < 40))	// only give boost in act 30- glutten
+		{
+			state.session.score_listen++;
+			state.session.score_empathy+=2;
 		}
 	}
 

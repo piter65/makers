@@ -13,6 +13,9 @@ exports.process = function(state)
 	{
 		state.result.code = 'rp_20_decided_full';  //'Yeah, . Ill have sausage and mushroom';
 		state.session.act = 30;  // move on!
+		if (state.session.glutten_known>0) state.session.act = 40;  // move on!
+
+
 		state.session.choice_done = true;
 	}
 
@@ -79,12 +82,16 @@ exports.process = function(state)
 	}
 	else
 	if (   state.result.tokens.includes('e_sick')
-		&& state.result.tokens.includes('e_gluten')
+		|| state.result.tokens.includes('e_gluten')
+		|| state.result.tokens.includes('i_dietary')
+
 		)
 	{
 		state.result.code = 'rp_20_gluten_disclose';  // now that you mention it.
 		state.session.score_understand+=2;
-		state.session.glutten_known=1;
+
+		state.session.next_act=20;	// come back here
+		state.session.act = 32;  // move to glutten decided!  move on!
 	}
 	else
 	if (   state.result.tokens.includes('e_mushroom')
@@ -208,15 +215,16 @@ exports.process = function(state)
 	else
 	if (state.result.tokens.includes('e_drink'))
 	{
-		state.result.code = 'rp_20_no_drink';
-		// state.result.reply = 'You know, I do not usually eat pizza so it has been a while, but lets see. How about sausage and a veggie?';
-		state.session.trust --;
+		state.result.code = 'rp_20_no_drink';    // was nodrink
 		state.session.score_listen--;
 	}
 	else
-
-
-
+	if (state.result.tokens.includes('i_offerhelp'))
+	{
+		state.result.code = 'rp_20_order_please_twice';    // was nodrink
+		state.session.score_listen--;
+	}
+	else
 	if (state.result.tokens.includes( 'i_5sec') )
 	{
 		state.result.code = 'rp_20_impatient';  // 'I just dont know what toppings.';
@@ -233,9 +241,6 @@ exports.process = function(state)
 	{
 		act_990.process(state);
 	}
-
-	// Decode the reply.
-	state.result.reply = decoder.decode_reply(state.result.code);
 
 	logger.log('ACT 20 - processed');
 };

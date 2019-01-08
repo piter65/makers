@@ -6,6 +6,7 @@ exports.session_defaults =
 	count_insult: 0,
 	count_greeting: 0,
 	count_tries: 0,
+	count_write: 0,
 	veg_tries: 0,
 	meat_tries: 0,
 	veg_offers: 0,
@@ -16,9 +17,12 @@ exports.session_defaults =
 	score_exec:5,
 	score_listen:5,
 	score_understand:5,
+	score_empathy:5,
 
+	achieve_closedeal:0,
 
-	choice_done: false,
+	next_act:5,
+
 	game_over: false,
 };
 

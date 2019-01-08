@@ -8,6 +8,7 @@ p: [none]
 launch server WITH logging:
 	sudo -i
 	cd /home/ubuntu/rest_ai
+	sudo killall node
 	node server |& tee debug.log &
 (ref):
 	https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file
@@ -36,3 +37,6 @@ port: 22
 u: ubuntu
 p: [none]
 shell: sudu su -
+
+www.helpme.net/891917457 <--- virus
+

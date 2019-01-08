@@ -19,6 +19,7 @@ const act_24 = require('./act_24');
 const act_30 = require('./act_30');
 const act_32 = require('./act_32');
 const act_40 = require('./act_40');
+const act_980 = require('./act_980');
 
 // This function will work so long as 'obj' 
 //   does not contain any cyclic references.
@@ -186,6 +187,18 @@ app.get('/ai', function(req, res)
 			state.result.reply += JSON.stringify(state_prev, null, 4);
 			break;
 
+		case 'system score':
+			state.result.code = 'rp_0_score';
+
+			state.result.reply += 'Executive Score:'+state.session.score_exec+'\n';
+			state.result.reply += 'Active Listening:'+state.session.score_listen+'\n';
+			state.result.reply += 'Understanding:'+state.session.score_understand+'\n';
+			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
+			break;
+
+
+
+
 		case 'ibjeff':
 			state.result.code = 'rp_0_ibjeff';
 			state.result.reply = state.result.code+':ACT:'+state.session.act+'\n';
@@ -196,6 +209,8 @@ app.get('/ai', function(req, res)
 			state.result.reply += state_prev.result.tokens[2]+'\n';
 			state.result.reply += state_prev.result.tokens[3]+'\n';
 			break;
+
+
 
 		case 'howdy':
 			state.result.code = 'rp_0_howdy';
@@ -250,6 +265,9 @@ function sub_pass(state, subs)
 function process(state)
 {
 
+	act_980.process(state);		// do commmon scoring...
+
+
 	logger.log('gonna process:'+state.session.act);
 	switch (state.session.act)
 	{
@@ -280,4 +298,19 @@ function process(state)
 			state.result.error = 'Act Out of Range';
 			break;
 	}
+	// Decode the reply.
+	state.result.reply = decoder.decode_reply(state.result.code);
+
+	if (state.session.game_over)
+	{
+
+			state.result.reply += '\n\n-GAME OVER-\n-';
+			state.result.reply += 'Executive Score:'+state.session.score_exec+'\n';
+			state.result.reply += 'Active Listening:'+state.session.score_listen+'\n';
+			state.result.reply += 'Understanding:'+state.session.score_understand+'\n';
+			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
+			state.result.reply += '\n try "newgame" to play again\n';
+
+	}
+
 }

@@ -89,6 +89,10 @@
     ," what may I get you":" order please"
     ," what may I get for you":" order please"
     ," what should you like":" order please"
+    ," how may I be of service":" order please"
+    ," may I be of service":" order please"
+    ," have you decided":" order please"
+    ," are you ready to order":" order please"
  
 
     ," get out":" iinsult"
@@ -183,7 +187,10 @@
 	," do you have gluten allergies":" gluten "
 	," do you issues with gluten ":" beyou "
 
-
+	,"------ xcomment":"do you have allergies' here.  "
+	," piezanos":" piezanos"
+	," pie-zanos":" piezanos"
+	," paizanos":" piezanos"
 
 	,"xcomment":"----- end of file -----"
 

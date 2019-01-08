@@ -5,7 +5,15 @@
 	{
 		"text":
 			"Hi there.  I've been wondering about this place, it's been a while since I've had some pizza.  I figured this would be a nice place to try out. By the way, nice uniform you got there."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 
 
@@ -13,7 +21,15 @@
 	{
 		"text":
 			"You are very welcome."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 
 	,"rp_10_past_reaction":
@@ -26,19 +42,43 @@
 	{
 		"text":
 			"Hi! This seemed like a nice place to eat."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_10_first_time":
 	{
 		"text":
-			"First time I've enterred the place."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+			"Yep first time I've enterred the place."
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_10_customer_initiates":
 	{
 		"text":
 			"I was thinking about getting a slice."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_10_insulted":
 	{
@@ -78,13 +118,29 @@
 	{
 		"text":
 			"I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_10_impatient":
 	{
 		"text":
 			"Are you gonna take my order or something?"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_10_fed_up":
 	{
@@ -119,19 +175,43 @@
 	{
 		"text":
 			"Yeah, thats about right. I'll have a slice of sausage and mushroom."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_20_decided_mushrooms":
 	{
 		"text":
 			"Mushrooms sound good. Now what meat goes with mushrooms?"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_20_decided_sausage":
 	{
 		"text":
 			"Sausage sounds perfect, but I want a veggie too.  Can you suggest a veggie?"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 
 	,"rp_20_pizza_prefer":
@@ -165,7 +245,15 @@
 	{
 		"text":
 			"Some meat sounds good.  Maybe one meat, one veggie?  I got it.  Sausage and one veggie?  Any suggestion on the veggie?"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 
 	,"rp_20_veg1":
@@ -204,31 +292,71 @@
 	{
 		"text":
 			"Maybe just one meat and a veggie."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_20_considering_hawaiin":
 	{
 		"text":
 			"Yech- way too sweet for me."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_20_considering_combo":
 	{
 		"text":
 			"Too much stuff.  Something simpler."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_20_considering_crap":
 	{
 		"text":
 			"Maybe you like that type of thing, but that's not for me."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_20_considering_fish":
 	{
 		"text":
 			"Fish and pizza do not go together."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_20_considering_fish":
 	{
@@ -248,38 +376,86 @@
 	{
 		"text":
 			"You gotta be joking, no one eats a dog pizza."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_20_considering_bird":
 	{
 		"text":
 			"Birds of a feather, flock together, and I will eat that pizza- NEVER!"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_20_self_discovery":
 	{
 		"text":
 			"You know, I do not usually eat pizza so it has been a while, but lets see. How about sausage and a veggie?"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_20_impatient":
 	{
 		"text":
 			"I just don't know what toppings."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_20_fed_up":
 	{
 		"text":
 			"I won't be visiting here again.  Good day."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 
 	,"rp_22_correct":
 	{
 		"text":
 			"Yeah, thats about right. I'll have a slice of sausage and mushroom."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_22_wrong_toppings":
 	{
@@ -313,7 +489,15 @@
 	{
 		"text":
 			"Almost. You know what I think? I'll have a slice of sausage and mushroom."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 
 	,"rp_22_what_veg":
@@ -326,15 +510,11 @@
 
 	,"rp_20_no_drink":
 	{
-		"text": "I've already said that I don't want a drink. Can you help me pick toppings?"
+		"text": "I've already said that I don't want a drink. Can you help me pick a vegetable?"
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
-	,"rp_20_order_please_twice":
-	{
-		"text": "I'm trying to figure that out. Can you help me pick toppings?"
-		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
-	}
+
 
 	,"rp_24_what_veg":
 	{
@@ -406,49 +586,99 @@
 		,"animations": [{ "face":"f_sad","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
+'
+
 	,"rp_30_time_to_reconsider":
 	{
 		"text":
 			"Now that I think about it, last time I had pizza, I think I had a bad reaction.  I'm suspicious it might be the gluten."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_30_remember_gluten":
 	{
 		"text":
 			"Now, come to think of it, last time I had pizza, I think I had a bad reaction.  I'm suspicious it might be the gluten."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 
 
 	,"rp_32_nogluten_undecided":
 	{
 		"text": "A no glutten option?  That's fantastic! Now what toppings do I get?"
-		,"animations": [{ "face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[{ "face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
 	,"rp_32_decided_nogluten":
 	{
 		"text": "A no glutten option?  That's fantastic! I'll get that."
-		,"animations": [{ "face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[{ "face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
 	,"rp_32_fed_up":
 	{
-		"text": "I guess this was a bad idea.  Thanks for your time."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text":
+			"I guess this was a bad idea.  Thanks for your time."
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
+
+
+
+
 
 	,"rp_40_finished":
 	{
 		"text":
 			"Perfect.  I have to say I'm very pleased with the service here at Paizanos! This is the current Game Over!"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 
 	,"rp_40_dont_forget":
 	{
 		"text": "Don't forget glutten free.  Please write that down and read it all back to me."
-	,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 
 
@@ -476,71 +706,185 @@
 	{
 		"text":
 			"Enough about me. Can we get on with my pizza?"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_990_insulted":
 	{
 		"text":
 			"Excuse me?"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_990_insulted_too_much":
 	{
 		"text":
 			"I think I'll go somewhere else for lunch."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_990_super_insulted":
 	{
-		"text": "Screw you and the horse you rode in on! I'm leaving!"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text":
+			"Fuck you and the horse you rode in on! I'm leaving!"
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_990_cussed_out":
 	{
-		"text": "I'm leaving!"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text":
+			"I'm leaving!"
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_990_smalltalk_sports":
 	{
-		"text": "I don't really follow sports."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text":
+			"I don't really follow sports."
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_990_smalltalk_weather":
 	{
-		"text": "Um, yeah, I guess so."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text":
+			"Um, yeah, I guess so."
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_990_rude":
 	{
-		"text": "Um, I not quite comfortable with that."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text":
+			"Um, I not quite comfortable with that."
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_990_hard_of_hearing":
 	{
 		"text":
 			"Excuse me. I'm a little hard of hearing. Can you speak more slowly and clearly, please?"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_990_not_understand":
 	{
 		"text":
 			"Didn't catch that. Can you speak more slowly and clearly?"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_990_fed_up":
 	{
-		"text": "I wont be visiting here again.  Good day."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text":
+			"I wont be visiting here again.  Good day."
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 	,"rp_990_nonseq":
 	{
-		"text": "What does that have to do with the price of peas in China?"
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text":
+			"What does that have to do with the price of peas in China?"
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
+
+
 
 	,"rp_990_regreeted":
 	{
-		"text": "Yeah, we've already met."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text":
+			"Yeah, we've already met."
+		,"animations":
+		[
+			{
+				 "face":"f_smile"
+				,"body":"b_normal"
+				,"delay":0
+				,"duration":250
+			}
+		]
 	}
 }

@@ -16,6 +16,7 @@ exports.process = function(state)
 
 	{
 		state.result.code = 'rp_40_finished';
+		state.session.game_over = true;
 	}
 
 	else if (
@@ -29,14 +30,18 @@ exports.process = function(state)
 	else if (state.result.tokens.includes('e_drink'))
 	{
 		state.result.code = 'rp_20_no_drink';
-		state.session.trust --;
+		state.session.score_listen --;
+		state.session.count_write++;
 	}
-
+	else if (state.session.count_write<2)
+	{
+		state.result.code = 'rp_40_write_it'  ;
+		state.session.count_write++;
+	}
 
 	else 
 	{
 		state.result.code = 'rp_40_restate_order';  //sausage, mushrroom, and glutten free.
 	}
-	// Decode the reply.
-	state.result.reply = decoder.decode_reply(state.result.code);
+
 };

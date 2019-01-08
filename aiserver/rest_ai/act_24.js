@@ -13,7 +13,22 @@ exports.process = function(state)
 		state.result.code = 'rp_24_correct';
 		// state.result.reply = 'Yeah, thats about right. Ill have a slice of sausage and mushroom';
 		state.session.act = 30;  // move on!
+		if (state.session.glutten_known>0) state.session.act = 40;  // move on!
+
+
 		state.result.choice_done = true;
+	}
+	else 
+	if (    state.result.tokens.includes('e_sick')
+		|| state.result.tokens.includes('e_gluten')
+		|| state.result.tokens.includes('i_dietary')	)
+
+	{
+		state.result.code = 'rp_20_gluten_disclose';  // now that you mention it.
+		state.session.score_understand+=2;
+		state.session.glutten_known=1;
+		state.session.next_act=24;	// come back here
+		state.session.act = 32;  // move to glutten decided!  move on!
 	}
 	else
 	if (   state.result.tokens.includes('e_herb')
@@ -58,6 +73,9 @@ exports.process = function(state)
 		}
 
 	}
+
+
+
 	else
 	if (state.result.tokens.includes( 'i_5sec') )
 	{
@@ -72,13 +90,18 @@ exports.process = function(state)
 		state.session.game_over = true;
 	}
 
+	else if (state.result.tokens.includes('e_drink'))
+	{
+		state.result.code = 'rp_20_no_drink';    // was nodrink
+		state.session.score_listen--;
+	}
+
+
 	else
 	{
 		act_990.process(state);
 	}
 
-	// Decode the reply.
-	state.result.reply = decoder.decode_reply(state.result.code);
 
 	logger.log('ACT 24 - processed');
 };
