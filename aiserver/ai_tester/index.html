@@ -45,7 +45,11 @@ function get_session_id(callback_success)
 
 	// Request a new session with the server.
 	let url = config.server+"/ai/start-session";
-	$.get(url, function(data, status)
+	let query_vars =
+	{
+		mute: true
+	};
+	$.get(url, query_vars, function(data, status)
 	{
 		console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
 
@@ -81,6 +85,7 @@ function send_test_to_ai()
 			let url = config.server+"/ai";
 			let query_vars =
 			{
+				mute: true,
 				id_session: id_session,
 				text: test.input
 			};

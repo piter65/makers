@@ -3,12 +3,12 @@ const util = require('util');
 
 const log_path = '/debug.log';
 
-var is_logging = false;
-var log_buffer = [];
+exports.mute = false;
 
-// Setup file logging.
-// var logger.log_file = fs.createWriteStream(__dirname + '/debug.logger.log', {flags : 'w'});
-// var logger.log_stdout = process.stdout;
+exports.setMute = function(val)
+{
+	this.mute = val;
+}
 
 exports.log_clear = function()
 {
@@ -17,40 +17,15 @@ exports.log_clear = function()
 
 exports.log = function(d)
 {
-	var message = util.format.apply(d, arguments);
+	let self = this;
 
-	// Logs to file 'debug.log'.
-	// var file_stream = fs.createWriteStream(__dirname + log_path, {flags : 'a'});
-	// file_stream.write(util.format.apply(d, arguments) + '\n');
-	// file_stream.end();
-
-	if (is_logging)
+	// If the logger is unmuted, log to console.
+	if (self.mute == false)
 	{
-		log_buffer.push(message)
-	}
-	else
-	{
-		// is_logging = true;
-
+		let message = util.format.apply(d, arguments);
+		// let message = util.format("Mute: %s | ", self.mute) + util.format.apply(d, arguments);
 
 		// Logs to console.
-		// process.stdout.write(message + '\n');
 		console.log(message);
-
-
-		// fs.appendFile(__dirname + log_path, message + '\n', (err) =>
-		// {
-		// 	if (err)
-		// 		throw err;
-
-		// 	is_logging = false;
-
-		// 	// If we have buffered messages, pop one out now.
-		// 	if (log_buffer.length > 0)
-		// 	{
-		// 		var message = log_buffer.splice(0, 1)[0];
-		// 		log(message);
-		// 	}
-		// });
 	}
 };

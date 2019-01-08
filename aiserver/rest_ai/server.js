@@ -52,6 +52,9 @@ const app = express();
 
 app.get('/', function(req, res)
 {
+	// Logger is unmuted by default unless specifically requested.
+	logger.mute = req.query.mute ? true : false;
+
 	res.sendFile(path.join(__dirname + '/index.html'));
 
 	logger.log("sending index pa ");
@@ -60,6 +63,9 @@ app.get('/', function(req, res)
 // Creates a new session and sends back the session ID.
 app.get('/ai/start-session', function(req, res)
 {
+	// Logger is unmuted by default unless specifically requested.
+	logger.mute = req.query.mute ? true : false;
+
 	logger.log("Get request for '/ai/start-session' received:");
 
 	logger.log("query: " + JSON.stringify(req.query));
@@ -82,6 +88,10 @@ app.get('/ai/start-session', function(req, res)
 
 app.get('/ai', function(req, res)
 {
+	// Logger is unmuted by default unless specifically requested.
+	logger.mute = req.query.mute ? true : false;
+
+
 	logger.log("Get request for '/ai' received:")
 
 	logger.log("query: " + JSON.stringify(req.query));
@@ -217,31 +227,26 @@ app.get('/ai', function(req, res)
 
 	state.result.success = true;
 
-	// Save a current state if we're flagged to do so.
-	if (save_state)
-		sessions[id_session] = state;
-
 	state.result.reply+=state.result.extra;	// pa
 
     if (state.result.tokens.includes('e_newgame'))
     {
-			// Reset the session.
-			state.session = deepClone(state_templates.session_defaults);
-			save_state = true;
+		// Reset the session.
+		state.session = deepClone(state_templates.session_defaults);
+		save_state = true;
 
-			state.result.code = "rp_5_intro";
-			state.result.reply = decoder.decode_reply(state.result.code);	
+		state.result.code = "rp_5_intro";
+		state.result.reply = decoder.decode_reply(state.result.code);	
 
-    		if (state.result.tokens.includes('e_robot'))
-    		{	// Brent help, can we turn off logger for this?  bchance  bc
-
+		if (state.result.tokens.includes('e_robot'))
+		{
 			logger.log("Robots Rule");
-
-    		}
-
-
-
+		}
     }
+
+	// Save a current state if we're flagged to do so.
+	if (save_state)
+		sessions[id_session] = state;
 
 	logger.log("\tResult: \n" + JSON.stringify(state.result, null, 4));
 	logger.log("_story_AI:'"+state.result.reply+"'");
