@@ -130,7 +130,7 @@ app.get('/ai', function(req, res)
 	logger.log("\tResult - Start: \n" + JSON.stringify(state.result, null, 4));
 
 	state.result.text_origin = req.query.text.toLowerCase();
-	state.result.text = ' ' + state.result.text_origin;
+	state.result.text = ' ' + state.result.text_origin + ' ';
 
 	if(!state.result.text)
 	{
