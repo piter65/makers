@@ -188,7 +188,7 @@ app.get('/ai', function(req, res)
 		case 'system score':
 			state.result.code = 'rp_0_score';
 
-			state.result.reply += 'Executive Score:'+state.session.score_exec+'\n';
+			state.result.reply += '\nExecutive Score:'+state.session.score_exec+'\n';
 			state.result.reply += 'Active Listening:'+state.session.score_listen+'\n';
 			state.result.reply += 'Understanding:'+state.session.score_understand+'\n';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
@@ -230,7 +230,17 @@ app.get('/ai', function(req, res)
 			save_state = true;
 
 			state.result.code = "rp_5_intro";
-			state.result.reply = decoder.decode_reply(state.result.code);		
+			state.result.reply = decoder.decode_reply(state.result.code);	
+
+    		if (state.result.tokens.includes('e_robot'))
+    		{	// Brent help, can we turn off logger for this?  bchance  bc
+
+			logger.log("Robots Rule");
+
+    		}
+
+
+
     }
 
 	logger.log("\tResult: \n" + JSON.stringify(state.result, null, 4));
