@@ -31,9 +31,37 @@ exports.process = function(state)
 	{
 		state.result.code = 'rp_20_no_drink';
 		state.session.score_listen --;
+		state.session.score_exec  --;
 		state.session.count_write++;
 	}
-	else if (state.session.count_write<2)
+
+	else if (
+			state.result.tokens.includes('e_meat')			||
+			state.result.tokens.includes('e_veggies')	||
+			state.result.tokens.includes('e_toppings')	||
+			state.result.tokens.includes('e_hawaiin')	||
+			state.result.tokens.includes('e_fish')	||
+			state.result.tokens.includes('e_bird')	
+		)
+	{
+
+	if (state.session.count_write>=3)
+		{
+			state.result.code = 'rp_990_angry_leaving'  ;
+			state.session.score_listen=0;
+			state.session.score_exec-=2;
+			state.session.game_over = true;
+		}
+	else 
+		{
+			state.result.code = 'rp_40_restate_order';  //how hard can it be? sausage, mushrroom, and glutten free.
+			state.session.score_listen --;
+			state.session.score_exec  --;
+			state.session.count_write++;		
+		}
+
+	}
+	else if (state.session.count_write<1)
 	{
 		state.result.code = 'rp_40_write_it'  ;
 		state.session.count_write++;
@@ -41,7 +69,8 @@ exports.process = function(state)
 
 	else 
 	{
-		state.result.code = 'rp_40_restate_order';  //sausage, mushrroom, and glutten free.
+		state.result.code = 'rp_40_restate_order';  //how hard can it be? sausage, mushrroom, and glutten free.
+		state.session.count_write++;	
 	}
 
 };

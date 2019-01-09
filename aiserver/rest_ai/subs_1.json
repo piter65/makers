@@ -159,8 +159,10 @@
 	," floats your boat":" prefer"
 	," floats your boat":" prefer"
 
-
-
+	,"---------- xcomment":"Just plain fat.  "
+	," just plain ":" "
+	," quite frankly ":" "
+	," biggest ":" "
 
 	,"---------- xcomment":"Gonna work on 'why has it been a long time' here.  "
 	," how come ":" why "
@@ -168,6 +170,7 @@
 
 	," has it been ":" "
 	," did you wait ":" "
+
 
 	," such long time":" longtime"
 	," long time":" longtime"
@@ -191,6 +194,18 @@
 	," piezanos":" piezanos"
 	," pie-zanos":" piezanos"
 	," paizanos":" piezanos"
+
+
+	,"we have many toppings":" "
+	,"how can i help" : " order please"
+
+	,"------ xcomment":"do you have allergies' here.  "
+	,"what a drag" : " notgood"
+	,"that doesnt sound like fun" : " notgood"
+	,"thats no fun" : " notgood"
+	,"that must have been terrible" : " notgood"	
+	,"thats no fun" : " notgood"
+
 
 	,"xcomment":"----- end of file -----"
 
