@@ -7,8 +7,21 @@ var tests_origin =
 	{input:"sausage",reply:"rp_24_correct"},
 	{input:"sausage",reply:"rp_30_remember_gluten"},
 	{input:"gluten free option",reply:"rp_32_decided_nogluten"},
-	{input:"alright",reply:"rp_40_restate_order"},
+	{input:"alright",reply:"rp_40_write_it"},
 	{input:"one slice sausage mushrooms no gluten",reply:"rp_40_finished"},
+
+	{input:"STEFANIE PATH!",reply:null},
+	{input:"newgame",reply:"rp_5_intro"},
+	{input:"new games stefanie",reply:"rp_5_intro"},
+	{input:"welcome to pay zone is the best place in town how may help you today?",reply:"rp_990_complimented"},
+	{input:"that is wonderful! welcome how many i help you",reply:"rp_5_intro"},
+	{input:"i love your haircut",reply:"rp_5_intro"},
+	{input:"no problem i was just complementing your shirt",reply:"rp_5_intro"},
+	{input:"that is a good question. how can i help you today would you like a slice of pizza?",reply:"rp_5_intro"},
+	{input:"excellent that is one slice of sausage and mushroom correct",reply:"rp_10_offeredhelp"},
+	{input:"oh no i'm sorry to hear that well the good news is we have gluten-free pizza would you like your mushroom and sausage on a gluten-free pizza?",reply:"rp_10_offeredhelp"},
+	{input:"wonderful so that's one gluten-free mushroom and sausage coming right up",reply:"rp_10_offeredhelp"},
+	{input:"thank you so much. see you soon!",reply:"rp_10_offeredhelp"},
 
 
 	{input:"TEST NEWGAME WITH DIFFERENT PATH",reply:null},
@@ -19,10 +32,30 @@ var tests_origin =
 	{input:"and meatball",reply:"rp_22_frustrated"},
 	{input:"just kidding, how about sausage and mushrooms",reply:"rp_22_correct"},
 	{input:"ok",reply:"rp_30_remember_gluten"},
-	{input:"gluten free option",reply:"rp_32_decided_nogluten"},
-	{input:"alright",reply:"rp_40_restate_order"},
+	{input:"We have a no gluten option",reply:"rp_32_decided_nogluten"},
+	{input:"Let's write that up!",reply:"rp_40_write_it"},
 	{input:"one slice sausage mushrooms with extra gluten",reply:"rp_40_dont_forget"},
 	{input:"one slice sausage mushrooms without gluten",reply:"rp_40_finished"},
+
+	{input:"TEST NEWGAME WITH DIFFERENT PATH",reply:null},
+	{input:"newgame robot",reply:"rp_5_intro"},
+	{input:"Thank you, and welcome to PieZanos, may I take your order?",reply:"rp_10_offeredhelp"},
+	{input:"Why not try our chicken and cheese special?",reply:"rp_20_considering_topping"},
+	{input:"Just chicken then??",reply:"rp_20_considering_bird"},	
+	{input:"How about hawaiin?",reply:"rp_20_considering_hawaiin"},
+	{input:"Maybe you craving dog crap pizza?",reply:"rp_20_considering_crap"},
+	{input:"sausage",reply:"rp_20_decided_sausage"},
+	{input:"and meatball",reply:"rp_22_frustrated"},
+	{input:"just kidding, how about sausage and mushrooms",reply:"rp_22_correct"},
+	{input:"ok",reply:"rp_30_remember_gluten"},
+	{input:"I'm sorry to hear that, but it's your lucky day,We have a no gluten option",reply:"rp_32_decided_nogluten"},
+	{input:"Let's write that up!",reply:"rp_40_write_it"},
+	{input:"one slice sausage onion with extra gluten",reply:"rp_40_restate_order"},
+	{input:"Ok,ok, im adding gluten free.",reply:"rp_40_restate_order"},
+	{input:"Are you messing with me?",reply:"rp_40_restate_order"},
+    {input:"one dog crap slice coming right up!",reply:"rp_40_restate_order"},
+
+
 
 	{ input:"TEST NEWGAME WITH INSULTS",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
@@ -111,5 +144,17 @@ var tests_origin =
 	{ input:"glad to have you, how can I help you",reply:"rp_10_offeredhelp"},
 	{input:"what kind of toppings do you like" ,reply:"rp_10_offeredhelp"},
 	{input:"how about sausage with those mushrooms" ,reply:"rp_10_offeredhelp"},
+
+	{ input:"TEST NEWGAME BROKEN STUFF",reply:null},
+
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"xyzzy",reply:"rp_10_past_reaction"},
+	{ input:"Wacca Wacca",reply:"rp_990_complimented"},
+	{ input:"You think the eagles might makes the playoffs?",reply:"rp_10_first_time"},
+
+
+
+
+
 
 ];
