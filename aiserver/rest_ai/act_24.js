@@ -69,7 +69,6 @@ exports.process = function(state)
 		{
 			state.result.code = 'rp_24_meat_giveup';
 			state.session.act = 30;  // move on!
-			state.result.choice_done = true;
 		}
 
 	}

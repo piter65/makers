@@ -94,25 +94,23 @@
 	,"want":"craving"
 	,"wanna":"craving"
 
-
-	," big eyes ":" body "
 	," thighs ":" body "
 	," body ":" body "
-	," eyes ":" body "
 	," butt ":" body "
 	," breast ":" body "
-	," hair ":" body "
 	," hips ":" body "
 
-	,"your body":"body"
+	," big eyes ":" bodynice "
+	," eyes ":" bodynice "
+	," hair ":" bodynice "
+	," haircut ":" bodynice "
+	," smile ":" bodynice "
 
+	,"your body":"body"
 
 	,"chubby":"fat"
 	,"obese":"fat"
 	,"too fat":"fat"
-
-
-	
 
 	,"slice of pie":"slice"
 	,"slice of pizza pie":"slice"
@@ -144,7 +142,7 @@
 
 
 	,"dressed nicely":"pretty"
-	,"nice":"pretty"
+	," nice ":" pretty "
 	,"sharp":"pretty"
 	,"snappy":"pretty"
 	,"lovely":"pretty"

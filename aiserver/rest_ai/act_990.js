@@ -17,9 +17,11 @@ exports.process = function(state)
 			state.result.code = 'rp_990_complimented_too_much'; // 'Enough about me. How about my pizza?';
 			state.session.trust += -1;
 		}
-
 //		++state.session.count_compliment_dress;
 	}
+
+
+
 	else
 	if (state.result.tokens.includes('i_insult'))
 	{
@@ -38,6 +40,16 @@ exports.process = function(state)
 
 		++state.session.count_insult;
 	}
+
+	else if (  state.result.tokens.includes( 'i_heart')
+					&&
+		state.result.tokens.includes( 'e_bodynice')
+		)
+	{
+			state.result.code = 'rp_990_thankyou';  // 'Thanks. I got it at Brooks Brothers.';
+	
+	}
+
 
 	else if (state.result.tokens.includes('i_nopizza'))
 	{

@@ -26,6 +26,7 @@ exports.process = function(state)
 	{
 			state.result.code = 'rp_40_dont_forget';  //"Don't forget glutten free.
 			state.session.trust += -1;
+			state.session.count_write++;	
 	}
 	else if (state.result.tokens.includes('e_drink'))
 	{
@@ -45,7 +46,7 @@ exports.process = function(state)
 		)
 	{
 
-	if (state.session.count_write>=3)
+		if (state.session.count_write>=3)
 		{
 			state.result.code = 'rp_990_angry_leaving'  ;
 			state.session.score_listen=0;

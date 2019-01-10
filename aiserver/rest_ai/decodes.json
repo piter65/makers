@@ -654,6 +654,20 @@
 		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
+	,"rp_990_thankyou":
+	{
+		"text":"Thank you."
+		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+
+	,"rp_990_complimented":
+	{
+		"text":
+			"Thanks. I got it at Brooks Brothers."
+		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
 	,"rp_990_complimented":
 	{
 		"text":

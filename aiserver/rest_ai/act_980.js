@@ -22,6 +22,27 @@ exports.process = function(state)
 		++state.session.count_compliment_dress;
 	}
 	
+// i like your haircut
+	if (  state.result.tokens.includes( 'i_heart')
+					&&
+		state.result.tokens.includes( 'body_nice')
+		)
+	{
+		if (state.session.count_compliment_dress <2)
+		{
+			state.session.score_empathy += 1;
+			state.result.extra=":compliment boost";
+		}
+		else
+		{
+			state.session.score_empathy += -1;
+			state.result.extra=":enough already";	
+		}
+		++state.session.count_compliment_dress;
+	}
+
+
+
 	if (state.result.tokens.includes('i_confidence'))
 	{
 		state.session.score_exec++;

@@ -64,10 +64,15 @@
 	," do you want today ":" would you like "
 	," do you want ":" would you like "
 
+	," anything":" something"
+
 
 
 	," cops":" police"
 	," authorities":" police"
+	," glad":" happy"
+
+
 
 	,"_comment_":"Peter wants to start literals here.  These are early substitions for common entries."
 
@@ -93,6 +98,11 @@
     ," may I be of service":" order please"
     ," have you decided":" order please"
     ," are you ready to order":" order please"
+
+    ," how may help you":" order please"
+    ," how many i help you":" order please"
+    ," may i get something for you":" order please"
+
  
 
     ," get out":" iinsult"
@@ -225,7 +235,19 @@
 	,"i wanna":"iheart"
 	," i am envious of ":" iheart "
 
+	,"------ xcomment":"Scotts troublesome phrases "
 
+
+	," im happy you stopped in":" hello "
+	," were happy you stopped in":" hello "
+	," happy you stopped in":" hello "
+	," Youve come to the right place":" hello "
+
+	,"Do you have something in mind":"prefer"
+	,"Did you have something in mind":"prefer"
+	,"have a preference":"prefer"
+
+	,"preference":"prefer"
 
 	,"xcomment":"----- end of file -----"
 

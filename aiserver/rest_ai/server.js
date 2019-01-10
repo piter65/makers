@@ -158,7 +158,9 @@ app.get('/ai', function(req, res)
 // peter wants a extra text, used for feedback now.
 	state.result.extra =":";
 
-	logger.log("_story_Player: '%s'", state.result.text_origin);
+//	logger.log("_story_Player: '%s'", state.result.text_origin);
+// 	{input:"INITIAL TEST",reply:null}, 
+	logger.log('_story_{input:"%s",',state.result.text_origin);
 
 	sub_pass(state, subs_1);
 	logger.log("\tSub Pass 1 'text': '%s'", state.result.text);
@@ -249,8 +251,10 @@ app.get('/ai', function(req, res)
 		sessions[id_session] = state;
 
 	logger.log("\tResult: \n" + JSON.stringify(state.result, null, 4));
-	logger.log("_story_AI:'"+state.result.reply+"'");
+//	logger.log("_story_AI:'"+state.result.reply+"'");
 
+// 	{input:"INITIAL TEST",reply:null}, 
+	logger.log('_story_{result:'+state.result.reply+'"},\n');
 
 
 	res.set('Access-Control-Allow-Origin', '*');
