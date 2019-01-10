@@ -254,8 +254,21 @@ app.get('/ai', function(req, res)
 //	logger.log("_story_AI:'"+state.result.reply+"'");
 
 // 	{input:"INITIAL TEST",reply:null}, 
-	logger.log('_story_{result:'+state.result.reply+'"},\n');
+	logger.log('_story_result:'+state.result.reply+'"},\n');
 
+// Brent if you want to clean this up and loopify, have a it.
+// I don't want to deal with dowhile loops in JS.
+	if (state.result.text_origin.charAt(0)=='#')
+	{
+		state.result.reply = state.result.tokens[0]+" ";
+		if (state.result.tokens[1])
+			state.result.reply+= state.result.tokens[1]+" ";
+		if (state.result.tokens[2])
+			state.result.reply+= state.result.tokens[2]+" ";
+		if (state.result.tokens[3])
+			state.result.reply+= state.result.tokens[3]+" ";
+
+	}
 
 	res.set('Access-Control-Allow-Origin', '*');
 	res.send(state.result);

@@ -234,6 +234,8 @@
 	," i want ":"iheart"
 	,"i wanna":"iheart"
 	," i am envious of ":" iheart "
+	," kind of ":" type of "
+
 
 	,"------ xcomment":"Scotts troublesome phrases "
 
@@ -241,13 +243,36 @@
 	," im happy you stopped in":" hello "
 	," were happy you stopped in":" hello "
 	," happy you stopped in":" hello "
-	," Youve come to the right place":" hello "
+	," youve come to the right place":" hello "
 
 	,"Do you have something in mind":"prefer"
 	,"Did you have something in mind":"prefer"
 	,"have a preference":"prefer"
 
 	,"preference":"prefer"
+
+	," what drag ":" sorry "
+	," what bummer ":" sorry "
+	," what bummer ":" sorry "
+
+	," like fun ":" good "
+	," like good ":" good "
+	," like good ":" good "
+	," pleasant ":" good "
+
+	," terrible ":" ungood "
+	," awful ":" ungood "
+	," unpleasant ":" ungood "
+	," nightmare ":" ungood "
+
+	," that doesnt sound good ":" sorry "
+	," that doesnt seem good ":" sorry "
+	," that doesnt feel good ":" sorry "
+	," thats ungood ":" sorry "
+	," have been ungood ":" sorry "
+
+	," lots of ":" many "
+	," many options ": " toppings "
 
 	,"xcomment":"----- end of file -----"
 

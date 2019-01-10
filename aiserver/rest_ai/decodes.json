@@ -173,7 +173,7 @@
 
 	,"rp_20_pizza_prefer":
 	{
-		"text": "Oh my, you actually care about my preferences?  That is so refreshing! So, since you asked, I love sausage and mushroom.  But last time I had pizza I got sick, so I'm a bit afraid to try again."
+		"text": "Oh my, you actually care about my preferences?  That is so refreshing! So, since you asked, I love sausage.  But last time I had pizza I got sick, so I'm a bit afraid to try again."
 		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
