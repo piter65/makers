@@ -8,12 +8,10 @@
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
-
 	,"rp_10_welcome":
 	{
-		"text":
-			"You are very welcome."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text": "You are very welcome."
+			,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
 	,"rp_10_past_reaction":
@@ -486,6 +484,13 @@
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
+	,"rp_24_giveup":
+	{
+		"text": "Awe, I give up.  Just get me sausage and mushroom."
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+
 	,"rp_24_frustrated":
 	{
 		"text": "I've already said I want mushroom and one meat. Can you help me pick a meat?"
@@ -738,6 +743,13 @@
 	}
 
 	,"rp_990_not_understand":
+	{
+		"text":
+			"Didn't catch that. Can you speak more slowly and clearly?"
+,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+	,"rp_999_wut":
 	{
 		"text":
 			"Didn't catch that. Can you speak more slowly and clearly?"

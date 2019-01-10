@@ -91,18 +91,19 @@ exports.process = function(state)
 	else
 	if (state.result.tokens.includes( 'i_greeting') )
 	{
+		if (state.session.count_greeting> 1)	// only give boost in act 30.
 		{
-			state.result.code = 'rp_990_regreeted';  //'Yeah, we\'ve already met.';
-			state.session.trust += -1;
-		}
+			state.result.code = 'rp_990_regreeted';  
 
+		}
+		state.session.trust += 1;
 		++state.session.count_greeting;
 	}
 	else
 	if (state.result.tokens.includes('e_rude'))
 	{
 		state.result.code = 'rp_990_rude';  // 'Um, I not quite comfortable with that.';
-		state.session.trust += -1;
+
 	}
 	else
 	if (state.result.tokens.includes( 'i_9sec') )
@@ -120,7 +121,7 @@ exports.process = function(state)
 	// Input not understood.
 	else
 	{
-			state.result.code = 'rp_990_not_understand';  // hard of hearing
+			state.result.code = 'rp_999_wut';  // hard of hearing
 			logger.log('_fail_\''+ state.result.text_origin+'\'');
 	}
 
