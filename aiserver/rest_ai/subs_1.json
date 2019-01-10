@@ -194,6 +194,8 @@
 	," piezanos":" piezanos"
 	," pie-zanos":" piezanos"
 	," paizanos":" piezanos"
+	," pay zones":" piezanos"
+
 
 
 	,"we have many toppings":" "
@@ -205,6 +207,24 @@
 	,"thats no fun" : " notgood"
 	,"that must have been terrible" : " notgood"	
 	,"thats no fun" : " notgood"
+
+	,"------ xcomment":"I love, I like, ' here.  "
+	," really " : " "
+	," totally " : " "
+	," completely " : " "
+
+	," i love " : " iheart "
+	," i like " : " iheart "
+	," i admire " : " iheart "
+
+	," i appreciate " : " iheart "
+
+	,"i care for":"iheart"
+	,"i desire":"iheart"
+	," i want ":"iheart"
+	,"i wanna":"iheart"
+	," i am envious of ":" iheart "
+
 
 
 	,"xcomment":"----- end of file -----"

@@ -94,21 +94,30 @@ exports.process = function(state)
 		state.session.act = 32;  // move to glutten decided!  move on!
 	}
 	else
-	if (   state.result.tokens.includes('e_mushroom')
-		|| state.session.count_tries >= 4)
-	{
-		state.result.code = 'rp_20_decided_mushrooms';
-		// state.result.reply = 'Mushrooms sound good. Ill have a slice of sausage and mushroom';
-		state.session.act = 24;  // move on!
-		state.result.choice_done = true;
-	}
-	else
 	if (state.result.tokens.includes('e_sausage'))
 	{
 		state.result.code = 'rp_20_decided_sausage';
 		// state.result.reply = 'Sausage sounds perfect, but I want a veggie too.';
 		state.session.act = 22;  // move on!
 	}
+	else
+	if (   state.result.tokens.includes('e_mushroom') )
+
+	{
+		state.result.code = 'rp_20_decided_mushrooms'; // 'Mushrooms sound good. what next?
+		state.session.act = 24;  // move on!
+	}
+
+	else
+	if ( state.session.count_tries >= 4)
+	
+	{
+		state.result.code = 'rp_24_meat_giveup'; // 'awwwe, I give up...
+		state.session.act = 24;  // move on!
+	}
+
+
+
 	else
 	if (   state.result.tokens.includes('e_meat') )
 	{
