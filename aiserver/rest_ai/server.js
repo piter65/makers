@@ -53,7 +53,7 @@ const app = express();
 app.get('/', function(req, res)
 {
 	// Logger is unmuted by default unless specifically requested.
-	logger.mute = req.query.mute ? true : false;
+	logger.mute = req.query.mute == "true";
 
 	res.sendFile(path.join(__dirname + '/index.html'));
 
@@ -64,7 +64,7 @@ app.get('/', function(req, res)
 app.get('/ai/start-session', function(req, res)
 {
 	// Logger is unmuted by default unless specifically requested.
-	logger.mute = req.query.mute ? true : false;
+	logger.mute = req.query.mute == "true";
 
 	logger.log("Get request for '/ai/start-session' received:");
 
@@ -89,7 +89,7 @@ app.get('/ai/start-session', function(req, res)
 app.get('/ai', function(req, res)
 {
 	// Logger is unmuted by default unless specifically requested.
-	logger.mute = req.query.mute ? true : false;
+	logger.mute = req.query.mute == "true";
 
 
 	logger.log("Get request for '/ai' received:")
@@ -198,7 +198,7 @@ app.get('/ai', function(req, res)
 		case 'system score':
 			state.result.code = 'rp_0_score';
 
-			state.result.reply += '\nExecutive Score:'+state.session.score_exec+'\n';
+			state.result.reply += state.result.code+':\nExecutive Score:'+state.session.score_exec+'\n';
 			state.result.reply += 'Active Listening:'+state.session.score_listen+'\n';
 			state.result.reply += 'Understanding:'+state.session.score_understand+'\n';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';

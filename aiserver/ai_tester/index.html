@@ -10,8 +10,8 @@
 <script type="text/javascript" src="./tests.js"></script>
 <script type="text/javascript">
 
+var mute = true;
 var id_session = null;
-// var config = [];
 var tests = [];
 var count_tests = 0;
 var $test_results;
@@ -47,7 +47,7 @@ function get_session_id(callback_success)
 	let url = config.server+"/ai/start-session";
 	let query_vars =
 	{
-		mute: true
+		mute: mute
 	};
 	$.get(url, query_vars, function(data, status)
 	{
@@ -85,7 +85,7 @@ function send_test_to_ai()
 			let url = config.server+"/ai";
 			let query_vars =
 			{
-				mute: true,
+				mute: mute,
 				id_session: id_session,
 				text: test.input
 			};
@@ -120,6 +120,8 @@ function send_test_to_ai()
 			.fail(function(jqXHR, textStatus, errorThrown)
 			{
 				set_error("ERROR - NETWORK: Unable to connect to '"+url+"'");
+				test.received = '[ERROR]';
+				display_test_result(test);
 				$loading.hide();
 			});
 		}
@@ -137,8 +139,6 @@ function send_test_to_ai()
 
 function display_test_result(test)
 {
-	debugger;
-
 	let is_comment = !test.reply;
 
 	let dom;
@@ -153,19 +153,33 @@ function display_test_result(test)
 	}
 	else
 	{
-		let is_ok = 
-			   test.received != '[ERROR]'
-			&& test.reply == test.received;
+		let is_error =
+			   test.received == '[ERROR]'
+			|| test.received.includes('rp_999')
 
-		if (is_ok)
+		let is_mismatch = test.reply != test.received;
+
+		if (is_error)
 		{
 			dom =
 				  '<tr>'
 				+	 '<td>'+count_tests+'</td>'
 				+	 '<td>'+test.input+'</td>'
 				+	 '<td>'+test.reply+'</td>'
-				+	 '<td>'+test.received+'</td>'
-				+	 '<td><good>&#x2714;</good></td>'
+				+	 '<td class="bad">'+test.received+'</td>'
+				+	 '<td><bad>&#x2718;</bad></td>'
+				+ '</tr>';
+		}
+		else
+		if (is_mismatch)
+		{
+			dom =
+				  '<tr>'
+				+	 '<td>'+count_tests+'</td>'
+				+	 '<td>'+test.input+'</td>'
+				+	 '<td>'+test.reply+'</td>'
+				+	 '<td class="mismatch">'+test.received+'</td>'
+				+	 '<td><mismatch>&#x2013</mismatch></td>'
 				+ '</tr>';
 		}
 		else
@@ -175,8 +189,8 @@ function display_test_result(test)
 				+	 '<td>'+count_tests+'</td>'
 				+	 '<td>'+test.input+'</td>'
 				+	 '<td>'+test.reply+'</td>'
-				+	 '<td class="wrong">'+test.received+'</td>'
-				+	 '<td><bad>&#x2718;</bad></td>'
+				+	 '<td>'+test.received+'</td>'
+				+	 '<td><good>&#x2714;</good></td>'
 				+ '</tr>';
 		}
 	}
@@ -200,6 +214,11 @@ function set_error(text)
 	}
 }
 
+function toggle_mute()
+{
+	mute = !mute;
+}
+
 </script>
 
 </head>
@@ -208,7 +227,13 @@ function set_error(text)
 <div class="main">
 	<div class="error">This is a test error</div>
 	<div class="controls">
-		<button type="button" onclick="run_tests();">START TESTS</button>
+		<span class="option">
+			<button type="button" onclick="run_tests();">START TESTS</button>
+		</span>
+		<span class="option">
+			<label for="mute">MUTE LOGGING:</label>
+			<input name="mute" type="checkbox" onchange="toggle_mute();" checked />
+		</span>
 	</div>
 	<table>
 		<thead>

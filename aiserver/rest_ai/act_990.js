@@ -3,7 +3,7 @@ var randomInt = require('random-int');
 
 exports.process = function(state)
 {
-	logger.log('ACT 99 - start');
+	logger.log('ACT 990 - start');
 
 	if (   state.result.tokens.includes( 'i_compliment') )
 	{
@@ -91,11 +91,14 @@ exports.process = function(state)
 	else
 	if (state.result.tokens.includes( 'i_greeting') )
 	{
-		if (state.session.count_greeting> 1)	// only give boost in act 30.
-		{
-			state.result.code = 'rp_990_regreeted';  
+		// if (state.session.count_greeting> 1)	// only give boost in act 30.
+		// {
+		// 	state.result.code = 'rp_990_regreeted';
+		// }
 
-		}
+		// BChance: Above commented because apparently we can reach point 
+		//   'count_greeting' is 0, which leaves us with no code.
+		state.result.code = 'rp_990_regreeted';
 		state.session.trust += 1;
 		++state.session.count_greeting;
 	}
@@ -121,9 +124,10 @@ exports.process = function(state)
 	// Input not understood.
 	else
 	{
-			state.result.code = 'rp_999_wut';  // hard of hearing
-			logger.log('_fail_\''+ state.result.text_origin+'\'');
+		state.result.code = 'rp_999_wut';  // hard of hearing
+		logger.log('_fail_\''+ state.result.text_origin+'\'');
 	}
 
 	logger.log('ACT 990 - processed');
+	logger.log('state.result.code: "%s"', state.result.code);
 };
