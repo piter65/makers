@@ -1,0 +1,794 @@
+did clear 
+Server live
+Listening on port 80
+Get request for '/ai/start-session' received:
+query: {}
+Session generated. ID: 004acdf0-15bf-11e9-8430-e5766b3e6866
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"newgame peter"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"newgame peter",
+	Sub Pass 1 'text': ' newgame peter '
+	Sub Pass 2 'text': ' newgame peter '
+	Sub Pass 3 'text': ' newgame peter '
+	Sub Pass 4 'text': ' newgame peter '
+---
+NLU - processed:
+Index: 1
+Matches: [
+    " newgame  : e_newgame"
+]
+Tokens: [
+    "e_newgame"
+]
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:10
+process act 10 - pa
+ACT 990 - start
+ACT 990 - processed
+state.result.code: "rp_990_nonseq"
+ACT 10 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "newgame peter",
+    "text_1": " newgame peter ",
+    "text_2": " newgame peter ",
+    "text_3": " newgame peter ",
+    "text": " newgame peter ",
+    "reply": "rp_5_intro:Hi there.  I've been wondering about this place, it's been a while since I've had some pizza.  I figured this would be a nice place to try out. By the way, nice uniform you got there.:f_smile:b_normal:0:250",
+    "tokens": [
+        "e_newgame"
+    ],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_5_intro"
+}
+_story_result:rp_5_intro:Hi there.  I've been wondering about this place, it's been a while since I've had some pizza.  I figured this would be a nice place to try out. By the way, nice uniform you got there.:f_smile:b_normal:0:250"},
+
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"order please"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"order please",
+	Sub Pass 1 'text': ' order please '
+	Sub Pass 2 'text': ' order please '
+	Sub Pass 3 'text': ' order please '
+	Sub Pass 4 'text': ' order please '
+---
+NLU - processed:
+Index: 1
+Matches: [
+    "order please : i_offerhelp"
+]
+Tokens: [
+    "i_offerhelp"
+]
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:10
+process act 10 - pa
+ACT 10 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "order please",
+    "text_1": " order please ",
+    "text_2": " order please ",
+    "text_3": " order please ",
+    "text": " order please ",
+    "reply": "rp_10_offeredhelp:I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?:f_smile:b_normal:0:250:",
+    "tokens": [
+        "i_offerhelp"
+    ],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_10_offeredhelp"
+}
+_story_result:rp_10_offeredhelp:I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?:f_smile:b_normal:0:250:"},
+
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"you want a drink?"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"you want a drink?",
+	Sub Pass 1 'text': ' you want drink ? '
+	Sub Pass 2 'text': ' you want drink ? '
+	Sub Pass 3 'text': ' you desire drink ? '
+	Sub Pass 4 'text': ' you desire drink ? '
+---
+NLU - processed:
+Index: 1
+Matches: [
+    "desire : i_desire",
+    "drink : e_drink"
+]
+Tokens: [
+    "i_desire",
+    "e_drink"
+]
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:20
+ACT 20 - start pa - tries0
+ACT 20 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "you want a drink?",
+    "text_1": " you want drink ? ",
+    "text_2": " you want drink ? ",
+    "text_3": " you desire drink ? ",
+    "text": " you desire drink ? ",
+    "reply": "rp_20_no_drink:I've already said that I don't want a drink. Can you help me pick toppings?:f_smile:b_normal:0:250:",
+    "tokens": [
+        "i_desire",
+        "e_drink"
+    ],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_20_no_drink"
+}
+_story_result:rp_20_no_drink:I've already said that I don't want a drink. Can you help me pick toppings?:f_smile:b_normal:0:250:"},
+
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"you want a drink?"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"you want a drink?",
+	Sub Pass 1 'text': ' you want drink ? '
+	Sub Pass 2 'text': ' you want drink ? '
+	Sub Pass 3 'text': ' you desire drink ? '
+	Sub Pass 4 'text': ' you desire drink ? '
+---
+NLU - processed:
+Index: 1
+Matches: [
+    "desire : i_desire",
+    "drink : e_drink"
+]
+Tokens: [
+    "i_desire",
+    "e_drink"
+]
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:20
+ACT 20 - start pa - tries0
+ACT 20 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "you want a drink?",
+    "text_1": " you want drink ? ",
+    "text_2": " you want drink ? ",
+    "text_3": " you desire drink ? ",
+    "text": " you desire drink ? ",
+    "reply": "rp_20_no_drink:I've already said that I don't want a drink. Can you help me pick toppings?:f_smile:b_normal:0:250:",
+    "tokens": [
+        "i_desire",
+        "e_drink"
+    ],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_20_no_drink"
+}
+_story_result:rp_20_no_drink:I've already said that I don't want a drink. Can you help me pick toppings?:f_smile:b_normal:0:250:"},
+
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"you want a drink?"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"you want a drink?",
+	Sub Pass 1 'text': ' you want drink ? '
+	Sub Pass 2 'text': ' you want drink ? '
+	Sub Pass 3 'text': ' you desire drink ? '
+	Sub Pass 4 'text': ' you desire drink ? '
+---
+NLU - processed:
+Index: 1
+Matches: [
+    "desire : i_desire",
+    "drink : e_drink"
+]
+Tokens: [
+    "i_desire",
+    "e_drink"
+]
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:20
+ACT 20 - start pa - tries0
+ACT 20 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "you want a drink?",
+    "text_1": " you want drink ? ",
+    "text_2": " you want drink ? ",
+    "text_3": " you desire drink ? ",
+    "text": " you desire drink ? ",
+    "reply": "rp_20_no_drink:I've already said that I don't want a drink. Can you help me pick toppings?:f_smile:b_normal:0:250:",
+    "tokens": [
+        "i_desire",
+        "e_drink"
+    ],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_20_no_drink"
+}
+_story_result:rp_20_no_drink:I've already said that I don't want a drink. Can you help me pick toppings?:f_smile:b_normal:0:250:"},
+
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"mushroom"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"mushroom",
+	Sub Pass 1 'text': ' mushroom '
+	Sub Pass 2 'text': ' mushroom '
+	Sub Pass 3 'text': ' mushroom '
+	Sub Pass 4 'text': ' mushroom '
+---
+NLU - processed:
+Index: 1
+Matches: [
+    "mushroom : e_mushroom"
+]
+Tokens: [
+    "e_mushroom"
+]
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:20
+ACT 20 - start pa - tries0
+ACT 20 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "mushroom",
+    "text_1": " mushroom ",
+    "text_2": " mushroom ",
+    "text_3": " mushroom ",
+    "text": " mushroom ",
+    "reply": "rp_20_decided_mushrooms:Mushrooms sound good. Now what meat goes with mushrooms?:f_smile:b_normal:0:250:",
+    "tokens": [
+        "e_mushroom"
+    ],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_20_decided_mushrooms"
+}
+_story_result:rp_20_decided_mushrooms:Mushrooms sound good. Now what meat goes with mushrooms?:f_smile:b_normal:0:250:"},
+
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"want a drink?"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"want a drink?",
+	Sub Pass 1 'text': ' want drink ? '
+	Sub Pass 2 'text': ' want drink ? '
+	Sub Pass 3 'text': ' desire drink ? '
+	Sub Pass 4 'text': ' desire drink ? '
+---
+NLU - processed:
+Index: 1
+Matches: [
+    "desire : i_desire",
+    "drink : e_drink"
+]
+Tokens: [
+    "i_desire",
+    "e_drink"
+]
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:24
+ACT 24 - start
+ACT 24 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "want a drink?",
+    "text_1": " want drink ? ",
+    "text_2": " want drink ? ",
+    "text_3": " desire drink ? ",
+    "text": " desire drink ? ",
+    "reply": "rp_20_no_drink:I've already said that I don't want a drink. Can you help me pick toppings?:f_smile:b_normal:0:250:",
+    "tokens": [
+        "i_desire",
+        "e_drink"
+    ],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_20_no_drink"
+}
+_story_result:rp_20_no_drink:I've already said that I don't want a drink. Can you help me pick toppings?:f_smile:b_normal:0:250:"},
+
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"want a drink?"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"want a drink?",
+	Sub Pass 1 'text': ' want drink ? '
+	Sub Pass 2 'text': ' want drink ? '
+	Sub Pass 3 'text': ' desire drink ? '
+	Sub Pass 4 'text': ' desire drink ? '
+---
+NLU - processed:
+Index: 1
+Matches: [
+    "desire : i_desire",
+    "drink : e_drink"
+]
+Tokens: [
+    "i_desire",
+    "e_drink"
+]
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:24
+ACT 24 - start
+ACT 24 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "want a drink?",
+    "text_1": " want drink ? ",
+    "text_2": " want drink ? ",
+    "text_3": " desire drink ? ",
+    "text": " desire drink ? ",
+    "reply": "rp_20_no_drink:I've already said that I don't want a drink. Can you help me pick toppings?:f_smile:b_normal:0:250:",
+    "tokens": [
+        "i_desire",
+        "e_drink"
+    ],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_20_no_drink"
+}
+_story_result:rp_20_no_drink:I've already said that I don't want a drink. Can you help me pick toppings?:f_smile:b_normal:0:250:"},
+
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"sausage and mushroom"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"sausage and mushroom",
+	Sub Pass 1 'text': ' sausage and mushroom '
+	Sub Pass 2 'text': ' sausage and mushroom '
+	Sub Pass 3 'text': ' sausage and mushroom '
+	Sub Pass 4 'text': ' sausage and mushroom '
+---
+NLU - processed:
+Index: 1
+Matches: [
+    "sausage : e_sausage",
+    "mushroom : e_mushroom"
+]
+Tokens: [
+    "e_sausage",
+    "e_mushroom"
+]
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:24
+ACT 24 - start
+ACT 24 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "sausage and mushroom",
+    "text_1": " sausage and mushroom ",
+    "text_2": " sausage and mushroom ",
+    "text_3": " sausage and mushroom ",
+    "text": " sausage and mushroom ",
+    "reply": "rp_24_correct:Yeah, that sounds good.  I'll go with sausage and mushroom.:f_smile:b_normal:0:250:",
+    "tokens": [
+        "e_sausage",
+        "e_mushroom"
+    ],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_24_correct",
+    "choice_done": true
+}
+_story_result:rp_24_correct:Yeah, that sounds good.  I'll go with sausage and mushroom.:f_smile:b_normal:0:250:"},
+
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"I'll write that up"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"i'll write that up",
+	Sub Pass 1 'text': ' ill write that up '
+	Sub Pass 2 'text': ' ill write that up '
+	Sub Pass 3 'text': ' ill write that up '
+	Sub Pass 4 'text': ' ill write that up '
+---
+NLU - processed:
+Index: 1
+Matches: []
+Tokens: []
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:30
+ACT 30 - start
+ACT 30 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "i'll write that up",
+    "text_1": " ill write that up ",
+    "text_2": " ill write that up ",
+    "text_3": " ill write that up ",
+    "text": " ill write that up ",
+    "reply": "rp_30_remember_gluten:Now, come to think of it, last time I had pizza, I think I had a bad reaction.  I'm suspicious it might be the gluten.:f_smile:b_normal:0:250:",
+    "tokens": [],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_30_remember_gluten"
+}
+_story_result:rp_30_remember_gluten:Now, come to think of it, last time I had pizza, I think I had a bad reaction.  I'm suspicious it might be the gluten.:f_smile:b_normal:0:250:"},
+
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"we have gluten free"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"we have gluten free",
+	Sub Pass 1 'text': ' we have gluten free '
+	Sub Pass 2 'text': ' we have gluten free '
+	Sub Pass 3 'text': ' we have gluten free '
+	Sub Pass 4 'text': ' we have gluten free '
+---
+NLU - processed:
+Index: 1
+Matches: [
+    " gluten  : i_dietary e_gluten",
+    "gluten free : i_nogluten"
+]
+Tokens: [
+    "i_dietary",
+    "e_gluten",
+    "i_nogluten"
+]
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:32
+ACT 32 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "we have gluten free",
+    "text_1": " we have gluten free ",
+    "text_2": " we have gluten free ",
+    "text_3": " we have gluten free ",
+    "text": " we have gluten free ",
+    "reply": "rp_32_decided_nogluten:A no gluten option?  That's fantastic! I'll get that.:f_smile:b_normal:0:250:",
+    "tokens": [
+        "i_dietary",
+        "e_gluten",
+        "i_nogluten"
+    ],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_32_decided_nogluten"
+}
+_story_result:rp_32_decided_nogluten:A no gluten option?  That's fantastic! I'll get that.:f_smile:b_normal:0:250:"},
+
+Get request for '/ai' received:
+query: {"id_session":"004acdf0-15bf-11e9-8430-e5766b3e6866","text":"gluten free, sausage, mushroom"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"gluten free, sausage, mushroom",
+	Sub Pass 1 'text': ' gluten free, sausage, mushroom '
+	Sub Pass 2 'text': ' gluten free, sausage, mushroom '
+	Sub Pass 3 'text': ' gluten free, sausage, mushroom '
+	Sub Pass 4 'text': ' gluten free, sausage, mushroom '
+---
+NLU - processed:
+Index: 1
+Matches: [
+    "sausage : e_sausage",
+    "mushroom : e_mushroom",
+    " gluten  : i_dietary e_gluten",
+    "gluten free : i_nogluten"
+]
+Tokens: [
+    "e_sausage",
+    "e_mushroom",
+    "i_dietary",
+    "e_gluten",
+    "i_nogluten"
+]
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:40
+ACT 40 - start pa
+	Result: 
+{
+    "success": true,
+    "text_origin": "gluten free, sausage, mushroom",
+    "text_1": " gluten free, sausage, mushroom ",
+    "text_2": " gluten free, sausage, mushroom ",
+    "text_3": " gluten free, sausage, mushroom ",
+    "text": " gluten free, sausage, mushroom ",
+    "reply": "rp_40_finished_good1:Perfect.  I have to say I'm very pleased with the service here at Paizanos! See you next time!:f_smile:b_normal:0:250\n\n-GAME OVER-\n-Executive Score:6\nActive Listening:0\nUnderstanding:5\nEmpathy:5\n\n try \"newgame\" to play again\n:",
+    "tokens": [
+        "e_sausage",
+        "e_mushroom",
+        "i_dietary",
+        "e_gluten",
+        "i_nogluten"
+    ],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_40_finished_good1"
+}
+_story_result:rp_40_finished_good1:Perfect.  I have to say I'm very pleased with the service here at Paizanos! See you next time!:f_smile:b_normal:0:250
+
+-GAME OVER-
+-Executive Score:6
+Active Listening:0
+Understanding:5
+Empathy:5
+
+ try "newgame" to play again
+:"},
+
+Get request for '/ai/start-session' received:
+query: {}
+Session generated. ID: feb06260-15bf-11e9-8430-e5766b3e6866
+sending index pa 
+Get request for '/ai/start-session' received:
+query: {}
+Session generated. ID: 469b7530-15c3-11e9-8430-e5766b3e6866
+Get request for '/ai' received:
+query: {"id_session":"469b7530-15c3-11e9-8430-e5766b3e6866","text":"This Is A Test"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"this is a test",
+	Sub Pass 1 'text': ' this is test '
+	Sub Pass 2 'text': ' this is test '
+	Sub Pass 3 'text': ' this is test '
+	Sub Pass 4 'text': ' this is test '
+---
+NLU - processed:
+Index: 1
+Matches: []
+Tokens: []
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:10
+process act 10 - pa
+ACT 990 - start
+_fail_'this is a test'
+ACT 990 - processed
+state.result.code: "rp_999_wut"
+ACT 10 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "this is a test",
+    "text_1": " this is test ",
+    "text_2": " this is test ",
+    "text_3": " this is test ",
+    "text": " this is test ",
+    "reply": "rp_999_wut:Didn't catch that. Can you speak more slowly and clearly?:f_smile:b_normal:0:250:",
+    "tokens": [],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_999_wut"
+}
+_story_result:rp_999_wut:Didn't catch that. Can you speak more slowly and clearly?:f_smile:b_normal:0:250:"},
+
+sending index pa 
+Get request for '/ai/start-session' received:
+query: {}
+Session generated. ID: 38c31380-15c5-11e9-8430-e5766b3e6866
+Get request for '/ai' received:
+query: {"id_session":"38c31380-15c5-11e9-8430-e5766b3e6866","text":"This Is A Test"}
+	Result - Start: 
+{
+    "success": false,
+    "text_origin": null,
+    "text_1": null,
+    "text_2": null,
+    "text_3": null,
+    "text": null,
+    "reply": null,
+    "tokens": [],
+    "direction": null,
+    "extra": null
+}
+_story_{input:"this is a test",
+	Sub Pass 1 'text': ' this is test '
+	Sub Pass 2 'text': ' this is test '
+	Sub Pass 3 'text': ' this is test '
+	Sub Pass 4 'text': ' this is test '
+---
+NLU - processed:
+Index: 1
+Matches: []
+Tokens: []
+---
+ACT 98 - start
+ACT 980 - processed
+gonna process:10
+process act 10 - pa
+ACT 990 - start
+_fail_'this is a test'
+ACT 990 - processed
+state.result.code: "rp_999_wut"
+ACT 10 - processed
+	Result: 
+{
+    "success": true,
+    "text_origin": "this is a test",
+    "text_1": " this is test ",
+    "text_2": " this is test ",
+    "text_3": " this is test ",
+    "text": " this is test ",
+    "reply": "rp_999_wut:Didn't catch that. Can you speak more slowly and clearly?:f_smile:b_normal:0:250:",
+    "tokens": [],
+    "direction": null,
+    "extra": ":",
+    "code": "rp_999_wut"
+}
+_story_result:rp_999_wut:Didn't catch that. Can you speak more slowly and clearly?:f_smile:b_normal:0:250:"},
+

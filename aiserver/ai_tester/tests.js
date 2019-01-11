@@ -1,6 +1,7 @@
 var tests_origin =
 [
 	{input:"INITIAL TEST JEFF IS NOT CRAZY",reply:null},
+	{input:"newgame",reply:"rp_5_intro"},
 	{input:"hello",reply:"rp_10_first_time"},
 	{input:"what you want",reply:"rp_10_offeredhelp"},
 	{input:"mushrooms",reply:"rp_20_decided_mushrooms"},
@@ -8,7 +9,7 @@ var tests_origin =
 	{input:"sausage",reply:"rp_30_remember_gluten"},
 	{input:"gluten free option",reply:"rp_32_decided_nogluten"},
 	{input:"alright",reply:"rp_40_write_it"},
-	{input:"one slice sausage mushrooms no gluten",reply:"rp_40_finished"},
+	{input:"one slice sausage mushrooms no gluten",reply:"rp_40_finished_good1"},
 
 	{input:"STEFANIE PATH!",reply:null},
 	{input:"newgame",reply:"rp_5_intro"},
@@ -20,7 +21,7 @@ var tests_origin =
 	{input:"i love your haircut",reply:"rp_990_thankyou"},
 	{input:"no problem i was just complementing your shirt",reply:"rp_990_thankyou"},
 	{input:"that is wonderful! welcome how many i help you",reply:"rp_10_offeredhelp"},
-	{input:"that is a good question. how can i help you today would you like a slice of pizza?",reply:"rp_20_asked_twice"},
+	{input:"that is a good question. how can i help you today would you like a slice of pizza?",reply:"rp_20_asked_twice_nice"},
 	{input:"excellent that is one slice of sausage and mushroom correct",reply:"rp_20_decided_both"},
 	{input:"oh no i'm sorry to hear that well the good news is we have gluten-free pizza would you like your mushroom and sausage on a gluten-free pizza?",reply:"rp_30_remember_gluten"},
 	{input:"wonderful so that's one gluten-free mushroom and sausage coming right up",reply:"rp_32_decided_nogluten"},
@@ -266,6 +267,7 @@ var tests_origin =
 { input:"#Do you eat meat",reply:"tokens"},
 { input:"#Well we have the best pizza around",reply:"tokens"},
 { input:"#Well we have the best pizza in town",reply:"tokens"},
+{ input:"#gluten-free",reply:"tokens"},
 
 
 
