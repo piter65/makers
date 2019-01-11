@@ -15,7 +15,7 @@ exports.process = function(state)
 		)
 
 	{
-		state.result.code = 'rp_40_finished';
+		state.result.code = 'rp_40_finished_good1';
 		state.session.game_over = true;
 	}
 

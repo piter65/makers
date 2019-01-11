@@ -12,7 +12,7 @@ exports.session_defaults =
 	veg_offers: 0,
 	meat_offers: 0,
 
-	gluten_known: 0,
+	gluten_solved: 0,
 
 	score_exec:5,
 	score_listen:5,

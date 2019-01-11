@@ -55,12 +55,21 @@ exports.process = function(state)
 		state.result.extra=":brag boost";
 	}
 
-	if (state.result.tokens.includes('i_storebrand'))
+	if (state.result.tokens.includes('e_storebrand'))
 	{
 		state.session.score_exec++;
 		state.result.extra=":storebrand boost";
 
 	}
+	if (state.result.tokens.includes('i_brag'))
+	{
+		state.session.score_exec++;
+		state.result.extra=":brag boost";
+
+	}
+
+
+
 	if (state.result.tokens.includes('e_rude'))
 	{
 		state.session.score_exec-=2;

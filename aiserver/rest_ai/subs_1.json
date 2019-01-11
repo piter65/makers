@@ -39,6 +39,8 @@
 	," just little ":" "
 	," probably ":" "
 	," very ":" "
+	," did ":" do "
+
 
 
 	,"would":"should"
@@ -73,6 +75,41 @@
 	," glad":" happy"
 
 
+	,"------ xcomment":"Wide variety of choices "
+	," plethora of ":" many "
+	," multitude of ":" many "
+	," plenty of ":" many "
+	," dozens of ":" many "
+	," hundreds of ":" many "
+	," thousands of ":" many "
+	," millions of ":" many "
+	," various ":" many "
+
+
+	," wide variety ":" many "
+	," great variety ":" many "
+	," fantastic variety ":" many "
+
+	," variety ":" many "
+	," countless ":" many "
+
+	," lots of ":" many "
+	," ton of ":" many "
+
+	," various options ":" toppings "
+	," many options ":" toppings "
+
+	," different options ":" toppings "
+
+	," many choices ":" toppings "
+	," many selections ":" toppings "
+	," many selection ":" toppings "
+
+	," choices ":" toppings "
+	," selections ":" toppings "
+	," selection ":" toppings "
+
+
 
 	,"_comment_":"Peter wants to start literals here.  These are early substitions for common entries."
 
@@ -101,9 +138,8 @@
 
     ," how may help you":" order please"
     ," how many i help you":" order please"
-    ," may i get something for you":" order please"
+    ," may i get something for you":" order please" 
 
- 
 
     ," get out":" iinsult"
 	," please leave":" iinsult"
@@ -118,7 +154,6 @@
 
 	,"do you understand sign language":" inotgermane"
 
-
     ," may i interest you":" suggest"
 
 
@@ -128,7 +163,9 @@
 	," selection of toppings":" selection"
 
 	," weve ":" we have "
-	," weve got ":" weve "
+	," weve got ":" we have "
+	," we got ":" we have "
+	," we got ":" we have "
 
 	," we have excellent selection":" ibrag"
 	," we have great selection":" ibrag"
@@ -168,6 +205,8 @@
 
 	," floats your boat":" prefer"
 	," floats your boat":" prefer"
+
+	," what do you have in mind":" prefer"
 
 	,"---------- xcomment":"Just plain fat.  "
 	," just plain ":" "
@@ -211,8 +250,13 @@
 	,"we have many toppings":" "
 	,"how can i help" : " order please"
 
-	,"------ xcomment":"do you have allergies' here.  "
-	,"what a drag" : " notgood"
+	,"------ xcomment":"What a drag' here.  "
+	,"what drag" : " notgood"
+	,"what bummer" : " notgood"
+	,"what downer" : " notgood"
+	,"terrible" : " notgood"
+
+
 	,"that doesnt sound like fun" : " notgood"
 	,"thats no fun" : " notgood"
 	,"that must have been terrible" : " notgood"	
@@ -222,6 +266,11 @@
 	," really " : " "
 	," totally " : " "
 	," completely " : " "
+	," kinda " : " "
+	," actually " : " "
+	," really " : " "
+
+
 
 	," i love " : " iheart "
 	," i like " : " iheart "
@@ -271,8 +320,33 @@
 	," thats ungood ":" sorry "
 	," have been ungood ":" sorry "
 
-	," lots of ":" many "
+
 	," many options ": " toppings "
+
+	,"------ xcomment":"Scotts troublesome phrases "
+	," that wont happen here ":" ibrag "
+	," thats not gonna happen here ":" ibrag "
+	," that will not happen here ":" ibrag "
+
+	," best slice in town ":" ibrag "
+
+	,"------ xcomment":"empty phrases"
+	," to tell you truth ":" "
+	," to be honest with you ":" "
+	," to be honest ":" "
+	," frankly ":" "
+	," honestly ":" "
+	," truthfully ":" "
+	," let me explain ":" "
+	," may I explain ":" "
+
+
+	," in fact ":" "
+	," now that you mention it ":" "
+
+	," come to think of it ":" "
+
+
 
 	,"xcomment":"----- end of file -----"
 

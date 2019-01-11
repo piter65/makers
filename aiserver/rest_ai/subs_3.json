@@ -58,9 +58,16 @@
 
 	,"we are ":"webe "
 	,"we're ":"webe "
-	,"we pride ourselves ":"webe "
-	,"we're proud ":"webe "
-	,"we are proud ":"webe "
+	,"we're ":"webe "
+	,"we are":"webe "
+
+	,"we pride ourselves":"webe proud"
+	,"we take pride":"webe proud"
+
+
+
+	,"are ":"is "
+
 
 	,"i appreciate that":"thankyou"
 	,"thats nice of you":"thankyou"
@@ -134,8 +141,7 @@
 	,"kitchen":"kitchen"
 
 	,"available":""
-	,"choice":"options"
-	,"choice":"options"
+
 
 	,"your clothes":"dress"
 	,"your outfit":"dress"
@@ -155,13 +161,15 @@
 	,"hot":"pretty"
 	,"great":"pretty"
 	,"quite":"pretty"
-	,"good":"pretty"
-	,"great":"pretty"
-	,"attractive":"pretty"
+	," good ":" pretty "
+	," great ":" pretty "
+	," attractive ":" pretty "
 	,"beautiful":"pretty"
 	,"pretty":"pretty"
 	,"fine":"pretty"
 	,"dressed well":"pretty"
+
+
 
 
 
