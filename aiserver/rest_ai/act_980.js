@@ -76,7 +76,8 @@ exports.process = function(state)
 		state.session.score_empathy-=2;
 		state.result.extra=":rudeness drop";
 	}
-	if (state.result.tokens.includes('e_insult'))
+
+	if (state.result.tokens.includes('i_insult'))
 	{
 		state.session.score_exec-=2;
 		state.session.score_empathy-=2;		

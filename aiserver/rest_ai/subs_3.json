@@ -54,7 +54,7 @@
 
 	,"arent you ":"yoube "
 	,"are you not ":"yoube "
-
+	,"you smell ":"yoube "
 
 	,"we are ":"webe "
 	,"we're ":"webe "
@@ -223,6 +223,8 @@
 	,"we are proud of our uniforms at paizanos":"brag"
 	,"what you desire":"order please"
 
+	,"body are":"yoube"
+
 	,"yoube ugly":"iinsult"
 	,"yoube fat":"iinsult"
 	,"yoube knucklehead":"iinsult"
@@ -236,7 +238,11 @@
 	,"yoube bloody":"iinsult"
 	,"yoube obese":"iinsult"	
 	,"yoube annoying":"iinsult"	
-	,"yoube stinky":"iinsult"	
+	,"yoube stinky":"iinsult"
+	,"yoube bad":"iinsult"
+	,"yoube stink":"iinsult"
+	,"yoube slutty":"iinsult"
+
 
 	," coke " : " drink "
 	," water " : " drink "
@@ -252,5 +258,5 @@
 	," hold drink " : " "
 	," skip drink " : " "
 
-
+	," this is pretty place ": "idunno"
 }

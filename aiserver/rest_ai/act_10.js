@@ -15,7 +15,11 @@ exports.process = function(state)
 				state.result.tokens.includes( 'i_desire') &&
 				state.result.tokens.includes( 'e_slice')
 				)
-
+					||
+				(
+				state.result.tokens.includes( 'i_prefer') &&
+				state.result.tokens.includes( 'e_slice')
+				)
 		)
 	{
 		state.result.code = 'rp_10_offeredhelp';   //'I'd like a slice, but I can't decide. What do you suggest?';

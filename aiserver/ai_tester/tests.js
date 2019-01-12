@@ -34,12 +34,12 @@ var tests_origin =
 	{input:"may I have your order",reply:"rp_10_offeredhelp"},
 	{input:"sausage",reply:"rp_20_decided_sausage"},
 	{input:"and meatball",reply:"rp_22_frustrated"},
-	{input:"just kidding, how about sausage and mushrooms",reply:"rp_22_correct"},
+	{input:"just kidding, how about sausage and mushrooms",reply:"rp_22_correct_nice"},
 	{input:"ok",reply:"rp_30_remember_gluten"},
 	{input:"We have a no gluten option",reply:"rp_32_decided_nogluten"},
 	{input:"Let's write that up!",reply:"rp_40_write_it"},
 	{input:"one slice sausage mushrooms with extra gluten",reply:"rp_40_dont_forget"},
-	{input:"one slice sausage mushrooms without gluten",reply:"rp_40_finished"},
+	{input:"one slice sausage mushrooms without gluten",reply:"rp_40_finished_good1"},
 
 	{input:"TEST NEWGAME WITH DIFFERENT PATH",reply:null},
 	{input:"newgame robot",reply:"rp_5_intro"},
@@ -50,7 +50,7 @@ var tests_origin =
 	{input:"Maybe you craving dog crap pizza?",reply:"rp_20_considering_crap"},
 	{input:"sausage",reply:"rp_20_decided_sausage"},
 	{input:"and meatball",reply:"rp_22_frustrated"},
-	{input:"just kidding, how about sausage and mushrooms",reply:"rp_22_correct"},
+	{input:"just kidding, how about sausage and mushrooms",reply:"rp_22_correct_nice"},
 	{input:"ok",reply:"rp_30_remember_gluten"},
 	{input:"I'm sorry to hear that, but it's your lucky day,We have a no gluten option",reply:"rp_32_decided_nogluten"},
 	{input:"Let's write that up!",reply:"rp_40_write_it"},
@@ -267,8 +267,8 @@ var tests_origin =
 { input:"#Do you eat meat",reply:"tokens"},
 { input:"#Well we have the best pizza around",reply:"tokens"},
 { input:"#Well we have the best pizza in town",reply:"tokens"},
-{ input:"#glutenfree",reply:"tokens"},
-{ input:"#gluten-free",reply:"tokens"},
+{ input:"# glutenfree ",reply:"tokens"},
+{ input:"# gluten-free",reply:"tokens"},
 
 
 

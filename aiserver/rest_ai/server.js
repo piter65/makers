@@ -348,7 +348,7 @@ function process(state)
 			state.result.reply += 'Active Listening:'+state.session.score_listen+'\n';
 			state.result.reply += 'Understanding:'+state.session.score_understand+'\n';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
-			state.result.reply += '\n try "newgame" to play again\n';
+			state.result.reply += '\n try "newgame myname" to play again\n';
 
 	}
 
