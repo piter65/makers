@@ -24,11 +24,22 @@ exports.process = function(state)
 		|| state.result.tokens.includes('i_dietary')	)
 
 	{
-		state.result.code = 'rp_20_gluten_disclose';  // now that you mention it.
-		state.session.score_understand+=2;
-		state.session.glutten_known=1;
-		state.session.next_act=24;	// come back here
-		state.session.act = 32;  // move to glutten decided!  move on!
+		if (state.session.gluten_solved>0)
+		{
+			state.result.code = 'rp_990_complimented_too_much';
+		}
+		else
+		{
+
+
+			state.result.code = 'rp_20_gluten_disclose';  // now that you mention it.
+			state.session.score_understand+=2;
+			state.session.glutten_known=1;
+			state.session.next_act=24;	// come back here
+			state.session.act = 32;  // move to glutten decided!  move on!
+		}
+
+
 	}
 	else
 	if (   state.result.tokens.includes('e_herb')
@@ -69,7 +80,6 @@ exports.process = function(state)
 		{
 			state.result.code = 'rp_24_meat_giveup';
 			state.session.act = 30;  // move on!
-			state.result.choice_done = true;
 		}
 
 	}

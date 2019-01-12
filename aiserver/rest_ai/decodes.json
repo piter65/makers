@@ -8,12 +8,10 @@
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
-
 	,"rp_10_welcome":
 	{
-		"text":
-			"You are very welcome."
-,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text": "You are very welcome."
+			,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
 	,"rp_10_past_reaction":
@@ -158,7 +156,7 @@
 
 	,"rp_20_pizza_prefer":
 	{
-		"text": "Oh my, you actually care about my preferences?  That is so refreshing! So, since you asked, I love sausage and mushroom.  But last time I had pizza I got sick, so I'm a bit afraid to try again."
+		"text": "Oh my, you actually care about my preferences?  That is so refreshing! So, since you asked, I love sausage.  But last time I had pizza I got sick, so I'm a bit afraid to try again."
 		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -441,6 +439,13 @@
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
+	,"rp_24_giveup":
+	{
+		"text": "Awe, I give up.  Just get me sausage and mushroom."
+		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
+	}
+
+
 	,"rp_24_frustrated":
 	{
 		"text": "I've already said I want mushroom and one meat. Can you help me pick a meat?"
@@ -588,6 +593,20 @@
 		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
+	,"rp_990_thankyou":
+	{
+		"text":"Thank you."
+		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+
+	,"rp_990_complimented":
+	{
+		"text":
+			"Thanks. I got it at Brooks Brothers."
+		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
 	,"rp_990_complimented":
 	{
 		"text":
@@ -677,6 +696,13 @@
 	}
 
 	,"rp_990_not_understand":
+	{
+		"text":
+			"Didn't catch that. Can you speak more slowly and clearly?"
+,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+	,"rp_999_wut":
 	{
 		"text":
 			"Didn't catch that. Can you speak more slowly and clearly?"

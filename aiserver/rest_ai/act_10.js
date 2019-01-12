@@ -7,6 +7,23 @@ exports.process = function(state)
 {
 	logger.log('process act 10 - pa');
 
+
+
+	if (state.result.tokens.includes( 'i_offerhelp') 
+					||
+				(
+				state.result.tokens.includes( 'i_desire') &&
+				state.result.tokens.includes( 'e_slice')
+				)
+
+		)
+	{
+		state.result.code = 'rp_10_offeredhelp';   //'I'd like a slice, but I can't decide. What do you suggest?';
+		state.session.trust += 0;
+		state.session.act = 20;  // move on!
+	}
+	else 
+
 	if (state.result.tokens.includes( 'i_why')
 		&& state.result.tokens.includes( 'e_longtime')
 	 )
@@ -56,20 +73,7 @@ exports.process = function(state)
 			state.result.code = 'rp_10_first_time';  // first time I\'ve enterred the place.'
 		}
 	else
-	if (state.result.tokens.includes( 'i_offerhelp') 
-					||
-				(
-				state.result.tokens.includes( 'i_desire') &&
-				state.result.tokens.includes( 'e_slice')
-				)
 
-		)
-	{
-		state.result.code = 'rp_10_offeredhelp';   //'I'd like a slice, but I can't decide. What do you suggest?';
-		state.session.trust += 0;
-		state.session.act = 20;  // move on!
-	}
-	else 
 	if (state.result.tokens.includes( 'i_nothing') )
 	{
 		state.result.code = 'rp_10_customer_initiates';   //'I was thinking about getting a slice.';

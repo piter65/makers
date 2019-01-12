@@ -1,6 +1,7 @@
 var tests_origin =
 [
-	{input:"INITIAL TEST",reply:null}, {input:"newgame",reply:"rp_5_intro"},
+	{input:"INITIAL TEST JEFF IS NOT CRAZY",reply:null},
+	{input:"newgame",reply:"rp_5_intro"},
 	{input:"hello",reply:"rp_10_first_time"},
 	{input:"what you want",reply:"rp_10_offeredhelp"},
 	{input:"mushrooms",reply:"rp_20_decided_mushrooms"},
@@ -101,6 +102,39 @@ var tests_origin =
 	{ input:"what type of pizza have you liked in the past",reply:"rp_20_pizza_prefer"},
 	{ input:"maybe it was a gluten allergy",reply:"rp_10_offeredhelp"},
 { input:"maybe you are allergic to gluten",reply:"rp_10_offeredhelp"},
+
+
+{ input:"TEST NEWGAME ON STUFF FROM JEFFS",reply:null},
+{ input:"newgame",reply:"rp_5_intro"	},
+{ input:"your clothes are nice too" ,reply:"rp_10_offeredhelp"},
+{ input:"you look marvelous" ,reply:"rp_10_offeredhelp"},
+
+{ input:"PETER THIS SHOULD GO TO MEAT CHOICE",reply:null},
+{ input:"newgame",reply:"rp_5_intro"	},
+{ input:"what would you like." ,reply:"rp_10_offeredhelp"},
+{ input:"what do you like? Meat or veggies." ,reply:"rp_10_offeredhelp"},
+
+{ input:"PETER A FEW THINGS HERE",reply:null},
+{ input:"newgame",reply:"rp_5_intro"	},
+{ input:"what kind of pizza do you like" ,reply:"rp_10_offeredhelp"},
+{ input:"how can I help you" ,reply:"rp_10_offeredhelp"},
+{ input:"what kind of pizza do you like" ,reply:"rp_20_prefer_or_want"},
+{ input:"today" ,reply:"rp_20_pizza_prefer"},
+{ input:"what kind of pizza do you like today" ,reply:"rp_20_pizza_prefer"},
+
+
+{ input:"PETER That Problem with gluten free and toppings",reply:null},
+{ input:"newgame",reply:"rp_5_intro"	},
+{ input:"what would you like" ,reply:"rp_10_offeredhelp"},
+{ input:"what type of toppings do you like" ,reply:"rp_20_pizza_prefer"},
+{ input:"maybe it was a gluten allergy" ,reply:"rp_20_gluten_disclose"},
+{ input:"we have a gluten free pizza" ,reply:"rp_32_decided_nogluten"},
+
+
+
+
+
+
 
 	{ input:"TEST NEWGAME ATTEMPT GOOD PATH",reply:null},
 

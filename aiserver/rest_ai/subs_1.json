@@ -39,6 +39,8 @@
 	," just little ":" "
 	," probably ":" "
 	," very ":" "
+	," did ":" do "
+
 
 
 	,"would":"should"
@@ -64,10 +66,50 @@
 	," do you want today ":" would you like "
 	," do you want ":" would you like "
 
+	," anything":" something"
+
 
 
 	," cops":" police"
 	," authorities":" police"
+	," glad":" happy"
+
+
+	,"------ xcomment":"Wide variety of choices "
+	," plethora of ":" many "
+	," multitude of ":" many "
+	," plenty of ":" many "
+	," dozens of ":" many "
+	," hundreds of ":" many "
+	," thousands of ":" many "
+	," millions of ":" many "
+	," various ":" many "
+
+
+	," wide variety ":" many "
+	," great variety ":" many "
+	," fantastic variety ":" many "
+
+	," variety ":" many "
+	," countless ":" many "
+
+	," lots of ":" many "
+	," ton of ":" many "
+
+	," various options ":" toppings "
+	," many options ":" toppings "
+
+	," different options ":" toppings "
+
+	," many choices ":" toppings "
+	," many selections ":" toppings "
+	," many selection ":" toppings "
+
+	," choices ":" toppings "
+	," selections ":" toppings "
+	," selection ":" toppings "
+
+
 
 	,"_comment_":"Peter wants to start literals here.  These are early substitions for common entries."
 
@@ -93,7 +135,11 @@
     ," may I be of service":" order please"
     ," have you decided":" order please"
     ," are you ready to order":" order please"
- 
+
+    ," how may help you":" order please"
+    ," how many i help you":" order please"
+    ," may i get something for you":" order please"
+
 
     ," get out":" iinsult"
 	," please leave":" iinsult"
@@ -108,7 +154,6 @@
 
 	,"do you understand sign language":" inotgermane"
 
-
     ," may i interest you":" suggest"
 
 
@@ -118,7 +163,9 @@
 	," selection of toppings":" selection"
 
 	," weve ":" we have "
-	," weve got ":" weve "
+	," weve got ":" we have "
+	," we got ":" we have "
+	," we got ":" we have "
 
 	," we have excellent selection":" ibrag"
 	," we have great selection":" ibrag"
@@ -191,6 +238,8 @@
 	," piezanos":" piezanos"
 	," pie-zanos":" piezanos"
 	," paizanos":" piezanos"
+	," pay zones":" piezanos"
+
 
 	,"xcomment":"----- end of file -----"
 

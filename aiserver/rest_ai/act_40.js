@@ -15,7 +15,7 @@ exports.process = function(state)
 		)
 
 	{
-		state.result.code = 'rp_40_finished';
+		state.result.code = 'rp_40_finished_good1';
 		state.session.game_over = true;
 	}
 
@@ -26,6 +26,7 @@ exports.process = function(state)
 	{
 			state.result.code = 'rp_40_dont_forget';  //"Don't forget glutten free.
 			state.session.trust += -1;
+			state.session.count_write++;
 	}
 	else if (state.result.tokens.includes('e_drink'))
 	{
@@ -39,7 +40,7 @@ exports.process = function(state)
 		state.session.count_write++;
 	}
 
-	else 
+	else
 	{
 		state.result.code = 'rp_40_restate_order';  //sausage, mushrroom, and glutten free.
 	}

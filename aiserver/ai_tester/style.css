@@ -13,6 +13,11 @@
 	box-sizing: border-box;
 }
 
+.right
+{
+  float: right;
+}
+
 html
 {
 	margin: 0;
@@ -85,10 +90,16 @@ td:nth-child(5)
 	text-align: center;
 }
 
-.wrong
+.bad
 {
 	color: #f22;
 	font-weight: bold;
+}
+
+.mismatch
+{
+  color: #ff2;
+  font-weight: bold;
 }
 
 good
@@ -101,6 +112,16 @@ good
 	padding: 2px 30px;
 }
 
+mismatch
+{
+  display: inline-block;
+  background-color: #ff2;
+  color: #111;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 2px 30px;
+}
+
 bad
 {
 	display: inline-block;
@@ -111,19 +132,40 @@ bad
 	padding: 2px 30px;
 }
 
+.option
+{
+  display: inline-block;
+  float: right;
+  margin: 10px;
+  text-align: right;
+  vertical-align: top;
+}
+
 button
 {
-	float: right;
 	border-radius: 20px;
 	border: none;
 	padding: 15px 40px;
-	margin: 10px;
 	background: #2f2;
 	color: #a4f;
 	font-weight: bold;
 	font-size: 20px;
 	outline: none;
 	cursor: pointer;
+}
+
+label
+{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 50px;
+  color: #eee;
+}
+
+input[type='checkbox']
+{
+  width: 50px;
+  height: 50px;
 }
 
 .comment

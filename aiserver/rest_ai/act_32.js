@@ -17,6 +17,8 @@ exports.process = function(state)
 			state.result.code = 'rp_32_decided_nogluten'; // state"A no gluten option?Lets do that! "
 			state.session.act = state.session.next_act;  // move on!
 			state.session.score_exec++;
+			state.session.gluten_solved++;
+
 		}
 		else		// go back to level 20/22/24
 		{
