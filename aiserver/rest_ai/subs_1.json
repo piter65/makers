@@ -6,6 +6,8 @@
 	,"?":" ?"
 	,".":" ."
 	,"!":" !"
+	,"#":" # "
+
 
 	,"--comment":"should handle up to 6ish spaces. "
 

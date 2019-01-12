@@ -267,8 +267,8 @@ var tests_origin =
 { input:"#Do you eat meat",reply:"tokens"},
 { input:"#Well we have the best pizza around",reply:"tokens"},
 { input:"#Well we have the best pizza in town",reply:"tokens"},
-{ input:"# glutenfree ",reply:"tokens"},
-{ input:"# gluten-free",reply:"tokens"},
+{ input:"#glutenfree ",reply:"tokens"},
+{ input:"#gluten-free",reply:"tokens"},
 
 
 
