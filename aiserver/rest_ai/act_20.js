@@ -8,12 +8,19 @@ exports.process = function(state)
 {
 	logger.log('ACT 20 - start pa - tries' + state.session.count_tries);
 
+	if (state.result.tokens.includes( 'i_close') )
+	{
+		state.result.code = 'rp_20_dont_know_toppings';  // I don't know toppings
+		state.session.understand --;
+	}
+
+	else
 	if (   state.result.tokens.includes('e_sausage')
 		&& state.result.tokens.includes('e_mushroom'))
 	{
 		state.result.code = 'rp_20_decided_both';  //'Yeah, . Ill have sausage and mushroom';
 		state.session.act = 30;  // move on!
-		if (state.session.glutten_solved>0) state.session.act = 40;  // move on!
+		if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 	}
 
 	else
@@ -23,26 +30,17 @@ exports.process = function(state)
 		state.session.score_understand--;
 	}
 
-	else
-	if (   state.result.tokens.includes('e_slice')
-		&& state.result.tokens.includes('e_wtype')
+	else if ( 
+		// state.result.tokens.includes('e_slice')
+		state.result.tokens.includes('e_wtype')
 		&& state.result.tokens.includes('i_prefer')
 		)
 	{
 		state.result.code = 'rp_20_pizza_prefer';  // you actually care!
-		state.session.choice_done = true;
 		state.session.score_understand+=2;
 			logger.log('ACT 20 home run');
-	}
+		state.session.gluten_saga=2;   // gluten is out in the open...
 
-	else if ( state.result.tokens.includes('e_wtype')
-		&& state.result.tokens.includes('i_prefer')
-		)
-	{
-		state.result.code = 'rp_20_pizza_prefer';  // you actually care!
-		state.session.choice_done = true;
-		state.session.score_understand+=2;
-			logger.log('ACT 20 home run');
 	}
 	else if ( state.result.tokens.includes('i_prefer')
 		&&	state.result.tokens.includes('e_veggie') 
@@ -76,27 +74,6 @@ exports.process = function(state)
 		state.result.code = 'rp_20_meat_uprefer';  // you almost actually care!
 		state.session.score_understand+=1;
 		state.session.act = 22;  // meat decided!  move on!
-	}
-	else
-	if (   state.result.tokens.includes('e_sick')
-		|| state.result.tokens.includes('e_gluten')
-		|| state.result.tokens.includes('i_dietary')
-
-		)
-	{
-		if (state.session.gluten_solved>0)
-		{
-			state.result.code = 'rp_990_complimented_too_much';
-		}
-		else
-		{
-
-			state.result.code = 'rp_20_gluten_disclose';  // now that you mention it.
-			state.session.score_understand+=2;
-			state.session.empathy_opportunity=true;   // looking for sory
-			state.session.next_act=22;	// come back here
-			state.session.act = 32;  // move to glutten decided!  move on!
-		}
 	}
 	else
 	if (state.result.tokens.includes('e_sausage'))
@@ -165,6 +142,16 @@ exports.process = function(state)
 
 	}
 	else
+	if (	state.result.tokens.includes('i_desire') &&
+		state.result.tokens.includes('e_wtype') )
+	{
+		state.result.code = 'rp_20_considering_topping';
+		// state.result.reply = 'Maybe just one meat and a veggie.';
+		state.session.count_tries++;
+
+	}
+
+	else
 	if (state.result.tokens.includes('e_hawaiin'))
 	{
 		state.result.code = 'rp_20_considering_hawaiin';  // 'Yech- way too sweet for me.';
@@ -213,7 +200,10 @@ exports.process = function(state)
 		state.session.count_tries++;
 		state.session.trust -= 1;
 	}
+
 	else
+
+
 	if (state.result.tokens.includes('i_discover'))
 	{
 		state.result.code = 'rp_20_self_discovery';
@@ -246,9 +236,18 @@ exports.process = function(state)
 		state.session.game_over = true;
 	}
 	else
+	if (state.result.tokens.includes( 'i_close') )
+	{
+		state.result.code = 'rp_20_dont_know_toppings';  // 'I wont be visiting here again.  Good day.';
+		state.session.trust -= 2;
+
+	}
+/*
+	else
 	{
 		act_990.process(state);
 	}
+*/
 
 	logger.log('ACT 20 - processed');
 };

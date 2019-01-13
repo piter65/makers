@@ -18,7 +18,7 @@
 
 
 	,"glutten":"gluten"
-
+	,"hawaiian":"hawaiin"
 
 	," a ":" "
 	," an ":" "
@@ -237,32 +237,41 @@
 
 
 	,"------ xcomment":"do you have allergies' here.  "
-	," do you have allergies":" gluten "
-	," do you have gluten allergies":" gluten "
-	," do you issues with gluten ":" beyou "
+	," do you have ":" have you "
 
-	,"------ xcomment":"do you have allergies' here.  "
+
+	," have you allergies":" gluten "
+	," have you gluten allergies":" gluten "
+	," have you issues with gluten ":" gluten "
+
+
+
+
+	,"------ xcomment":"'piezanos' here.  "
 	," piezanos":" piezanos"
 	," pie-zanos":" piezanos"
 	," paizanos":" piezanos"
 	," pay zones":" piezanos"
-
+	," paisanos":" piezanos"
+	," paisano":" piezanos"
+	," buy sonos ":" piezanos"
+	," arizona slice":" piezanos"
 
 
 	,"we have many toppings":" "
 	,"how can i help" : " order please"
 
 	,"------ xcomment":"What a drag' here.  "
-	,"what drag" : " notgood"
-	,"what bummer" : " notgood"
-	,"what downer" : " notgood"
-	,"terrible" : " notgood"
+	,"what drag" : " nofun"
+	,"what bummer" : " nofun"
+	,"what downer" : " nofun"
+	,"terrible" : " nofun"
 
 
-	,"that doesnt sound like fun" : " notgood"
-	,"thats no fun" : " notgood"
-	,"that must have been terrible" : " notgood"	
-	,"thats no fun" : " notgood"
+	,"that doesnt sound like fun" : " nofun"
+	,"thats no fun" : " nofun"
+	,"that must have been terrible" : " nofun"	
+	,"thats no fun" : " nofun"
 
 	,"------ xcomment":"I love, I like, ' here.  "
 	," really " : " "
@@ -347,6 +356,9 @@
 	," now that you mention it ":" "
 
 	," come to think of it ":" "
+
+
+	," great place to work ":" begood "
 
 
 

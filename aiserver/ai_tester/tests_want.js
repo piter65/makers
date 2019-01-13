@@ -279,7 +279,7 @@ var tests_origin =
 { input:"#You won't have that problem here",reply:"tokens"},
 { input:"#Yes we have other customers with gluten issues",reply:"tokens"},
 { input:"#What a drag",reply:"tokens"},
-{ input:"#I feel sorry for you",reply:"tokens"}
+{ input:"#I feel sorry for you",reply:"tokens"},
 { input:"#That doesn't sound like fun",reply:"tokens"},
 { input:"#That must have been terrible",reply:"tokens"},
 { input:"#What a bummer",reply:"tokens"},

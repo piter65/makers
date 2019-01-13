@@ -7,6 +7,9 @@ exports.process = function(state)
 {
 	logger.log('ACT 98 - start');
 
+// clear out any one time scoring opportunities...
+	state.session.empathy_scored=false;
+
 	if (   state.result.tokens.includes( 'i_compliment') )
 	{
 		if (state.session.count_compliment_dress <2)
@@ -41,20 +44,12 @@ exports.process = function(state)
 		++state.session.count_compliment_dress;
 	}
 
-
-
 	if (state.result.tokens.includes('i_confidence'))
 	{
 		state.session.score_exec++;
 		state.result.extra=":exec boost";
 	}
 	
-	if (state.result.tokens.includes('i_brag'))
-	{
-		state.session.score_exec++;
-		state.result.extra=":brag boost";
-	}
-
 	if (state.result.tokens.includes('e_storebrand'))
 	{
 		state.session.score_exec++;
@@ -65,7 +60,6 @@ exports.process = function(state)
 	{
 		state.session.score_exec++;
 		state.result.extra=":brag boost";
-
 	}
 
 
@@ -94,21 +88,29 @@ exports.process = function(state)
 
 		}
 	}
-	if ( 
-		state.result.tokens.includes('e_shock') ||
-        state.result.tokens.includes('e_empathy')
-		)
+	if (state.session.empathy_opportunity)	// only give boost if appropriate
 	{
-		if (state.session.empathy_opportunity)	// only give boost if appropriate
-		{
+		if ( 
+			state.result.tokens.includes('e_shock') ||
+       		state.result.tokens.includes('e_empathy') ||
+        	state.result.tokens.includes('e_nofun')
+        	)
+			{
+// Player got it!
 			state.session.score_listen++;
 			state.session.score_empathy+=2;
 			state.result.extra=":empathy boost";
-		}
+			state.session.empathy_scored=true;	// so other logic knows...
+			}
+		else // you blew it...
+			{
+			state.session.score_empathy--;
+			}
+		state.session.empathy_opportunity=false;	// opportunity came and went
 	}
-
-
-	state.session.empathy_opportunity=false;	// opportunity came and went
 //	state.result.extra="::did act 980";
+
+	logger.log('state.result.code: "%s"', state.result.code);
+
 	logger.log('ACT 980 - processed');
 };

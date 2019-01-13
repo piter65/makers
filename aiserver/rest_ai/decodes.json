@@ -1,5 +1,39 @@
 {
-	"comment":"f_smile f_frown f_confused f_angry f_sad f_neutral body:b_normal b_engaged b_bored b_tapping b_phone b_angry"
+
+"comment":
+"rp_20_20:Why thank you:b_tap:1000:f_confu:1000:b_tap:1000:f_confu:1000:b_tap",
+
+	"comment":"f_smile f_frown f_conf f_angry f_sad f_norm"
+	,"body":":b_norm b_engage b_bored b_tap b_phone b_angry"
+
+	,"rp_1_asked_twice":
+	{
+		"text":
+			"addon-Didn't we already talk about this?"
+		,"anim":[{"f_smile":1000,"b_norm":1000}]
+	}
+
+	,"rp_1_hmmm":
+	{
+		"text":
+			"addon-hmmmmmm?"
+,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+	,"rp_1_can_we_continue":
+	{
+		"text":
+			"addon-Anyway, can we continue?"
+,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+	,"rp_1_dont_know_you":
+	{
+		"text":
+			"addon-That's a little bit personal, don't you think?"
+,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
 
 	,"rp_5_intro":
 	{
@@ -16,32 +50,32 @@
 
 	,"rp_10_past_reaction":
 	{
-		"text": "I sorta got sick last time I had pizza.  I'm not sure what happened, but today I saw your nice looking store, and I decided I'm going to try a slice of something."
+		"text": "I got kinda sick last time I had pizza.  I'm not sure what happened, but today I saw your nice looking store, and I thought I'd give pizza another try."
 		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
 	,"rp_10_greet":
 	{
 		"text":
-			"Hi! This seemed like a nice place to eat."
+			"Hi! This place must be new.  Looks great."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_10_first_time":
 	{
 		"text":
-			"First time I've enterred the place."
+			"This is the first time I've been here."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_10_customer_initiates":
 	{
 		"text":
-			"I was thinking about getting a slice."
+			"So, I was thinking of getting a slice."
 		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_10_store_compliment":
 	{
 		"text":
-			"Yes, PieZanos sure seems like a quality operation."
+			"Yes, this place looks great, and I love the name PieZanos."
 		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -49,7 +83,7 @@
 	,"rp_10_insulted":
 	{
 		"text":
-			"I'm not sure I like this place or you."
+			"Seriously, I'm not sure I like this place or you."
 		,"animations":
 		[
 			{
@@ -63,7 +97,7 @@
 	,"rp_10_rude":
 	{
 		"text":
-			"That's not a nice way to greet a customer! Anyway, I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?"
+			"Seriosuly, is that how you treat your customers?  Anyway, I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?"
 		,"animations":
 		[
 
@@ -90,13 +124,13 @@
 	,"rp_10_impatient":
 	{
 		"text":
-			"Are you gonna take my order or something?"
+			"Hello? Are you taking my order?"
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_10_fed_up":
 	{
 		"text":
-			"The service here stinks. I'm gone."
+			"No joke, the service here is pathetic. I'm outa here."
 		,"animations":
 		[
 			{
@@ -114,21 +148,21 @@
 	,"rp_10_notgermane":
 	{
 		"text":
-			"I'm really not sure what you're going on about, are you gonna take my order?"
+			"I have like no idea what you're talking about.  Are you going to take my order?"
 			,"animations": [{"face":"f_confused","body":"b_normal","delay":0,"duration":250}]
 	}
 
 	,"rp_10_notgermane_nice":
 	{
 		"text":
-			"I'm really not sure what you're going on about, are you gonna take my order?"
+			"I'm not really following you, but are you going to take my order?"
 			,"animations": [{"face":"f_confused","body":"b_normal","delay":0,"duration":250}]
 	}
 
 ,"rp_10_notgermane_annoyed":
 {
 	"text":
-		"I'm really not sure what you're going on about, are you gonna take my order?"
+		"I have like no idea what you're talking about.  Are you going to take my order?"
 		,"animations": [{"face":"f_confused","body":"b_normal","delay":0,"duration":250}]
 }
 
@@ -155,13 +189,13 @@
 	,"rp_20_decided_both":
 	{
 		"text":
-			"Yeah, thats about right. I'll have a slice of sausage and mushroom."
+			"Yeah, that sounds good. I'll have a slice of sausage and mushroom."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_decided_mushrooms":
 	{
 		"text":
-			"Mushrooms sound good. Now what meat goes with mushrooms?"
+			"Mushrooms sound good. What meat do you suggest I get with them?"
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_decided_sausage":
@@ -173,7 +207,7 @@
 
 	,"rp_20_pizza_prefer":
 	{
-		"text": "Oh my, you actually care about my preferences?  That is so refreshing! So, since you asked, I love sausage.  But last time I had pizza I got sick, so I'm a bit afraid to try again."
+		"text": "Thanks for asking, I like sausage.  But last time I had pizza I got sick, so I'm a bit afraid to try again."
 		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -188,13 +222,13 @@
 
 	,"rp_20_prefer_or_want":
 	{
-		"text": "Are you asking what pizza I want today?  Or what I've had in the past.  Can you be more clear for me?"
+		"text": "You mean what pizza I want today?  Or what I've had in the past?"
 		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
 	,"rp_20_meat1":
 	{
-		"text": "Some meat sounds good.   Any other meats good here?"
+		"text": "Some meat sounds good.   Whats good here?"
 		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -225,7 +259,7 @@
 	,"rp_20_decide_mushroom_meat":
 	{
 		"text":
-			"Some veggie sounds good.  But I want some meat too. I got it.  Mushroom and one meat?  Any suggestion on the meat?"
+			"A veggie sounds good.  But I want some meat too. I got it.  Mushroom and one meat.  Any suggestion on the meat?"
 		,"animations":
 		[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
@@ -262,19 +296,7 @@
 		"text":"Fish and pizza do not go together."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
-	,"rp_20_considering_fish":
-	{
-		"text":"Fish and pizza do not go together."
-		,"animations":
-		[
-			{
-				 "face":"f_sad"
-				,"body":"b_normal"
-				,"delay":0
-				,"duration":250
-			}
-		]
-	}
+
 	,"rp_20_considering_dog":
 	{
 		"text":"You gotta be joking, no one eats a dog pizza."
@@ -290,16 +312,20 @@
 		"text":"You know, I do not usually eat pizza so it has been a while, but lets see. How about sausage and a veggie?"
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
+	,"rp_20_dont_know_toppings":
+	{
+		"text": "I just don't know what toppings."
+,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
 	,"rp_20_impatient":
 	{
-		"text":
-			"I just don't know what toppings."
+		"text": "I just don't know what toppings."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_fed_up":
 	{
-		"text":
-			"I won't be visiting here again.  Good day."
+		"text": "I won't be visiting here again.  Good bye."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -343,7 +369,7 @@
 	,"rp_22_correct_annoyed":
 	{
 		"text":
-			"Yeah, thats about right. I'll have a slice of sausage and mushroom."
+			"Ok, fine. I'll have a slice of sausage and mushroom."
 	,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -364,7 +390,7 @@
 	,"rp_22_disgusted":
 	{
 		"text":
-			"I don't like your sense of humour.  Good day."
+			"I can totally do without your sense of humour.  Bye."
 		,"animations":
 		[
 			{
@@ -397,13 +423,13 @@
 
 	,"rp_20_no_drink_nice":
 	{
-		"text": "I've already said that I don't want a drink. Can you help me pick toppings?"
+		"text": "Well, I don't really want a drink.  Can you help me pick toppings?"
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
 	,"rp_20_no_drink_annoyed":
 	{
-		"text": "I've already said that I don't want a drink. Can you help me pick toppings?"
+		"text": "I can totally do without your sense of humour. I already said I don't want a drink.  Can you help me pick some toppings?"
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
@@ -462,7 +488,7 @@
 
 	,"rp_24_impatient":
 	{
-		"text": "I am certain I want mushroom.  Can you help me pick a meat?"
+		"text": "I definitely want mushroom.  Can you help me pick a meat?"
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
@@ -474,13 +500,13 @@
 
 	,"rp_24_meat_hint":
 	{
-		"text": "Not quite right.  What goes good with mushrooms?"
+		"text": "I don't know, that's not doing it.  What goes better with mushrooms?"
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
 	,"rp_24_meat_giveup":
 	{
-		"text": "Awe, I give up.  Just get me sausage and mushroom."
+		"text": "Oh my, fine.  Just get me sausage and mushroom."
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
@@ -493,13 +519,13 @@
 
 	,"rp_24_frustrated":
 	{
-		"text": "I've already said I want mushroom and one meat. Can you help me pick a meat?"
+		"text": "Really, I've already said I want mushroom and one meat. Can you help me pick a meat?"
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
 	,"rp_20_gluten_disclose":
 	{
-		"text": "You know what? Maybe I do have a problem there. Maybe I got sick because of a gluten allergy."
+		"text": "You know what? Maybe I do have a problem there. Maybe it was the gluten that did it."
 		,"animations": [{ "face":"f_sad","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
@@ -527,7 +553,7 @@
 	,"rp_30_notgermane_nice":
 	{
 		"text":
-			"Well, that’s one way to look at it, now what about my pizza."
+			"Ok, whatever, lets just finish up my order."
 			,"animations": [{"face":"f_confused","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -538,16 +564,21 @@
 			,"animations": [{"face":"f_confused","body":"b_normal","delay":0,"duration":250}]
 	}
 
-
+	,"rp_30_pizza_bad_idea":
+	{
+		"text":
+			"I dunno.  Maybe pizza is not a great idea after all."
+			,"animations": [{"face":"f_confused","body":"b_normal","delay":0,"duration":250}]
+	}
 	,"rp_32_nogluten_undecided":
 	{
-		"text": "A no gluten option?  That's fantastic! Now what toppings do I get?"
+			"text": "Ok, whatever, lets just finish up my order."
 		,"animations": [{ "face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
 	,"rp_32_decided_nogluten":
 	{
-		"text": "A no gluten option?  That's fantastic! I'll get that."
+		"text": "A no gluten option?  That totallly works.  I'll get that."
 		,"animations": [{ "face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -657,14 +688,6 @@
 	,"rp_990_thankyou":
 	{
 		"text":"Thank you."
-		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
-	}
-
-
-	,"rp_990_complimented":
-	{
-		"text":
-			"Thanks. I got it at Brooks Brothers."
 		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -779,7 +802,7 @@
 
 	,"rp_990_nonseq":
 	{
-		"text": "What does that have to do with the price of peas in China?"
+		"text": "Ok, I really don't knwo what you're talking about there."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 

@@ -1,5 +1,13 @@
 var tests_origin =
 [
+	{input:" GLUTEN TEST CRAZY",reply:null},
+
+	{input:"newgame",reply:"rp_5_intro"},
+{input:"thank you how can i help you today", reply:"rp_10_offeredhelp"},
+{input:"what kind of toppings do you like",reply:"rp_20_pizza_prefer"},
+{input:"we have gluten-free pizza",reply:"rp_20_pizza_prefer"},
+
+
 	{input:"INITIAL TEST JEFF IS NOT CRAZY",reply:null},
 	{input:"newgame",reply:"rp_5_intro"},
 	{input:"hello",reply:"rp_10_first_time"},
@@ -269,7 +277,7 @@ var tests_origin =
 { input:"#Well we have the best pizza in town",reply:"tokens"},
 { input:"#glutenfree ",reply:"tokens"},
 { input:"#gluten-free",reply:"tokens"},
-
+{ input:"#arizona pizza",reply:"tokens"},
 
 
 ]

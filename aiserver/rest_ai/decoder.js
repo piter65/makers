@@ -16,6 +16,7 @@ exports.decode_reply = function(code)
 		throw Error("Code not recognized: '" + code + "'. Unable to decode.");
 
 	var anim_strings = [];
+	if (data.animations != null)	// peter was here.  poking around where he don't belong..
 	for (let index_anim = 0; index_anim < data.animations.length; ++index_anim)
 	{
 		let anim = data.animations[index_anim];

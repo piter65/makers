@@ -19,7 +19,12 @@ const act_24 = require('./act_24');
 const act_30 = require('./act_30');
 const act_32 = require('./act_32');
 const act_40 = require('./act_40');
+
+const act_970 = require('./act_970');
 const act_980 = require('./act_980');
+const act_990 = require('./act_990');
+
+
 
 // This function will work so long as 'obj' 
 //   does not contain any cyclic references.
@@ -136,6 +141,8 @@ app.get('/ai', function(req, res)
 	const state = deepClone(state_prev);
 	if (!state.session)
 		state.session = deepClone(state_templates.session_defaults);
+
+	state.session.num_entries++;	// keep count of entries...
 
 	// Reset the state's result data.
 	state.result = deepClone(state_templates.result_defaults);
@@ -254,7 +261,7 @@ app.get('/ai', function(req, res)
 //	logger.log("_story_AI:'"+state.result.reply+"'");
 
 // 	{input:"INITIAL TEST",reply:null}, 
-	logger.log('_story_result:'+state.result.reply+'"},\n');
+	logger.log('_story_reply:"'+state.result.reply+'"},\n');
 
 // Brent if you want to clean this up and loopify, have a it.
 // I don't want to deal with dowhile loops in JS.
@@ -338,18 +345,28 @@ function process(state)
 			break;
 	}
 	// Decode the reply.
+// Wait, let's do the gluten saga...
+	act_970.process(state);		// do commmon scoring...
+
+	if (state.result.code==null)	
+	{
+// do 990 only if no other answer.  		
+			act_990.process(state);	
+	}	
+
+	logger.log('state.result.code: "%s"', state.result.code);
+
 	state.result.reply = decoder.decode_reply(state.result.code);
 
 	if (state.session.game_over)
 	{
 
-			state.result.reply += '\n\n-GAME OVER-\n-';
-			state.result.reply += 'Executive Score:'+state.session.score_exec+'\n';
-			state.result.reply += 'Active Listening:'+state.session.score_listen+'\n';
-			state.result.reply += 'Understanding:'+state.session.score_understand+'\n';
-			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
-			state.result.reply += '\n try "newgame myname" to play again\n';
-
+			state.result.reply += '\nGAME OVER-\n';
+			state.result.reply += 'Executive Score:'+state.session.score_exec+' ';
+			state.result.reply += 'Active Listening:'+state.session.score_listen+' ';
+			state.result.reply += 'Understanding:'+state.session.score_understand+' ';
+			state.result.reply += 'Empathy:'+state.session.score_empathy+' ';
+			state.result.reply += '\n try "newgame myname" to play again\n';		
 	}
 
 }

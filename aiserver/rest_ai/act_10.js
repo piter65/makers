@@ -28,15 +28,6 @@ exports.process = function(state)
 	}
 	else 
 
-	if (state.result.tokens.includes( 'i_why')
-		&& state.result.tokens.includes( 'e_longtime')
-	 )
-	{
-		state.result.code = 'rp_10_past_reaction';    //  bad reaction in past, but I'm gonna get a slice.
-		state.session.score_understands += 1;
-	   state.session.empathy_opportunity=true;
-	}
-	else
 	if (state.result.tokens.includes( 'i_thankyou') )
 	{
 		state.result.code = 'rp_10_welcome';    //  'You are very welcome.''
@@ -102,7 +93,7 @@ exports.process = function(state)
 	}
 	else
 	{
-		act_990.process(state);
+//		act_990.process(state);
 	}
 
 

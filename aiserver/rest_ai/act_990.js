@@ -127,8 +127,14 @@ exports.process = function(state)
 		state.session.game_over = true;
 	}
 	// If we have any tokens at all, fall thru here.
-	else
-	if (state.result.tokens.length > 0)
+	else 
+
+	if (state.session.empathy_scored)	// Did they get an empathy point?
+	{
+	state.result.code = 'rp_990_smalltalk_weather';
+	}
+
+	else if (state.result.tokens.length > 0)
 	{
 		state.result.code = 'rp_990_nonseq';  // not germane.
 	}
