@@ -39,7 +39,7 @@ exports.process = function(state)
 		state.result.code = 'rp_20_pizza_prefer';  // you actually care!
 		state.session.score_understand+=2;
 			logger.log('ACT 20 home run');
-		state.session.gluten_saga=2;   // gluten is out in the open...
+		state.session.gluten_saga=1;   // gluten is out in the open...
 
 	}
 	else if ( state.result.tokens.includes('i_prefer')

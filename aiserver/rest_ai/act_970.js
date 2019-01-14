@@ -21,7 +21,8 @@ exports.process = function(state)
 	if (state.session.act == 10)	// only do the why's in act 10.	
 	{{
 			if (state.result.tokens.includes( 'i_why')
-			 && state.result.tokens.includes( 'e_longtime'))
+			 && state.result.tokens.includes( 'e_longtime')
+			 )
 				{
 				if (state.session.gluten_saga==0)
 					{
@@ -73,7 +74,10 @@ exports.process = function(state)
 			}
 		}
 
-		if (   state.result.tokens.includes('i_nogluten'))
+		if (   state.result.tokens.includes('i_nogluten')
+			 		&&
+			 !state.result.tokens.includes( 'i_close')
+			)
 		{
 				// fix - make this an rp1 in future releases...
 				state.result.code = 'rp_32_decided_nogluten'; // state"A no gluten option?Lets do that! "

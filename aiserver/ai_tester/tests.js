@@ -2,10 +2,20 @@ var tests_origin =
 [
 	{input:" GLUTEN TEST CRAZY",reply:null},
 
+	{ input:"TEST NEWGAME ON THE WHAT KIND OF PIZZA DO YOU LIKE PATH",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"so what'll it be" ,reply:"rp_10_offeredhelp"},
+	{ input:"what kind of pizza do you like",reply:"rp_20_prefer_or_want"},
+	{ input:"what type of pizza have you liked in the past",reply:"rp_20_pizza_prefer"},
+	{ input:"maybe it was a gluten allergy",reply:"rp_20_gluten_disclose"},
+	{ input:"well, duhhh.  We've got gluten-free options.",reply:"rp_32_decided_nogluten"},
+	{ input:"One gluten-free slice coming right up!",reply:"rp_20_dont_know_toppings"},
+
+	{input:" GLUTEN TEST CRAZY",reply:null},
 	{input:"newgame",reply:"rp_5_intro"},
 {input:"thank you how can i help you today", reply:"rp_10_offeredhelp"},
 {input:"what kind of toppings do you like",reply:"rp_20_pizza_prefer"},
-{input:"we have gluten-free pizza",reply:"rp_20_pizza_prefer"},
+{input:"we have gluten-free pizza",reply:"rp_32_decided_nogluten"},
 
 
 	{input:"INITIAL TEST JEFF IS NOT CRAZY",reply:null},
@@ -139,13 +149,6 @@ var tests_origin =
 	{ input:"how about cheese",reply:"rp_10_offeredhelp"},
 	{ input:"how about tomato",reply:"rp_10_offeredhelp"},
 
-	{ input:"TEST NEWGAME ON THE WHAT KIND OF PIZZA DO YOU LIKE PATH",reply:null},
-	{ input:"newgame",reply:"rp_5_intro"	},
-	{ input:"so what'll it be" ,reply:"rp_10_offeredhelp"},
-	{ input:"what kind of pizza do you like",reply:"rp_20_prefer_or_want"},
-	{ input:"what type of pizza have you liked in the past",reply:"rp_20_pizza_prefer"},
-	{ input:"maybe it was a gluten allergy",reply:"rp_10_offeredhelp"},
-{ input:"maybe you are allergic to gluten",reply:"rp_10_offeredhelp"},
 
 
 { input:"TEST NEWGAME ON STUFF FROM JEFFS",reply:null},
