@@ -50,7 +50,7 @@
 
 	,"rp_10_past_reaction":
 	{
-		"text": "I got kinda sick last time I had pizza.  I'm not sure what happened, but today I saw your nice looking store, and I thought I'd give pizza another try."
+		"text": "I got kinda sick last time I had pizza.  I'm not sure what happened, but today I saw your store, and I thought I'd give pizza another try."
 		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -176,7 +176,7 @@
 
 	,"rp_20_asked_twice_nice":
 	{
-		"text": "Like I said, I do not want a drink, I want a slice.  And I don't know about the toppings."
+		"text": "Well, I want a slice.  And I don't know about the toppings."
 		,"animations": [{"face":"f_confused","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -467,7 +467,7 @@
 
 	,"rp_22_veg_hint":
 	{
-		"text": "Not quite right.  What goes good with sausage?"
+		"text": "I dunno, that doesn't sound good.  What goes better with sausage?"
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
@@ -523,11 +523,6 @@
 		,"animations": [{ "face":"f_smile","body":"b_normal" ,"delay":0 ,"duration":250 }]
 	}
 
-	,"rp_20_gluten_disclose":
-	{
-		"text": "You know what? Maybe I do have a problem there. Maybe it was the gluten that did it."
-		,"animations": [{ "face":"f_sad","body":"b_normal" ,"delay":0 ,"duration":250 }]
-	}
 
 	,"rp_30_time_to_reconsider":
 	{
@@ -538,7 +533,7 @@
 	,"rp_30_remember_gluten":
 	{
 		"text":
-			"Now, come to think of it, last time I had pizza, I think I had a bad reaction.  I'm suspicious it might be the gluten."
+			"Now that I think about it, last time I had pizza, I had a bad reaction.  I'm thinking maybe it was the gluten."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -676,7 +671,6 @@
 		"text": "Can you please write down my order and repeat it back to me?"
 		,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
-
 
 
 	,"rp_40_restate_order":

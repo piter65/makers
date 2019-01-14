@@ -213,6 +213,14 @@ app.get('/ai', function(req, res)
 			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
 			break;
 
+		case 'system version':
+			state.result.code = 'rp_0_score';
+
+			state.result.reply += state.result.code+':\nversion Jan 13\n';
+
+			break;
+
+
 		case 'ibjeff':
 			state.result.code = 'rp_0_ibjeff';
 			state.result.reply = state.result.code+':ACT:'+state.session.act+'\n';
@@ -362,7 +370,7 @@ function process(state)
 	{
 
 			state.result.reply += '\nGAME OVER-\n';
-			state.result.reply += 'Executive Score:'+state.session.score_exec+' ';
+			state.result.reply += 'Executive Presence:'+state.session.score_exec+' ';
 			state.result.reply += 'Active Listening:'+state.session.score_listen+' ';
 			state.result.reply += 'Understanding:'+state.session.score_understand+' ';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+' ';

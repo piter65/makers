@@ -74,16 +74,20 @@ exports.process = function(state)
 			}
 		}
 
-		if (   state.result.tokens.includes('i_nogluten')
-			 		&&
-			 !state.result.tokens.includes( 'i_close')
-			)
+		if ( state.session.gluten_saga<5)
 		{
+
+			if (   state.result.tokens.includes('i_nogluten')
+				 		&&
+			 	!state.result.tokens.includes( 'i_close')
+			)
+			{
 				// fix - make this an rp1 in future releases...
 				state.result.code = 'rp_32_decided_nogluten'; // state"A no gluten option?Lets do that! "
 				state.session.gluten_saga=5;		// move it up
 				state.session.score_exec++;
-		}
+			}
+		}	
 	}}
 // No action for act30, or act40..
 

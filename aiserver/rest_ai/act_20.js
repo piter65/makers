@@ -26,7 +26,7 @@ exports.process = function(state)
 	else
 	if (   state.result.tokens.includes('i_offerhelp')		)
 	{
-		state.result.code = 'rp_20_asked_twice_nice';  // Um.   yeah...
+		state.result.code = 'rp_20_asked_twice_annoyed';  // Um.   yeah...
 		state.session.score_understand--;
 	}
 
@@ -48,6 +48,7 @@ exports.process = function(state)
 
 	{
 		state.result.code = 'rp_20_carno_prefer';  // you actually sorta care!
+		state.session.act = 22;  // meat decided!  move on!
 		state.session.score_understand+=1;
 	}
 	else
