@@ -131,7 +131,7 @@ exports.process = function(state)
 
 	if (state.session.empathy_scored)	// Did they get an empathy point?
 	{
-	state.result.code = 'rp_990_smalltalk_weather';
+		state.result.code = 'rp_1_thankyou';
 	}
 
 	else if (state.result.tokens.length > 0)

@@ -31,15 +31,22 @@ exports.process = function(state)
 	}
 
 	else if ( 
-		// state.result.tokens.includes('e_slice')
 		state.result.tokens.includes('e_wtype')
 		&& state.result.tokens.includes('i_prefer')
 		)
 	{
-		state.result.code = 'rp_20_pizza_prefer';  // you actually care!
-		state.session.score_understand+=2;
+		if (state.session.gluten_saga<1)
+			{
+			state.result.code = 'rp_20_pizza_prefer';  // you actually care!
+			state.session.score_understand+=2;
+			state.session.gluten_saga=1;   // gluten is out in the open...
+			state.session.act = 22;  // meat decided!  move on!	
 			logger.log('ACT 20 home run');
-		state.session.gluten_saga=1;   // gluten is out in the open...
+			}
+		else
+			{
+			state.result.code = 'rp_20_prefer_saga_done';  // gluten saga done
+			}
 
 	}
 	else if ( state.result.tokens.includes('i_prefer')

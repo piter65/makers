@@ -63,7 +63,7 @@ exports.process = function(state)
 		++state.session.count_greeting;
 	}
 	else
-		if (state.result.tokens.includes('e_bbrother'))
+		if (state.result.tokens.includes('e_dressbrand'))
 		{
 			state.result.code = 'rp_10_first_time';  // first time I\'ve enterred the place.'
 		}

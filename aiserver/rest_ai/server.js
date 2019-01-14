@@ -207,16 +207,16 @@ app.get('/ai', function(req, res)
 		case 'system score':
 			state.result.code = 'rp_0_score';
 
-			state.result.reply += state.result.code+':\nExecutive Score:'+state.session.score_exec+'\n';
+			state.result.reply += state.result.code+';\nExecutive Score:'+state.session.score_exec+'\n';
 			state.result.reply += 'Active Listening:'+state.session.score_listen+'\n';
 			state.result.reply += 'Understanding:'+state.session.score_understand+'\n';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
 			break;
 
 		case 'system version':
-			state.result.code = 'rp_0_score';
+			state.result.code = 'rp_0_version';
 
-			state.result.reply += state.result.code+':\nversion Jan 13\n';
+			state.result.reply += state.result.code+'\nversion Jan 13a\n';
 
 			break;
 

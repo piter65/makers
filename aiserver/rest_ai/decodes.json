@@ -34,7 +34,12 @@
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
-
+	,"rp_1_thank_you":
+	{
+		"text":
+			"addon-Thank you"
+,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
 	,"rp_5_intro":
 	{
 		"text":
@@ -211,7 +216,11 @@
 		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
-
+	,"rp_20_prefer_saga_done":
+	{
+		"text": "Thanks for asking, I like sausage.  But last time I had pizza I got sick, so I'm a bit afraid to try again."
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
 	,"rp_20_carno_prefer":
 	{
 		"text": "Oh thank you for asking.  Actually, I just want a little of each, I'm thinking one meat, one veggie."

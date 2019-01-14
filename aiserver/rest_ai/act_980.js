@@ -79,12 +79,12 @@ exports.process = function(state)
 	}
 
 
-	if (state.result.tokens.includes('e_bbrother'))
+	if (state.result.tokens.includes('e_dressbrand'))
 	{
 		if (state.session.act == 10)	// only give boost in act 10.
 		{
 			state.session.score_listen++;
-			state.result.extra=":listen boost";
+			state.result.extra=":;listen boost";
 
 		}
 	}
@@ -99,12 +99,13 @@ exports.process = function(state)
 // Player got it!
 			state.session.score_listen++;
 			state.session.score_empathy+=2;
-			state.result.extra=":empathy boost";
+			state.result.extra=":;empathy boost";
 			state.session.empathy_scored=true;	// so other logic knows...
 			}
 		else // you blew it...
 			{
 			state.session.score_empathy--;
+			state.result.extra=":;empathy drop";
 			}
 		state.session.empathy_opportunity=false;	// opportunity came and went
 	}
