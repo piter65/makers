@@ -1,0 +1,33 @@
+Peter's initial ideas on what would be good to keep:
+
+session #:  (probably a unique # based on time I think)
+userid :    (so we can reference back)
+start date/time:
+end date/time:
+(total time?):  (I'm really interested in this stat at the moment)
+server/game version:
+game id:  (pizza, real game, etc)
+system (ios/android/text):
+
+overall score:
+subscores:
+  empathy
+  understanding
+  exec
+  (something else)
+  other stuff (TBD)
+ # of words
+ # of stall words.
+ # of pg words.
+ # of r words.
+ # of x words.
+ # of 3 syllable words
+ # of 4 syllable words
+
+
+transcript:
+(.eg _story_)
+
+
+either (original audio) or reference to audio server.
+
