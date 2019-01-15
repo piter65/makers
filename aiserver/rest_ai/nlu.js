@@ -1,52 +1,6 @@
 const logger = require('./logger');
 const fs = require('fs');
-
-// exports.intents =
-// [
-// 	'i_offerhelp',
-// 	'i_greeting',
-// 	'i_decide',
-// 	'i_reveal',
-// 	'i_compliment',
-// 	'i_suggest',
-// 	'i_discover',
-// 	'i_dietary',
-// 	'i_empathy',
-// 	'i_thankyou',
-// 	'i_brag',
-// 	'i_like',
-// 	'i_insult',
-// 	'i_nothing',
-// 	'i_sorry',
-// 	'i_nopizza',
-// 	'i_5sec',
-// 	'i_9sec',
-
-
-// ];
-
-// exports.entities =
-// [
-// 	'e_pizza',
-// 	'e_pizzeria',
-// 	'e_hawaiin',
-// 	'e_fish',
-// 	'e_combo',
-// 	'e_bird',
-// 	'e_meat',
-// 	'e_veggie',
-// 	'e_sausage',
-// 	'e_mushroom',
-// 	'e_topping',
-// 	'e_herbs',
-// 	'e_dog',
-// 	'e_rude',
-// 	'e_crap',
-// 	'e_cuss',
-// 	'e_noglut',
-
-// ];
-
+const _ = require('underscore');
 
 // Load 'tokens.json'.
 exports.tokens = JSON.parse(fs.readFileSync('tokens.json'));
@@ -60,20 +14,42 @@ exports.process = function(state)
 	let matches = [];
 	for (let match in self.tokens)
 	{
-		// matches.push(match+": "+state.result.text.indexOf(match));
-
 		// If the text holds a match, and we don't 
 		//   already have the token, add the token.
-		if (state.result.text.indexOf(match) > -1)
+		let index_match = state.result.text.indexOf(match);
+		if (index_match > -1)
 		{
-			matches.push(match+" : "+self.tokens[match]);
-
-			let match_tokens = self.tokens[match].split(' ');
-			for (let index_token = 0; index_token < match_tokens.length; ++index_token)
+			let match_entry =
 			{
-				let token = match_tokens[index_token];
-				if (!state.result.tokens.includes(token))
-					state.result.tokens.push(token);
+				index: index_match,
+				match: match,
+				tokens: self.tokens[match].split(' ')
+			}
+
+			// Insert the entry into the matches list using 
+			//   a binary sort to keep things ordered.
+			let index_insert = _.sortedIndex(matches, match_entry, 'index');
+			matches.splice(index_insert, 0, match_entry);
+		}
+	}
+
+	// Loop thru the matches and add them to tokens list if they aren't already present.
+	for (let index_match = 0; index_match < matches.length; ++index_match)
+	{
+		let match_tokens = matches[index_match].tokens;
+		for (let index_token = 0; index_token < match_tokens.length; ++index_token)
+		{
+			let token = match_tokens[index_token];
+			if (!state.result.tokens.includes(token))
+			{
+				state.result.tokens.push(token);
+
+				// Increment the counts of the entities and intents
+				if (token.indexOf('e_') == 0)
+					++state.result.count_entities;
+				else
+				if (token.indexOf('i_') == 0)
+					++state.result.count_intents;
 			}
 		}
 	}

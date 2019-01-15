@@ -24,6 +24,22 @@ const act_970 = require('./act_970');
 const act_980 = require('./act_980');
 const act_990 = require('./act_990');
 
+const func = require('./func');
+
+let testArr = ['alice', 'bob', 'cisco', 'dude'];
+
+
+// BChance: Peter these are tests for 'func' methods.
+//   Remove if you want.
+logger.log('includesAny | %s : %s', ['alice'].join(' '), func.includesAny(testArr, 'alice'));
+logger.log('includesAny | %s : %s', ['edward'].join(' '), func.includesAny(testArr, 'edward'));
+logger.log('includesAny | %s : %s', ['edward', 'greg', 'bob'].join(' '), func.includesAny(testArr, 'edward', 'greg', 'bob'));
+
+logger.log('includesAll | %s : %s', ['alice'].join(' '), func.includesAll(testArr, 'alice'));
+logger.log('includesAll | %s : %s', ['edward'].join(' '), func.includesAll(testArr, 'edward'));
+logger.log('includesAll | %s : %s', ['edward', 'greg', 'bob'].join(' '), func.includesAll(testArr, 'edward', 'greg', 'bob'));
+logger.log('includesAll | %s : %s', ['cisco', 'dude', 'alice'].join(' '), func.includesAll(testArr, 'cisco', 'dude', 'alice'));
+
 
 
 // This function will work so long as 'obj' 

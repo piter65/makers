@@ -49,6 +49,8 @@ exports.result_defaults =
 	text: null,
 	reply: null,
 	tokens: [],
+	count_intents: 0,
+	count_entities: 0,
 	direction: null,
 	extra:null,
 };
