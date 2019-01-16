@@ -253,7 +253,7 @@ app.get('/ai', function(req, res)
 			state.result.reply = state.result.code+':Hey there cowboy';
 			break;
 		default:
-			process(state);
+			process_ai(state);
 			save_state = true;
 			break;
 	}
@@ -305,11 +305,27 @@ app.get('/ai', function(req, res)
 	res.send(state.result);
 });
 
+// app.get('/crash', function(req, res)
+// {
+// 	logger.log('\nIntentially crashing...\n');
+
+// 	// throw Error('The server has been intentionally crashed.');
+// 	throw 'The server has been intentionally crashed.';
+
+// 	res.send();
+// });
+
 // Start the server
 var server = app.listen(port, function()
 {
 	logger.log('Server live');
 	logger.log('Listening on port %d', server.address().port);
+});
+
+// Catch any uncaught exceptions, log it, and then let the crash happen.
+process.on('uncaughtException', function(err)
+{
+	logger.log('\n-----\nCRASH: %s\n-----\n', err);
 });
 
 
@@ -332,7 +348,7 @@ function sub_pass(state, subs)
 // 	}
 // }
 
-function process(state)
+function process_ai(state)
 {
 
 	act_980.process(state);		// do commmon scoring...
