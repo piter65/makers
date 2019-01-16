@@ -15,19 +15,26 @@ exports.decode_reply = function(code)
 	if (!data)
 		throw Error("Code not recognized: '" + code + "'. Unable to decode.");
 
-	var anim_strings = [];
-	if (data.animations != null)	// peter was here.  poking around where he don't belong..
-	for (let index_anim = 0; index_anim < data.animations.length; ++index_anim)
+	let anim_strings = [];
+	let index_anim = 0;
+	for (; index_anim < data.animations.length; ++index_anim)
 	{
 		let anim = data.animations[index_anim];
 		anim_strings.push(util.format
 		(
-			":%s:%s:%d:%d"
+			":%s:%d:%s:%d"
 			,anim.face
-			,anim.body
 			,anim.delay
+			,anim.body
 			,anim.duration
 		));
+	}
+
+	// Loop thru and fill in NULL animations as needed.
+	for (; index_anim < 3; ++index_anim)
+	{
+		let anim = data.animations[index_anim];
+		anim_strings.push(":none:0:none:0");
 	}
 
 	const reply = util.format
