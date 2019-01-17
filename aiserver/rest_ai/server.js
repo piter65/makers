@@ -31,14 +31,14 @@ let testArr = ['alice', 'bob', 'cisco', 'dude'];
 
 // BChance: Peter these are tests for 'f' methods.
 //   Remove if you want.
-logger.log('includesAny | %s : %s', ['alice'].join(' '), f.includesAny(testArr, 'alice'));
-logger.log('includesAny | %s : %s', ['edward'].join(' '), f.includesAny(testArr, 'edward'));
-logger.log('includesAny | %s : %s', ['edward', 'greg', 'bob'].join(' '), f.includesAny(testArr, 'edward', 'greg', 'bob'));
+logger.log('hasAny | %s : %s', ['alice'].join(' '), f.hasAny(testArr, 'alice'));
+logger.log('hasAny | %s : %s', ['edward'].join(' '), f.hasAny(testArr, 'edward'));
+logger.log('hasAny | %s : %s', ['edward', 'greg', 'bob'].join(' '), f.hasAny(testArr, 'edward', 'greg', 'bob'));
 
-logger.log('includesAll | %s : %s', ['alice'].join(' '), f.includesAll(testArr, 'alice'));
-logger.log('includesAll | %s : %s', ['edward'].join(' '), f.includesAll(testArr, 'edward'));
-logger.log('includesAll | %s : %s', ['edward', 'greg', 'bob'].join(' '), f.includesAll(testArr, 'edward', 'greg', 'bob'));
-logger.log('includesAll | %s : %s', ['cisco', 'dude', 'alice'].join(' '), f.includesAll(testArr, 'cisco', 'dude', 'alice'));
+logger.log('hasAll | %s : %s', ['alice'].join(' '), f.hasAll(testArr, 'alice'));
+logger.log('hasAll | %s : %s', ['edward'].join(' '), f.hasAll(testArr, 'edward'));
+logger.log('hasAll | %s : %s', ['edward', 'greg', 'bob'].join(' '), f.hasAll(testArr, 'edward', 'greg', 'bob'));
+logger.log('hasAll | %s : %s', ['cisco', 'dude', 'alice'].join(' '), f.hasAll(testArr, 'cisco', 'dude', 'alice'));
 
 
 
