@@ -43,7 +43,10 @@ exports.process = function(state)
 		state.result.code = 'rp_20_asked_twice_annoyed';  // Um.   yeah...
 		state.session.score_understand--;
 	}
-	else if (f.includesAll(state.result.tokens, 'i_prefer','e_wtype','e_meatclass'))
+	else if (f.includesAll(state.result.tokens, 'e_wtype','e_meatclass')
+						&&
+			f.includesAny(state.result.tokens, 'i_prefer','e_desire') )
+
 	{
 			{
 			state.result.code = 'rp_20_i_prefer_sausage';  // 
@@ -81,14 +84,18 @@ exports.process = function(state)
 	}
 */
 
-	else if (f.includesAll(state.result.tokens, 'i_prefer','e_vegclass'))
+	else if (f.includesAll(state.result.tokens,'e_vegclass')
+							&&
+		f.includesAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
 		state.result.code = 'rp_20_veg_uprefer';  // you almost actually care!
 		state.session.score_understand+=1;
 		state.session.act = 24;  // veggie decided!  move on!
 	}
 
-	else if (f.includesAll(state.result.tokens, 'i_prefer','e_meatclass'))
+	else if (f.includesAll(state.result.tokens, 'e_meatclass')
+									&&
+		f.includesAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
 		state.result.code = 'rp_20_meat_uprefer';  // you almost actually care!
 		state.session.score_understand+=1;

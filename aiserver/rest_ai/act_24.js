@@ -1,6 +1,8 @@
 var logger = require('./logger');
 const decoder = require('./decoder');
 var act_990 = require('./act_990');
+const f = require('./func');
+
 
 // In this act, the AI has decided on the mushroom, but not on the topping...
 
@@ -17,6 +19,22 @@ exports.process = function(state)
 		if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 
 		state.result.choice_done = true;
+	}
+	else if (f.includesAll(state.result.tokens, 'e_wtype','e_meatclass')
+							&&
+			f.includesAny(state.result.tokens, 'i_prefer','i_desire') )
+	{
+			state.result.code = 'rp_20_i_prefer_sausage';  // 
+			state.session.score_understand++;
+			state.session.act = 30;  // move on!	
+			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
+	}
+	else if (f.includesAll(state.result.tokens, 'e_wtype','e_vegclass')
+							&&
+			f.includesAny(state.result.tokens, 'i_prefer','i_desire') )
+	{
+			state.result.code = 'rp_22_frustrated';  // I' already told you';  // 
+			state.session.score_understand--;
 	}
 	else
 	if (   state.result.tokens.includes('e_herb')

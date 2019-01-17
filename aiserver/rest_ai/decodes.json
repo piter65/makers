@@ -237,7 +237,7 @@
 
 	,"rp_20_i_prefer_mushroom":
 	{
-		"text": "addon-Thanks for asking, I like sausage."
+		"text": "addon-Thanks for asking, I like mushrooms."
 		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
@@ -257,7 +257,7 @@
 		"text": "Oh thank you for asking.  Actually, I just want a little of each, I'm thinking one meat, one veggie."
 		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
-	
+
 	,"rp_20_one_of_each":
 	{
 		"text": "Oh thank you for asking.  Actually, I just want a little of each, I'm thinking one meat, one veggie."
@@ -303,10 +303,8 @@
 	}
 	,"rp_20_decide_mushroom_meat":
 	{
-		"text":
-			"A veggie sounds good.  But I want some meat too. I got it.  Mushroom and one meat.  Any suggestion on the meat?"
-		,"animations":
-		[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+		"text":"new-audio:Oh, just make it mushrooms. Any suggestion on the meat?"
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
 	,"rp_20_gluten_disclose":
