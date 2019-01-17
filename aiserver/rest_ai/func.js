@@ -16,6 +16,7 @@ exports.includesAny = function(obj)
 
 	return false;
 };
+exports.hasAny = exports.includesAny;
 
 // NOTE: All params after the first are arguments.
 exports.includesAll = function(obj)
@@ -34,3 +35,4 @@ exports.includesAll = function(obj)
 
 	return true;
 };
+exports.hasAll = exports.includesAll;
