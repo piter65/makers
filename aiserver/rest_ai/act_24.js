@@ -8,10 +8,6 @@ exports.process = function(state)
 {
 	logger.log('ACT 24 - start');
 
-
-
-
-
 	if (   state.result.tokens.includes('e_sausage'))
 	{
 		state.result.code = 'rp_24_correct';
@@ -48,22 +44,7 @@ exports.process = function(state)
 			state.result.code = 'rp_24_frustrated';  // I' already told you
 	}
 
-	else
-	if (state.result.tokens.includes('e_meat') )	
-	{
-		state.session.meat_tries++;
 
-		if (state.session.meat_tries<3)
-		{
-			state.result.code = 'rp_24_meat_hint';
-		}
-		else 
-		{
-			state.result.code = 'rp_24_meat_giveup';
-			state.session.act = 30;  // move on!
-		}
-
-	}
 
 
 
@@ -86,6 +67,24 @@ exports.process = function(state)
 		state.result.code = 'rp_20_no_drink';    // was nodrink
 		state.session.score_listen--;
 	}
+
+	else
+	if (state.result.tokens.includes('e_meat') )	
+	{
+		state.session.meat_tries++;
+
+		if (state.session.meat_tries<2)
+		{
+			state.result.code = 'rp_24_meat_hint';
+		}
+		else 
+		{
+			state.result.code = 'rp_24_meat_giveup';
+			state.session.act = 30;  // move on!
+		}
+	}
+
+
 
 /*
 	else

@@ -201,10 +201,25 @@
 			"Yeah, that sounds good. I'll have a slice of sausage and mushroom."
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
+
+	,"rp_20_decided_sam":
+	{
+		"text":
+			"Yeah, that sounds good. I'll have a slice of sausage and mushroom."
+,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+	,"rp_20_sam_but_more":
+	{
+		"text":
+			"addon-Right idea, but a bit too much. I'll have a slice of sausage and mushroom."
+,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
 	,"rp_20_decided_mushrooms":
 	{
 		"text":
-			"Mushrooms sound good. What meat do you suggest I get with them?"
+			"addon-Mushrooms sound good. What meat do you suggest I get with them?"
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 	,"rp_20_decided_sausage":
@@ -212,6 +227,18 @@
 		"text":
 			"Sausage sounds perfect, but I want a veggie too.  Can you suggest a veggie?"
 ,"animations":[{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+	,"rp_20_i_prefer_sausage":
+	{
+		"text": "addon-Thanks for asking, I like sausage."
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
+
+	,"rp_20_i_prefer_mushroom":
+	{
+		"text": "addon-Thanks for asking, I like sausage."
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
 
 	,"rp_20_pizza_prefer":
@@ -230,7 +257,12 @@
 		"text": "Oh thank you for asking.  Actually, I just want a little of each, I'm thinking one meat, one veggie."
 		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
 	}
-
+	
+	,"rp_20_one_of_each":
+	{
+		"text": "Oh thank you for asking.  Actually, I just want a little of each, I'm thinking one meat, one veggie."
+		,"animations": [{"face":"f_smile","body":"b_normal","delay":0,"duration":250}]
+	}
 
 
 	,"rp_20_prefer_or_want":

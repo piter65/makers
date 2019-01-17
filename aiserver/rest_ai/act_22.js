@@ -5,9 +5,6 @@ var act_990 = require('./act_990');
 // In this act, the AI has decided on the sausage, but is not sure of the veggie.
 
 
-
-
-
 exports.process = function(state)
 {
 	logger.log('ACT 22 - start');
@@ -48,22 +45,7 @@ exports.process = function(state)
 	}
 
 	else 
-	if (state.result.tokens.includes('e_veggie') )	
-	{
-		state.session.veg_tries++;
-
-		if (state.session.veg_tries<3)
-		{
-			state.result.code = 'rp_22_veg_hint';
-		}
-		else 
-		{
-			state.result.code = 'rp_22_veg_giveup';
-			state.session.act = 30;  // move on!
-			state.result.choice_done = true;
-		}
-	}
-	else 
+// bc We gotta have would you like sausage?		
 	if ( (state.result.tokens.length <2) &&		// bc - this doesn't work for me...
 		 (state.result.tokens.includes('e_sausage') )  )	
 	{
@@ -86,6 +68,22 @@ exports.process = function(state)
 	{
 		state.result.code = 'rp_20_no_drink';    // was nodrink
 		state.session.score_listen--;
+	}
+	else 
+	if (state.result.tokens.includes('e_veggie') )	
+	{
+		state.session.veg_tries++;
+
+		if (state.session.veg_tries<1)
+		{
+			state.result.code = 'rp_22_veg_hint';
+		}
+		else 
+		{
+			state.result.code = 'rp_22_veg_giveup';
+			state.session.act = 30;  // move on!
+			state.result.choice_done = true;
+		}
 	}
 
 /*
