@@ -1,5 +1,6 @@
 var logger = require('./logger');
 var randomInt = require('random-int');
+const f = require('./func');
 
 exports.process = function(state)
 {

@@ -1,7 +1,7 @@
 var logger = require('./logger');
 const decoder = require('./decoder');
 var act_990 = require('./act_990');
-
+const f = require('./func');
 
 // Ok, this is the gluten free prelude  
 // The AI just decided on sausage and mushroom,

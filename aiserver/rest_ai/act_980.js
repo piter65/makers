@@ -1,5 +1,7 @@
 var logger = require('./logger');
 var randomInt = require('random-int');
+const f = require('./func');
+
 
 // act 98 contains just words for scoring-
 // should be called even if phrase was already mentioned.

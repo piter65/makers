@@ -42,6 +42,8 @@
 	," probably ":" "
 	," very ":" "
 	," did ":" do "
+	," possibly ":" "
+	," could be ":" "
 
 
 
@@ -342,6 +344,14 @@
 	," that will not happen here ":" ibrag "
 
 	," best slice in town ":" ibrag "
+
+
+	," do you think ":" you think "
+	," do you believe ":" you think "
+	," do you consider ":" you think "
+
+
+
 
 	,"------ xcomment":"empty phrases"
 	," to tell you truth ":" "

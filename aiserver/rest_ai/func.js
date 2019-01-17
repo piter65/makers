@@ -16,6 +16,7 @@ exports.includesAny = function(obj)
 
 	return false;
 };
+// peter says, oh this is an alias?
 exports.hasAny = exports.includesAny;
 
 // NOTE: All params after the first are arguments.

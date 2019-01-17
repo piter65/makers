@@ -1,6 +1,6 @@
 var logger = require('./logger');
 var randomInt = require('random-int');
-
+const f = require('./func');
 
 // So Peter has been rethinking the out of sequence act, 
 // I think it's better to have it progress from stage to stage.

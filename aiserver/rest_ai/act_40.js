@@ -1,6 +1,7 @@
 var logger = require('./logger');
 const decoder = require('./decoder');
 var act_990 = require('./act_990');
+const f = require('./func');
 
 // Ok, close the deal.  Ideally player repeats order
 

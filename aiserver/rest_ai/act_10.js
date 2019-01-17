@@ -1,6 +1,8 @@
 const logger = require('./logger');
 const decoder = require('./decoder');
 const act_990 = require('./act_990');
+const f = require('./func');
+
 
 
 exports.process = function(state)
