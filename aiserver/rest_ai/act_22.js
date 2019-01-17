@@ -88,9 +88,7 @@ exports.process = function(state)
 	else 
 	if (state.result.tokens.includes('e_veggie') )	
 	{
-		state.session.veg_tries++;
-
-		if (state.session.veg_tries<1)
+		if (state.session.veg_tries<2)
 		{
 			state.result.code = 'rp_22_veg_hint';
 		}
@@ -100,6 +98,7 @@ exports.process = function(state)
 			state.session.act = 30;  // move on!
 			state.result.choice_done = true;
 		}
+		state.session.veg_tries++;
 	}
 
 /*

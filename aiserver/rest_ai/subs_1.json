@@ -45,8 +45,6 @@
 	," possibly ":" "
 	," could be ":" "
 
-
-
 	,"would":"should"
 	,"should not":"shouldnt"
 
@@ -247,8 +245,12 @@
 	," have you allergies":" gluten "
 	," have you gluten allergies":" gluten "
 	," have you issues with gluten ":" gluten "
+	," have you food restrictions ":" gluten "
 
-
+	," have you any food restrictions ":" gluten "
+	," have you any food allergies":" gluten "
+	," have you any issues with gluten ":" gluten "
+	," have you any allergies":" gluten "
 
 
 	,"------ xcomment":"'piezanos' here.  "

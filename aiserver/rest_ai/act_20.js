@@ -74,7 +74,7 @@ exports.process = function(state)
 */
 	else if (f.hasAll(state.result.tokens,'e_vegclass')
 							&&
-		f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
+		f.hasAny(state.result.tokens, 'i_prefer','i_desire','i_suggest') )
 	{
 		state.result.code = 'rp_20_veg_uprefer';  // you almost actually care!
 		state.session.score_understand+=1;
@@ -83,7 +83,7 @@ exports.process = function(state)
 
 	else if (f.hasAll(state.result.tokens, 'e_meatclass')
 									&&
-		f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
+		f.hasAny(state.result.tokens, 'i_prefer','i_desire','i_suggest') )
 	{
 		state.result.code = 'rp_20_meat_uprefer';  // you almost actually care!
 		state.session.score_understand+=1;

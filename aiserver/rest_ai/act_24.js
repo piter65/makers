@@ -89,9 +89,8 @@ exports.process = function(state)
 	else
 	if (state.result.tokens.includes('e_meat') )	
 	{
-		state.session.meat_tries++;
 
-		if (state.session.meat_tries<2)
+		if (state.session.meat_tries<3)
 		{
 			state.result.code = 'rp_24_meat_hint';
 		}
@@ -100,6 +99,9 @@ exports.process = function(state)
 			state.result.code = 'rp_24_meat_giveup';
 			state.session.act = 30;  // move on!
 		}
+		state.session.meat_tries++;
+
+
 	}
 
 
