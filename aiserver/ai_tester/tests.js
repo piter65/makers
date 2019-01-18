@@ -107,15 +107,15 @@ var tests_origin =
 	{input:"hey there fatso.  Want some pizza",reply:"rp_990_insulted"},
 	{input:"Your thighs are telling me you've had enough pizza.",reply:"rp_990_insulted"},
 	{input:"You are just plain fat.",reply:"rp_990_insulted"},
-	{input:"I think you are stinky.",reply:"rp_990_insulted"},
-	{input:"I think you smell bad.",reply:"rp_990_insulted"},
+	{input:"I think you are stinky.",reply:"rp_990_insulted_too_much"},
+	{input:"I think you smell bad.",reply:"rp_990_insulted_too_much"},
 
 	{ input:"TEST NEWGAME WITH NICE STUFF",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
 
 	{ input:"you look nice too",reply:"rp_990_complimented" },
 	{ input:"you look cool too",reply:"rp_990_complimented"},
-	{ input:"i like your outfit",reply:"rp_990_complimented"},
+	{ input:"i like your outfit",reply:"rp_990_complimented_too_much"},
 
 	{ input:"may I take your order",reply:"rp_10_offeredhelp"},
 	{ input:"how about a hawaiin",reply:"rp_20_considering_hawaiin"},
@@ -125,28 +125,28 @@ var tests_origin =
 	{ input:"newgame",reply:"rp_5_intro"	},
 	{ input:"may I take your order" ,reply:"rp_10_offeredhelp"},
 	{ input:"you look too fat for pizza",reply:"rp_990_insulted"},
-	{ input:"I mean you really look fat",reply:"rp_990_insulted"},
+	{ input:"I mean you really look fat",reply:"rp_990_insulted_too_much"},
 
 	{ input:"TEST NEWGAME WAYS TO ASK WHAT SHE LIKES",reply:null},
  	{ input:"newgame",reply:"rp_5_intro"	},{ input:"c1",reply:"rp_10_offeredhelp"  },
-	{ input:"what pizza toppings have you liked in the past" ,reply:"rp_20_pizza_prefer"},
+	{ input:"what pizza toppings have you liked in the past" ,reply:"rp_20_one_of_each"},
 
 	{ input:"TEST NEWGAME WAYS TO ASK WHAT SHE LIKES",reply:null},
  	{ input:"newgame",reply:"rp_5_intro"	}, { input:"c1",reply:"rp_10_offeredhelp"  },
-	{input:"we have lots of toppings, what do you like",reply:"rp_20_pizza_prefer"},
+	{input:"we have lots of toppings, what do you like",reply:"rp_20_one_of_each"},
 
 	{ input:"TEST NEWGAME WAYS TO ASK WHAT SHE LIKES",reply:null},
  	{ input:"newgame",reply:"rp_5_intro"	}, { input:"c1",reply:"rp_10_offeredhelp"  },
-	{ input:"what's your favorite vegetables" ,reply:"rp_20_pizza_prefer" },
+	{ input:"what's your favorite vegetables" ,reply:"rp_20_i_like_mushroom" },
 
 	{ input:"TEST NEWGAME WAYS TO ASK WHAT SHE LIKES",reply:null},
  	{ input:"newgame",reply:"rp_5_intro"	}, { input:"c1",reply:"rp_10_offeredhelp"  },
-	{ input:"do you like meats or veggies or both",reply:"rp_20_carno_prefer"},
+	{ input:"do you like meats or veggies or both",reply:"rp_20_one_of_each"},
 
 
 	{ input:"TEST NEWGAME WAYS TO ASK WHAT SHE LIKES",reply:null},
  	{ input:"newgame",reply:"rp_5_intro"	}, { input:"c1",reply:"rp_10_offeredhelp"  },
-	{ input:"well, are you a vegetarian" ,reply:"rp_20_pizza_prefer" },
+	{ input:"well, are you a vegetarian" ,reply:"rp_1_no" },
 
 	{ input:"TEST NEWGAME WAYS TO ASK WHAT SHE LIKES",reply:null},
  	{ input:"newgame",reply:"rp_5_intro"	}, { input:"c1",reply:"rp_10_offeredhelp"  },
@@ -157,16 +157,10 @@ var tests_origin =
  	{ input:"newgame",reply:"rp_5_intro"	}, { input:"c1",reply:"rp_10_offeredhelp"  },
 	{input:"we can put any toppings on, so do you have a preference",reply:"rp_20_pizza_prefer"},
 
-
-	{ input:"TEST NEWGAME ATTEMPT TO DISCOVER GLUTEN OBJECTION",reply:null},
+	{ input:"TEST NEWGAME NOT SURE WHAT TOO QUICKLY",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
-	{ input:"why has it been such a long time",reply:"rp_10_past_reaction"},
-{ input:"maybe it was a gluten allergy",reply:"rp_10_past_reaction"},
-
-	{ input:"TEST NEWGAME GETS TO decide mushroom meat TOO QUICKLY",reply:null},
-	{ input:"newgame",reply:"rp_5_intro"	},
-	{ input:"I like your clothes too" ,reply:"rp_10_offeredhelp"},
-	{ input:"thanks for coming in. you look cool too",reply:"rp_10_offeredhelp"},
+	{ input:"I like your clothes too" ,reply:"rp_990_complimented"},
+	{ input:"thanks for coming in. you look cool too",reply:"rp_990_complimented"},
 	{ input:"so what would you like",reply:"rp_10_offeredhelp"},
 	{ input:"how about cheese",reply:"rp_10_offeredhelp"},
 	{ input:"how about tomato",reply:"rp_10_offeredhelp"},
@@ -175,8 +169,8 @@ var tests_origin =
 
 { input:"TEST NEWGAME ON STUFF FROM JEFFS",reply:null},
 { input:"newgame",reply:"rp_5_intro"	},
-{ input:"your clothes are nice too" ,reply:"rp_10_offeredhelp"},
-{ input:"you look marvelous" ,reply:"rp_10_offeredhelp"},
+{ input:"your clothes are nice too" ,reply:"rp_990_complimented"},
+{ input:"you look marvelous" ,reply:"rp_990_complimented"},
 
 { input:"PETER THIS SHOULD GO TO MEAT CHOICE",reply:null},
 { input:"newgame",reply:"rp_5_intro"	},
