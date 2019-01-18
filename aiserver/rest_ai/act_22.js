@@ -19,36 +19,28 @@ exports.process = function(state)
 
 		state.result.choice_done = true;
 	}
-	else if (f.includesAll(state.result.tokens, 'e_wtype','e_vegclass')
+	else if (f.hasAll(state.result.tokens, 'e_wtype','e_vegclass')
 							&&
-			f.includesAny(state.result.tokens, 'i_prefer','i_desire') )
+			f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
 			state.result.code = 'rp_20_i_prefer_mushroom';  // 
 			state.session.score_understand++;
 			state.session.act = 30;  // move on!
 			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 	}
-	else if (f.includesAll(state.result.tokens, 'e_wtype','e_meatclass')
+	else if (f.hasAll(state.result.tokens, 'e_wtype','e_meatclass')
 							&&
-			f.includesAny(state.result.tokens, 'i_prefer','i_desire') )
+			f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
 			state.result.code = 'rp_22_frustrated';  // I' already told you';  // 
 			state.session.score_understand--;
 	}
-	else
-	if (   state.result.tokens.includes('e_herb')
-		|| state.result.tokens.includes('e_bird')
-		|| state.result.tokens.includes('e_hawaiin')
-		|| state.result.tokens.includes('e_fish') )
+	else if (f.hasAny(state.result.tokens, 'e_bird','e_herb','e_hawaiin','e_fish'))
 	{
-		state.result.code = 'rp_22_wrong_toppings';
+		state.result.code = 'rp_22_wrong_toppings';    // 'Arent you listening, I want sausage and a veggie';
 		state.session.score_listen--;
-		// state.result.reply = 'Arent you listening, I want sausage and a veggie';
 	}
-	else 
-	if (   state.result.tokens.includes('e_crap')
-		|| state.result.tokens.includes('e_dog')
-		|| state.result.tokens.includes('i_insult') )
+	else if (f.hasAny(state.result.tokens, 'e_crap','e_dog','i_insult'))
 	{
 		state.result.code = 'rp_22_disgusted';
 		// state.result.reply = 'I dont like your sense of humour.  Good day.';
@@ -86,7 +78,10 @@ exports.process = function(state)
 		state.session.score_listen--;
 	}
 	else 
-	if (state.result.tokens.includes('e_veggie') )	
+	if (state.result.tokens.includes('e_veggie') 
+			||
+		f.hasAll(state.result.tokens, 'e_what','e_vegclass')			// what veggie?
+		)	
 	{
 		if (state.session.veg_tries<2)
 		{

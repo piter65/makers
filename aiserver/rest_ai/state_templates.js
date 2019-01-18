@@ -15,6 +15,7 @@ exports.session_defaults =
 	veg_offers: 0,
 	meat_offers: 0,
 
+	one_meat_one_veggie_ctx: 0,		// This is a context flag set when she says she wants one meat, one veggie.
 
 	gluten_saga: 0,
 

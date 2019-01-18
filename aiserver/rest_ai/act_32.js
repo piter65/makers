@@ -11,7 +11,7 @@ exports.process = function(state)
 
 	if (state.result.tokens.includes('i_nogluten'))
 	{
-			state.result.code = 'rp_32_decided_nogluten'; // state"A no gluten option?Lets do that! "
+			state.result.code = 'rp_3_decided_nogluten'; // state"A no gluten option?Lets do that! "
 			state.session.act = 40;  // move on!
 			state.session.score_exec++;
 			state.session.gluten_saga=4;		// just tag it was force solved for now

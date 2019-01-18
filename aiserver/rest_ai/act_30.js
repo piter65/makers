@@ -26,7 +26,7 @@ exports.process = function(state)
 	}
     if (true)
    	{
-		state.result.code = 'rp_30_remember_gluten';		// last time I got sick..
+		state.result.code = 'rp_3_remember_gluten';		// last time I got sick..
 		state.session.next_act=40;	// come back here
 		state.session.act = 32;  // move to glutten decided!  move on!	
 		state.session.empathy_opportunity = true;  // open to empathy	

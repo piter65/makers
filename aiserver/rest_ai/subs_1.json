@@ -68,6 +68,7 @@
 	," do you want today ":" would you like "
 	," do you want ":" would you like "
 
+	,"------ xcomment":"have you is powerful, I need more syns... "
 	," do you have ":" have you "
 
 	," anything":" something"
@@ -113,7 +114,12 @@
 	," selections ":" toppings "
 	," selection ":" toppings "
 
+	,"_comment_":"Thinking in terms of 'what was the problem'"
 
+	," could have been ": " was "
+	," could possibly be ": " was "
+	," do you think was ": " was "
+	," could be ": " was "
 
 	,"_comment_":"Peter wants to start literals here.  These are early substitions for common entries."
 
@@ -190,8 +196,8 @@
 	," wtype of ":" wtype "
 	," wtype toppings ":" wtype "
 
-	," we can put any toppings on ":" wtype "
-	," any toppings on ":" wtype "
+	," we can put toppings on ":" wtype "
+	," toppings on ":" wtype "
 
 	," what do you like":" wtype prefer"
 	," what do you prefer":" wtype prefer"
@@ -233,9 +239,9 @@
 
 
 	,"----------- xcomment":"Gonna work on 'are you a vegetarian' here.  "
-	," are you ":" beyou "
-	," do you happen to be ":" beyou "
-	," do you consider yourself ":" beyou "
+	," are you ":" isyou "
+	," do you happen to be ":" isyou "
+	," do you consider yourself ":" isyou "
 
 
 	,"------ xcomment":"do you have allergies' here.  "
@@ -246,12 +252,6 @@
 	," have you gluten allergies":" gluten "
 	," have you issues with gluten ":" gluten "
 	," have you food restrictions ":" gluten "
-
-	," have you any food restrictions ":" gluten "
-	," have you any food allergies":" gluten "
-	," have you any issues with gluten ":" gluten "
-	," have you any allergies":" gluten "
-
 
 	,"------ xcomment":"'piezanos' here.  "
 	," piezanos":" piezanos"

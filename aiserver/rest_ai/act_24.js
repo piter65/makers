@@ -36,35 +36,22 @@ exports.process = function(state)
 			state.result.code = 'rp_22_frustrated';  // I' already told you';  // 
 			state.session.score_understand--;
 	}
-	else
-	if (   state.result.tokens.includes('e_herb')
-		|| state.result.tokens.includes('e_bird')
-		|| state.result.tokens.includes('e_hawaiin')
-		|| state.result.tokens.includes('e_fish') )
+	else if (f.hasAny(state.result.tokens, 'e_bird','e_herb','e_hawaiin','e_fish'))	
 	{
 		state.result.code = 'rp_22_wrong_toppings';   // 'Arent you listening,
 		state.session.count_tries++;
 		state.session.score_listen--;
 
 	}
-	else 
-	if (   state.result.tokens.includes('e_crap')
-		|| state.result.tokens.includes('e_dog')
-		|| state.result.tokens.includes('i_insult') )
+	else if (f.hasAny(state.result.tokens, 'e_crap','e_dog','i_insult'))
 	{
-		state.result.code = 'rp_22_disgusted';
-		// state.result.reply = 'I dont like your sense of humour.  Good day.';
+		state.result.code = 'rp_22_disgusted';  //'I dont like your sense of humour.  Good day.';
 		state.session.game_over = true;
 	}
-	else 
-	if (state.result.tokens.includes('e_veggie') )	
+	else if (state.result.tokens.includes('e_veggie') )	
 	{
 			state.result.code = 'rp_24_frustrated';  // I' already told you
 	}
-
-
-
-
 
 	else
 	if (state.result.tokens.includes( 'i_5sec') )
@@ -87,7 +74,10 @@ exports.process = function(state)
 	}
 
 	else
-	if (state.result.tokens.includes('e_meat') )	
+	if (state.result.tokens.includes('e_meat') 
+			||
+	f.hasAll(state.result.tokens, 'e_what','e_meatclass') )			// what meat?		
+
 	{
 
 		if (state.session.meat_tries<3)

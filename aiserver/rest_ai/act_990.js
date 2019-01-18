@@ -47,7 +47,7 @@ exports.process = function(state)
 		state.result.tokens.includes( 'e_bodynice')
 		)
 	{
-			state.result.code = 'rp_990_thankyou';  // 'Thanks. I got it at Brooks Brothers.';
+			state.result.code = 'rp_990_thankyou';  // 'Thanks. I got it at .';
 	
 	}
 
@@ -128,11 +128,9 @@ exports.process = function(state)
 		state.session.game_over = true;
 	}
 	// If we have any tokens at all, fall thru here.
-	else 
-
-	if (state.session.empathy_scored)	// Did they get an empathy point?
+	else if (state.session.empathy_scored)	// Did they get an empathy point?
 	{
-		state.result.code = 'rp_1_thankyou';
+		state.result.code = 'rp_1_thank_you';
 	}
 
 	else if (state.result.tokens.length > 0)

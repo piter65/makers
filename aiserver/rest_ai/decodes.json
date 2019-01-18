@@ -41,11 +41,29 @@
 
 	,"rp_1_thank_you":
 	{
-		"text":
-			"addon-Thank you"
+		"text": "addon-Thank you"
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
+	,"rp_1_yes":
+	{
+		"text": "addon-Yes."
+,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_no":
+	{
+		"text": "addon-no."
+,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
+	}
+
+
+	,"rp_3_remember_gluten":
+	{
+		"text":
+			"Now that I think about it, last time I had pizza, I had a bad reaction. "
+,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
 	,"rp_3_gluten_uncle":
 	{
 		"text":
@@ -53,7 +71,11 @@
 		,"animations":[{"face":"f_sad","body":"b_idle","delay":0,"duration":0}]
 	}
 
-
+	,"rp_3_decided_nogluten":
+	{
+		"text": "A no gluten option?  That totallly works.  I'll get that."
+		,"animations": [{ "face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
 
 	,"rp_5_intro":
 	{
@@ -62,7 +84,7 @@
 		,"animations":
 		[
 			 {"face":"f_conf","body":"b_phone","delay":1999,"duration":1999}
-			,{"face":"f_norm","body":"b_engage","delay":3998,"duration":3998}
+			,{"face":"f_neutr","body":"b_engage","delay":3998,"duration":3998}
 			,{"face":"f_smile","body":"b_idle","delay":0,"duration":0}
 		]
 	}
@@ -250,6 +272,18 @@
 	,"rp_20_i_prefer_sausage":
 	{
 		"text": "addon-Thanks for asking, I like sausage."
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_20_i_like_sausage":
+	{
+		"text": "addon-I like sausage."
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_20_i_like_mushroom":
+	{
+		"text": "addon-I like mushrooms."
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -637,11 +671,7 @@
 		,"animations": [{ "face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_32_decided_nogluten":
-	{
-		"text": "A no gluten option?  That totallly works.  I'll get that."
-		,"animations": [{ "face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
+
 
 	,"rp_32_fed_up":
 	{
@@ -753,8 +783,7 @@
 
 	,"rp_990_complimented":
 	{
-		"text":
-			"Thanks. I got it at Brooks Brothers."
+		"text":	"Thanks. I got it at Urban."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 	,"rp_990_complimented_too_much":

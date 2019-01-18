@@ -20,9 +20,8 @@ exports.process = function(state)
 
 	if (state.session.act == 10)	// only do the why's in act 10.	
 	{{
-			if (state.result.tokens.includes( 'i_why')
-			 && state.result.tokens.includes( 'e_longtime')
-			 )
+
+			if (f.hasAll(state.result.tokens, 'i_why','e_longtime'))
 				{
 				if (state.session.gluten_saga==0)
 					{
@@ -37,53 +36,79 @@ exports.process = function(state)
 					state.session.score_understand--;
 				 	}
 				 }
-			if (   state.result.tokens.includes('e_sick')
-				|| state.result.tokens.includes('e_gluten')
-				|| state.result.tokens.includes('i_dietary')
-				)
-				{
-					state.result.code = 'rp_10_rude';  // why so long?
-					state.session.score_understand--;
-					state.session.act = 20;  // move on!
-				}
 
 	}}
 ////////////////////////////////////////////////////////////////////////////////
 	else if ( (state.session.act >19) && (state.session.act<30))  // when ordering...
 	{{
-		if (state.result.tokens.includes( 'i_why')
-		&& state.result.tokens.includes( 'e_longtime'))
+		if (f.hasAll(state.result.tokens, 'i_why','e_longtime'))
 				{
 				state.result.code = 'rp_1_can_we_continue';  // nonseq
 				state.session.score_understand--;
 			 	}
+	}}
 
-		if ( 	state.session.gluten_saga<2)
+
+////////////////////////////////////////////////////////////////////////////////
+	if ( (state.session.act >9) && (state.session.act<30))  // from intro ordering...
+	{{
+
+		if ( state.session.gluten_saga<2)
 		{
-
-			if (   state.result.tokens.includes('e_sick')
-				|| state.result.tokens.includes('e_gluten')
-				|| state.result.tokens.includes('i_dietary')
-				)
+		if (f.hasAny(state.result.tokens, 'e_sick','e_gluten',"i_dietary"))
 			{
 				// fix - make this an rp1 in future releases...
-				state.result.code = 'rp_20_gluten_disclose';  // ok- ask here.
+				state.result.code = 'rp_3_remember_gluten';		// last time I got sick..
 				state.session.score_understand++;
 				state.session.gluten_saga=2;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry
 			}
 		}
 
+		else if ( state.session.gluten_saga<3)
+		{
+			if (f.hasAny(state.result.tokens, 'e_sick','e_gluten','i_dietary'))
+				{
+				state.result.code = 'rp_3_gluten_uncle';		// last time I got sick..
+				state.session.score_understand++;
+				state.session.gluten_saga=3;		// move it up
+				state.session.empathy_opportunity=true;   // looking for sorry
+				}
+		}
+
+		{
+			if (f.hasAny(state.result.tokens, 'i_isyou','e_vegan'))
+				{
+				state.result.code = 'rp_1_no';		// last time I got sick..
+				state.session.score_understand++;
+				state.session.gluten_saga=3;		// move it up
+				state.session.empathy_opportunity=true;   // looking for sorry
+				}
+			else if (f.hasAny(state.result.tokens, 'i_isyou','e_simplegood'))
+				{
+				state.result.code = 'rp_1_yes';		// last time I got sick..
+				state.session.score_understand++;
+				state.session.gluten_saga=3;		// move it up
+				state.session.empathy_opportunity=true;   // looking for sorry
+				}
+
+
+
+		}
+
+
+
+	}}
+	if ( (state.session.act >19) && (state.session.act<30))  // from intro ordering...
+	{{
 		if ( state.session.gluten_saga<5)
 		{
 
 			if (   state.result.tokens.includes('i_nogluten')
 				 		&&
-			 	!state.result.tokens.includes( 'i_close')
-			)
+			 	!state.result.tokens.includes( 'i_close')	)
 			{
-				// fix - make this an rp1 in future releases...
-				state.result.code = 'rp_32_decided_nogluten'; // state"A no gluten option?Lets do that! "
+				state.result.code = 'rp_3_decided_nogluten'; // state"A no gluten option?Lets do that! "
 				state.session.gluten_saga=5;		// move it up
 				state.session.score_exec++;
 			}
