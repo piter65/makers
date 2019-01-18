@@ -17,8 +17,6 @@ exports.process = function(state)
 {
 	logger.log('ACT 970 - start pa');
 
-
-
 ////////////////////////////////////////////////////////////////////////////////
 	if ( (state.session.act >19) && (state.session.act<30))  // when ordering...
 	{{
@@ -40,6 +38,7 @@ exports.process = function(state)
 				state.result.code = 'rp_3_gluten_uncle';
 				state.session.score_understand++;
 				state.session.score_listen++;	
+				state.session.gluten_saga=3;		// move it up
 			 	}
 		state.session.why_sick_ctx=0; // kill the opportunity for now		
 		}}
@@ -62,8 +61,7 @@ exports.process = function(state)
 		{
 			if (f.hasAny(state.result.tokens, 'e_sick','e_gluten','i_dietary'))
 				{
-// TEMP				state.result.code = 'rp_3_gluten_uncle';		// last time I got sick..
-				state.result.code = 'rp_1_no';		// last time I got sick..
+				state.result.code = 'rp_3_gluten_uncle';		// last time I got sick..
 				state.session.score_understand++;
 				state.session.gluten_saga=3;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry
@@ -72,19 +70,10 @@ exports.process = function(state)
 
 		{
 			if (f.hasAny(state.result.tokens, 'i_isyou','e_vegan'))
-				{
-				state.result.code = 'rp_1_no';		// last time I got sick..
-				state.session.score_understand++;
-				state.session.gluten_saga=3;		// move it up
-				state.session.empathy_opportunity=true;   // looking for sorry
-				}
+				state.result.code = 'rp_1_no';		// nope
+				
 			else if (f.hasAny(state.result.tokens, 'i_isyou','e_simplegood'))
-				{
-				state.result.code = 'rp_1_yes';		// last time I got sick..
-				state.session.score_understand++;
-				state.session.gluten_saga=3;		// move it up
-				state.session.empathy_opportunity=true;   // looking for sorry
-				}
+				state.result.code = 'rp_1_yes';		// yep		
 		}
 
 	}}
@@ -109,6 +98,21 @@ exports.process = function(state)
 				 	}
 				 }
 
+		if ( state.session.gluten_saga==3)
+		{
+
+			if (   state.result.tokens.includes('i_nogluten')
+				 		&&
+			 	state.result.tokens.includes( 'i_suggest')	)
+			{
+				state.result.code = 'rp_3_decided_nogluten'; // state"A no gluten option?Lets do that! "
+				state.session.gluten_saga=5;		// move it up
+				state.session.score_exec++;
+			}
+		}
+
+
+
 	}}
 
 
@@ -126,7 +130,7 @@ exports.process = function(state)
 				state.session.gluten_saga=5;		// move it up
 				state.session.score_exec++;
 			}
-		}	
+		}
 	}}
 // No action for act30, or act40..
 
