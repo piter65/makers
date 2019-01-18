@@ -9,7 +9,7 @@ const f = require('./func');
 exports.process = function(state)
 {
 
-	if (state.result.tokens.includes('i_nogluten'))
+	if (state.result.tokens.includes('e_nogluten'))
 	{
 			state.result.code = 'rp_3_decided_nogluten'; // state"A no gluten option?Lets do that! "
 			state.session.act = 40;  // move on!
@@ -29,7 +29,7 @@ exports.process = function(state)
 		state.session.score_understand++;
 		state.session.score_listen++;	
 	}
-	else if (f.includesAny(state.result.tokens, 'i_why') /* what do you think it was?  */ )
+	else if (f.includesAny(state.result.tokens, 'i_why','e_gluten') /* what do you think it was?  */ )
 	{
 		state.result.code = 'rp_3_gluten_uncle';
 		state.session.score_understand++;

@@ -394,6 +394,15 @@ function process_ai(state)
 			act_990.process(state);	
 	}	
 
+// set triggers - this is so flags set once outside of logic
+	if (state.result.one_meat_one_veggie_trig>0)
+		{  state.result.one_meat_one_veggie_ctx = 1; state.result.one_meat_one_veggie_trig =0;}	
+	else state.result.one_meat_one_veggie_ctx = 0;
+
+	if (state.result.why_sick_trig>0)
+		{  state.result.why_sick_ctx = 1; state.result.why_sick_trig =0;}	
+	else state.result.why_sick_ctx = 0;
+
 	logger.log('state.result.code: "%s"', state.result.code);
 
 	state.result.reply = decoder.decode_reply(state.result.code);

@@ -18,31 +18,8 @@ exports.process = function(state)
 	logger.log('ACT 970 - start pa');
 
 ////////////////////////////////////////////////////////////////////////////////
-	if ( (state.session.act >19) && (state.session.act<30))  // when ordering...
-	{{
-		if (f.hasAll(state.result.tokens, 'i_why','e_longtime'))
-				{
-				state.result.code = 'rp_1_can_we_continue';  // nonseq
-				state.session.score_understand--;
-			 	}
-	}}
-
-
-////////////////////////////////////////////////////////////////////////////////
 	if ( (state.session.act >9) && (state.session.act<30))  // from intro ordering...
 	{{
-		if (state.session.why_sick_ctx>0)  // she said she was sick
-		{{
-			if (f.hasAll(state.result.tokens, 'i_why'))
-				{
-				state.result.code = 'rp_3_gluten_uncle';
-				state.session.score_understand++;
-				state.session.score_listen++;	
-				state.session.gluten_saga=3;		// move it up
-			 	}
-		state.session.why_sick_ctx=0; // kill the opportunity for now		
-		}}
-
 
 		if ( state.session.gluten_saga<2)
 		{
@@ -53,76 +30,59 @@ exports.process = function(state)
 				state.session.score_understand++;
 				state.session.gluten_saga=2;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry
-				state.session.why_sick_ctx=1;  // she says she was sick
+				state.session.why_sick_trig=1;  // she says she was sick
 			}
 		}
 
 		else if (state.session.gluten_saga==2) 
 		{
-			if (f.hasAny(state.result.tokens, 'e_sick','e_gluten','i_dietary'))
+			if (f.hasAny(state.result.tokens, 'e_gluten'))	// look for gluten only
 				{
 				state.result.code = 'rp_3_gluten_uncle';		// last time I got sick..
 				state.session.score_understand++;
 				state.session.gluten_saga=3;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry
 				}
-		}
 
+			else if (f.hasAny(state.result.tokens, 'i_dietary', 'e_sick'))	// look for gluten only
+				{
+				state.result.code = 'rp_1_hmmm';		// last time I got sick..
+				}
+		}
+		else if (state.session.gluten_saga>4) 
 		{
-			if (f.hasAny(state.result.tokens, 'i_isyou','e_vegan'))
-				state.result.code = 'rp_1_no';		// nope
-				
-			else if (f.hasAny(state.result.tokens, 'i_isyou','e_simplegood'))
-				state.result.code = 'rp_1_yes';		// yep		
+			if  (
+					(f.hasAny(state.result.tokens, 'i_dietary'))	// any dietary talk
+							&&
+					!state.result.tokens.includes( 'i_close')	)		
+				{
+				state.result.code = 'rp_1_asked_twice';		// last time I got sick..
+				state.session.score_listen--;
+				}
+
 		}
 
 	}}
 
 	if (state.session.act == 10)	// only do the why's in act 10.	
 	{{
-
-			if (f.hasAll(state.result.tokens, 'i_why','e_longtime'))
-				{
-				if (state.session.gluten_saga==0)
-					{
-					state.result.code = 'rp_10_past_reaction';  // why so long?
-					state.session.gluten_saga=1;		// move it up
-					state.session.score_understand+=2;
-					state.session.empathy_opportunity=true;   // looking for sorry
-					state.session.why_sick_ctx=1;  // she says she wants one meat, one veggie.
-					}		
-				else
-					{
-					state.result.code = 'rp_1_asked_twice';  // didn't we discuss this already?
-					state.session.score_understand--;
-				 	}
-				 }
-
-		if ( state.session.gluten_saga==3)
+		if ( state.session.gluten_saga<5)
 		{
-
-			if (   state.result.tokens.includes('i_nogluten')
-				 		&&
-			 	state.result.tokens.includes( 'i_suggest')	)
+			if (f.hasAll(state.result.tokens, 'e_nogluten'))
 			{
 				state.result.code = 'rp_3_decided_nogluten'; // state"A no gluten option?Lets do that! "
 				state.session.gluten_saga=5;		// move it up
 				state.session.score_exec++;
 			}
 		}
-
-
-
 	}}
-
 
 
 	if ( (state.session.act >19) && (state.session.act<30))  // from intro ordering...
 	{{
 		if ( state.session.gluten_saga<5)
 		{
-
-			if (   state.result.tokens.includes('i_nogluten')
+			if (   state.result.tokens.includes('e_nogluten')
 				 		&&
 			 	!state.result.tokens.includes( 'i_close')	)
 			{
@@ -132,7 +92,22 @@ exports.process = function(state)
 			}
 		}
 	}}
-// No action for act30, or act40..
+
+
+
+
+// only omnipresent actions here
+	if ( true)  // from intro ordering...
+	{{
+		{
+			if (f.hasAny(state.result.tokens, 'i_isyou','e_simplebad'))
+				state.result.code = 'rp_1_no';		// nope
+				
+			else if (f.hasAny(state.result.tokens, 'i_isyou','e_simplegood'))
+				state.result.code = 'rp_1_yes';		// yep		
+		}
+	}}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 

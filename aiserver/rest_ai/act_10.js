@@ -13,24 +13,23 @@ exports.process = function(state)
 
 	if (state.result.tokens.includes( 'i_offerhelp') 
 					||
-				(
-				state.result.tokens.includes( 'i_desire') &&
-				state.result.tokens.includes( 'e_slice')
-				)
+			f.hasAll(state.result.tokens, 'e_slice','i_desire')
 					||
-				(
-				state.result.tokens.includes( 'i_prefer') &&
-				state.result.tokens.includes( 'e_slice')
-				)
+			f.hasAll(state.result.tokens, 'e_slice','i_prefer')
 		)
 	{
 		state.result.code = 'rp_10_offeredhelp';   //'I'd like a slice, but I can't decide. What do you suggest?';
 		state.session.trust += 0;
 		state.session.act = 20;  // move on!
 	}
-	else 
+	else if (f.hasAll(state.result.tokens, 'e_slice','i_close'))  // not ideal, closing before order
+	{
+		state.result.code = 'rp_10_offeredhelp';   //move on...
+		state.session.listen--;
+		state.session.act = 20;  // move on!
+	}
 
-	if (state.result.tokens.includes( 'i_thankyou') )
+	else if (state.result.tokens.includes( 'i_thankyou') )
 	{
 		state.result.code = 'rp_10_welcome';    //  'You are very welcome.''
 		state.session.trust += 1;
@@ -70,18 +69,18 @@ exports.process = function(state)
 			state.result.code = 'rp_10_first_time';  // first time I\'ve enterred the place.'
 		}
 	else
-
-	if (state.result.tokens.includes( 'i_nothing') )
-	{
-		state.result.code = 'rp_10_customer_initiates';   //'I was thinking about getting a slice.';
-	}
-	else
 	if (state.result.tokens.includes( 'i_insult') )
 	{
 		state.result.code = 'rp_10_insulted';    // 'Im not sure I like this place or you.';
 		state.session.trust -= 2;
 	}
 	else
+	if (state.result.tokens.includes( 'i_nothing') )
+	{
+		state.result.code = 'rp_10_customer_initiates';   //'I was thinking about getting a slice.';
+	}
+	else
+
 	if (state.result.tokens.includes( 'i_5sec') )
 	{
 		state.result.code = 'rp_10_impatient';   // 'Are you gonna take my order or something?';
@@ -93,11 +92,6 @@ exports.process = function(state)
 		state.result.code = 'rp_10_fed_up';  // 'The service here stinks. Im gone.';
 		state.session.game_over = true;
 	}
-	else
-	{
-//		act_990.process(state);
-	}
-
 
 
 	logger.log('ACT 10 - processed');

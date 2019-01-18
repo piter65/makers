@@ -15,8 +15,11 @@ exports.session_defaults =
 	veg_offers: 0,
 	meat_offers: 0,
 
+	one_meat_one_veggie_trig: 0,		// This is a context flag set when she says she wants one meat, one veggie.
 	one_meat_one_veggie_ctx: 0,		// This is a context flag set when she says she wants one meat, one veggie.
-	why_sick_ctx: 0,		// This is a context flag set when she says she wants one meat, one veggie.
+
+	why_sick_trig: 0,		// 
+	why_sick_ctx: 0,		// for the why in a sick
 
 	gluten_saga: 0,
 

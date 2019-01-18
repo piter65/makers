@@ -189,13 +189,13 @@ exports.process = function(state)
 	}
 	else if (state.result.tokens.includes('e_crap'))
 	{
-		state.result.code = 'rp_20_considering_crap';// 'Maybe you like that type of thing, but not for me.';
+		state.result.code = 'rp_20_considering_silly';// 'Maybe you like that type of thing, but not for me.';
 		state.session.count_tries++;
 		state.session.score_exec--;
 	}
 	else if (state.result.tokens.includes('e_herb'))
 	{
-		state.result.code = 'rp_20_considering_crap';  // 'Maybe you like that type of thing, but not for me.';
+		state.result.code = 'rp_20_considering_silly';  // 'Maybe you like that type of thing, but not for me.';
 		state.session.count_tries++;
 	}
 

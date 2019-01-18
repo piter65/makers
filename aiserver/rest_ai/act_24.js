@@ -33,16 +33,28 @@ exports.process = function(state)
 							&&
 			f.includesAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
-			state.result.code = 'rp_22_frustrated';  // I' already told you';  // 
+			state.result.code = 'rp_24_frustrated_restate';  // I' already told you';  // 
 			state.session.score_understand--;
 	}
-	else if (f.hasAny(state.result.tokens, 'e_bird','e_herb','e_hawaiin','e_fish'))	
+	else if ( f.hasAny(state.result.tokens, 'e_mushroom')	// offered mushrooms and no meat.	
+					&&
+				!f.hasAny(state.result.tokens, 'e_meat'))
 	{
-		state.result.code = 'rp_22_wrong_toppings';   // 'Arent you listening,
+		state.result.code = 'rp_24_frustrated_restate' ;   // 'Arent you listening,
 		state.session.count_tries++;
 		state.session.score_listen--;
 
 	}
+	else if (f.hasAny(state.result.tokens, 'e_bird','e_herb','e_hawaiin','e_fish'))	
+	{
+		state.result.code = 'rp_24_frustrated_restate';   // 'Arent you listening,
+		state.session.count_tries++;
+		state.session.score_listen--;
+
+	}
+
+
+
 	else if (f.hasAny(state.result.tokens, 'e_crap','e_dog','i_insult'))
 	{
 		state.result.code = 'rp_22_disgusted';  //'I dont like your sense of humour.  Good day.';

@@ -10,11 +10,7 @@ exports.process = function(state)
 {
 	logger.log('ACT 40 - start pa');
 
-	if (state.result.tokens.includes('i_nogluten')&&
-		state.result.tokens.includes('e_sausage')&&
-		state.result.tokens.includes('e_mushroom')
-		)
-
+	if (f.hasAll(state.result.tokens, 'e_nogluten','e_sausage','e_mushroom'))
 	{
 		state.result.code = 'rp_40_finished_good1';
 		state.session.game_over = true;

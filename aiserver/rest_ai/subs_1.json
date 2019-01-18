@@ -246,12 +246,16 @@
 
 	,"------ xcomment":"do you have allergies' here.  "
 	," do you have ":" have you "
+	," are you prone to ":" have you "
 
-	," have you food allergies":" gluten "
-	," have you allergies":" gluten "
-	," have you gluten allergies":" gluten "
 	," have you issues with gluten ":" gluten "
-	," have you food restrictions ":" gluten "
+
+	," wheat ":" flour "
+	," bread ":" flour "
+	," grain ":" flour "
+	," flower ":" flour "
+
+
 
 	,"------ xcomment":"'piezanos' here.  "
 	," piezanos":" piezanos"

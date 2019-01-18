@@ -1,10 +1,9 @@
 {
 
 "comment":
-"rp_20_20:Why thank you:b_tap:1000:f_confu:1000:b_tap:1000:f_confu:b_tap",
+"rp_20_20:Why thank you:b_tap:1000:f_confu:1000:b_tap:1000:f_confu:b_tap"
 
-	"comment":"f_smile f_frown f_conf f_angry f_sad f_norm"
-	,"body":":b_idle b_engage b_bored b_tap b_phone b_angry"
+
 
     ,"vincent_body":"b_idle b_idle_slouch b_look b_look_slouch b_engage b_bored b_tap b_phone b_angry"
     ,"vincent_body":"b_idle b_look b_engage b_bored b_tap b_phone b_angry"
@@ -57,6 +56,11 @@
 ,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
 	}
 
+	,"rp_1_not_listening":
+	{
+		"text": "addon-Are you listening?"
+,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
+	}
 
 	,"rp_3_remember_gluten":
 	{
@@ -80,7 +84,7 @@
 	,"rp_5_intro":
 	{
 		"text":
-			"Hi there.  I've been wondering about this place, it's been a while since I've had some pizza.  I figured this would be a nice place to try out. By the way, nice uniform you got there."
+			"Hi there.  I've been wondering about this place.  I figured this would be a nice place to try out. By the way, nice uniform you got there."
 		,"animations":
 		[
 			 {"face":"f_conf","body":"b_phone","delay":1999,"duration":1999}
@@ -97,7 +101,7 @@
 			,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_10_past_reaction":
+	,"rp_10_past_reaction_ELIM":
 	{
 		"text": "I got kinda sick last time I had pizza.  I'm not sure what happened, but today I saw your store, and I thought I'd give pizza another try."
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
@@ -131,17 +135,9 @@
 
 	,"rp_10_insulted":
 	{
-		"text":
-			"Seriously, I'm not sure I like this place or you."
+		"text":  "Seriously, I'm not sure I like this place or you."
 		,"animations":
-		[
-			{
-				 "face":"f_frown"
-				,"body":"b_idle"
-				,"delay":0
-				,"duration":0
-			}
-		]
+		[{ "face":"f_frown","body":"b_idle","delay":0 ,"duration":0 }]
 	}
 	,"rp_10_rude":
 	{
@@ -293,18 +289,18 @@
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_20_pizza_prefer":
+	,"rp_20_pizza_prefer_ELIM":
 	{
 		"text": "Thanks for asking, I like sausage.  But last time I had pizza I got sick, so I'm a bit afraid to try again."
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_20_prefer_saga_done":
+	,"rp_20_prefer_saga_done_elim":
 	{
 		"text": "Thanks for asking, I like sausage.  But last time I had pizza I got sick, so I'm a bit afraid to try again."
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
-	,"rp_20_carno_prefer":
+	,"rp_20_carno_prefer_elim":
 	{
 		"text": "Oh thank you for asking.  Actually, I just want a little of each, I'm thinking one meat, one veggie."
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
@@ -381,7 +377,7 @@
 		"text":"Too much stuff.  Something simpler."
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
-	,"rp_20_considering_crap":
+	,"rp_20_considering_silly":
 	{
 		"text":"Maybe you like that type of thing, but that's not for me."
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
@@ -611,8 +607,7 @@
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
 	}
 
-
-	,"rp_24_frustrated":
+	,"rp_24_frustrated_restate":
 	{
 		"text": "Really, I've already said I want mushroom and one meat. Can you help me pick a meat?"
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
