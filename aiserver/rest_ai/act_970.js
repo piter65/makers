@@ -18,29 +18,9 @@ exports.process = function(state)
 	logger.log('ACT 970 - start pa');
 
 
-	if (state.session.act == 10)	// only do the why's in act 10.	
-	{{
 
-			if (f.hasAll(state.result.tokens, 'i_why','e_longtime'))
-				{
-				if (state.session.gluten_saga==0)
-					{
-					state.result.code = 'rp_10_past_reaction';  // why so long?
-					state.session.gluten_saga=1;		// move it up
-					state.session.score_understand+=2;
-					state.session.empathy_opportunity=true;   // looking for sorry
-					state.session.why_sick_ctx=1;  // she says she wants one meat, one veggie.
-					}		
-				else
-					{
-					state.result.code = 'rp_1_asked_twice';  // didn't we discuss this already?
-					state.session.score_understand--;
-				 	}
-				 }
-
-	}}
 ////////////////////////////////////////////////////////////////////////////////
-	else if ( (state.session.act >19) && (state.session.act<30))  // when ordering...
+	if ( (state.session.act >19) && (state.session.act<30))  // when ordering...
 	{{
 		if (f.hasAll(state.result.tokens, 'i_why','e_longtime'))
 				{
@@ -53,7 +33,6 @@ exports.process = function(state)
 ////////////////////////////////////////////////////////////////////////////////
 	if ( (state.session.act >9) && (state.session.act<30))  // from intro ordering...
 	{{
-
 		if (state.session.why_sick_ctx>0)  // she said she was sick
 		{{
 			if (f.hasAll(state.result.tokens, 'i_why'))
@@ -79,11 +58,12 @@ exports.process = function(state)
 			}
 		}
 
-		else if ( state.session.gluten_saga<3)
+		else if (state.session.gluten_saga==2) 
 		{
 			if (f.hasAny(state.result.tokens, 'e_sick','e_gluten','i_dietary'))
 				{
-				state.result.code = 'rp_3_gluten_uncle';		// last time I got sick..
+// TEMP				state.result.code = 'rp_3_gluten_uncle';		// last time I got sick..
+				state.result.code = 'rp_1_no';		// last time I got sick..
 				state.session.score_understand++;
 				state.session.gluten_saga=3;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry
@@ -105,14 +85,34 @@ exports.process = function(state)
 				state.session.gluten_saga=3;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry
 				}
-
-
-
 		}
 
+	}}
 
+	if (state.session.act == 10)	// only do the why's in act 10.	
+	{{
+
+			if (f.hasAll(state.result.tokens, 'i_why','e_longtime'))
+				{
+				if (state.session.gluten_saga==0)
+					{
+					state.result.code = 'rp_10_past_reaction';  // why so long?
+					state.session.gluten_saga=1;		// move it up
+					state.session.score_understand+=2;
+					state.session.empathy_opportunity=true;   // looking for sorry
+					state.session.why_sick_ctx=1;  // she says she wants one meat, one veggie.
+					}		
+				else
+					{
+					state.result.code = 'rp_1_asked_twice';  // didn't we discuss this already?
+					state.session.score_understand--;
+				 	}
+				 }
 
 	}}
+
+
+
 	if ( (state.session.act >19) && (state.session.act<30))  // from intro ordering...
 	{{
 		if ( state.session.gluten_saga<5)
