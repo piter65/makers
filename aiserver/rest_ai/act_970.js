@@ -29,6 +29,7 @@ exports.process = function(state)
 					state.session.gluten_saga=1;		// move it up
 					state.session.score_understand+=2;
 					state.session.empathy_opportunity=true;   // looking for sorry
+					state.session.why_sick_ctx=1;  // she says she wants one meat, one veggie.
 					}		
 				else
 					{
@@ -53,6 +54,18 @@ exports.process = function(state)
 	if ( (state.session.act >9) && (state.session.act<30))  // from intro ordering...
 	{{
 
+		if (state.session.why_sick_ctx>0)  // she said she was sick
+		{{
+			if (f.hasAll(state.result.tokens, 'i_why'))
+				{
+				state.result.code = 'rp_3_gluten_uncle';
+				state.session.score_understand++;
+				state.session.score_listen++;	
+			 	}
+		state.session.why_sick_ctx=0; // kill the opportunity for now		
+		}}
+
+
 		if ( state.session.gluten_saga<2)
 		{
 		if (f.hasAny(state.result.tokens, 'e_sick','e_gluten',"i_dietary"))
@@ -62,6 +75,7 @@ exports.process = function(state)
 				state.session.score_understand++;
 				state.session.gluten_saga=2;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry
+				state.session.why_sick_ctx=1;  // she says she was sick
 			}
 		}
 

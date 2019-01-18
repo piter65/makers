@@ -80,7 +80,7 @@ exports.process = function(state)
 
 	{
 
-		if (state.session.meat_tries<3)
+		if (state.session.meat_tries<2)
 		{
 			state.result.code = 'rp_24_meat_hint';
 		}
