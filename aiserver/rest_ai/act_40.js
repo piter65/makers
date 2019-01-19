@@ -12,8 +12,15 @@ exports.process = function(state)
 
 	if (f.hasAll(state.result.tokens, 'e_nogluten','e_sausage','e_mushroom'))
 	{
-		state.result.code = 'rp_40_finished_good1';
+
+		if (state.session.score_overall>30) state.result.code = 'rp_go_finished_good1';
+		else if (state.session.score_overall>25) state.result.code = 'rp_go_finished_good2';
+		else if (state.session.score_overall>20) state.result.code = 'rp_go_finished_med1';
+		else if (state.session.score_overall>15) state.result.code = 'rp_go_finished_med2';
+		else if (state.session.score_overall>10) state.result.code = 'rp_go_finished_bad1';
+		else  state.result.code = 'rp_go_finished_bad2';
 		state.session.game_over = true;
+
 	}
 
 	else if (

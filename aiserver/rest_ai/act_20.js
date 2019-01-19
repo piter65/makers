@@ -45,7 +45,7 @@ exports.process = function(state)
 	}
 
 	else if (f.hasAll(state.result.tokens, /* 'e_wtype' , */ 'e_meatclass')
-		&& one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
+		&& state.session.one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
 	{
 			state.result.code = 'rp_20_i_like_sausage';  // 
 			state.session.score_understand++;
@@ -62,7 +62,7 @@ exports.process = function(state)
 	}
 
 	else if (f.hasAll(state.result.tokens, /* 'e_wtype', */'e_vegclass')
-			&& one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
+			&& state.session.one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
 	{
 			state.result.code = 'rp_20_i_like_mushroom';  // 
 			state.session.score_understand++;
@@ -79,7 +79,7 @@ exports.process = function(state)
 	{
 			state.result.code = 'rp_20_one_of_each';  // one of each
 			state.session.score_understand++;
-			one_meat_one_veggie_ctx=1;				// set the one meat one veggie context for next round...
+			state.session.one_meat_one_veggie_trig=1;				// set the one meat one veggie context for next round...
 	}
 	else if (f.hasAll(state.result.tokens,'e_meatclass','e_vegclass')
 								&&

@@ -2,6 +2,27 @@ var tests_origin =
 [
 	{input:" GLUTEN TEST CRAZY",reply:null},
 
+	{ input:"TEST  GLUTEN EARLY throughout order",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"thank you, we're glad you stopped into the Pizza Shop.",reply:"rp_10_welcome"},
+	{ input:"Before we get started, do you have any food restrictions we should know about?",reply:"rp_3_remember_gluten"},
+	{ input:"Hmm... couuld be anything.  Maybe we should be careful with toppings. What toppings do you think are safe?",reply:"rp_1_thank_you"},
+
+
+	{ input:"Do you have any food restrictions" ,reply:"rp_3_remember_gluten"},
+	{ input:"I'm sorry to hear that.",reply:"rp_1_thank_you"},
+	{ input:"Could it be gluten?",reply:"rp_3_gluten_uncle"},
+	{ input:"My unclue had that problem too.  We can do gluten free here.",reply:"rp_3_decided_nogluten"},
+	{ input:"Do you have any other food restrictions?",reply:"rp_1_asked_twice"},
+	{ input:"Ok, one gluten free slice coming up!",reply:"rp_10_offeredhelp"},
+
+
+	{ input:"Why not sausage and mushroom?",reply:"rp_20_decided_sam"},
+	{ input:"Great, one slice of sausage and mushroom coming right up.",reply:"rp_40_dont_forget"},
+
+	{ input:"Ok, one slice of gluten-filled sausage and mushroom coming up",reply:"rp_40_dont_forget"},
+	{ input:"Ok, one slice of chicken pizza coming up",reply:"rp_40_restate_order"},
+	{ input:"Ok, one slice of chicken anchovy special coming right up",reply:"rp_990_angry_leaving"},
 
 	{ input:"TEST NEWGAME AND GLUTEN EARLY IN WELCOME",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
@@ -297,6 +318,6 @@ var tests_origin =
 { input:"#glutenfree ",reply:"tokens"},
 { input:"#gluten-free",reply:"tokens"},
 { input:"#arizona pizza",reply:"tokens"},
-
+{ input:"#do you have any food allergies",reply:"tokens"},
 
 ]

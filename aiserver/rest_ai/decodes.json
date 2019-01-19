@@ -674,36 +674,29 @@
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_40_finished_good1":
+	,"rp_go_finished_good1":
 	{
 		"text":
-			"Perfect.  I have to say I'm very pleased with the service here at Paizanos! See you next time!"
+			"Perfect.  I have to say I'm very pleased with the service here! See you next time!"
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 
-	,"rp_40_finished":
+	,"rp_go_finished_good2":
 	{
 		"text":
 			"That's perfect.  You've been so helpful! I'm going to write a great review on Yelp. See you soon!"
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_40_finished_good2":
-	{
-		"text":
-			"That's perfect.  You've been so helpful! I'm going to write a great review on Yelp. See you soon!"
-	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-	,"rp_40_finished_med1":
+	,"rp_go_finished_med1":
 	{
 		"text":
 			"Thanks. I felt a bit awkward, but I'm glad we got it sorted all out."
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_40_finished_med2":
+	,"rp_go_finished_med2":
 	{
 		"text":
 			"Thanks. It was a little rough, but I'm glad we worked it out."
@@ -712,14 +705,14 @@
 
 
 
-	,"rp_40_finished_bad1":
+	,"rp_go_finished_bad1":
 	{
 		"text":
 "Finally.  I'd come back next week to see if the health department shut you down.  On second thought, I'm never coming back."
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_40_finished_bad2":
+	,"rp_go_finished_bad2":
 	{
 		"text":
 "About time.  You can tell your manager to look for my ultra negative review on Yelp. Goodbye!"
@@ -727,21 +720,21 @@
 
 }
 
-,"rp_40_finished_bad3":
+,"rp_go_finished_bad3":
 {
 	"text":
 "Now? Now you get a slice ready? Your customer service was disasterous. You can see yourself on my Instagram page - the worst pizza salesperson in history. SMILE!"
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 
 }
-,"rp_40_finished_bad4":
+,"rp_go_finished_bad4":
 {
 	"text":
 "Um, thank you I guess. I mean seriously, all you had to do was to sell me a slice. How can that be so hard? Isn't that what you do all day long? I truly hope the pizza is way better than your service."
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 
 }
-,"rp_40_finished_bad5":
+,"rp_go_finished_bad5":
 {
 	"text":
 "Now I know why I haven't had pizza in such a long time - because of incompetent people like you. I mean, all I wanted to do was order a slice. Next time I'm getting frozen."

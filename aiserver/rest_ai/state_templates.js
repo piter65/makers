@@ -27,6 +27,7 @@ exports.session_defaults =
 	score_listen:5,
 	score_understand:5,
 	score_empathy:5,
+	score_overall:0,
 
 
 
