@@ -193,7 +193,7 @@
 
 	," wtype of toppings ":" wtype toppings "
 	," wtype of ":" wtype toppings "
-	," wtype toppings ":" wtype toppings"
+	," wtype toppings ":" wtype toppings "
 
 	," we can put toppings on ":" wtype toppings "
 	," toppings on ":" wtype toppings "

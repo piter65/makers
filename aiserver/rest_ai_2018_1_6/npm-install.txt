@@ -1,4 +1,0 @@
-npm install express
-npm install path
-npm install compromise
-EXIT

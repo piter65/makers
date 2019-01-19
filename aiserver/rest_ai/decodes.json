@@ -62,6 +62,13 @@
 ,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
 	}
 
+	,"rp_2_restate_one_and_one":
+	{
+		"text": "I’d like one meat, one veggie, and I don’t want a drink."
+		,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
+	}
+
+
 	,"rp_3_remember_gluten":
 	{
 		"text":
@@ -252,7 +259,7 @@
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_20_decided_mushrooms":
+	,"rp_20_decided_mushroom":
 	{
 		"text":
 			"addon-Mushrooms sound good. What meat do you suggest I get with them?"
@@ -562,6 +569,12 @@
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
 	}
 
+	,"rp_22_veg_hintb":
+	{
+		"text": "What veggie goes best with sausage?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
 	,"rp_22_veg_giveup":
 	{
 		"text": "Awe, I give up.  Just get me sausage and mushroom."
@@ -594,6 +607,13 @@
 		"text": "I don't know, that's not doing it.  What goes better with mushrooms?"
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
 	}
+
+	,"rp_24_meat_hintb":
+	{
+		"text": "Whats a good meat to match with mushrooms?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
 
 	,"rp_24_meat_giveup":
 	{
@@ -776,9 +796,8 @@
 	}
 	,"rp_990_complimented_too_much":
 	{
-		"text":
-			"Enough about me. Can we get on with my pizza?"
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"text":	"Enough about me. Are you gonna take my order or something?"
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_insulted":

@@ -12,7 +12,7 @@ exports.process = function(state)
 
 	if ( state.result.tokens.includes( 'i_offerhelp') 
 					||
-		(f.hasAny(state.result.tokens, 'i_prefer','i_desire')
+		(f.hasAny(state.result.tokens, 'i_prefer','i_desire','i_suggest')
 					&&		
 			f.hasAny(state.result.tokens, 'e_slice','e_wtype','e_topping'))
 		)

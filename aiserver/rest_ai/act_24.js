@@ -20,9 +20,11 @@ exports.process = function(state)
 
 		state.result.choice_done = true;
 	}
-	else if (f.includesAll(state.result.tokens, 'e_wtype','e_meatclass')
+	else if (	f.hasAll(state.result.tokens,'e_meatclass')
 							&&
-			f.includesAny(state.result.tokens, 'i_prefer','i_desire') )
+			f.hasAny(state.result.tokens, 'i_prefer','i_desire','i_suggest') 
+			)
+
 	{
 			state.result.code = 'rp_20_i_prefer_sausage';  // 
 			state.session.score_understand++;
@@ -84,13 +86,8 @@ exports.process = function(state)
 	}
 
 	else
-	if (state.result.tokens.includes('e_meat') 
-			||
-	f.hasAll(state.result.tokens, 'e_what','e_meatclass') 			// what meat?	
-			||
-	f.hasAll(state.result.tokens, 'e_wtype','e_meatclass') )			// what meat?	
+	if (state.result.tokens.includes('e_meat') )		
 	{
-
 		if (state.session.meat_tries<2)
 		{
 			state.result.code = 'rp_24_meat_hint';
@@ -102,7 +99,22 @@ exports.process = function(state)
 		}
 		state.session.meat_tries++;
 	}
-
+	else if (
+		f.hasAll(state.result.tokens, 'e_what','e_meatclass') 			// what meat?	
+				||
+		f.hasAll(state.result.tokens, 'e_wtype','e_meatclass') )			// what meat?	
+	{
+		if (state.session.meat_tries<2)
+		{
+			state.result.code = 'rp_24_meat_hintb';
+		}
+		else 
+		{
+			state.result.code = 'rp_24_meat_giveup';
+			state.session.act = 30;  // move on!
+		}
+		state.session.meat_tries++;
+	}
 
 	logger.log('ACT 24 - processed');
 };

@@ -29,6 +29,15 @@ exports.process = function(state)
 		if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 	}
 	
+	else if (f.hasAll(state.result.tokens,'e_meatclass','e_vegclass')
+								&&
+			f.hasAny(state.result.tokens, 'i_prefer','e_desire','i_suggest') )
+	{
+		state.result.code = 'rp_20_one_of_each';  // you actually sorta care!
+		state.session.score_understand+=1;
+	}
+
+
 	else if (   state.result.tokens.includes('i_offerhelp')		)
 	{
 		state.result.code = 'rp_20_asked_twice_annoyed';  // Um.   yeah...
@@ -47,6 +56,8 @@ exports.process = function(state)
 	else if (f.hasAll(state.result.tokens, 'e_wtype' , 'e_meatclass')
 								||
 			f.hasAll(state.result.tokens, 'e_what','e_meatclass')
+								||
+			f.hasAll(state.result.tokens, 'i_suggest','e_meatclass')
 		)
 //		&& state.session.one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
 	{
@@ -67,6 +78,8 @@ exports.process = function(state)
 	else if (f.hasAll(state.result.tokens, 'e_wtype','e_vegclass')
 								||
 			f.hasAll(state.result.tokens, 'e_what','e_vegclass')
+								||
+			f.hasAll(state.result.tokens, 'i_suggest','e_vegclass')	  // how about veggies?						
 		)
 
 //			&& state.session.one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
@@ -81,13 +94,7 @@ exports.process = function(state)
 			state.session.score_understand++;
 			state.session.one_meat_one_veggie_trig=1;				// set the one meat one veggie context for next round...
 	}
-	else if (f.hasAll(state.result.tokens,'e_meatclass','e_vegclass')
-								&&
-			f.hasAny(state.result.tokens, 'i_prefer','e_desire') )
-	{
-		state.result.code = 'rp_20_one_of_each';  // you actually sorta care!
-		state.session.score_understand+=1;
-	}
+
 
 	else if (f.hasAny(state.result.tokens,'e_wtype','e_what')
 								&&
@@ -124,7 +131,7 @@ exports.process = function(state)
 	}
 	else if (   state.result.tokens.includes('e_mushroom') )
 	{
-		state.result.code = 'rp_20_decided_mushrooms'; // 'Mushrooms sound good. what next?
+		state.result.code = 'rp_20_decided_mushroom'; // 'Mushrooms sound good. what next?
 		state.session.act = 24;  // move on!
 	}
 

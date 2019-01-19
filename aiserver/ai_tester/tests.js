@@ -1,10 +1,62 @@
 var tests_origin =
 [
-	{input:" GLUTEN TEST CRAZY",reply:null},
+
+	{ input:"bug 20  Jan 19 - fixed - response hints at order",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"you look cool?",reply:"rp_990_complimented"},
+	{ input:"I like urban?",reply:"rp_10_first_time"},
+	{ input:"you look cool?",reply:"rp_990_complimented"},
+	{ input:"youre a snappy dresser.",reply:"rp_990_complimented_too_much"},
+
+
+	{ input:"bug 25  Jan 19 - fixed",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"what toppings would you like?",reply:"rp_10_offeredhelp"},
+	{ input:"what kind of veggies do you like?",reply:"rp_20_i_prefer_mushroom"},
+	{ input:"and you'd like some meat with that?",reply:"rp_20_i_prefer_sausage"},
+
+
+
+	{ input:"bug 31  Jan 19 - fixed ",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"what toppings do you like?",reply:"rp_10_offeredhelp"},
+	{ input:"what type of veggies do you like?",reply:"rp_20_i_prefer_mushroom"},
+	{ input:"what type of meat do you want?",reply:"rp_20_i_prefer_sausage"},
+
+	{ input:"bug 32  Jan 19 - fixed ",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"how can I help you?",reply:"rp_10_offeredhelp"},
+	{ input:"we have gluten free pizza?",reply:"rp_3_decided_nogluten"},
+	{ input:"would you like mushrooms on it?",reply:"rp_20_decided_mushroom"},
+
+	{ input:"one of each bug -open- should not repeat  Jan 19",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"how can I help you?",reply:"rp_10_offeredhelp"},
+	{ input:"what toppings do you prefer?",reply:"rp_20_i_like_sausage"},
+	{ input:"what toppings do you prefer?",reply:"rp_20_i_prefer_mushroom"},
+	{ input:"what toppings do you prefer?",reply:"rp_20_i_prefer_mushroom"},
+
+
+	{ input:"bug 5/6 - fixed  Jan 19",reply:null},
+
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"how can I help you?",reply:"rp_10_offeredhelp"},
+	{ input:"how about some meat?",reply:"rp_20_i_like_sausage"},
+	{ input:"how about vegetable??",reply:"rp_20_i_prefer_mushroom"},
+
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"how can I help you?",reply:"rp_10_offeredhelp"},
+	{ input:"how about vegetable??",reply:"rp_20_i_like_mushroom"},
+	{ input:"how about some meat?",reply:"rp_20_i_prefer_sausage"},
+
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"how can I help you?",reply:"rp_10_offeredhelp"},
+	{ input:"how about meat and vegetable??",reply:"rp_20_one_of_each"},
+
 
 	{ input:"TEST  GLUTEN EARLY throughout order",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
-	{ input:"thank you, we're glad you stopped into the Pizza Shop.",reply:"rp_10_welcome"},
+	{ input:"thank you, we're glad you stopped into the Pizza Shop.",reply:"rp_10_greet"},
 	{ input:"Before we get started, do you have any food restrictions we should know about?",reply:"rp_3_remember_gluten"},
 	{ input:"Hmm... couuld be anything.  Maybe we should be careful with toppings. What toppings do you think are safe?",reply:"rp_1_thank_you"},
 
@@ -171,12 +223,12 @@ var tests_origin =
 
 	{ input:"TEST NEWGAME WAYS TO ASK WHAT SHE LIKES",reply:null},
  	{ input:"newgame",reply:"rp_5_intro"	}, { input:"c1",reply:"rp_10_offeredhelp"  },
-	{ input:"do you like meat or vegetables" ,reply:"rp_20_carno_prefer" },
+	{ input:"do you like meat or vegetables" ,reply:"rp_20_one_of_each" },
 
 
 	{ input:"TEST NEWGAME WAYS TO ASK WHAT SHE LIKES",reply:null},
  	{ input:"newgame",reply:"rp_5_intro"	}, { input:"c1",reply:"rp_10_offeredhelp"  },
-	{input:"we can put any toppings on, so do you have a preference",reply:"rp_20_pizza_prefer"},
+	{ input:"we can put any toppings on, so do you have a preference",reply:"rp_20_considering_topping"},
 
 	{ input:"TEST NEWGAME NOT SURE WHAT TOO QUICKLY",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
@@ -322,7 +374,10 @@ var tests_origin =
 { input:"#any other restrictions",reply:"tokens"},
 { input:"#are you ok with flour",reply:"tokens"},
 { input:"#the pizza shop",reply:"tokens"},
-
+{ input:"#how about some meat",reply:"tokens"},
+{ input:"#how about some veggie",reply:"tokens"},
+{ input:"#why not try some veggetables",reply:"tokens"},
+{ input:"#what type of toppings",reply:"tokens"},
 
 
 ]

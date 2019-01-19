@@ -21,7 +21,7 @@ exports.process = function(state)
 	}
 	else if (f.hasAll(state.result.tokens,'e_vegclass')
 							&&
-			f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
+			f.hasAny(state.result.tokens, 'i_prefer','i_desire','i_suggest') )
 	{
 			state.result.code = 'rp_20_i_prefer_mushroom';  // 
 			state.session.score_understand++;
@@ -30,7 +30,7 @@ exports.process = function(state)
 	}
 	else if (f.hasAll(state.result.tokens, 'e_meatclass')
 							&&
-			f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
+			f.hasAny(state.result.tokens, 'i_prefer','i_desire','i_suggest') )
 	{
 			state.result.code = 'rp_22_frustrated';  // I' already told you';  // 
 			state.session.score_understand--;
@@ -78,12 +78,7 @@ exports.process = function(state)
 		state.session.score_listen--;
 	}
 	else 
-	if (state.result.tokens.includes('e_veggie') 
-			||
-		f.hasAll(state.result.tokens, 'e_what','e_vegclass')			// what veggie?
-			||
-		f.hasAll(state.result.tokens, 'e_wtype','e_vegclass')			// what veggie?
-		)	
+	if (state.result.tokens.includes('e_veggie') )	
 	{
 		if (state.session.veg_tries<2)
 		{
@@ -97,6 +92,26 @@ exports.process = function(state)
 		}
 		state.session.veg_tries++;
 	}
+	
+	if ( f.hasAll(state.result.tokens, 'e_what','e_vegclass')			// what veggie?
+			||
+		f.hasAll(state.result.tokens, 'e_wtype','e_vegclass') )			// what veggie?	
+	{
+		if (state.session.veg_tries<2)
+		{
+			state.result.code = 'rp_22_veg_hintb';				// what type is best?
+		}
+		else 
+		{
+			state.result.code = 'rp_22_veg_giveup';
+			state.session.act = 30;  // move on!
+			state.result.choice_done = true;
+		}
+		state.session.veg_tries++;
+	}
+
+
+
 
 /*
 	else
