@@ -319,10 +319,5 @@ var tests_origin =
 { input:"#gluten-free",reply:"tokens"},
 { input:"#arizona pizza",reply:"tokens"},
 { input:"#do you have any food allergies",reply:"tokens"},
-{ input:"#any other restrictions",reply:"tokens"},
-{ input:"#are you ok with flour",reply:"tokens"},
-{ input:"#the pizza shop",reply:"tokens"},
-
-
 
 ]

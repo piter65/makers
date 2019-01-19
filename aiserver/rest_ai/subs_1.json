@@ -190,14 +190,13 @@
 	," what type ":" wtype "
 	," what style ":" wtype "
 	," what slice ":" wtype "
-	," what toppings ":" wtype "
 
-	," wtype of toppings ":" wtype "
-	," wtype of ":" wtype "
-	," wtype toppings ":" wtype "
+	," wtype of toppings ":" wtype toppings "
+	," wtype of ":" wtype toppings "
+	," wtype toppings ":" wtype toppings"
 
-	," we can put toppings on ":" wtype "
-	," toppings on ":" wtype "
+	," we can put toppings on ":" wtype toppings "
+	," toppings on ":" wtype toppings "
 
 	," what do you like":" wtype prefer"
 	," what do you prefer":" wtype prefer"
@@ -349,7 +348,8 @@
 	," thats not gonna happen here ":" ibrag "
 	," that will not happen here ":" ibrag "
 
-	," best slice in town ":" ibrag "
+	," home of best slice in town ":" slice shack ibrag "
+	," best slice in town ":" slice shack ibrag "
 
 
 	," do you think ":" you think "

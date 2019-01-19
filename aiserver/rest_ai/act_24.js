@@ -53,8 +53,6 @@ exports.process = function(state)
 
 	}
 
-
-
 	else if (f.hasAny(state.result.tokens, 'e_crap','e_dog','i_insult'))
 	{
 		state.result.code = 'rp_22_disgusted';  //'I dont like your sense of humour.  Good day.';
@@ -88,8 +86,9 @@ exports.process = function(state)
 	else
 	if (state.result.tokens.includes('e_meat') 
 			||
-	f.hasAll(state.result.tokens, 'e_what','e_meatclass') )			// what meat?		
-
+	f.hasAll(state.result.tokens, 'e_what','e_meatclass') 			// what meat?	
+			||
+	f.hasAll(state.result.tokens, 'e_wtype','e_meatclass') )			// what meat?	
 	{
 
 		if (state.session.meat_tries<2)
@@ -102,18 +101,8 @@ exports.process = function(state)
 			state.session.act = 30;  // move on!
 		}
 		state.session.meat_tries++;
-
-
 	}
 
 
-
-/*
-	else
-	{
-		act_990.process(state);
-	}
-
-*/
 	logger.log('ACT 24 - processed');
 };

@@ -36,7 +36,14 @@ exports.process = function(state)
 
 		else if (state.session.gluten_saga==2) 
 		{
-			if (f.hasAny(state.result.tokens, 'e_gluten'))	// look for gluten only
+			if (f.hasAny(state.result.tokens, 'e_gluten','i_why'))	// look for gluten only
+				{
+				state.result.code = 'rp_3_gluten_uncle';		// last time I got sick..
+				state.session.score_understand++;
+				state.session.gluten_saga=3;		// move it up
+				state.session.empathy_opportunity=true;   // looking for sorry
+				}
+			else if (f.hasAny(state.result.tokens, 'e_shock','e_empathy','e_nofun'))	// look for gluten only
 				{
 				state.result.code = 'rp_3_gluten_uncle';		// last time I got sick..
 				state.session.score_understand++;
@@ -49,18 +56,7 @@ exports.process = function(state)
 				state.result.code = 'rp_1_hmmm';		// last time I got sick..
 				}
 		}
-		else if (state.session.gluten_saga>4) 
-		{
-			if  (
-					(f.hasAny(state.result.tokens, 'i_dietary'))	// any dietary talk
-							&&
-					!state.result.tokens.includes( 'i_close')	)		
-				{
-				state.result.code = 'rp_1_asked_twice';		// last time I got sick..
-				state.session.score_listen--;
-				}
 
-		}
 
 	}}
 

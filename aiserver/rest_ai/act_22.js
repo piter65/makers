@@ -19,7 +19,7 @@ exports.process = function(state)
 
 		state.result.choice_done = true;
 	}
-	else if (f.hasAll(state.result.tokens, 'e_wtype','e_vegclass')
+	else if (f.hasAll(state.result.tokens,'e_vegclass')
 							&&
 			f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
@@ -28,7 +28,7 @@ exports.process = function(state)
 			state.session.act = 30;  // move on!
 			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 	}
-	else if (f.hasAll(state.result.tokens, 'e_wtype','e_meatclass')
+	else if (f.hasAll(state.result.tokens, 'e_meatclass')
 							&&
 			f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
@@ -81,6 +81,8 @@ exports.process = function(state)
 	if (state.result.tokens.includes('e_veggie') 
 			||
 		f.hasAll(state.result.tokens, 'e_what','e_vegclass')			// what veggie?
+			||
+		f.hasAll(state.result.tokens, 'e_wtype','e_vegclass')			// what veggie?
 		)	
 	{
 		if (state.session.veg_tries<2)

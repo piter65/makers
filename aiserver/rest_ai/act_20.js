@@ -44,8 +44,11 @@ exports.process = function(state)
 			state.session.act = 22;  // meat decided!  move on!	
 	}
 
-	else if (f.hasAll(state.result.tokens, /* 'e_wtype' , */ 'e_meatclass')
-		&& state.session.one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
+	else if (f.hasAll(state.result.tokens, 'e_wtype' , 'e_meatclass')
+								||
+			f.hasAll(state.result.tokens, 'e_what','e_meatclass')
+		)
+//		&& state.session.one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
 	{
 			state.result.code = 'rp_20_i_like_sausage';  // 
 			state.session.score_understand++;
@@ -61,20 +64,17 @@ exports.process = function(state)
 			state.session.act = 24;  // veggie decided!  move on!	
 	}
 
-	else if (f.hasAll(state.result.tokens, /* 'e_wtype', */'e_vegclass')
-			&& state.session.one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
+	else if (f.hasAll(state.result.tokens, 'e_wtype','e_vegclass')
+								||
+			f.hasAll(state.result.tokens, 'e_what','e_vegclass')
+		)
+
+//			&& state.session.one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
 	{
 			state.result.code = 'rp_20_i_like_mushroom';  // 
 			state.session.score_understand++;
 			state.session.act = 24;  // veggie decided!  move on!	
 	}
-
-
-
-
-
-
-
 	else if (f.hasAll(state.result.tokens, 'i_prefer','e_wtype'))
 	{
 			state.result.code = 'rp_20_one_of_each';  // one of each
@@ -89,14 +89,14 @@ exports.process = function(state)
 		state.session.score_understand+=1;
 	}
 
-/*    this was trouble.  People got it asking "would you like a slice", etc
-	if (   state.result.tokens.includes('e_slice')
-		&& state.result.tokens.includes('i_prefer')
-		)
+	else if (f.hasAny(state.result.tokens,'e_wtype','e_what')
+								&&
+			f.hasAny(state.result.tokens, 'e_topping') )
 	{
-		state.result.code = 'rp_20_prefer_or_want';  // you almost actually care!
+		state.result.code = 'rp_20_one_of_each';  // you actually sorta care!
+		state.session.score_understand+=1;
 	}
-*/
+
 	else if (f.hasAll(state.result.tokens,'e_vegclass')
 							&&
 		f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
@@ -163,6 +163,11 @@ exports.process = function(state)
 		state.session.act = 24;  // move on!
 	}
 */
+	else if (state.result.tokens.includes('e_drink'))
+	{
+		state.result.code = 'rp_20_no_drink_nice';    // was nodrink
+		state.session.score_listen--;
+	}
 
 	else if (state.result.tokens.includes('e_topping'))
 	{
@@ -223,11 +228,7 @@ exports.process = function(state)
 		state.result.code = 'rp_20_self_discovery'; // 'it has been a while, but lets see. How about sausage and a veggie?';
 		state.session.trust += 2;
 	}
-	else if (state.result.tokens.includes('e_drink'))
-	{
-		state.result.code = 'rp_20_no_drink_nice';    // was nodrink
-		state.session.score_listen--;
-	}
+
 	else if (state.result.tokens.includes('i_offerhelp'))
 	{
 		state.result.code = 'rp_20_order_please_twice_nice';    // was nodrink
