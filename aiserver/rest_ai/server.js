@@ -419,12 +419,13 @@ function process_ai(state)
 
 	if (state.session.game_over)
 	{
-
 			state.result.reply += '\nGAME OVER-\n';
 			state.result.reply += 'Executive Presence:'+state.session.score_exec+' ';
 			state.result.reply += 'Active Listening:'+state.session.score_listen+' ';
 			state.result.reply += 'Understanding:'+state.session.score_understand+' ';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+' ';
+			state.result.reply += 'Overall:'+state.session.score_overall+' ';
+
 			state.result.reply += '\n try "newgame myname" to play again\n';		
 	}
 
