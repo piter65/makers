@@ -1,6 +1,9 @@
 - Set AI server endpoint in 'config.js'.
 
-- Add new tests to 'tests.js'.
+- Set test set in 'config.js'.
+
+
+- Add new tests to 'tests_peter.js' or 'tests_jeff.js'.
 	- Tests with 'reply:null' will act as comments and always succeed.
 
 - Open 'index.html' in browser to open tester.

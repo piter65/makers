@@ -7,7 +7,8 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="./config.js"></script>
-<script type="text/javascript" src="./tests.js"></script>
+<script type="text/javascript" src="./tests_peter.js"></script>
+<script type="text/javascript" src="./tests_jeff.js"></script>
 <script type="text/javascript">
 
 var mute = true;
@@ -33,7 +34,7 @@ function run_tests()
 	set_error(null);
 
 	// Copy the tests into a separate list.
-	tests = JSON.parse(JSON.stringify(tests_origin));
+	tests = JSON.parse(JSON.stringify(test_sets[config.test_set]));
 	count_tests = 0;
 
 	get_session_id(send_test_to_ai);
