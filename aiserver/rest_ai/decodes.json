@@ -14,14 +14,14 @@
 	{
 		"text":
 			"addon-Didn't we already talk about this?"
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":1000,"duration":1000}]
+		,"animations":[{"face":"f_angry","body":"b_idle","delay":1000,"duration":1000}]
 	}
 
 	,"rp_1_hmmm":
 	{
 		"text":
 			"addon-hmmmmmm?"
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_1_can_we_continue":
@@ -59,6 +59,12 @@
 	,"rp_1_not_listening":
 	{
 		"text": "addon-Are you listening?"
+,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
+	}
+
+	,"rp_1_not_get_your_point":
+	{
+		"text": "addon-I'm not certain I get your point.  Could you be more clear?"
 ,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
 	}
 
@@ -135,7 +141,7 @@
 	,"rp_10_store_compliment":
 	{
 		"text":
-			"Yes, this place looks great, and I love the name PieZanos."
+			"Yes, this place looks great, and I love the name Pizza Place."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -176,8 +182,8 @@
 	,"rp_10_impatient":
 	{
 		"text":
-			"Hello? Are you taking my order?"
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+			"Hello? Are you going to take my order?"
+,"animations":[{"face":"f_bored","body":"b_idle","delay":0,"duration":0}]
 	}
 	,"rp_10_fed_up":
 	{
@@ -187,7 +193,7 @@
 		[
 			{
 				 "face":"f_angry"
-				,"body":"b_idle"
+				,"body":"b_angry"
 				,"delay":0
 				,"duration":0
 			}
@@ -320,7 +326,7 @@
 	}
 
 
-	,"rp_20_prefer_or_want":
+	,"rp_20_prefer_or_want_elim":
 	{
 		"text": "You mean what pizza I want today?  Or what I've had in the past?"
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
@@ -763,6 +769,15 @@
 
 
 	}
+
+	,"rp_40_no_drink":
+	{
+		"text": "I've already said that I don't want a drink.  Please read back the order to me."
+	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
 	,"rp_40_dont_forget":
 	{
 		"text": "Don't forget gluten free.  Please write that down and read it all back to me."

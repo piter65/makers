@@ -56,6 +56,28 @@ exports.process = function(state)
 				state.result.code = 'rp_1_hmmm';		// last time I got sick..
 				}
 		}
+		else if (state.session.gluten_saga==3)		// the info is there 
+		{
+			 if (f.hasAny(state.result.tokens, 'i_dietary', 'e_sick'))	// look for gluten only
+				{
+				state.result.code = 'rp_30_pizza_bad_idea';		// last time I got sick..
+				state.session.game_over = true;
+				state.session.score_exec--;
+				state.session.score_listen=0;
+				state.session.score_understand-=2;		
+				}
+			
+		}	
+		else if ( state.session.gluten_saga>4)		// gluten saga solved...
+		{
+			if (   state.result.tokens.includes('i_dietary')
+				 		&&
+			 	!f.hasAny(state.result.tokens, 'e_nogluten','e_slice')	)
+			{
+				state.result.code = 'rp_1_asked_twice'; // state"A no gluten option?Lets do that! "
+				state.session.score_listen--;
+			}
+		}
 
 
 	}}
@@ -87,6 +109,10 @@ exports.process = function(state)
 				state.session.score_exec++;
 			}
 		}
+
+
+
+
 	}}
 
 

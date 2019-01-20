@@ -35,7 +35,7 @@ exports.process = function(state)
 	}
 	else if (state.result.tokens.includes('e_drink'))
 	{
-		state.result.code = 'rp_20_no_drink';
+		state.result.code = 'rp_40_no_drink';
 		state.session.score_listen--;
 		state.session.score_exec--;
 		state.session.count_write++;

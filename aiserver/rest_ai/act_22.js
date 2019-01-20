@@ -93,7 +93,7 @@ exports.process = function(state)
 		state.session.veg_tries++;
 	}
 	
-	if ( f.hasAll(state.result.tokens, 'e_what','e_vegclass')			// what veggie?
+	else if ( f.hasAll(state.result.tokens, 'e_what','e_vegclass')			// what veggie?
 			||
 		f.hasAll(state.result.tokens, 'e_wtype','e_vegclass') )			// what veggie?	
 	{

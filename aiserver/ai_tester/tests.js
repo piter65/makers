@@ -1,6 +1,63 @@
 var tests_origin =
 [
 
+	{ input:"bug 43  Jan 19 - response hints at order",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"order please",reply:"rp_10_offeredhelp"},
+	{ input:"what toppings would you like on it",reply:"rp_20_one_of_each"},
+	{ input:"ok what kind of meat do you prefer?",reply:"rp_20_i_prefer_sausage"},
+	{ input:"ok great and what kind of veggie",reply:"rp_22_veg_hintb"},
+	{ input:"ok great and what kind of veggie",reply:"rp_22_veg_hintb"},
+	{ input:"ok great and what kind of veggie",reply:"rp_22_veg_hintb"},
+
+	{ input:"bug 43 - test bed 2.,  Jan 19 - response hints at order",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"order please",reply:"rp_10_offeredhelp"},
+	{ input:"what toppings would you like on it",reply:"rp_20_one_of_each"},
+	{ input:"ok what kind of meat do you prefer?",reply:"rp_20_i_prefer_sausage"},
+	{ input:"ok great and what kind of veggie",reply:"rp_22_veg_hintb"},
+	{ input:"ok great and what kind of veggie",reply:"rp_22_veg_hintb"},
+	{ input:"tomato",reply:"rp_22_veg_hintb"},
+
+
+	{ input:"bug 41  Jan 19 - response hints at order",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"order please",reply:"rp_10_offeredhelp"},
+	{ input:"sausage and mushroom",reply:"rp_20_decided_sam"},
+	{ input:"ok, I'll write that up.",reply:"rp_3_remember_gluten"},
+	{ input:"sorry to hear that.",reply:"rp_3_gluten_uncle"},
+	{ input:"we have gluten free options.",reply:"rp_3_decided_nogluten"},
+	{ input:"great, would you like a drink?",reply:"rp_40_no_drink"},
+	{ input:"ok one sausage and one mushroom coming up",reply:"rp_40_dont_forget"},
+	{ input:"ok one sausage, mushroom on gluten-free crust",reply:"rp_go_finished_med1"},
+
+	{ input:"bug p03 - more gluten gymnastics  Jan 19 ",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"do you have dietary restrictions?",reply:"rp_3_remember_gluten"},
+	{ input:"Could be gluten.  We offer gluten free options.",reply:"rp_3_decided_nogluten"},
+	{ input:"do you have dietary restrictions?",reply:"rp_1_asked_twice"},
+	{ input:"you look like you might be diabetic?",reply:"rp_1_asked_twice"},
+	{ input:"you look like you need food restrictions?",reply:"rp_1_asked_twice"},
+	{ input:"are you possibly low on sugar?",reply:"rp_1_asked_twice"},
+	{ input:"do you suffer from hypertension?",reply:"rp_1_asked_twice"},
+	{ input:"I got it, you got a gluten allergy!",reply:"rp_1_asked_twice"},
+	{ input:"One gluten-free slice coming up!",reply:"rp_1_asked_twice"},
+
+
+
+	{ input:"bug p01 - not closing gluten order  Jan 19 ",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"do you have dietary restrictions?",reply:"rp_3_remember_gluten"},
+	{ input:"do you have any other dietary restrictions?",reply:"rp_1_hmmm"},
+	{ input:"You probably had a diabetic reaction to the grease.",reply:"rp_1_hmmm"},
+
+	{ input:"bug p02 - not closing gluten order  Jan 19 ",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"do you have dietary restrictions?",reply:"rp_3_remember_gluten"},
+	{ input:"Oh my, that's terrible.  I'm an so sorry.",reply:"rp_3_gluten_uncle"},
+	{ input:"do you have any other dietary restrictions?",reply:"rp_30_pizza_bad_idea"},
+
+
 	{ input:"bug 20  Jan 19 - fixed - response hints at order",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
 	{ input:"you look cool?",reply:"rp_990_complimented"},
@@ -378,6 +435,7 @@ var tests_origin =
 { input:"#how about some veggie",reply:"tokens"},
 { input:"#why not try some veggetables",reply:"tokens"},
 { input:"#what type of toppings",reply:"tokens"},
+{ input:"#You probably had a diabetic reaction to the grease.",reply:"tokens"},
 
 
 ]
