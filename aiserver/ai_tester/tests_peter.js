@@ -1,4 +1,4 @@
-var tests_origin =
+test_sets['tests_peter'] =
 [
 
 	{ input:"bug 43  Jan 19 - response hints at order",reply:null},
