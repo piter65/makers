@@ -86,7 +86,7 @@ exports.process = function(state)
 		}
 		else 
 		{
-			state.result.code = 'rp_2_giveup';
+			state.result.code = 'rp_2_giveup_sam';
 			state.session.act = 30;  // move on!
 			state.result.choice_done = true;
 		}
@@ -103,7 +103,7 @@ exports.process = function(state)
 		}
 		else 
 		{
-			state.result.code = 'rp_2_giveup';
+			state.result.code = 'rp_2_giveup_sam';
 			state.session.act = 30;  // move on!
 			state.result.choice_done = true;
 		}

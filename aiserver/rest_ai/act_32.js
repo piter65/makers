@@ -37,7 +37,7 @@ exports.process = function(state)
 	}
 	else if (f.includesAny(state.result.tokens,'i_nopizza','i_9sec','e_rude'))
 	{
-		state.result.code = 'rp_32_fed_up';     // "I guess this was a bad idea.  Thanks for your time."
+		state.result.code = 'rp_1_fed_up_b';     // "I guess this was a bad idea.  Thanks for your time."
 		state.session.score_empathy = 0;
 		state.session.score_exec -= 2;
 

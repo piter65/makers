@@ -1,11 +1,6 @@
 {
 
-"comment":"these are the approved anim names"
-
-    ,"vincent_body":"b_idle b_idle_slouch b_look b_look_slouch b_engage b_bored b_tap b_phone b_angry"
-    ,"vincent_body":"b_idle b_look b_engage b_bored b_tap b_phone b_angry"
-    ,"vincent_face":"f_neutr f_smile f_frown f_conf f_angry f_sad"
-
+"comment":"we need redos or originals of the first 175 lines or so..."
 
 	,"rp_1_asked_twice":
 	{
@@ -14,18 +9,26 @@
 		,"animations":[{"face":"f_angry","body":"b_idle","delay":1000,"duration":1000}]
 	}
 
+
 	,"rp_1_hmmm":
 	{
-		"direct":"read as a at least 2-3 sylables, between confusion and sneaky understanding"
+		"direct":"We got an ok. Re-read as a at least 2-3 sylables, between confusion and sneaky understanding"
 		,"text":"addon-hmmmmmm?"
 		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_1_can_we_continue":
+	,"rp_40_no_drink":
 	{
-		"direct":"generic let's continue"
-		,"text":"addon-Anyway, can we continue?"
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"add-on redo"
+		,"text": "I've already said that I don't want a drink.  Please read back the order to me."
+	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_40_dont_forget":
+	{
+		"direct":"redo- add-on WE REALLY NEED THIS!"
+		,"text":"Don't forget gluten free.  Please read the order back to me."
+	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_1_dont_know_you":
@@ -34,6 +37,7 @@
 		,"text":"addon-That's a little bit personal, don't you think?"
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
+
 
 	,"rp_1_thank_you":
 	{
@@ -44,25 +48,18 @@
 
 	,"rp_1_thank_you_sarcastic":
 	{
-		"direct":"A tired thank you, the compliment was insincere"
+		"direct":"A dis-interested thank you, the compliment was insincere"
 		,"text":"addon-Thank you"
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-
-	,"rp_1_yes":
-	{
-		"direct":"These are stage directions"
-		,"text":"addon-Yes."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
 	,"rp_1_no":
 	{
-		"direct":"These are stage directions"
-		,"text":"addon-no."
+		"direct":"we need. Should be neutral and 2 syl 'no'"
+		,"text":"addon- no."
 		,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
 	}
+
 
 	,"rp_1_not_listening":
 	{
@@ -71,75 +68,35 @@
 		,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
 	}
 
-	,"rp_1_not_get_your_point":
-	{
-		"direct":"These are stage directions"
-		,"text":"addon-I'm not certain I get your point.  Could you be more clear?"
-		,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
-	}
-
-	,"rp_1_fed_up":
-	{
-	"direct":"These are stage directions"
-	,"text":"I wont be visiting here again.  Good day."
-	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-	,"rp_1_fed_up_b":
-	{
-		"direct":"These are stage directions"
-		,"text":"I guess this was a bad idea.  Thanks for your time."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-
-	,"rp_2_restate_one_and_one":
-	{
-		"direct":"These are stage directions"
-		,"text":"I’d like one meat, one veggie, and I don’t want a drink."
-		,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
-	}
-	,"rp_2_giveup":
-	{
-		"direct":"These are stage directions"
-		,"text": "Awe, I give up.  Just get me sausage and mushroom."
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
 
 	,"rp_2_yes_sam":
 	{
-		"direct":"These are stage directions"
+		"direct":"redo-add-on- the important thing here is 'about right'"
 		,"text":"Yeah, thats about right. I'll have a slice of sausage and mushroom."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-
+	,"rp_2_sam_but_more":
+	{
+		"direct":"redo-add-on This needs doing.  please add."
+		,"text":"addon-Right idea, but a bit too much. How abou a slice with just sausage and mushroom."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
 
 
 
 	,"rp_3_remember_gluten":
 	{
-		"direct":"These are stage directions"
+		"direct":"'wait a minute' is the addition here.  thanks for redoing."
 		,"text": "Wait a minute, now that I think about it, last time I had pizza, I had a bad reaction. "
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
-	,"rp_3_gluten_uncle":
-	{
-		"direct":"These are stage directions"
-		,"text":"You know, my uncle had the same problem, it turned out he had a gluten allergy.  Come to think of it, maybe I do too?  Maybe I should just avoid pizza."
-		,"animations":[{"face":"f_sad","body":"b_idle","delay":0,"duration":0}]
-	}
 
-	,"rp_3_decided_nogluten":
-	{
-		"direct":"These are stage directions"
-		,"text":"A no gluten option?  That totallly works.  I'll get that."
-		,"animations": [{ "face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
+
 
 	,"rp_5_intro":
 	{
-		"direct":"These are stage directions"
+		"direct":"please redo, we've changed the text"
 		,"text": "Hi there.  I've been wondering about this place.  I figured this would be a nice place to try out. By the way, nice uniform you got there."
 		,"animations":
 		[
@@ -149,382 +106,42 @@
 		]
 	}
 
-	,"rp_10_welcome":
-	{
-		"direct":"These are stage directions"
-		,"text":"You are very welcome."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
 
-
-
-	,"rp_10_greet":
-	{
-		"direct":"These are stage directions"
-		,"text":"Hi! This place must be new.  Looks great."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-	,"rp_10_first_time":
-	{
-		"direct":"These are stage directions"
-		,"text": "This is the first time I've been here."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-	,"rp_10_customer_initiates":
-	{
-		"direct":"These are stage directions"
-		,"text":"So, I was thinking of getting a slice."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
 	,"rp_10_store_compliment":
 	{
-		"direct":"These are stage directions"
+		"direct":"needs redo.  new audio."
 		,"text":"Yes, this place looks great, and I love the name Pizza Place."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 
-	,"rp_10_insulted":
-	{
-		"direct":"These are stage directions"
-		,"text":"Seriously, I'm not sure I like this place or you."
-		,"animations":[{ "face":"f_frown","body":"b_idle","delay":0 ,"duration":0 }]
-	}
-	,"rp_10_rude":
-	{
-		"direct":"These are stage directions"
-		,"text":"Seriosuly, is that how you treat your customers?  Anyway, I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?"
-		,"animations":
-		[
-		{ "face":"f_frown","body":"b_angry","delay":2200,"duration":2200},
-		{ "face":"f_neutral","body":"b_idle","delay":0,"duration":0}
-		]
-	}
-	,"rp_10_offeredhelp":
-	{
-		"direct":"These are stage directions"
-		,"text":"I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?"
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-	,"rp_10_impatient":
-	{
-		"direct":"These are stage directions"
-		,"text":"Hello? Are you going to take my order?"
-		,"animations":[{"face":"f_bored","body":"b_idle","delay":0,"duration":0}]
-	}
-
-
-
-	,"rp_20_asked_twice_annoyed":
-	{
-		"direct":"These are stage directions"
-		,"text":
- "Like I said, I do not want a drink, I want a slice.  And I don't know about the toppings."
-		,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
-	}
-
-	,"rp_20_decided_sam":
-	{
-		"direct":"These are stage directions"
-		,"text":
-"Yeah, that sounds good. I'll have a slice of sausage and mushroom."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-	,"rp_20_sam_but_more":
-	{
-		"direct":"These are stage directions"
-		,"text":"addon-Right idea, but a bit too much. I'll have a slice of sausage and mushroom."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-	,"rp_20_decided_mushroom":
-	{
-		"direct":"These are stage directions"
-		,"text":"addon-Mushrooms sound good. What meat do you suggest I get with them?"
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-	,"rp_20_decided_sausage":
-	{
-		"direct":"These are stage directions"
-		,"text":"Sausage sounds perfect, but I want a veggie too.  Can you suggest a veggie?"
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-	,"rp_20_i_prefer_sausage":
-	{
-		"direct":"These are stage directions"
-		,"text": "addon-Thanks for asking, I like sausage."
-		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
 
 	,"rp_20_i_like_sausage":
 	{
 		"direct":"should be moderately positive, yeh, i like sausage."
-		,"text":"addon-I like sausage."
+		,"text":"redo addon-I like sausage."
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_20_i_like_mushroom":
 	{
 		"direct":"positive"
-		,"text": "addon-I like mushrooms."
+		,"text": "redi addon-I like mushrooms."
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_20_i_prefer_mushroom":
-	{
-		"direct":"These are stage directions"
-		,"text":"addon-Thanks for asking, I like mushrooms."
-		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-
-	,"rp_20_one_of_each":
-	{
-		"direct":"These are stage directions"
-		,"text":
- "Oh thank you for asking.  Actually, I just want a little of each, I'm thinking one meat, one veggie."
-		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-
-
-	,"rp_20_meat1":
-	{
-		"direct":"These are stage directions"
-		,"text":"Some meat sounds good.   Whats good here?"
-		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-	,"rp_20_decide_sausage_veg":
-	{
-		"direct":"These are stage directions"
-		,"text":
-"Some meat sounds good.  Maybe one meat, one veggie?  I got it.  Sausage and one veggie?  Any suggestion on the veggie?"
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-	,"rp_20_veg1":
-	{
-		"direct":"These are stage directions"
-		,"text":"Some veggie sounds good.   Any other vegetable good here?"
-		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-	,"rp_20_veg_uprefer":
-	{
-		"direct":"These are stage directions"
-		,"text":
- "Oh, thanks for asking.  Actually, I've always enjoyed mushrooms and .. well, some kind of meat."
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-	,"rp_20_meat_uprefer":
-	{
-		"direct":"These are stage directions"
-		,"text":
- "Oh, thanks for asking.  Actually, I've always enjoyed sausage and .. well, some kind of veggie."
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-	,"rp_20_decide_mushroom_meat":
-	{
-		"direct":"These are stage directions"
-		,"text":"addon:Oh, just make it mushrooms. Any suggestion on the meat?"
-		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-
-	,"rp_20_considering_topping":
-	{
-		"direct":"These are stage directions"
-		,"text":"Maybe just one meat and a veggie."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-	,"rp_20_considering_hawaiin":
-	{
-		"direct":"These are stage directions"
-		,"text":"Yech- way too sweet for me."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-	,"rp_20_considering_combo":
-	{
-		"direct":"These are stage directions"
-		,"text":"Too much stuff.  Something simpler."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-	,"rp_20_considering_silly":
-	{
-		"direct":"These are stage directions"
-		,"text":"Maybe you like that type of thing, but that's not for me."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-	,"rp_20_considering_fish":
-	{
-		"direct":"These are stage directions"
-		,"text":"Fish and pizza do not go together."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
 
 	,"rp_20_considering_bird":
 	{
-		"direct":"These are stage directions"
+		"direct":"plz redo"
 		,"text":"I don't care for poultry of any kind on my pizza"
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
-	,"rp_20_self_discovery":
-	{
-				"direct":"These are stage directions"
-		,"text":
-"You know, I do not usually eat pizza so it has been a while, but lets see. How about sausage and a veggie?"
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-	,"rp_20_dont_know_toppings":
-	{
-		"direct":"These are stage directions"
-		,"text":"I just don't know what toppings."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
-
-
-
-
-
-	,"rp_22_wrong_toppings":
-	{
-				"direct":"These are stage directions"
-		,"text":
-"Aren't you listening? I want sausage and a veggie."
-		,"animations":
-		[
-			{
-				 "face":"f_angry"
-				,"body":"b_idle"
-				,"delay":0
-				,"duration":0
-			}
-		]
-	}
-	,"rp_22_disgusted":
-	{
-				"direct":"These are stage directions"
-		,"text":
-"I can totally do without your sense of humour.  Bye."
-		,"animations":
-		[
-			{
-				 "face":"f_angry"
-				,"body":"b_idle"
-				,"delay":0
-				,"duration":0
-			}
-		]
-	}
-
-
-	,"rp_22_what_veg":
-	{
-		"direct":"These are stage directions"
-		,"text":"Oh, thanks for asking.  Actually, I've always enjoyed mushrooms and .. well, some kind of meat."
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-
-	,"rp_20_no_drink":
-	{
-		"direct":"These are stage directions"
-		,"text": "I've already said that I don't want a drink. Can you help me pick toppings?"
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-	,"rp_20_no_drink_nice":
-	{
-		"direct":"These are stage directions"
-		,"text":"Well, I don't really want a drink.  Can you help me pick toppings?"
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-	,"rp_20_no_drink_annoyed":
-	{
-		"direct":"These are stage directions"
-		,"text": "I can totally do without your sense of humour. I already said I don't want a drink.  Can you help me pick some toppings?"
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-	,"rp_20_order_please_twice":
-	{
-		"direct":"These are stage directions"
-		,"text":"I'm trying to figure that out. Can you help me pick toppings?"
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-
-	,"rp_20_order_please_twice_nice":
-	{
-		"direct":"These are stage directions"
-		,"text":"I'm trying to figure that out. Can you help me pick toppings?"
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-	,"rp_20_order_please_twice_annoyed":
-	{
-		"direct":"These are stage directions"
-		,"text":"I'm trying to figure that out. Can you help me pick toppings?"
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-	,"rp_24_what_veg":
-	{
-		"direct":"These are stage directions"
-		,"text":
- "Oh, thanks for asking.  Actually, I've always enjoyed mushrooms and .. well, some kind of meat."
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-	,"rp_22_frustrated":
-	{
-		"direct":"These are stage directions"
-		,"text": "I've already said I want sausage and one vegetable.Can you help me pick a vegetable?"
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-
-	,"rp_22_veg_hint":
-	{
-		"direct":"These are stage directions"
-		,"text":"I dunno, that doesn't sound good.  What goes better with sausage?"
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
+	
 	,"rp_22_veg_hintb":
 	{
 		"direct":"These are stage directions"
-		,"text":
- "What veggie goes best with sausage?"
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-	,"rp_22_impatient":
-	{
-		"direct":"These are stage directions"
-		,"text": "I am certain I want sausage.  Can you help me pick the veggie?"
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-	,"rp_24_impatient":
-	{
-				"direct":"These are stage directions"
-		,"text":
- "I definitely want mushroom.  Can you help me pick a meat?"
-		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
-	}
-
-
-	,"rp_24_meat_hint":
-	{
-		"direct":"These are stage directions"
-		,"text": "I don't know, that's not doing it.  What goes better with mushrooms?"
+		,"text": "What veggie goes best with sausage?"
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
 	}
 
@@ -536,12 +153,472 @@
 	}
 
 
+	,"rp_990_complimented_too_much":
+	{
+		"direct":"add-on,redo- want to push player to take order"
+		,"text":"Enough about me. Are you gonna take my order or something?"
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
+,"----------------- comment":"We need above redone."
+
+
+
+
+
+,"----------------- comment":"We've got versions of all below "
+
+,"----------------- comment":"I think we got something close enough, but in double check"
+	,"rp_1_not_get_your_point":
+	{
+		"direct":"We got something close in the not germanes"
+		,"text":"addon-I'm not certain I get your point.  Could you be more clear?"
+		,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
+	}
+
+
+
+	,"rp_1_can_we_continue":
+	{
+		"direct":"- We got this. generic let's continue"
+		,"text":"I'm not sure I'm following you, can we continue with my order?"
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_thanks":
+	{
+		"direct":"we got this"
+		,"text":"thanks"
+	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_yes":
+	{
+		"direct":"we got an ok take"
+		,"text":"addon-Yes."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_um_yeah":
+	{
+		"direct":"we got this"
+		,"text":"um, yeah, thanks."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_1_excuse_me":
+	{
+		"direct":"We got this"
+		,"text":"excuse me"
+		,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
+	}
+
+
+	,"rp_1_fed_up":
+	{
+	"direct":"we got this"
+	,"text":"I wont be visiting here again.  Good day."
+	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_fed_up_b":
+	{
+		"direct":"we got this"
+		,"text":"I guess this was a bad idea.  Thanks for your time."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_1_bad_humor":
+	{
+		"direct":"we got this"
+		,"text":"I can totally do without your sense of humor.  bye."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_2_thanks_omov":
+	{
+		"direct":"we got this"
+		,"text":"thanks for asking, I'd like one meat, and one veggie"
+		,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
+	}
+
+	,"rp_2_omov":
+	{
+		"direct":"we got this"
+		,"text":"I’d like one meat, one veggie, and I don’t want a drink."
+		,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
+	}
+	,"rp_2_giveup_sam":
+	{
+		"direct":"we got this"
+		,"text": "Ok, I'm like done.  Just get me sausage and mushroom."
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+	,"rp_2_giveup":
+	{
+		"direct":"we got this"
+		,"text": "Ok, I'm like done.  Just get me sausage and mushroom."
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+
+
+	,"rp_2_almost_sam":
+	{
+		"direct":"we got this"
+		,"text":"almost. I'll have a slice of sausage and mushroom."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_2_decided_sam":
+	{
+		"direct":"we got this"
+		,"text":"Yeah, that sounds good. I'll have a slice of sausage and mushroom."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
+
+	,"rp_3_pizza_bad_idea":
+	{
+		"direct":"We got this."
+		,"text":"I dunno.  Maybe pizza is not a great idea after all."
+		,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_3_gluten_uncle":
+	{
+		"direct":"We got this"
+		,"text":"You know, last time I had pizza I got totally sick. My uncle had the same problem, it turned out he had a gluten allergy.  Come to think of it, maybe I do too?  Maybe I should just avoid pizza."
+		,"animations":[{"face":"f_sad","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_3_decided_nogluten_early":
+	{
+		"direct":"we got this?"
+		,"text":"A no gluten option?  That totallly works.  What toppings can I get?."
+		,"animations": [{ "face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_3_decided_nogluten":
+	{
+		"direct":"We got this as rp_32_nogluten"
+		,"text":"A no gluten option?  That totallly works.  I'll get that."
+		,"animations": [{ "face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
+	,"rp_10_welcome":
+	{
+		"direct":"we got this"
+		,"text":"You are very welcome."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
+	,"rp_10_greet":
+	{
+		"direct":"we got this"
+		,"text":"Hi! This place must be new.  Looks great."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+	,"rp_10_first_time":
+	{
+		"direct":"we got this"
+		,"text": "This is the first time I've been here."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+	,"rp_10_customer_initiates":
+	{
+		"direct":"we got this, don't use it."
+		,"text":"So, I was thinking of getting a slice."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_10_insulted":
+	{
+		"direct":"we got this"
+		,"text":"Seriously, I'm not sure I like this place or you."
+		,"animations":[{ "face":"f_frown","body":"b_idle","delay":0 ,"duration":0 }]
+	}
+	,"rp_10_rude":
+	{
+		"direct":"we got this"
+		,"text":"Seriously, is that how you treat your customers?  Anyway, I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?"
+		,"animations":
+		[
+		{ "face":"f_frown","body":"b_angry","delay":2200,"duration":2200},
+		{ "face":"f_neutral","body":"b_idle","delay":0,"duration":0}
+		]
+	}
+	,"rp_10_offeredhelp":
+	{
+		"direct":"we got this"
+		,"text":"I'd like a slice with no drink, but I can't decide on the topping. What do you suggest?"
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+	,"rp_10_impatient":
+	{
+		"direct":"we got this"
+		,"text":"Hello? Are you taking my order?"
+		,"animations":[{"face":"f_bored","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
+	,"rp_20_asked_twice_annoyed":
+	{
+		"direct":"we got this"
+		,"text":
+ "Like I said, I do not want a drink, I want a slice.  And I don't know about the toppings."
+		,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
+	,"rp_20_decided_mushroom":
+	{
+		"direct":"we got this"
+		,"text":"Mushrooms sound good. What meat do you suggest I get with them?"
+,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+	,"rp_20_decided_sausage":
+	{
+		"direct":"we got this"
+		,"text":"Sausage sounds perfect, but I want a veggie too.  Can you suggest a veggie?"
+,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_20_i_prefer_sausage":
+	{
+		"direct":"we got this close enough"
+		,"text": "addon-Thanks for asking, I like sausage, and some kind of veggie"
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_20_i_prefer_mushroom":
+	{
+		"direct":"we got this"
+		,"text":"addon-Thanks for asking, I like mushrooms."
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_20_one_of_each":
+	{
+		"direct":"we got this"
+		,"text":
+ "Oh thank you for asking.  Actually, I just want a little of each, I'm thinking one meat, one veggie."
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_20_meat1":
+	{
+		"direct":"we got this"
+		,"text":"Some meat sounds good.   Whats good here?"
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_20_decide_sausage_veg":
+	{
+		"direct":"we got this "
+		,"text": "Some meat sounds good.  Maybe one meat, one veggie?  I got it.  Sausage and one veggie?  Any suggestion on the veggie?"
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_20_veg1":
+	{
+		"direct":"we got this"
+		,"text":"Some veggie sounds good.   Any other vegetable good here?"
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_20_veg_uprefer":
+	{
+		"direct":"we got this as i_prefer"
+		,"text":
+ "Oh, thanks for asking.  Actually, I've always enjoyed mushrooms and .. well, some kind of meat."
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+	,"rp_20_meat_uprefer":
+	{
+		"direct":"we got this as i_prefer"
+		,"text":
+ "Oh, thanks for asking.  Actually, I've always enjoyed sausage and .. well, some kind of veggie."
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+	,"rp_20_decide_mushroom_meat":
+	{
+		"direct":"we got this"
+		,"text":"A veggie sound good, but I want some meat.  I got it. Mushroom and one meat.  Any suggestion? "
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_20_considering_topping":
+	{
+		"direct":"we got this"
+		,"text":"Maybe just one meat and a veggie."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+	,"rp_20_considering_hawaiin":
+	{
+		"direct":"we got this"
+		,"text":"Yech- way too sweet for me."
+,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+	,"rp_20_considering_combo":
+	{
+		"direct":"We got this"
+		,"text":"Too much stuff.  Something simpler."
+,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+	,"rp_20_considering_silly":
+	{
+		"direct":"we got this"
+		,"text":"seriosusly no thanks."
+,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+	,"rp_20_considering_fish":
+	{
+		"direct":"we got this "
+		,"text":"Fish and pizza do not go together."
+,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_20_self_discovery":
+	{
+		"direct":"we got this"
+		,"text":
+"You know, I do not usually eat pizza so it has been a while, but lets see. How about sausage and a veggie?"
+,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_20_dont_know_toppings":
+	{
+		"direct":"we got this"
+		,"text":"I just don't know what toppings."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_22_wrong_toppings":
+	{
+		"direct":"we got this"
+		,"text": "Aren't you listening? I want sausage and a veggie."
+		,"animations":
+		[{"face":"f_angry","body":"b_idle","delay":0,"duration":0}]
+	}
+	,"rp_22_disgusted":
+	{
+		"direct":"we got this"
+		,"text":"I can totally do without your sense of humour.  Bye."
+		,"animations":
+		[{"face":"f_angry","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_22_what_veg":
+	{
+		"direct":"we got this"
+		,"text":"Oh, thanks for asking.  Actually, I've always enjoyed mushrooms and .. lets add some kind of meat."
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+
+	,"rp_20_no_drink":
+	{
+		"direct":"we got this in no_drink_annoyed"
+		,"text": "I've already said that I don't want a drink. Can you help me pick toppings?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+	,"rp_20_no_drink_nice":
+	{
+		"direct":"we got this"
+		,"text":"Well, I don't really want a drink.  Can you help me pick toppings?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+	,"rp_20_no_drink_annoyed":
+	{
+		"direct":"we got this"
+		,"text": "I can totally do without your sense of humour. I already said I don't want a drink.  Can you help me pick some toppings?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+	,"rp_20_order_please_twice":
+	{
+		"direct":"we got this"
+		,"text":"I'm trying to figure that out. Can you help me pick toppings?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+
+	,"rp_20_order_please_twice_nice":
+	{
+		"direct":"we got this"
+		,"text":"I'm trying to figure that out. Can you help me pick toppings?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+
+
+	,"rp_22_frustrated":
+	{
+		"direct":"we got this"
+		,"text": "I've already said I want sausage and one vegetable.Can you help me pick a vegetable?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+
+	,"rp_22_veg_hint":
+	{
+		"direct":"we got this"
+		,"text":"I dunno, that doesn't sound good.  What goes better with sausage?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+
+
+	,"rp_22_impatient":
+	{
+		"direct":"we got this"
+		,"text": "I definitely want sausage.  Can you help me pick the veggie?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+	,"rp_24_impatient":
+	{
+				"direct":"we got this"
+		,"text": "I definitely want mushroom.  Can you help me pick a meat?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+
+	,"rp_24_meat_hint":
+	{
+		"direct":"we got this"
+		,"text": "I don't know, that's not doing it.  What goes better with mushrooms?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
 
 
 
 	,"rp_24_frustrated_restate":
 	{
-		"direct":"These are stage directions"
+		"direct":"we got this"
 		,"text":"Really, I've already said I want mushroom and one meat. Can you help me pick a meat?"
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
 	}
@@ -549,78 +626,63 @@
 
 	,"rp_30_pizza_bad_idea":
 	{
-		"direct":"These are stage directions"
+		"direct":"we got this"
 		,"text":"I dunno.  Maybe pizza is not a great idea after all."
 		,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
 	}
-	,"rp_32_nogluten_undecided":
-	{
-		"direct":"These are stage directions"
-		,"text": "Ok, whatever, lets just finish up my order."
-		,"animations": [{ "face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
 
 
 
 
-,"---- comment":"We are only using 2 goods, 2 meds, and 2 bads.  not sure which"
+
+,"---- comment":"We are only using 2 goods, 2 meds, and 2 bads. "
 	,"rp_go_finished_good1":
 	{
-				"direct":"These are stage directions"
-		,"text":
-"Perfect.  I have to say I'm very pleased with the service here! See you next time!"
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"We got this"
+		,"text": "Perfect.  I am so ready for that slice.  This place is great.  I'll definitely be back!"
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 
 	,"rp_go_finished_good2":
 	{
-				"direct":"These are stage directions"
-		,"text":
-"That's perfect.  You've been so helpful! I'm going to write a great review on Yelp. See you soon!"
+		"direct":"we got this"
+		,"text":"That's perfect.  You've been so helpful! I'm going to write a great review on Yelp. See you soon!"
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_go_finished_med1":
 	{
-				"direct":"These are stage directions"
-		,"text":
-"Thanks. I felt a bit awkward, but I'm glad we got it sorted all out."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"We got this"
+		,"text": "Thanks. I felt a bit awkward, but I'm glad we figured it all out."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_go_finished_med2":
 	{
-				"direct":"These are stage directions"
-		,"text":
-"Thanks. It was a little rough, but I'm glad we worked it out."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"we got this"
+		,"text": "Thanks. This whole thing was a little sketchy, but I'm glad we worked it out."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
-
-
 
 	,"rp_go_finished_bad1":
 	{
-				"direct":"These are stage directions"
-		,"text":
-
-"Finally.  I'd come back next week to see if the health department shut you down.  On second thought, I'm never coming back."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"we got this"
+		,"text": "Ok, I never thought the slice could be this difficult.  You people seriously need to improve the service here."
+		,"animations":[{"face":"f_frown","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_go_finished_bad2":
 	{
-				"direct":"These are stage directions"
-		,"text":
-
-"About time.  You can tell your manager to look for my ultra negative review on Yelp. Goodbye!"
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"We got this"
+		,"text": "Ok, that was seriosuly painful.  I'll definitely be posting on Yelp. Goodbye."
+		,"animations":[{"face":"f_angry","body":"b_angry","delay":0,"duration":0}]
 
 }
 
 ,"rp_go_finished_bad3":
 {
-			"direct":"These are stage directions"
+			"direct":"drop it"
 		,"text":
 
 "Now? Now you get a slice ready? Your customer service was disasterous. You can see yourself on my Instagram page - the worst pizza salesperson in history. SMILE!"
@@ -629,7 +691,7 @@
 }
 ,"rp_go_finished_bad4":
 {
-			"direct":"These are stage directions"
+			"direct":"drop it"
 		,"text":
 
 "Um, thank you I guess. I mean seriously, all you had to do was to sell me a slice. How can that be so hard? Isn't that what you do all day long? I truly hope the pizza is way better than your service."
@@ -638,7 +700,7 @@
 }
 ,"rp_go_finished_bad5":
 {
-			"direct":"These are stage directions"
+			"direct":"drop it"
 		,"text":"Now I know why I haven't had pizza in such a long time - because of incompetent people like you. I mean, all I wanted to do was order a slice. Next time I'm getting frozen."
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 
@@ -646,107 +708,87 @@
 
 	}
 
-	,"rp_40_no_drink":
-	{
-		"direct":"These are stage directions"
-		,"text": "I've already said that I don't want a drink.  Please read back the order to me."
-	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
 
-
-
-	,"rp_40_dont_forget":
-	{
-		"direct":"These are stage directions"
-		,"text":"Don't forget gluten free.  Please read the order back to me."
-	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
 
 
 	,"rp_40_write_it":
 	{
-		"direct":"These are stage directions"
-		,"text":"Can you please repeat my order back to me?"
+		"direct":"we got this"
+		,"text":"Can you  repeat my order back to me?"
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_40_restate_order":
 	{
-		"direct":"These are stage directions"
-		,"text":"How hard can it be?  I want a gluten free slice of sausage and mushroom.  Can you please write it down and read it back to me?"
+		"direct":"we got this"
+		,"text":"How hard can this be?  I want a gluten free slice of sausage and mushroom.  Can you please read my order back to me?"
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 
 	,"rp_990_complimented":
 	{
-		"direct":"These are stage directions"
+		"direct":"we got this"
 		,"text":"Thanks. I got it at Urban."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
-	,"rp_990_complimented_too_much":
-	{
-		"direct":"These are stage directions"
-		,"text":"Enough about me. Are you gonna take my order or something?"
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
+
 
 	,"rp_990_insulted":
 	{
-		"direct":"These are stage directions"
+		"direct":"we got this"
 		,"text":"Excuse me?"
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_insulted_too_much":
 	{
-		"direct":"These are stage directions"
+		"direct":"we got this"
 		,"text":"I think I'll go somewhere else for lunch."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_angry_leaving":
 	{
-		"direct":"These are stage directions"
-		,"text":
- "Seriously, what is wrong with you?  I am never returning to this pizza place.  Good Day."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"we got this"
+		,"text": "Seriously?  I am definitely not coming back to this place.  Good Bye."
+        ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_cussed_out":
 	{
-	"direct":"These are stage directions"
-	,"text": "I'm leaving!"
+	"direct":"We got this"
+	,"text": "Really, I'm leaving."
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 
 	,"rp_999_wut":
 	{
-	"direct":"These are stage directions"
+	"direct":"we got this in a half dozen variations"
 	,"text":"addon-Would you mind rephrasing that for me?"
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_rude":
 	{
-	"direct":"These are stage directions"
-	,"text":"Um, I not quite comfortable with that."
+	"direct":"we got this"
+	,"text":"Ok, that's weird."
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 
 	,"rp_990_nonseq":
 	{
-	"direct":"These are stage directions"
-	,"text":"Ok, I really don't knwo what you're talking about there."
+	"direct":"We got this"
+	,"text":"Ok, I really don't know what you're talking about there."
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_regreeted":
 	{
-		"direct":"These are stage directions"
-		,"text":"Yeah, we've already met."
+		"direct":"We got this"
+		,"text":"Yeah, I know, thanks."
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -758,70 +800,64 @@
 
 	,"rp_990_smalltalk_sports":
 	{
-				"direct":"These are stage directions"
-		,"text":
- "I don't really follow sports."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"we got this"
+		,"text":"I don't really follow sports."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_smalltalk_weather":
 	{
-				"direct":"These are stage directions"
-		,"text":
- "Um, yeah, I guess so."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"we got this"
+		,"text":"Um, yeah, I guess so."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_smalltalk_any":
 	{
-				"direct":"These are stage directions"
-		,"text":
- "If you follow that type of thing."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"we got this"
+		,"text":"If you follow that type of thing."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_smalltalk_any2":
 	{
-				"direct":"These are stage directions"
-		,"text":
- "hmmm..."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"We got this"
+		,"text":"hmmm..."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_smalltalk_any3":
 	{
-	"direct":"These are stage directions"
-	,"text":
- 	"I'm sorry, I slipped into a daydream.  Where were we?"
+	"direct":"we got this"
+	,"text":"I'm sorry, I wasn't paying attention.  Where were we?"
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_too_many_words":
 	{
-	"direct":"These are stage directions"
-	,"text":"Could you repeat that and get to the point?"
+	"direct":"we got this"
+	,"text":"You totally lost me with all that.  Could you get to the point?"
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_990_hard_of_hearing":
 	{
 	"direct":"These are stage directions"
-	,"text":"Excuse me. I'm a little hard of hearing. Can you speak more slowly and clearly, please?"
+	,"text":"Excuse me. I've got water in my ear. Can you speak more slowly and clearly, please?"
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 
 ,"rp_990_stay_focused1":
 {
-			"direct":"These are stage directions"
-		,"text":
- "That’s very interesting. Can we continue with my order?"
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"These are stage directions"
+		,"text":"Cool. Can we continue with my order?"	
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 }
 
 ,"rp_990_stay_focused2":
 {
-			"direct":"These are stage directions"
+			"direct":"we got this"
 		,"text":
  "I’m not sure I’m following you, but can we continue with my order?"
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
@@ -829,31 +865,30 @@
 }
 ,"rp_990_stay_focused3":
 {
-		"direct":"These are stage directions"
+		"direct":"We got this"
 		,"text":"I’m actually in a bit of a hurry. Can we finish up my order?"
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 }
 
 ,"rp_990_what_talking_about1":
 {
-		"direct":"These are stage directions"
+		"direct":"we got this"
 		,"text":"I’m sorry. I didn’t catch that.  What did you say?"
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 }
 
 ,"rp_990_what_talking_about2":
 {
-		"direct":"These are stage directions"
+		"direct":"we got this"
 		,"text":"I’m sorry, I was thinking about something else. What did you say?"
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 }
 
 ,"rp_990_what_talking_about3":
 {
-			"direct":"These are stage directions"
-		,"text":
- "I’m sorry. Come again?"
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+			"direct":"we got this"
+		,"text":"I’m sorry. Come again?"
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 }
 
 
@@ -898,7 +933,7 @@
 
 	,"rp_10_notgermane":
 	{
-				"direct":"These are stage directions"
+				"direct":"we got this"
 		,"text":
 "I have like no idea what you're talking about.  Are you going to take my order?"
 			,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
@@ -906,7 +941,7 @@
 
 	,"rp_10_notgermane_nice":
 	{
-				"direct":"These are stage directions"
+				"direct":"we got this"
 		,"text":
 "I'm not really following you, but are you going to take my order?"
 			,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
@@ -923,26 +958,23 @@
 
 ,"rp_20_notgermane":
 	{
-				"direct":"These are stage directions"
-		,"text":
-"Um, that's nice.  Now are we going to figure out my toppings?"
+				"direct":"got this= not german annoyed"
+		,"text":"Um, that's nice.  Now are we going to figure out my toppings?"
 			,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
 	}
 
 
 	,"rp_20_notgermane_nice":
 	{
-				"direct":"These are stage directions"
-		,"text":
-"Um, that's nice.  Now are we going to figure out my toppings?"
+				"direct":"got this."
+		,"text":"Um, that's nice.  Now are we going to figure out my toppings?"
 			,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_20_notgermane_annoyed":
 	{
 				"direct":"These are stage directions"
-		,"text":
-"Um, that's nice.  Now are we going to figure out my toppings?"
+		,"text":"Um, that's nice.  Now are we going to figure out my toppings?"
 			,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -988,9 +1020,8 @@
 
 	,"rp_20_gluten_disclose_elim":
 	{
-				"direct":"These are stage directions"
-		,"text":
-"You know, the last time I had pizza I felt horrible hours later.  My uncle had the same problem, it turned out he had a gluten allergy.  Come to think of it, maybe I do too?  Maybe I should just avoid pizza."
+		"direct":"We got this"
+		,"text": "You know, the last time I had pizza I got totally sick.  My uncle had the same problem, it turned out he had a gluten allergy.  Come to think of it, maybe I do too?  Maybe I should just avoid pizza."
 		,"animations":[{"face":"f_sad","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -1012,7 +1043,7 @@
 
 	,"rp_10_past_reaction_ELIM":
 	{
-		"direct":"These are stage directions"
+		"direct":"we got this"
 		,"text":"I got kinda sick last time I had pizza.  I'm not sure what happened, but today I saw your store, and I thought I'd give pizza another try."
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
@@ -1056,13 +1087,6 @@
 		,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_20_asked_twice_nice_elim":
-	{
-		"direct":"These are stage directions"
-		,"text":
- "Well, I want a slice.  And I don't know about the toppings."
-		,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
-	}
 
 	,"rp_20_decided_both_elim":
 	{
@@ -1075,7 +1099,7 @@
 
 	,"rp_20_prefer_or_want_elim":
 	{
-		"direct":"These are stage directions"
+		"direct":"we've got this"
 		,"text":
  "You mean what pizza I want today?  Or what I've had in the past?"
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
@@ -1089,22 +1113,13 @@
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_22_correct_nice":
+	,"rp_22_correct_nice_elim":
 	{
-				"direct":"These are stage directions"
+				"direct":"we got this"
 		,"text":
 "Yeah, thats about right. I'll have a slice of sausage and mushroom."
 ,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
-
-	,"rp_22_correct_annoyed":
-	{
-				"direct":"These are stage directions"
-		,"text":
-"Ok, fine. I'll have a slice of sausage and mushroom."
-	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
-
 
 	,"rp_24_correct":
 	{
@@ -1134,10 +1149,9 @@
 
 	,"rp_20_fed_up_elim":
 	{
-				"direct":"These are stage directions"
-		,"text":
- "I won't be visiting here again.  Good bye."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		"direct":"We got this as 990_fed_up"
+		,"text":"I won't be visiting here again.  Good bye."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 
@@ -1146,7 +1160,53 @@
 	{
 		"direct":"These are stage directions"
 		,"text":"I guess this was a bad idea.  Thanks for your time."
-,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
+
+
+	,"rp_20_order_please_twice_annoyed_elim":
+	{
+		"direct":"we got this"
+		,"text":"ok, chill, can you help me figure out my toppings?"
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+	,"rp_22_correct_annoyed_elim":
+	{
+				"direct":"we got this"
+		,"text":
+"Ok, fine. I'll have a slice of sausage and mushroom."
+	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
+	,"rp_24_what_veg_elim":
+	{
+		"direct":"we got this. not sure we need this in 24"
+		,"text":
+ "Oh, thanks for asking.  Actually, I've always enjoyed mushrooms and .. well, some kind of meat."
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+
+
+
+	,"rp_32_nogluten_undecided_elim":
+	{
+		"direct":"These are stage directions"
+		,"text": "Ok, whatever, lets just finish up my order."
+		,"animations": [{ "face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
+
+,"--- comment":"these are the approved anim names"
+
+    ,"vincent_body":"b_idle b_idle_slouch b_look b_look_slouch b_engage b_bored b_tap b_phone b_angry"
+    ,"vincent_body":"b_idle b_look b_engage b_bored b_tap b_phone b_angry"
+    ,"vincent_face":"f_neutr f_smile f_frown f_conf f_angry f_sad"
+
 
 }

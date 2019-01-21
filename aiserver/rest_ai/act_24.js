@@ -94,7 +94,7 @@ exports.process = function(state)
 		}
 		else 
 		{
-			state.result.code = 'rp_2_giveup';
+			state.result.code = 'rp_2_giveup_sam';
 			state.session.act = 30;  // move on!
 		}
 		state.session.meat_tries++;
@@ -110,7 +110,7 @@ exports.process = function(state)
 		}
 		else 
 		{
-			state.result.code = 'rp_2_giveup';
+			state.result.code = 'rp_2_giveup_sam';
 			state.session.act = 30;  // move on!
 		}
 		state.session.meat_tries++;

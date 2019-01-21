@@ -17,14 +17,14 @@ exports.process = function(state)
 	else if (f.hasAll(state.result.tokens, 'e_mushroom','e_sausage')
 		&& (state.result.count_entities<3)   )// the only toppings were sausage and mushroom
 	{
-		state.result.code = 'rp_20_decided_sam';  //'Yeah, . Ill have sausage and mushroom';
+		state.result.code = 'rp_2_decided_sam';  //'Yeah, . Ill have sausage and mushroom';
 		state.session.act = 30;  // move on!
 		if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 	}
 	else if (f.hasAll(state.result.tokens, 'e_mushroom','e_sausage')
 		&& (state.result.count_entities>2)  ) // Manytoppings including sausage and mushroom
 	{
-		state.result.code = 'rp_20_sam_but_more';  //'a bit too much . Ill have sausage and mushroom';
+		state.result.code = 'rp_2_sam_but_more';  //'a bit too much . Ill have sausage and mushroom';
 		state.session.act = 30;  // move on!
 		if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 	}
@@ -163,13 +163,7 @@ exports.process = function(state)
 		}
 		state.session.veg_offers++;
 	}
-/*  maybe too old
-	else if ( state.session.count_tries >= 4)
-	{
-		state.result.code = 'rp_24_meat_giveup'; // 'awwwe, I give up...
-		state.session.act = 24;  // move on!
-	}
-*/
+
 	else if (state.result.tokens.includes('e_drink'))
 	{
 		state.result.code = 'rp_20_no_drink_nice';    // was nodrink
