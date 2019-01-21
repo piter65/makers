@@ -1,4 +1,4 @@
-var tests_origin =
+test_sets['tests_peter'] =
 [
 	{ input:"JEFF'S PERFECT PATH FOR DEMO",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
