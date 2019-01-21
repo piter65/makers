@@ -243,12 +243,12 @@ exports.process = function(state)
 	}
 	else if (state.result.tokens.includes( 'i_5sec') )
 	{
-		state.result.code = 'rp_20_impatient';  // 'I just dont know what toppings.';
+		state.result.code = 'rp_20_dont_know_toppings';  // 'I just dont know what toppings.';
 		state.session.trust -= 2;
 	}
 	else if (state.result.tokens.includes( 'i_9sec') )
 	{
-		state.result.code = 'rp_20_fed_up';  // 'I wont be visiting here again.  Good day.';
+		state.result.code = 'rp_1_fed_up';  // 'I wont be visiting here again.  Good day.';
 		state.session.trust -= 2;
 		state.session.game_over = true;
 	}

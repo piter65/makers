@@ -12,7 +12,7 @@ exports.process = function(state)
 
 	if (   state.result.tokens.includes('e_mushroom') )
 	{
-		state.result.code = 'rp_22_correct_nice'; // 'Yeah,. Ill have a slice of sausage and mushroom';
+		state.result.code = 'rp_2_yes_sam'; // 'Yeah,. Ill have a slice of sausage and mushroom';
 
 		state.session.act = 30;  // move on!
 		if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
@@ -68,7 +68,7 @@ exports.process = function(state)
 	else
 	if (state.result.tokens.includes( 'i_9sec') )
 	{
-		state.result.code = 'rp_20_fed_up';  // 'I wont be visiting here again.  Good day.';
+		state.result.code = 'rp_1_fed_up';  // 'I wont be visiting here again.  Good day.';
 		state.session.trust -= 2;
 		state.session.game_over = true;
 	}
@@ -86,7 +86,7 @@ exports.process = function(state)
 		}
 		else 
 		{
-			state.result.code = 'rp_22_veg_giveup';
+			state.result.code = 'rp_2_giveup';
 			state.session.act = 30;  // move on!
 			state.result.choice_done = true;
 		}
@@ -103,7 +103,7 @@ exports.process = function(state)
 		}
 		else 
 		{
-			state.result.code = 'rp_22_veg_giveup';
+			state.result.code = 'rp_2_giveup';
 			state.session.act = 30;  // move on!
 			state.result.choice_done = true;
 		}

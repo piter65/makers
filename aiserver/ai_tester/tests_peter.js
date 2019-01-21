@@ -1,6 +1,8 @@
 test_sets['tests_peter'] =
 [
 
+	{ input:"TESTS PETER",reply:null},
+
 	{ input:"bug 43  Jan 19 - response hints at order",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
 	{ input:"order please",reply:"rp_10_offeredhelp"},
