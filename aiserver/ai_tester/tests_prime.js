@@ -1,7 +1,5 @@
-test_sets['tests_peter'] =
+test_sets['tests_prime'] =
 [
-
-	{ input:"TESTS PETER",reply:null},
 	{ input:"JEFF'S PERFECT PATH FOR DEMO",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
 	{ input:"thanks, how can I help you",reply:"rp_10_offeredhelp"},
@@ -24,8 +22,6 @@ test_sets['tests_peter'] =
 	{ input:"okay, one slice sausage and mushroom coming up",reply:"rp_3_remember_gluten"},
 	{ input:"sorry",reply:"rp_3_gluten_uncle"},
   { input:"yeah, you should probably avoid pizza",reply:"rp_32_fed_up"},
-
-
 
 
 	{ input:"bug 43  Jan 19 - response hints at order",reply:null},
@@ -423,7 +419,7 @@ test_sets['tests_peter'] =
 
 
 
-{ input:"TOKENS, TOKENS, TOKENS, TOKENS FOR EVERYONE",reply:null},	
+{ input:"TOKENS, TOKENS, TOKENS, TOKENS FOR EVERYONE",reply:null},
 { input:"newgame robot",reply:"rp_5_intro"},
 
 { input:"#I feel sorry for you",reply:"tokens"},
