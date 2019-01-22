@@ -12,9 +12,6 @@ exports.process = function(state)
 
 	if (f.hasAll(state.result.tokens, 'e_nogluten','e_sausage','e_mushroom'))
 	{
-		state.session.score_listen+=2;		// they got it
-		state.session.score_overall+=2;		// just add it here....
-
 
 		if (state.session.score_overall>30) state.result.code = 'rp_go_finished_good1';
 		else if (state.session.score_overall>25) state.result.code = 'rp_go_finished_good2';

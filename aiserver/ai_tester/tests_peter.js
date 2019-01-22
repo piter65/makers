@@ -2,6 +2,25 @@ test_sets['tests_peter'] =
 [
 
 	{ input:"TESTS PETER",reply:null},
+
+
+	{ input:"PETERS PERFECT PATH FOR DEMO",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"Why thankyou.  We take pride in our uniforms.  Welcome to the pizza place, home of the best slice in town!  and may I say your outfit is quite nice too",reply:"rp_10_greet"},
+	{ input:"Yes, at the pizza place we take pride in the appearance of our restaurant. My name is Peter and I'm here to help you get the best slice in town!  May I please take your order",reply:"rp_10_offeredhelp"},
+	{ input:"Well, it depends on your personal preferences, but here at the pizza place we have some of the tastiest toppings.  What type of toppings do you like",reply:"rp_20_one_of_each"},
+	{ input:"We have some great meats here. What's your favorite meat?",reply:"rp_20_i_prefer_sausage"},
+	{ input:"Ok, so sausage it is.  Any idea what vegetable you prefer?",reply:"rp_20_i_prefer_mushroom"},
+
+	{ input:"Great, one perfect slice coming right up!",reply:"rp_3_remember_gluten"},
+
+	{ input:"Oh my, that's must have been terrible, I'm am sorry.  That won't happen here at the pizza place!  What do you think the problem was?!",reply:"rp_3_gluten_uncle"},
+
+	{ input:"no problem, we have a gluten free crust",reply:"rp_3_decided_nogluten"},
+	{ input:"great, so one slice gluten free with sausage and mushroom coming up",reply:"rp_go_finished_good1"},
+	{ input:"system score",reply:"?"},
+
+
 	{ input:"JEFF'S PERFECT PATH FOR DEMO",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
 	{ input:"thanks, how can I help you",reply:"rp_10_offeredhelp"},
@@ -464,5 +483,5 @@ test_sets['tests_peter'] =
 { input:"#what type of toppings",reply:"tokens"},
 { input:"#You probably had a diabetic reaction to the grease.",reply:"tokens"},
 
-
+{ input:"#Depends on what you like.",reply:"tokens"},
 ]

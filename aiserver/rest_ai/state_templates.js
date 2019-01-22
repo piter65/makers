@@ -9,6 +9,11 @@ exports.session_defaults =
 	count_write: 0,		// # of times player "wrote down" order and repeated it back.
 	num_entries: 0,	// # of player sentences/entries into the system.  newgame sets to 0
 
+// certain bonuses are limited.
+	num_polite: 0,
+	num_brag: 0,
+	num_storebrand: 0,
+
 
 	veg_tries: 0,
 	meat_tries: 0,

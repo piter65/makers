@@ -108,7 +108,7 @@ exports.process = function(state)
 							&&
 		f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
-		state.result.code = 'rp_20_veg_uprefer';  // you almost actually care!
+		state.result.code = 'rp_20_i_prefer_mushroom';  // you almost actually care!
 		state.session.score_understand+=1;
 		state.session.act = 24;  // veggie decided!  move on!
 	}
@@ -117,7 +117,7 @@ exports.process = function(state)
 									&&
 		f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
-		state.result.code = 'rp_20_meat_uprefer';  // you almost actually care!
+		state.result.code = 'rp_20_i_prefer_sausage';  // you almost actually care!
 		state.session.score_understand+=1;
 		state.session.act = 22;  // meat decided!  move on!
 	}

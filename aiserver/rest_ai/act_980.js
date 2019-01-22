@@ -52,16 +52,24 @@ exports.process = function(state)
 		state.result.extra=":exec boost";
 	}
 	
-	if (state.result.tokens.includes('e_storebrand'))
+	if (f.hasAny(state.result.tokens, 'e_please','e_thankyou') )	
 	{
-		state.session.score_exec++;
-		state.result.extra=":storebrand boost";
-
+		if (state.session.num_polite++ < 2)   // max of 2 boost for these
+			{
+			state.session.score_exec++;
+			state.result.extra=":brag boost";
+			}
 	}
-	if (state.result.tokens.includes('e_brag'))
+
+
+	if (state.result.tokens.includes('e_brag' || 'e_storebrand' ))
 	{
-		state.session.score_exec++;
-		state.result.extra=":brag boost";
+
+		if (state.session.num_brag++ < 3)   // max of 3 boost for these
+			{
+			state.session.score_exec++;
+			state.result.extra=":brag boost";
+			}
 	}
 
 
