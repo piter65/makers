@@ -1,0 +1,87 @@
+"comment":"we need redos or originals of the first 175 lines or so..."
+
+	,"rp_1_asked_twice":
+			"direct":"read confused and annoyed"
+		,"text":"addon-Didn't we already talk about this?"
+
+
+	,"rp_1_hmmm":
+		"direct":"We got an ok. Re-read as a at least 2-3 sylables, between confusion and sneaky understanding"
+		,"text":"hmmmmmm?"
+
+	,"rp_40_no_drink":
+		"direct":"this is new"
+		,"text": "I've already said that I don't want a drink.  Please read back the order to me."
+
+	,"rp_40_dont_forget":
+		"direct":"redo- add-on WE REALLY NEED THIS!"
+		,"text":"Don't forget gluten free.  Please read the order back to me."
+
+	,"rp_1_dont_know_you":
+
+		"direct":"this is new, in case"
+		,"text":"addon-That's a little bit personal, don't you think?"
+
+	,"rp_1_thank_you":
+		"direct":"A sincere thank you, a bit happy"
+		,"text":"addon-Thank you"
+
+	,"rp_1_thank_you_sarcastic":
+		"direct":"A dis-interested thank you, the compliment was insincere"
+		,"text":"addon-Thank you"
+
+	"rp_1_no":
+		"direct":"we need. Should be neutral and 2 syl 'no'"
+		,"text":"addon- no."
+
+	,"rp_1_not_listening":
+		"direct":"We got something close, but want as a standalone."
+		,"text":"addon-Are you listening?"
+
+	,"rp_2_yes_sam":
+		"direct":"the important thing here is 'about right'"
+		,"text":"Yeah, thats about right. I'll have a slice of sausage and mushroom."
+
+	,"rp_2_sam_but_more":
+		"direct":"This needs doing.  Player has offered 1 extra item. please add."
+		,"text":"Right idea, but a bit too much. How abou a slice with just sausage and mushroom."
+
+	,"rp_3_remember_gluten":
+		"direct":"'wait a minute' is the addition here.  thanks for redoing."
+		,"text": "Wait a minute, now that I think about it, last time I had pizza, I had a bad reaction. "
+
+	,"rp_5_intro":
+		"direct":"please redo, we've changed the text"
+		,"text": "Hi there.  I've been wondering about this place.  I figured this would be a nice place to try out. By the way, nice uniform you got there."
+		,"animations":
+
+	,"rp_10_store_compliment":
+		"direct":"needs redo.  new audio."
+		,"text":"Yes, this place looks great, and I love the name Pizza Place."
+
+	,"rp_20_i_like_sausage":
+		"direct":"should be moderately positive, yeh, i like sausage."
+		,"text":"redo addon-I like sausage."
+
+	,"rp_20_i_like_mushroom":
+		"direct":"positive"
+		,"text": "I like mushrooms."
+
+	,"rp_20_considering_bird":
+		"direct":"plz redo"
+		,"text":"I don't care for poultry of any kind on my pizza"
+
+	,"rp_22_veg_hintb":
+		"direct":"This is a new addition"
+		,"text": "What veggie goes best with sausage?"
+
+	,"rp_24_meat_hintb":
+		"direct":"This is a new addition"
+		,"text": "Whats a good meat to match with mushrooms?"
+
+
+	,"rp_990_complimented_too_much":
+		"direct":"changed slightly,- we want to push player to take order"
+		,"text":"Enough about me. Are you gonna take my order or something?"
+
+,"----------------- comment":"We need above redone."

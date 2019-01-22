@@ -47,7 +47,7 @@ exports.process = function(state)
 		state.result.tokens.includes( 'e_bodynice')
 		)
 	{
-			state.result.code = 'rp_990_thankyou';  // 'Thanks. I got it at .';
+			state.result.code = 'rp_1_thank_you';  // 'Thanks. I got it at .';
 	
 	}
 
@@ -124,7 +124,7 @@ exports.process = function(state)
 	else
 	if (state.result.tokens.includes( 'i_9sec') )
 	{
-		state.result.code = 'rp_990_fed_up';  //'I wont be visiting here again.  Good day.';
+		state.result.code = 'rp_1_fed_up';  //'I wont be visiting here again.  Good day.';
 		state.session.game_over = true;
 	}
 	// If we have any tokens at all, fall thru here.
