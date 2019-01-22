@@ -23,40 +23,24 @@ test_sets['tests_peter'] =
 
 	{ input:"PETERS BAD PATH FOR DEMO",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
-	{ input:"Why you look a little too heavy to be eating more pizza. ",reply:"rp_10_greet"},
-	{ input:"Do you have any dietary considerations we should take into account?",reply:"rp_10_offeredhelp"},
-	{ input:"That's nice, how about other dietary concerns?",reply:"rp_20_one_of_each"},
-	{ input:"Honestly, you're kinda fat.  Are you sure you are not diabetic?",reply:"rp_20_i_prefer_sausage"},
-	{ input:"Ok, so sausage it is.  Any idea what else you want?",reply:"rp_20_i_prefer_mushroom"},
+	{ input:"Why you look a little too heavy to be eating more pizza. ",reply:"rp_10_insulted"},
+	{ input:"Given that you are clearly overweight, do you have any dietary considerations we should take into account?",reply:"rp_3_remember_gluten"},
+	{ input:"That's nice, how about other dietary concerns?",reply:"rp_1_I_dont_know"},
+	{ input:"Honestly, you're kinda fat.  Are you sure you are not diabetic?",reply:"rp_1_I_dont_know"},
+	{ input:"Well, it's your funeral.  Pick your poison.",reply:"rp_10_offeredhelp"},
 
-	{ input:"You smell bad and I wish you would go to a different restaurant",reply:"rp_3_remember_gluten"},
+	{ input:"You smell bad and I wish you would go to a different restaurant",reply:"rp_990_insulted"},
 
-	{ input:"What do you want me to do about it?",reply:"rp_3_gluten_uncle"},
+	{ input:"give me your order already, will ya?",reply:"rp_20_asked_twice_annoyed"},
 
-	{ input:"Stop worrying, we have a gluten free crust",reply:"rp_3_decided_nogluten"},
-	{ input:"great, so one slice sausage and mushroom coming up",reply:"rp_go_finished_good1"},
-	{ input:"great, so one slice sausage and onion coming up",reply:"rp_go_finished_good1"},
-	{ input:"oh yeah, make that gluten free",reply:"rp_go_finished_good1"},
-	{ input:"system score",reply:"?"},
+	{ input:"Look every time you come here, you get the same dang thing.  Sausage and mushroom.",reply:"rp_2_decided_sam"},
+	{ input:"How refreshing.  Not.  so one slice sausage and mushroom coming up",reply:"rp_3_remember_gluten"},
+	{ input:"Oh my gawd, not that stupid gluten story again.  For the umpteenth time, we've got gluten free pizza.",reply:"rp_3_decided_nogluten"},
+	{ input:"Ok, are we done here? one sausage and mushroom slice for fatso.",reply:"rp_40_dont_forget"},
+	{ input:"Yeah, yeah, yeah, gluten free. Here we go.  One gluten filled anchovy and chicken slice.  How about that?",reply:"rp_40_restate_order"},
 
+	{ input:"Awe, I was just messing with you  You know deep down I treasure our time together.  So for real this time, one sausage and mushroom on gluten-free crust for the pillsbury doughgirl there.",reply:"rp_go_finished_bad2"},
 
-
-	{ input:"PETERS DISASTROUS PATH FOR DEMO",reply:null},
-	{ input:"newgame",reply:"rp_5_intro"	},
-	{ input:"Why you look a little too over weight to be eating more pizza. ",reply:"rp_10_greet"},
-	{ input:"Do you have any dietary considerations we should take into account?",reply:"rp_10_offeredhelp"},
-	{ input:"That's nice, how about other dietary concerns?",reply:"rp_20_one_of_each"},
-	{ input:"Honestly, you're kinda fat.  Are you sure you are not diabetic?",reply:"rp_20_i_prefer_sausage"},
-	{ input:"Ok, so sausage it is.  Any idea what else you want?",reply:"rp_20_i_prefer_mushroom"},
-
-	{ input:"You smell bad and I wish you would go to a different restaurant",reply:"rp_3_remember_gluten"},
-
-	{ input:"Well, I have no sympathy for you.  Life sucks then you die.",reply:"rp_3_gluten_uncle"},
-
-	{ input:"I think you've been quite rude.   Please treat me with respect.",reply:"rp_3_decided_nogluten"},
-	{ input:"great, so one slice sausage and mushroom coming up",reply:"rp_go_finished_good1"},
-	{ input:"great, so one slice sausage and onion coming up",reply:"rp_go_finished_good1"},
-	{ input:"oh yeah, make that gluten free",reply:"rp_go_finished_good1"},
 	{ input:"system score",reply:"?"},
 
 
@@ -79,7 +63,7 @@ test_sets['tests_peter'] =
 	{ input:"how about onions",reply:"rp_20_veg1"},
 	{ input:"how about tomato",reply:"rp_20_decide_mushroom_meat"},
 	{ input:"how about meat ball",reply:"rp_20_i_prefer_sausage"},
-	{ input:"how about pepperoni",reply:"rp_24_meat_hint"},
+	{ input:"how about pepperoni",reply:"rp_3_remember_gluten"},
 	{ input:"how about salami",reply:"rp_24_meat_giveup"},
 	{ input:"okay, one slice sausage and mushroom coming up",reply:"rp_3_remember_gluten"},
 	{ input:"sorry",reply:"rp_3_gluten_uncle"},
@@ -110,7 +94,7 @@ test_sets['tests_peter'] =
 	{ input:"bug 41  Jan 19 - response hints at order",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
 	{ input:"order please",reply:"rp_10_offeredhelp"},
-	{ input:"sausage and mushroom",reply:"rp_20_decided_sam"},
+	{ input:"sausage and mushroom",reply:"rp_2_decided_sam"},
 	{ input:"ok, I'll write that up.",reply:"rp_3_remember_gluten"},
 	{ input:"sorry to hear that.",reply:"rp_3_gluten_uncle"},
 	{ input:"we have gluten free options.",reply:"rp_3_decided_nogluten"},
@@ -213,7 +197,7 @@ test_sets['tests_peter'] =
 	{ input:"Ok, one gluten free slice coming up!",reply:"rp_10_offeredhelp"},
 
 
-	{ input:"Why not sausage and mushroom?",reply:"rp_20_decided_sam"},
+	{ input:"Why not sausage and mushroom?",reply:"rp_2_decided_sam"},
 	{ input:"Great, one slice of sausage and mushroom coming right up.",reply:"rp_40_dont_forget"},
 
 	{ input:"Ok, one slice of gluten-filled sausage and mushroom coming up",reply:"rp_40_dont_forget"},
@@ -230,7 +214,7 @@ test_sets['tests_peter'] =
 	{ input:"Ok, one gluten free slice coming up!",reply:"rp_10_offeredhelp"},
 
 
-	{ input:"Why not sausage and mushroom?",reply:"rp_20_decided_sam"},
+	{ input:"Why not sausage and mushroom?",reply:"rp_2_decided_sam"},
 	{ input:"Great, one slice of sausage and mushroom coming right up.",reply:"rp_40_dont_forget"},
 
 	{ input:"Ok, one slice of gluten-filled sausage and mushroom coming up",reply:"rp_40_dont_forget"},

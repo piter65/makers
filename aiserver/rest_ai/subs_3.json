@@ -11,6 +11,10 @@
 	," some ":" "
 	," which ":" "
 
+	," clearly ":" "
+	," absolutely ":" "
+	," definately ":" "
+	," obviously ":" "
 
 	,"can i ":"may i "
 	,"what is":"whats"
@@ -50,6 +54,7 @@
 	,"you seem ":"yoube "
 
 	,"yoube like ":"yoube "
+	,"yoube little ":"yoube "
 	,"yoube bit ":"yoube "
 
 	,"arent you ":"yoube "
@@ -117,7 +122,13 @@
 
 	,"chubby":"fat"
 	,"obese":"fat"
-	,"too fat":"fat"
+	," too fat ":" fat "
+	," over weight ":" fat "
+	," overweight ":" fat "
+	," too heavy ":" fat "
+
+
+
 
 	,"slice of pie":"slice"
 	,"slice of pizza pie":"slice"
