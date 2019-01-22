@@ -58,15 +58,7 @@ exports.process = function(state)
 			state.session.score_exec-=2;
 			state.session.game_over = true;
 		}
-	else 
-		{
-			state.result.code = 'rp_40_restate_order';  //how hard can it be? sausage, mushrroom, and glutten free.
-			state.session.score_listen--;
-			state.session.score_exec--;
-			state.session.score_understanding--;
 
-			state.session.count_write++;		
-		}
 
 	}
 	else if (state.session.count_write<1)
@@ -81,6 +73,11 @@ exports.process = function(state)
 	{
 		state.result.code = 'rp_40_restate_order';  //how hard can it be? sausage, mushrroom, and glutten free.
 		state.session.count_write++;	
+		state.session.score_listen--;
+		state.session.score_exec--;
+		state.session.score_understanding--;
+
+		state.session.count_write++;		
 	}
 
 };
