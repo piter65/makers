@@ -61,10 +61,10 @@ exports.process = function(state)
 			 if (f.hasAny(state.result.tokens, 'i_dietary', 'e_sick'))	// look for gluten only
 				{
 				state.result.code = 'rp_30_pizza_bad_idea';		// last time I got sick..
-				state.session.game_over = true;
+		//		state.session.game_over = true;   // peter thinks the game should end
 				state.session.score_exec--;
-				state.session.score_listen=0;
-				state.session.score_understand-=2;		
+				state.session.score_listen--;
+				state.session.score_understand--;		
 				}
 			
 		}	

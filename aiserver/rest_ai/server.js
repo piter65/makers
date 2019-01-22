@@ -49,6 +49,22 @@ function deepClone(obj)
 	return JSON.parse(JSON.stringify(obj));
 }
 
+
+// peter stole this from stack overflow
+function getTimeStamp() {
+    var now = new Date();
+    return ((now.getMonth() + 1) + '/' +
+            (now.getDate()) + '/' +
+             now.getFullYear() + " " +
+             now.getHours() + ':' +
+             ((now.getMinutes() < 10)
+                 ? ("0" + now.getMinutes())
+                 : (now.getMinutes())) + ':' +
+             ((now.getSeconds() < 10)
+                 ? ("0" + now.getSeconds())
+                 : (now.getSeconds())));
+}
+
 // Start server with empty object of sessions.
 var sessions = {};
 
@@ -223,10 +239,19 @@ app.get('/ai', function(req, res)
 		case 'system score':
 			state.result.code = 'rp_0_score';
 
+// refigure....			
+	state.session.score_overall = 
+		state.session.score_exec+state.session.score_listen+	
+		state.session.score_understand+state.session.score_empathy;
+
+			state.result.reply = 'score #'+state.session.score_overall+'\n:';
 			state.result.reply += state.result.code+';\nCommunication Style:'+state.session.score_exec+'\n';
 			state.result.reply += 'Active Listening:'+state.session.score_listen+'\n';
 			state.result.reply += 'Understanding:'+state.session.score_understand+'\n';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
+
+			
+
 			break;
 
 		case 'system version':
@@ -267,6 +292,7 @@ app.get('/ai', function(req, res)
 		// Reset the session.
 		state.session = deepClone(state_templates.session_defaults);
 		save_state = true;
+		logger.log("_story_:date:"+getTimeStamp());
 
 		state.result.code = "rp_5_intro";
 		state.result.reply = decoder.decode_reply(state.result.code);	
@@ -395,6 +421,13 @@ function process_ai(state)
 	}	
 
 
+
+
+
+ // var res = str.replace("Microsoft", "W3Schools");
+
+
+
 // set triggers - this is so flags set once outside of logic
 	if (state.session.one_meat_one_veggie_trig>0)
 		{  state.session.one_meat_one_veggie_ctx = 1; state.session.one_meat_one_veggie_trig =0;}	
@@ -409,11 +442,54 @@ function process_ai(state)
 	state.result.reply = decoder.decode_reply(state.result.code);
 
 
+
 	state.session.score_overall = 
 		state.session.score_exec+	
 		state.session.score_listen+	
 		state.session.score_understand+
 		state.session.score_empathy;
+
+// ---------------------------------- Peter hacking in last pass
+//
+//    "b_idle b_idle_slouch b_look b_look_slouch b_engage b_bored b_tap b_phone b_angry"
+//    "b_idle b_look b_engage b_bored b_tap b_phone b_angry"
+//    "f_neutr f_smile f_frown f_conf f_angry f_sad"
+
+
+if (state.session.score_overall <18)
+ {	// not very happy
+	 if (state.result.reply!=null)
+ 		{
+// make the face a lot unhappy
+ 		state.result.reply = state.result.reply.replace("f_neutr","f_angry");   // test one
+		state.result.reply = state.result.reply.replace("f_smile","f_sad");   // test one
+// make the body slouch
+ 		state.result.reply = state.result.reply.replace("b_idle","b_idle_slouch");   // test one
+		state.result.reply = state.result.reply.replace("f_look","f_look_slouch");   // test one
+		}
+ }
+
+
+ if (state.session.score_overall <15)
+ {	// not very happy
+	 if (state.result.reply!=null)
+ 		{
+// make the face a little unhappy
+ 		state.result.reply = state.result.reply.replace("f_neutr","f_angry");   // test one
+		state.result.reply = state.result.reply.replace("f_smile","f_neutr");   // test one
+		}
+ }
+
+ if (state.session.score_overall >23)
+ {	// a little happy
+	 if (state.result.reply!=null)
+ 		{
+// make the face a little unhappy
+ 		state.result.reply = state.result.reply.replace("f_neutr","f_smile");   // smiles everyone
+		state.result.reply = state.result.reply.replace("f_angry","f_neutr");   // and never angry
+		}
+ }
+
 
 
 
