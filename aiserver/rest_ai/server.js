@@ -239,12 +239,17 @@ app.get('/ai', function(req, res)
 		case 'system score':
 			state.result.code = 'rp_0_score';
 
-			state.result.reply = 'score-'+state.session.score_overall+'\n:';
+// refigure....			
+	state.session.score_overall = 
+		state.session.score_exec+state.session.score_listen+	
+		state.session.score_understand+state.session.score_empathy;
+
+			state.result.reply = 'score #'+state.session.score_overall+'\n:';
 			state.result.reply += state.result.code+';\nCommunication Style:'+state.session.score_exec+'\n';
 			state.result.reply += 'Active Listening:'+state.session.score_listen+'\n';
 			state.result.reply += 'Understanding:'+state.session.score_understand+'\n';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
-			state.result.reply += 'Overall:'+state.session.score_overall+'\n';
+
 			
 
 			break;
