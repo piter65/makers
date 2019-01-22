@@ -17,7 +17,7 @@
 		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_1_I_don't_know":
+	,"rp_1_I_dont_know":
 	{
 		"direct":"Read this neutrally so we can use it in cases where we don't have a better answer"
 		,"text":"addon-I don't know."
