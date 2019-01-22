@@ -17,6 +17,47 @@
 		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
 	}
 
+	,"rp_1_I_don't_know":
+	{
+		"direct":"Read this neutrally so we can use it in cases where we don't have a better answer"
+		,"text":"addon-I don't know."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_no_enthusiastic":
+	{
+		"direct":"A hearty no!"
+		,"text":"addon-No."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_no_sarcastic":
+	{
+		"direct":"sarcastic"
+		,"text":"addon-No."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_yes":
+	{
+		"direct":"neutral"
+		,"text":"addon-Yes."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_yes_sarcastic":
+	{
+		"direct":"sarcastic"
+		,"text":"addon-Yes."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_yes_enthusiastic":
+	{
+		"direct":"A hearty yes!"
+		,"text":"addon-Yes."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
 	,"rp_40_no_drink":
 	{
 		"direct":"add-on redo"
@@ -79,7 +120,7 @@
 	,"rp_2_sam_but_more":
 	{
 		"direct":"redo-add-on This needs doing.  please add."
-		,"text":"addon-Right idea, but a bit too much. How abou a slice with just sausage and mushroom."
+		,"text":"addon-Right idea, but a bit too much. How about a slice with just sausage and mushroom."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -110,7 +151,7 @@
 	,"rp_10_store_compliment":
 	{
 		"direct":"needs redo.  new audio."
-		,"text":"Yes, this place looks great, and I love the name Pizza Place."
+		,"text":"Yes, this place looks great, and I love the name the Pizza Shop."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -137,7 +178,7 @@
 		,"text":"I don't care for poultry of any kind on my pizza"
 	,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
-	
+
 	,"rp_22_veg_hintb":
 	{
 		"direct":"These are stage directions"
@@ -148,7 +189,7 @@
 	,"rp_24_meat_hintb":
 	{
 		"direct":"These are stage directions"
-		,"text": "Whats a good meat to match with mushrooms?"
+		,"text": "What's a good meat to match with mushrooms?"
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
 	}
 
@@ -160,6 +201,12 @@
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
+	,"rp_3_gluten_uncle":
+	{
+		"direct":"We changed the beginning to You know what? so that it fits better in the conversation"
+		,"text":"You know what? Last time I had pizza I got totally sick. My uncle had the same problem, it turned out he had a gluten allergy.  Come to think of it, maybe I do too?  Maybe I should just avoid pizza."
+		,"animations":[{"face":"f_sad","body":"b_idle","delay":0,"duration":0}]
+	}
 
 
 ,"----------------- comment":"We need above redone."
@@ -183,7 +230,7 @@
 	,"rp_1_can_we_continue":
 	{
 		"direct":"- We got this. generic let's continue"
-		,"text":"I'm not sure I'm following you, can we continue with my order?"
+		,"text":"I'm not sure I'm following you. Can we continue with my order?"
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -235,18 +282,18 @@
 	,"rp_1_bad_humor":
 	{
 		"direct":"we got this"
-		,"text":"I can totally do without your sense of humor.  bye."
+		,"text":"I can totally do without your sense of humor.  Bye."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_2_thanks_omov":
 	{
 		"direct":"we got this"
-		,"text":"thanks for asking, I'd like one meat, and one veggie"
+		,"text":"Thanks for asking. I'd like one meat and one veggie"
 		,"animations":[{"face":"f_frown","body":"b_angry","delay":0,"duration":0}]
 	}
 
-	,"rp_2_omov":
+	,"rp_2_omov_ELIM":
 	{
 		"direct":"we got this"
 		,"text":"I’d like one meat, one veggie, and I don’t want a drink."
@@ -291,12 +338,6 @@
 		,"animations": [{"face":"f_confused","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_3_gluten_uncle":
-	{
-		"direct":"We got this"
-		,"text":"You know, last time I had pizza I got totally sick. My uncle had the same problem, it turned out he had a gluten allergy.  Come to think of it, maybe I do too?  Maybe I should just avoid pizza."
-		,"animations":[{"face":"f_sad","body":"b_idle","delay":0,"duration":0}]
-	}
 
 	,"rp_3_decided_nogluten_early":
 	{
@@ -851,7 +892,7 @@
 ,"rp_990_stay_focused1":
 {
 		"direct":"These are stage directions"
-		,"text":"Cool. Can we continue with my order?"	
+		,"text":"Cool. Can we continue with my order?"
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 }
 
@@ -1130,7 +1171,7 @@
 	}
 
 
-	
+
 	,"rp_22_correct_elim":
 	{
 		"direct":"These are stage directions"

@@ -1,17 +1,24 @@
-"comment":"we need redos or originals of the first 175 lines or so..."
 
 	,"rp_1_asked_twice":
 			"direct":"read confused and annoyed"
-		,"text":"addon-Didn't we already talk about this?"
+		,"text":"addon-Didn't we talk about this already?"
 
+		,"rp_3_gluten_uncle":
+			"direct":"We changed the beginning to You know what? so that it fits better in the conversation"
+			,"text":"You know what? Last time I had pizza I got totally sick. My uncle had the same problem, it turned out he had a gluten allergy.  Come to think of it, maybe I do too?  Maybe I should just avoid pizza."
 
 	,"rp_1_hmmm":
-		"direct":"We got an ok. Re-read as a at least 2-3 sylables, between confusion and sneaky understanding"
+		"direct":"We got an ok. Re-read as at least 2-3 sylables, between confusion and sneaky understanding"
 		,"text":"hmmmmmm?"
+
+		,"rp_1_I_don't_know":
+			"direct":"Read this neutrally so we can use it in cases where we don't have a better answer"
+			,"text":"I don't know."
+
 
 	,"rp_40_no_drink":
 		"direct":"this is new"
-		,"text": "I've already said that I don't want a drink.  Please read back the order to me."
+		,"text": "I've already said that I don't want a drink.  Please read the order back to me."
 
 	,"rp_40_dont_forget":
 		"direct":"redo- add-on WE REALLY NEED THIS!"
@@ -30,9 +37,31 @@
 		"direct":"A dis-interested thank you, the compliment was insincere"
 		,"text":"addon-Thank you"
 
-	"rp_1_no":
+	,"rp_1_no":
 		"direct":"we need. Should be neutral and 2 syl 'no'"
 		,"text":"addon- no."
+
+		,"rp_1_no_enthusiastic":
+			"direct":"we need. a hearty no!'"
+			,"text":"addon- no."
+
+			,"rp_1_no_sarcastic":
+				"direct":"we need."
+				,"text":"addon- no."
+
+				,"rp_1_yes":
+					"direct":"we need. Should be neutral"
+					,"text":"addon- no."
+
+					,"rp_1_yes_enthusiastic":
+						"direct":"we need. a hearty yes!'"
+						,"text":"addon- no."
+
+						,"rp_1_yes_sarcastic":
+							"direct":"we need."
+							,"text":"addon- no."
+
+
 
 	,"rp_1_not_listening":
 		"direct":"We got something close, but want as a standalone."
@@ -47,7 +76,7 @@
 		,"text":"Right idea, but a bit too much. How abou a slice with just sausage and mushroom."
 
 	,"rp_3_remember_gluten":
-		"direct":"'wait a minute' is the addition here.  thanks for redoing."
+		"direct":"'We added Wait a minute to this line as if she's just remembering it. Works into the conversation better."
 		,"text": "Wait a minute, now that I think about it, last time I had pizza, I had a bad reaction. "
 
 	,"rp_5_intro":
@@ -57,14 +86,14 @@
 
 	,"rp_10_store_compliment":
 		"direct":"needs redo.  new audio."
-		,"text":"Yes, this place looks great, and I love the name Pizza Place."
+		,"text":"Yes, this place looks great, and I love the name The Pizza Shop."
 
 	,"rp_20_i_like_sausage":
-		"direct":"should be moderately positive, yeh, i like sausage."
+		"direct":"should be moderately positive, yeah, i like sausage."
 		,"text":"redo addon-I like sausage."
 
 	,"rp_20_i_like_mushroom":
-		"direct":"positive"
+		"direct":"should be moderately positive, yeah, i like sausage."
 		,"text": "I like mushrooms."
 
 	,"rp_20_considering_bird":
