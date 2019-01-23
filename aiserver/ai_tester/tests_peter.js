@@ -4,6 +4,13 @@ test_sets['tests_peter'] =
 	{ input:"TESTS PETER",reply:null},
 
 
+	{ input:"SCOTTS FIRST ISSUE",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"thank you we have the best pizza in town",reply:"rp_10_greet"},
+
+
+
+
 	{ input:"PETERS GOOD PATH FOR DEMO",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
 	{ input:"Why thankyou.  We take pride in our uniforms.  Welcome to the pizza place, home of the best slice in town!  and may I say your outfit is quite nice too",reply:"rp_10_greet"},
@@ -467,7 +474,7 @@ test_sets['tests_peter'] =
 
 
 
-{ input:"TOKENS, TOKENS, TOKENS, TOKENS FOR EVERYONE",reply:null},	
+{ input:"TOKENS, TOKENS, TOKENS, TOKENS FOR EVERYONE",reply:null},
 { input:"newgame robot",reply:"rp_5_intro"},
 
 { input:"#I feel sorry for you",reply:"tokens"},
