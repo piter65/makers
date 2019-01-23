@@ -6,9 +6,13 @@ test_sets['tests_peter'] =
 
 	{ input:"SCOTTS FIRST ISSUE",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
+
+	{ input:"system score",reply:"?"},
 	{ input:"thank you we have the best pizza in town",reply:"rp_10_greet"},
 
+	{ input:"system score",reply:"?"},
 
+	{ input:"#thank you we have the best pizza in town",reply:"tokens"},
 
 
 	{ input:"PETERS GOOD PATH FOR DEMO",reply:null},
