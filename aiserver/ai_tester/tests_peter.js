@@ -6,7 +6,6 @@ test_sets['tests_peter'] =
 
 	{ input:"JEFF'S NEW SHE GOES TO CLOSING ERROR - PETER NOTE THAT THIS BUG AND THE NEXT ONE REVOLVE AROUND THE SAME RESPONSE",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
-	{ input:"Why thankyou.  We take pride in our uniforms.  Welcome to the pizza place, home of the best slice in town!  and may I say your outfit is quite nice too",reply:"rp_10_greet"},
 	{ input:"Do you have any food allergies?",reply:"rp_3_remember_gluten"},
 	{ input:"what do you think caused it?",reply:"rp_3_gluten_uncle"},
 	{ input:"we have a gluten free option",reply:"rp_3_decided_nogluten"},
@@ -18,12 +17,14 @@ test_sets['tests_peter'] =
 
 	{ input:"JEFF'S NEW INTERNAL SERVER ERROR",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
-	{ input:"Why thankyou.  We take pride in our uniforms.  Welcome to the pizza place, home of the best slice in town!  and may I say your outfit is quite nice too",reply:"rp_10_greet"},
 	{ input:"What can I get you?",reply:"rp_10_offeredhelp"},
 	{ input:"How about mushroom",reply:"rp_20_decided_mushroom"},
 	{ input:"How about tomato",reply:"rp_24_frustrated_restate"},
 
-
+	{ input:"JEFF'S NEW INTERNAL SERVER ERROR",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"I like your outfit",reply:"rp_990_complimented"},
+	{ input:"you look cool",reply:"rp_1_asked_twice"},
 
 
 
