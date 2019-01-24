@@ -3,6 +3,22 @@ test_sets['tests_peter'] =
 
 	{ input:"TESTS PETER",reply:null},
 
+	{ input:"Some oddball things we want to get working",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"May I take your order please?",reply:"rp_10_offeredhelp"},
+	{ input:"sausage and mushrooms?",reply:"rp_2_decided_sam"},
+	{ input:"we have a gluten free option",reply:"rp_3_remember_gluten"},
+	{ input:"would you like anything else?",reply:"rp_10_offeredhelp"},
+	{ input:"for here or to go?",reply:"rp_20_decided_mushroom"},
+	{ input:"okay.",reply:"rp_20_i_prefer_sausage"},
+
+	{ input:"#okay",reply:"tokens"},
+	{ input:"#great",reply:"tokens"},
+	{ input:"#for here or to go",reply:"tokens"},
+	{ input:"#would you like anything else?",reply:"tokens"},
+
+
+
 
 	{ input:"JEFF'S NEW SHE GOES TO CLOSING ERROR - PETER NOTE THAT THIS BUG AND THE NEXT ONE REVOLVE AROUND THE SAME RESPONSE",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
