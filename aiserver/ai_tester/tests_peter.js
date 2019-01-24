@@ -8,26 +8,51 @@ test_sets['tests_peter'] =
 	{ input:"May I take your order please?",reply:"rp_10_offeredhelp"},
 	{ input:"sausage and mushrooms?",reply:"rp_2_decided_sam"},
 	{ input:"we have a gluten free option",reply:"rp_3_remember_gluten"},
-	{ input:"would you like anything else?",reply:"rp_10_offeredhelp"},
+	{ input:"would you like anything else?",reply:"rp_1_no_thankyou"},
 	{ input:"for here or to go?",reply:"rp_20_decided_mushroom"},
 	{ input:"okay.",reply:"rp_20_i_prefer_sausage"},
+	{ input:"yes, we just opened",reply:"rp_10_store_clean"},
+	{ input:"we just opened",reply:"rp_10_store_clean"},
 
 	{ input:"#okay",reply:"tokens"},
 	{ input:"#great",reply:"tokens"},
 	{ input:"#for here or to go",reply:"tokens"},
 	{ input:"#would you like anything else?",reply:"tokens"},
+	{ input:"#meatball",reply:"tokens"},
+	{ input:"#meat ball",reply:"tokens"},
+
+	{ input:"JAN 24 JEFF'S WHAT WOULD YOU LIKE ON YOUR GLUTEN FREE PIZZA",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"#what would you like on your gluten free pizza?",reply:"tokens"},
+	{ input:"#yes, we love our uniforms?",reply:"tokens"},
+
+	{ input:"JAN 24 JEFF'S SORRY WE DID TALK ABOUT THAT",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"Do you have any food allergies?",reply:"rp_3_remember_gluten"},
+	{ input:"We have gluten free pizza",reply:"rp_3_decided_nogluten"},
+	{ input:"Do you have any food allergies?",reply:"rp_1_asked_twice"},
+	{ input:"Sorry you did say that earlier",reply:"rp_1_no_problem"},
+
+	{ input:"JAN 24 JEFF'S WHAT WOULD YOU LIKE WITH YOUR SAUSAGE",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"thanks, how can I help you",reply:"rp_10_offeredhelp"},
+	{ input:"what type of toppings do you like",reply:"rp_20_one_of_each"},
+	{ input:"how about pepperoni",reply:"rp_20_meat1"},
+	{ input:"how about meatballs",reply:"rp_20_i_like_sausage"},
+	{ input:"okay great what would you like with your sausage",reply:"rp_22_veg_hintb"},
+	{ input:"4PETER THIS PROBABLY NEEDS TO BE DONE FOR MEAT TOO",reply:null},
 
 
-
-
-	{ input:"JEFF'S NEW SHE GOES TO CLOSING ERROR - PETER NOTE THAT THIS BUG AND THE NEXT ONE REVOLVE AROUND THE SAME RESPONSE",reply:null},
+	{ input:"JAN 24 JEFF'S SHE ASKS ABOUT VEGGIE EVEN THOUGH SHE'S DECIDED",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
 	{ input:"Do you have any food allergies?",reply:"rp_3_remember_gluten"},
 	{ input:"what do you think caused it?",reply:"rp_3_gluten_uncle"},
 	{ input:"we have a gluten free option",reply:"rp_3_decided_nogluten"},
 	{ input:"what toppings would you like on it",reply:"rp_10_offeredhelp"},
 	{ input:"how about mushroom",reply:"rp_20_decided_mushroom"},
+	{ input:"4PETER: THE RESPONSE BELOW IS INCORRECT BECAUSE SHE'S ALREADY DECIDED ON MUSHROOM",reply:null},
 	{ input:"what meat do you like",reply:"rp_20_i_prefer_sausage"},
+	{ input:"4PETER: SHE'S DECIDED ON MUSHROOM ALREADY BUT I ASK AGAIN AND SHE GOES TO REPEAT MY ORDER BUT SHOULDN'T",reply:null},
 	{ input:"how about mushroom",reply:"rp_24_frustrated_restate"},
 
 
@@ -37,7 +62,7 @@ test_sets['tests_peter'] =
 	{ input:"How about mushroom",reply:"rp_20_decided_mushroom"},
 	{ input:"How about tomato",reply:"rp_24_frustrated_restate"},
 
-	{ input:"JEFF'S NEW INTERNAL SERVER ERROR",reply:null},
+	{ input:"JEFF'S URBAN RESPONSE TWICE IN A ROW",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
 	{ input:"I like your outfit",reply:"rp_990_complimented"},
 	{ input:"you look cool",reply:"rp_1_asked_twice"},
