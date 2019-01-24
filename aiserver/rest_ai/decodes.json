@@ -1,6 +1,6 @@
 {
 
-"comment":"we need redos or originals of the first 175 lines or so..."
+"comment":"lose"
 
 	,"rp_1_asked_twice":
 	{
@@ -21,6 +21,15 @@
 	{
 		"direct":"Read this neutrally so we can use it in cases where we don't have a better answer"
 		,"text":"addon-I don't know."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
+	,"rp_1_no_thankyou":
+	{
+		"direct":"A simple no thankyou"
+		,"text":"addon2-No Thankyou."
 		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -58,6 +67,16 @@
 		,"text":"addon-Yes."
 		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
 	}
+
+	,"rp_1_togo":
+	{
+		"direct":"a simple response!"
+		,"text":"addon2-I'll take it to go."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
 	,"rp_40_no_drink":
 	{
 		"direct":"add-on redo"
@@ -124,7 +143,12 @@
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-
+	,"rp_2_u_know_sam":
+	{
+		"direct":"redo2-add-on This needs doing.  please add."
+		,"text":"addon-You know what? How about a slice with just sausage and mushroom."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
 
 	,"rp_3_remember_gluten":
 	{
@@ -410,7 +434,7 @@
 	{
 		"direct":"we got this"
 		,"text":"Hello? Are you taking my order?"
-		,"animations":[{"face":"f_bored","body":"b_idle","delay":0,"duration":0}]
+		,"animations":[{"face":"f_sad","body":"b_idle","delay":0,"duration":0}]
 	}
 
 

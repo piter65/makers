@@ -26,7 +26,7 @@ exports.process = function(state)
 			)
 
 	{
-			state.result.code = 'rp_20_i_prefer_sausage';  // 
+			state.result.code = 'rp_2_u_know_sam';  // 
 			state.session.score_understand++;
 			state.session.act = 30;  // move on!	
 			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
@@ -62,7 +62,7 @@ exports.process = function(state)
 	}
 	else if (state.result.tokens.includes('e_veggie') )	
 	{
-			state.result.code = 'rp_24_frustrated';  // I' already told you
+			state.result.code = 'rp_24_frustrated_restate';  // I' already told you
 	}
 
 	else

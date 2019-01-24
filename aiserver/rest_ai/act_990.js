@@ -121,6 +121,23 @@ exports.process = function(state)
 		state.result.code = 'rp_990_rude';  // 'Um, I not quite comfortable with that.';
 
 	}
+
+//	i_desire e_unknown
+
+	else if (f.includesAll(state.result.tokens, 'i_desire','e_unknown'))
+	{
+		state.result.code = 'rp_1_no_thankyou';  //
+
+	else if (f.includesAll(state.result.tokens, 'e_togo'))
+	{
+		state.result.code = 'rp_1_togo';  //'
+	}
+
+	else if (state.result.tokens.includes( 'i_5sec') )
+	{
+		state.result.code = 'rp_1_hmmm';  //
+
+
 	else
 	if (state.result.tokens.includes( 'i_9sec') )
 	{
