@@ -23,7 +23,7 @@ exports.process = function(state)
 							&&
 			f.hasAny(state.result.tokens, 'i_prefer','i_desire','i_suggest') )
 	{
-			state.result.code = 'rp_20_i_prefer_mushroom';  // 
+			state.result.code = 'rp_2_u_know_sam';  // 
 			state.session.score_understand++;
 			state.session.act = 30;  // move on!
 			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
