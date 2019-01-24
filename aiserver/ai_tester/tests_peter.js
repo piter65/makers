@@ -4,6 +4,30 @@ test_sets['tests_peter'] =
 	{ input:"TESTS PETER",reply:null},
 
 
+	{ input:"JEFF'S NEW SHE GOES TO CLOSING ERROR - PETER NOTE THAT THIS BUG AND THE NEXT ONE REVOLVE AROUND THE SAME RESPONSE",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"Why thankyou.  We take pride in our uniforms.  Welcome to the pizza place, home of the best slice in town!  and may I say your outfit is quite nice too",reply:"rp_10_greet"},
+	{ input:"Do you have any food allergies?",reply:"rp_3_remember_gluten"},
+	{ input:"what do you think caused it?",reply:"rp_3_gluten_uncle"},
+	{ input:"we have a gluten free option",reply:"rp_3_decided_nogluten"},
+	{ input:"what toppings would you like on it",reply:"rp_10_offeredhelp"},
+	{ input:"how about mushroom",reply:"rp_20_decided_mushroom"},
+	{ input:"what meat do you like",reply:"rp_20_i_prefer_sausage"},
+	{ input:"how about mushroom",reply:"rp_24_frustrated_restate"},
+
+
+	{ input:"JEFF'S NEW INTERNAL SERVER ERROR",reply:null},
+	{ input:"newgame",reply:"rp_5_intro"	},
+	{ input:"Why thankyou.  We take pride in our uniforms.  Welcome to the pizza place, home of the best slice in town!  and may I say your outfit is quite nice too",reply:"rp_10_greet"},
+	{ input:"What can I get you?",reply:"rp_10_offeredhelp"},
+	{ input:"How about mushroom",reply:"rp_20_decided_mushroom"},
+	{ input:"How about tomato",reply:"rp_24_frustrated_restate"},
+
+
+
+
+
+
 	{ input:"SCOTTS FIRST ISSUE",reply:null},
 	{ input:"newgame",reply:"rp_5_intro"	},
 
