@@ -100,10 +100,13 @@ exports.process = function(state)
 	}
 	if (state.session.empathy_opportunity)	// only give boost if appropriate
 	{
+		logger.log('==========================  checking opportunity');
 		if ( 
 			state.result.tokens.includes('e_shock') ||
        		state.result.tokens.includes('e_empathy') ||
-        	state.result.tokens.includes('e_nofun')
+        	state.result.tokens.includes('e_nofun') ||
+        	state.result.tokens.includes('i_sorry') 
+
         	)
 			{
 // Player got it!

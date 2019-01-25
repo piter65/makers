@@ -23,7 +23,7 @@ exports.process = function(state)
 		state.session.score_empathy = 0;
 		state.session.score_exec -= 1;
 	}
-	else if (f.includesAny(state.result.tokens,'e_shock','e_empathy','e_nofun'))
+	else if (f.includesAny(state.result.tokens,'e_shock','e_empathy','e_nofun','i_sorry'))
 	{
 		state.result.code = 'rp_3_gluten_uncle';
 		state.session.score_understand++;

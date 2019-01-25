@@ -45,8 +45,7 @@
 	," possibly ":" "
 	," could be ":" "
 
-	,"would":"should"
-	,"should not":"shouldnt"
+
 
 
 	," can i ":" may i "
@@ -67,6 +66,16 @@
 
 	," do you want today ":" would you like "
 	," do you want ":" would you like "
+
+	,"------ xcomment":"waiting for more powerful vocab things "
+
+	," would you like on ": " whatextra "
+	," would you like with ": " whatextra "
+	," do you want on ": " whatextra "
+	," do you want with ": " whatextra "
+
+
+
 
 	,"------ xcomment":"have you is powerful, I need more syns... "
 	," do you have ":" have you "
@@ -91,6 +100,12 @@
 	," thousands of ":" many "
 	," millions of ":" many "
 	," various ":" many "
+
+
+	,"------ xcomment":"meat balls have problemss "
+	," meat balls ":" salami "
+	," meat ball":" salami"
+	," meatball":" salami "
 
 
 	," wide variety ":" many "
@@ -383,7 +398,11 @@
 
 	," what you like ":" preference "
 
+	,"xcomment":"----- end of file -----"
 
+
+	,"would":"should"
+	,"should not":"shouldnt"
 	,"xcomment":"----- end of file -----"
 
 

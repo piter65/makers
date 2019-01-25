@@ -29,6 +29,11 @@ exports.process = function(state)
 		state.session.act = 20;  // move on!
 	}
 
+	else if (f.hasAll(state.result.tokens, 'e_wtype','e_topping'))  
+	{
+		state.result.code = 'rp_10_topppings_early';   //move on...
+		state.session.act = 20;  // move on!
+	}
 
 	else if (state.result.tokens.includes( 'i_mirror') )
 	{
@@ -72,6 +77,7 @@ exports.process = function(state)
 	{
 		state.result.code = 'rp_10_insulted';    // 'Im not sure I like this place or you.';
 		state.session.trust -= 2;
+		state.session.oops_trig=1;			// opportunity to reduce damage
 	}
 
 	else if (state.result.tokens.includes( 'i_thankyou') )

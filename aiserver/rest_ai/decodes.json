@@ -2,36 +2,139 @@
 
 "comment":"lose"
 
+
+
+	,"rp_1_ok":
+	{
+		"direct":"neutral ok for a potential ok loop."
+		,"text":"Okay."
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_10_topppings_early":
+	{
+		"direct":"Jeff rewrite addon2"
+		,"text":"Well, maybe one meat and one veggie, and no drink for me."
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_10_store_clean":
+	{
+		"direct":"Jeff rewrite addon2"
+		,"text":"Yeah, looks nice."
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_2_u_know_sam":
+	{
+		"direct":"Jeff, help re-write"
+		,"text": "You know what I think? I'll have a slice of sausage and mushroom."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_1_no_problem":
+	{
+		"direct":"Jeff rewrite addon2"
+		,"text":"No problem with me."
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_20_veg1":
+	{
+		"direct":"Jeff rewrite  addon2"
+		,"text":"Some veggie sounds good.   Any other vegetable good here?"
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+	,"rp_20_meat1":
+	{
+		"direct":"Jeff rewrite addon2"
+		,"text":"Some meat sounds good.   Whats good here?"
+		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_thats_nice":
+	{
+		"direct":"addon2-"
+		,"text": "Thats nice."
+		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
+	}
+
+
+	,"rp_1_what_toppings":
+	{
+		"direct":"addon2-neutral"
+		,"text":"What toppings can I get?."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_store_clean":
+	{
+		"direct":"addon2-neutral"
+		,"text":"Yeah, the places looks shiny and clean."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
+
+
+
+
+
+	,"rp_1_yes":
+	{
+		"direct":"addon2-neutral"
+		,"text":"Yes."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_1_no_thankyou":
+	{
+		"direct":"addon2-A simple no thankyou"
+		,"text":"No Thankyou."
+		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_2_sausage_sam":
+	{
+		"direct":"addon2-on This needs doing.  please add."
+		,"text":"I like sausage and it will go well with mushroom."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
+	,"rp_2_mushroom_sam":
+	{
+		"direct":"addon2-add-on This needs doing.  please add."
+		,"text":"I like mushroom and it will go great with the sausage."
+		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+	}
+
 	,"rp_1_asked_twice":
 	{
-		"direct":"read confused and annoyed"
-		,"text":"addon-Didn't we already talk about this?"
+		"direct":"addon-read confused and annoyed"
+		,"text":"Didn't we already talk about this?"
 		,"animations":[{"face":"f_angry","body":"b_idle","delay":1000,"duration":1000}]
 	}
 
 
 	,"rp_1_hmmm":
 	{
-		"direct":"We got an ok. Re-read as a at least 2-3 sylables, between confusion and sneaky understanding"
-		,"text":"addon-hmmmmmm?"
+		"direct":"addon-We got an ok. Re-read as a at least 2-3 sylables, between confusion and sneaky understanding"
+		,"text":"hmmmmmm?"
 		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_1_I_dont_know":
 	{
-		"direct":"Read this neutrally so we can use it in cases where we don't have a better answer"
-		,"text":"addon-I don't know."
+		"direct":"addon-Read this neutrally so we can use it in cases where we don't have a better answer"
+		,"text":"I don't know."
 		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
 	}
 
 
 
-	,"rp_1_no_thankyou":
-	{
-		"direct":"A simple no thankyou"
-		,"text":"addon2-No Thankyou."
-		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
-	}
 
 	,"rp_1_no_enthusiastic":
 	{
@@ -47,12 +150,7 @@
 		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_1_yes":
-	{
-		"direct":"neutral"
-		,"text":"addon-Yes."
-		,"animations":[{"face":"f_conf","body":"b_idle","delay":0,"duration":0}]
-	}
+
 
 	,"rp_1_yes_sarcastic":
 	{
@@ -143,12 +241,8 @@
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_2_u_know_sam":
-	{
-		"direct":"redo2-add-on This needs doing.  please add."
-		,"text":"addon-You know what? How about a slice with just sausage and mushroom."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
+
+
 
 	,"rp_3_remember_gluten":
 	{
@@ -487,12 +581,6 @@
 	}
 
 
-	,"rp_20_meat1":
-	{
-		"direct":"we got this"
-		,"text":"Some meat sounds good.   Whats good here?"
-		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
 
 	,"rp_20_decide_sausage_veg":
 	{
@@ -501,12 +589,7 @@
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-	,"rp_20_veg1":
-	{
-		"direct":"we got this"
-		,"text":"Some veggie sounds good.   Any other vegetable good here?"
-		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-	}
+
 
 	,"rp_20_veg_uprefer":
 	{
@@ -605,21 +688,21 @@
 	,"rp_20_no_drink":
 	{
 		"direct":"we got this in no_drink_annoyed"
-		,"text": "I've already said that I don't want a drink. Can you help me pick toppings?"
+		,"text": "I've already said that I don't want a drink. I want a slice and I can not decide on the toppings?"
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
 	}
 
 	,"rp_20_no_drink_nice":
 	{
 		"direct":"we got this"
-		,"text":"Well, I don't really want a drink.  Can you help me pick toppings?"
+		,"text":"Well, I don't really want a drink.  I can not decide on the toppings??"
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
 	}
 
 	,"rp_20_no_drink_annoyed":
 	{
 		"direct":"we got this"
-		,"text": "I can totally do without your sense of humour. I already said I don't want a drink.  Can you help me pick some toppings?"
+		,"text": "I can totally do without your sense of humour. I already said I don't want a drink.  I can not decide on the toppings??"
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
 	}
 

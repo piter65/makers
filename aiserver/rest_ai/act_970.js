@@ -76,6 +76,10 @@ exports.process = function(state)
 			{
 				state.result.code = 'rp_1_asked_twice'; // state"A no gluten option?Lets do that! "
 				state.session.score_listen--;
+				state.session.score_understand-=2;
+				state.session.oops_trig=1;			// opportunity to reduce damage
+
+
 			}
 		}
 

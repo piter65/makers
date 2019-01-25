@@ -237,27 +237,39 @@ app.get('/ai', function(req, res)
 			break;
 
 		case 'system score':
+// refigure....			
+			state.session.score_overall = 
+			state.session.score_exec+state.session.score_listen+	
+			state.session.score_understand+state.session.score_empathy;
+
+
+
 			state.result.code = 'rp_0_score';
 
-// refigure....			
-	state.session.score_overall = 
-		state.session.score_exec+state.session.score_listen+	
-		state.session.score_understand+state.session.score_empathy;
-
-			state.result.reply = 'score #'+state.session.score_overall+'\n:';
+			state.result.reply = 'score #'+(state.session.score_overall*100)+'\n:';
 			state.result.reply += state.result.code+';\nCommunication Style:'+state.session.score_exec+'\n';
 			state.result.reply += 'Active Listening:'+state.session.score_listen+'\n';
 			state.result.reply += 'Understanding:'+state.session.score_understand+'\n';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
 
-			
+			break;
+
+		case 'system vscore':
+// refigure....			
+			state.session.score_overall = 
+			state.session.score_exec+state.session.score_listen+	
+			state.session.score_understand+state.session.score_empathy;
+
+			state.result.code = 'rp_0_score';
+			state.result.reply = state.session.score_overall*100;
 
 			break;
+
 
 		case 'system version':
 			state.result.code = 'rp_0_version';
 
-			state.result.reply += state.result.code+'\nversion Jan 17a\n';
+			state.result.reply += state.result.code+'\nversion Jan 25\n';
 
 			break;
 
@@ -420,14 +432,6 @@ function process_ai(state)
 			act_990.process(state);	
 	}	
 
-
-
-
-
- // var res = str.replace("Microsoft", "W3Schools");
-
-
-
 // set triggers - this is so flags set once outside of logic
 	if (state.session.one_meat_one_veggie_trig>0)
 		{  state.session.one_meat_one_veggie_ctx = 1; state.session.one_meat_one_veggie_trig =0;}	
@@ -436,6 +440,15 @@ function process_ai(state)
 	if (state.session.why_sick_trig>0)
 		{  state.session.why_sick_ctx = 1; state.session.why_sick_trig =0;}	
 	else state.session.why_sick_ctx = 0;
+
+	if (state.session.oops_trig>0)
+		{  state.session.oops_ctx = 1; state.session.oops_trig--;}	
+	else state.session.oops_ctx = 0;
+
+	if (state.session.order_trig>0)
+		{  state.session.order_ctx = 1; state.session.order_trig--;}	
+	else state.session.oops_order = 0;
+
 
 	logger.log('state.result.code: "%s"', state.result.code);
 
@@ -500,7 +513,7 @@ if (state.session.score_overall <18)
 			state.result.reply += 'Active Listening:'+state.session.score_listen+' ';
 			state.result.reply += 'Understanding:'+state.session.score_understand+' ';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+' ';
-			state.result.reply += 'Overall:'+state.session.score_overall+' ';
+			state.result.reply += 'Overall:'+(state.session.score_overall*100)+' ';
 
 			state.result.reply += '\n try "newgame myname" to play again\n';		
 	}

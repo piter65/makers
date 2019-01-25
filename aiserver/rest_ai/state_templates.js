@@ -23,6 +23,14 @@ exports.session_defaults =
 	one_meat_one_veggie_trig: 0,		// This is a context flag set when she says she wants one meat, one veggie.
 	one_meat_one_veggie_ctx: 0,		// This is a context flag set when she says she wants one meat, one veggie.
 
+
+	oops_trig: 0,		// ctx flag for short term apology.  oops, sorry about that.
+	oops_ctx: 0,		// 
+
+	order_trig: 0,		// ctx flag for short term apology.  oops, sorry about that.
+	order_ctx: 0,		// 
+
+
 	why_sick_trig: 0,		// 
 	why_sick_ctx: 0,		// for the why in a sick
 

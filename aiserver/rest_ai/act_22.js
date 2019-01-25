@@ -12,12 +12,10 @@ exports.process = function(state)
 
 	if (   state.result.tokens.includes('e_mushroom') )
 	{
-		state.result.code = 'rp_2_yes_sam'; // 'Yeah,. Ill have a slice of sausage and mushroom';
+		state.result.code = 'rp_2_mushroom_sam'; // 'Yeah,. Ill have a slice of sausage and mushroom';
 
 		state.session.act = 30;  // move on!
 		if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
-
-		state.result.choice_done = true;
 	}
 	else if (f.hasAll(state.result.tokens,'e_vegclass')
 							&&
@@ -28,6 +26,15 @@ exports.process = function(state)
 			state.session.act = 30;  // move on!
 			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 	}
+// special case for "what would you like with your sausage"
+	else if (f.hasAll(state.result.tokens,'e_wtype','e_sausage'))
+	{
+			state.result.code = 'rp_2_u_know_sam';  // 
+			state.session.score_understand++;
+			state.session.act = 30;  // move on!
+			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
+	}
+
 	else if (f.hasAll(state.result.tokens, 'e_meatclass')
 							&&
 			f.hasAny(state.result.tokens, 'i_prefer','i_desire','i_suggest') )

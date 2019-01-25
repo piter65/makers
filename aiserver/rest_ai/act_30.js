@@ -30,6 +30,8 @@ exports.process = function(state)
 		state.session.next_act=40;	// come back here
 		state.session.act = 32;  // move to glutten decided!  move on!	
 		state.session.empathy_opportunity = true;  // open to empathy	
+		logger.log('set opportunity');
+
    	}
 /*
 	else
