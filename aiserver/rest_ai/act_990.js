@@ -31,6 +31,8 @@ exports.process = function(state)
 			state.result.code = 'rp_990_insulted';  //'Excuse me?';
 			state.session.trust += -2;
 			state.session.score_understand-=2;
+			state.session.oops_trig=1;			// opportunity to reduce damage
+
 		}
 		else
 		{
@@ -49,6 +51,15 @@ exports.process = function(state)
 	{
 			state.result.code = 'rp_1_thank_you';  // 'Thanks. I got it at .';
 	
+	}
+
+	else if (  state.result.tokens.includes( 'e_uniform'))
+	{
+			state.result.code = "rp_1_thats_nice";  // 'Thanks. I got it at .';	
+	}
+	else if (  state.result.tokens.includes( 'e_storeclean'))
+	{
+			state.result.code = "rp_10_store_clean";  // 'Thanks. I got it at .';	
 	}
 
 
@@ -83,24 +94,7 @@ exports.process = function(state)
 			state.session.game_over = true;
 		}
 	}
-	else
-	if (   state.result.tokens.includes( 'i_smalltalk')
-		&& state.result.tokens.includes('sports'))
-	{
-		{
-			state.result.code = 'rp_990_smalltalk_sports';  //  'I don\'t really follow sports.';
-			state.result.direction = 'awkward';
-			state.session.trust += 0;
-		}
-	}
-	else
-	if (   state.result.tokens.includes( 'i_smalltalk')
-		&& state.result.tokens.includes('weather'))
-	{
-		{
-			state.result.code = 'rp_990_smalltalk_weather';   // 'Um, yeah, I guess so.';
-		}
-	}
+
 	else
 	if (state.result.tokens.includes( 'i_greeting') )
 	{
@@ -127,6 +121,7 @@ exports.process = function(state)
 	else if (f.includesAll(state.result.tokens, 'i_desire','e_unknown'))
 	{
 		state.result.code = 'rp_1_no_thankyou';  //
+	}
 
 	else if (f.includesAll(state.result.tokens, 'e_togo'))
 	{
@@ -136,7 +131,7 @@ exports.process = function(state)
 	else if (state.result.tokens.includes( 'i_5sec') )
 	{
 		state.result.code = 'rp_1_hmmm';  //
-
+	}
 
 	else
 	if (state.result.tokens.includes( 'i_9sec') )
@@ -144,10 +139,33 @@ exports.process = function(state)
 		state.result.code = 'rp_1_fed_up';  //'I wont be visiting here again.  Good day.';
 		state.session.game_over = true;
 	}
-	// If we have any tokens at all, fall thru here.
+
+	// If we have no tokens at all, fall thru here.
 	else if (state.session.empathy_scored)	// Did they get an empathy point?
 	{
 		state.result.code = 'rp_1_thank_you';
+	}
+
+	// look for goofs....
+	else if ( (state.session.oops_ctx>0) && (f.includesAll(state.result.tokens, 'i_sorry'))	  )// Did they get an empathy point?
+	{
+		state.result.code = 'rp_1_no_problem';
+	// maybe a score boost, or a score penalty if not?
+	}
+
+	else if (f.hasAny(state.result.tokens, 'i_affirm','e_pretty'))
+	{
+		state.result.code = 'rp_1_ok';  //'The dreaded ok loop';
+	}
+
+	else if (state.result.tokens.length > 4)	// if many tokens recognized
+	{
+		state.result.code = 'rp_1_not_get_your_point';  //';
+	}
+
+	else if (state.result.tokens.length > 1)	// if 2 tokens recognized
+	{
+		state.result.code = 'rp_1_hmmm';  //'The dreaded ok loop';
 	}
 
 	else if (state.result.tokens.length > 0)
