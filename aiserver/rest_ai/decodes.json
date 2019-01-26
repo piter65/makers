@@ -485,7 +485,7 @@
 	,"rp_10_greet":
 	{
 		"direct":"we got this"
-		,"text":"Hi! This place must be new.  Looks great."
+		,"text":"This place must be new.  Looks great."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 	,"rp_10_first_time":
@@ -497,7 +497,7 @@
 	,"rp_10_customer_initiates":
 	{
 		"direct":"we got this, don't use it."
-		,"text":"So, I was thinking of getting a slice."
+		,"text":"So, I'm thinking of getting a slice."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -505,7 +505,7 @@
 	,"rp_10_insulted":
 	{
 		"direct":"we got this"
-		,"text":"Seriously, I'm not sure I like this place or you."
+		,"text":"Seriously? I'm not sure I like this place - or you."
 		,"animations":[{ "face":"f_frown","body":"b_idle","delay":0 ,"duration":0 }]
 	}
 	,"rp_10_rude":
@@ -527,7 +527,7 @@
 	,"rp_10_impatient":
 	{
 		"direct":"we got this"
-		,"text":"Hello? Are you taking my order?"
+		,"text":"Hello?! Are you going to take my order?"
 		,"animations":[{"face":"f_sad","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -1192,7 +1192,7 @@
 	,"rp_10_past_reaction_ELIM":
 	{
 		"direct":"we got this"
-		,"text":"I got kinda sick last time I had pizza.  I'm not sure what happened, but today I saw your store, and I thought I'd give pizza another try."
+		,"text":"I got kind of sick last time I had pizza.  I'm not sure what happened, but today I saw your store, and I thought I'd give pizza another try."
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
