@@ -254,6 +254,7 @@ app.get('/ai', function(req, res)
 
 			break;
 
+		case 'system_vscore':
 		case 'system vscore':
 // refigure....			
 			state.session.score_overall = 
@@ -261,7 +262,7 @@ app.get('/ai', function(req, res)
 			state.session.score_understand+state.session.score_empathy;
 
 			state.result.code = 'rp_0_score';
-			state.result.reply = state.session.score_overall*100;
+			state.result.reply = "score:"+state.session.score_overall*100;
 
 			break;
 
@@ -297,7 +298,7 @@ app.get('/ai', function(req, res)
 
 	state.result.success = true;
 
-	state.result.reply+=state.result.extra;	// pa
+//	state.result.reply+=state.result.extra;	// pa
 
     if (state.result.tokens.includes('e_newgame'))
     {
