@@ -37,6 +37,14 @@ exports.process = function(state)
 		state.session.score_understand+=1;
 	}
 
+// added late january 27 just because scott asks "what would you like on your pizza"
+	else if (f.hasAll(state.result.tokens,'e_wtype','e_slice'))
+	{
+		state.result.code = 'rp_20_one_of_each';  // you actually sorta care!
+		state.session.score_understand+=1;
+	}
+
+
 
 	else if (   state.result.tokens.includes('i_offerhelp')		)
 	{
