@@ -24,7 +24,9 @@ exports.process = function(state)
 		state.session.score_exec++;
 		state.result.extra=":exec boost";
 	}
-    if (true)
+// need to deal with 5 sec here....
+//i_5sec
+   	if (!state.result.tokens.includes('i_5sec')	) 	
    	{
 		state.result.code = 'rp_3_remember_gluten';		// last time I got sick..
 		state.session.next_act=40;	// come back here
