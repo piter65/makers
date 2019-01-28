@@ -43,7 +43,7 @@ exports.process = function(state)
 				state.session.gluten_saga=3;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry
 				}
-			else if (f.hasAny(state.result.tokens, 'e_sorry','e_shock','e_empathy','e_nofun'))	// look for gluten only
+			else if (f.hasAny(state.result.tokens, 'i_sorry','e_shock','e_empathy','e_nofun'))	// look for gluten only
 				{
 				state.result.code = 'rp_3_gluten_uncle';		// last time I got sick..
 				state.session.score_understand++;
