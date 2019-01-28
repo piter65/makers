@@ -29,19 +29,6 @@ const f = require('./func');
 let testArr = ['alice', 'bob', 'cisco', 'dude'];
 
 
-// BChance: Peter these are tests for 'f' methods.
-//   Remove if you want.
-logger.log('hasAny | %s : %s', ['alice'].join(' '), f.hasAny(testArr, 'alice'));
-logger.log('hasAny | %s : %s', ['edward'].join(' '), f.hasAny(testArr, 'edward'));
-logger.log('hasAny | %s : %s', ['edward', 'greg', 'bob'].join(' '), f.hasAny(testArr, 'edward', 'greg', 'bob'));
-
-logger.log('hasAll | %s : %s', ['alice'].join(' '), f.hasAll(testArr, 'alice'));
-logger.log('hasAll | %s : %s', ['edward'].join(' '), f.hasAll(testArr, 'edward'));
-logger.log('hasAll | %s : %s', ['edward', 'greg', 'bob'].join(' '), f.hasAll(testArr, 'edward', 'greg', 'bob'));
-logger.log('hasAll | %s : %s', ['cisco', 'dude', 'alice'].join(' '), f.hasAll(testArr, 'cisco', 'dude', 'alice'));
-
-
-
 // This function will work so long as 'obj' 
 //   does not contain any cyclic references.
 function deepClone(obj)
@@ -125,6 +112,9 @@ app.get('/ai/start-session', function(req, res)
 
 app.get('/ai', function(req, res)
 {
+
+
+
 	// Logger is unmuted by default unless specifically requested.
 	logger.mute = req.query.mute == "true";
 
@@ -172,12 +162,25 @@ app.get('/ai', function(req, res)
 	//   it with the default session data.
 	const state = deepClone(state_prev);
 	if (!state.session)
+	{
+		logger.log("--------------------- DEEP CLONING NEW CONNECTION ---------------------");
+
 		state.session = deepClone(state_templates.session_defaults);
+	}
+
+	logger.log("&&&&&&&&&FIRST DISPLAY&&&&&&&&&&&&& testall:"+state.session.testall+"  testcount"+state.session.testcount+"\n");
+
+
 
 	state.session.num_entries++;	// keep count of entries...
+	logger.log("_______________ num_entries:"+state.session.num_entries+"\n");
 
 	// Reset the state's result data.
 	state.result = deepClone(state_templates.result_defaults);
+	logger.log("************************ testall:"+state.session.testall+"  testcount"+state.session.testcount+"\n");
+
+
+
 	logger.log("\tResult - Start: \n" + JSON.stringify(state.result, null, 4));
 
 	state.result.text_origin = req.query.text.toLowerCase();
@@ -196,6 +199,12 @@ app.get('/ai', function(req, res)
 
 // peter wants a extra text, used for feedback now.
 	state.result.extra =":";
+
+
+
+
+
+
 
 //	logger.log("_story_Player: '%s'", state.result.text_origin);
 // 	{input:"INITIAL TEST",reply:null}, 
@@ -235,6 +244,7 @@ app.get('/ai', function(req, res)
 			state.result.reply = state.result.code+':ACT:'+state.session.act+'\n';
 			state.result.reply += JSON.stringify(state_prev, null, 4);
 			break;
+
 
 		case 'system score':
 // refigure....			
@@ -290,6 +300,25 @@ app.get('/ai', function(req, res)
 			state.result.code = 'rp_0_howdy';
 			state.result.reply = state.result.code+':Hey there cowboy';
 			break;
+
+		case 'system test all':
+		case 'sta':		// for peter's lazy typing
+
+			state.result.code = 'rp_0_system_test_all';
+			state.session.testall=1000;				// let the testing begin!
+//			state.session.testcount=0;				// let the testing begin!
+			break;
+/*
+		case 'system stop test':
+		case 'system test stop':
+			state.result.code = 'rp_0_system_test_stop';
+			state.session.testall=0;				// so sad, testing over.
+			state.session.testcount=0;			// just to be tidy.
+			break;
+*/
+
+
+
 		default:
 			process_ai(state);
 			save_state = true;
@@ -299,6 +328,18 @@ app.get('/ai', function(req, res)
 	state.result.success = true;
 
 //	state.result.reply+=state.result.extra;	// pa
+
+	if (state.session.testall != 7777)				// let the testing begin!
+	{
+		state.result.code = 'rp_0_ib_testing';
+		state.result.reply = 'This is test#'+state.session.testcount+'\n';	
+
+		state.session.testcount++;				// let the testing begin!
+		logger.log("................testall:"+state.session.testall+
+			"  testcount"+state.session.testcount+"\n");
+	}
+
+
 
     if (state.result.tokens.includes('e_newgame'))
     {
@@ -342,6 +383,13 @@ app.get('/ai', function(req, res)
 
 	res.set('Access-Control-Allow-Origin', '*');
 	res.send(state.result);
+
+//	state.session.testall+=1000;    // why not?
+
+	state.session.testcount+=10;    // why not?
+	logger.log("##Last####Display################# testall:"+state.session.testall+
+			"  testcount"+state.session.testcount+"\n");
+
 });
 
 // app.get('/crash', function(req, res)
@@ -520,3 +568,5 @@ if (state.session.score_overall <18)
 	}
 
 }
+
+// end of file
