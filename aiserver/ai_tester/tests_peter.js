@@ -5,7 +5,7 @@ test_sets['tests_peter'] =
 	{input:"new game jeff", reply:"rp_5_intro"},
 	{input:"we hate these uniforms",reply:"rp_1_thats_nice"},
 	{input:"do you have any food restrictions",reply:"rp_3_remember_gluten"},
-	{input:"what caused it",reply:"rp_3_gluten_uncle:"},
+	{input:"what caused it",reply:"rp_3_gluten_uncle"},
 	{input:"do you have any food restrictions",reply:"rp_1_I_dont_know"},
 
 
