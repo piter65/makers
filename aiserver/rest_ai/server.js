@@ -305,19 +305,21 @@ app.get('/ai', function(req, res)
 		case 'sta':		// for peter's lazy typing
 
 			state.result.code = 'rp_0_system_test_all';
-			state.session.testall=1000;				// let the testing begin!
-//			state.session.testcount=0;				// let the testing begin!
+			state.session.testall=1;				// let the testing begin!
+			state.session.testcount=0;				// let the testing begin!
 
-			save_state = true;
+			save_state = true;			// we need to actually save data.
 			break;
-/*
+
 		case 'system stop test':
 		case 'system test stop':
 			state.result.code = 'rp_0_system_test_stop';
 			state.session.testall=0;				// so sad, testing over.
 			state.session.testcount=0;			// just to be tidy.
+			save_state = true;			// we need to actually save data.
+
 			break;
-*/
+
 
 
 
@@ -331,7 +333,7 @@ app.get('/ai', function(req, res)
 
 //	state.result.reply+=state.result.extra;	// pa
 
-	if (state.session.testall != 7777)				// let the testing begin!
+	if (state.session.testall != 0)				// let the testing begin!
 	{
 		state.result.code = 'rp_0_ib_testing';
 		state.result.reply = 'This is test#'+state.session.testcount+'\n';	
@@ -388,7 +390,6 @@ app.get('/ai', function(req, res)
 
 //	state.session.testall+=1000;    // why not?
 
-	state.session.testcount+=10;    // why not?
 	logger.log("##Last####Display################# testall:"+state.session.testall+
 			"  testcount"+state.session.testcount+"\n");
 

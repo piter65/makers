@@ -3,7 +3,7 @@ exports.session_defaults =
 	act: 10,
 	trust: 0,
 
-	testall: 7777,		// set true when doing a test of all scenese. Over-rides all logic.
+	testall: 0,		// set true when doing a test of all scenese. Over-rides all logic.
 	testcount: 0,		// index of where in count we are...
 
 	count_compliment_dress: 0,
