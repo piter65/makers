@@ -307,6 +307,8 @@ app.get('/ai', function(req, res)
 			state.result.code = 'rp_0_system_test_all';
 			state.session.testall=1000;				// let the testing begin!
 //			state.session.testcount=0;				// let the testing begin!
+
+			save_state = true;
 			break;
 /*
 		case 'system stop test':
