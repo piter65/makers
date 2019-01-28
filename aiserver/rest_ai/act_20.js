@@ -174,7 +174,7 @@ exports.process = function(state)
 
 	else if (state.result.tokens.includes('e_drink'))
 	{
-		state.result.code = 'rp_20_no_drink_nice';    // was nodrink
+		state.result.code = 'rp_20_no_drink';    // was nodrink
 		state.session.score_listen--;
 	}
 
