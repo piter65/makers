@@ -1,5 +1,15 @@
 test_sets['tests_peter'] =
 [
+
+	{ input:"drink oddity  jan 27",reply:null},
+	{input:"new game jeff", reply:"rp_5_intro"},
+	{input:"order please", reply:"rp_10_offeredhelp"},
+
+	{input:"would you like a drink with that",reply:"rp_20_no_drink"},
+	{input:"would you like a drink with that",reply:"rp_20_no_drink"},
+	{input:"would you like a drink with that",reply:"rp_20_no_drink"},
+
+
 	{ input:"glutten oddity  jan 27",reply:null},
 
 	{input:"new game jeff", reply:"rp_5_intro"},

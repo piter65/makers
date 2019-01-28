@@ -74,11 +74,11 @@ exports.process = function(state)
 				 		&&
 			 	!f.hasAny(state.result.tokens, 'e_nogluten','e_slice')	)
 			{
-				state.result.code = 'rp_1_asked_twice'; // state"A no gluten option?Lets do that! "
+				state.result.code = 'rp_1_I_dont_know';		// last time I got sick..
+//				state.result.code = 'rp_1_asked_twice'; // state"A no gluten option?Lets do that! "
 				state.session.score_listen--;
 				state.session.score_understand-=2;
-				state.session.oops_trig=1;			// opportunity to reduce damage
-
+//				state.session.oops_trig=1;			// opportunity to reduce damage
 
 			}
 		}

@@ -53,10 +53,7 @@ exports.process = function(state)
 	
 	}
 
-	else if (  state.result.tokens.includes( 'e_uniform'))
-	{
-			state.result.code = "rp_1_thats_nice";  // 'Thanks. I got it at .';	
-	}
+
 	else if (  state.result.tokens.includes( 'e_storeclean'))
 	{
 			state.result.code = "rp_10_store_clean";  // 'Thanks. I got it at .';	
@@ -67,6 +64,8 @@ exports.process = function(state)
 	{
 		state.result.code = 'rp_990_insulted';  //'Excuse me?';
 		state.session.score_understand-=2;
+		state.session.oops_trig=1;			// opportunity to reduce damage
+
 	}
 
 	else
@@ -144,6 +143,12 @@ exports.process = function(state)
 	else if (state.session.empathy_scored)	// Did they get an empathy point?
 	{
 		state.result.code = 'rp_1_thank_you';
+	}
+
+	// 
+	else if (  state.result.tokens.includes( 'e_uniform'))
+	{
+			state.result.code = "rp_1_thats_nice";  // 'Thanks. I got it at .';	
 	}
 
 	// look for goofs....

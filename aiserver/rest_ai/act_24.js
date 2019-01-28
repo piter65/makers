@@ -53,6 +53,8 @@ exports.process = function(state)
 	{
 			state.result.code = 'rp_24_frustrated_restate';  // I' already told you';  // 
 			state.session.score_understand--;
+			state.session.oops_trig=1;			// opportunity to reduce damage
+
 	}
 	else if ( f.hasAny(state.result.tokens, 'e_mushroom')	// offered mushrooms and no meat.	
 					&&
@@ -61,6 +63,8 @@ exports.process = function(state)
 		state.result.code = 'rp_24_frustrated_restate' ;   // 'Arent you listening,
 		state.session.count_tries++;
 		state.session.score_listen--;
+		state.session.oops_trig=1;			// opportunity to reduce damage
+
 
 	}
 	else if (f.hasAny(state.result.tokens, 'e_bird','e_herb','e_hawaiin','e_fish'))	
@@ -112,6 +116,8 @@ exports.process = function(state)
 		{
 			state.result.code = 'rp_2_giveup_sam';
 			state.session.act = 30;  // move on!
+			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
+	
 		}
 		state.session.meat_tries++;
 	}
@@ -128,6 +134,8 @@ exports.process = function(state)
 		{
 			state.result.code = 'rp_2_giveup_sam';
 			state.session.act = 30;  // move on!
+			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
+
 		}
 		state.session.meat_tries++;
 	}

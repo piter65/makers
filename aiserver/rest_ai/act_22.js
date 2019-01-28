@@ -41,11 +41,15 @@ exports.process = function(state)
 	{
 			state.result.code = 'rp_22_frustrated';  // I' already told you';  // 
 			state.session.score_understand--;
+			state.session.oops_trig=1;			// opportunity to reduce damage
+	
 	}
 	else if (f.hasAny(state.result.tokens, 'e_bird','e_herb','e_hawaiin','e_fish'))
 	{
 		state.result.code = 'rp_22_wrong_toppings';    // 'Arent you listening, I want sausage and a veggie';
 		state.session.score_listen--;
+		state.session.oops_trig=1;			// opportunity to reduce damage
+
 	}
 	else if (f.hasAny(state.result.tokens, 'e_crap','e_dog','i_insult'))
 	{
