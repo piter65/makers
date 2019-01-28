@@ -1393,9 +1393,9 @@
 
 ,"--- comment":"these are the approved anim names"
 
-    ,"vincent_body":"b_idle b_idle_slouch b_look b_look_slouch b_engage b_bored b_tap b_phone b_angry"
-    ,"vincent_body":"b_idle b_look b_engage b_bored b_tap b_phone b_angry"
-    ,"vincent_face":"f_neutr f_smile f_frown f_conf f_angry f_sad"
+    ,"--- vincent_body":"b_idle b_idle_slouch b_look b_look_slouch b_engage b_bored b_tap b_phone b_angry"
+    ,"--- vincent_body":"b_idle b_look b_engage b_bored b_tap b_phone b_angry"
+    ,"--- vincent_face":"f_neutr f_smile f_frown f_conf f_angry f_sad"
 
 
 }

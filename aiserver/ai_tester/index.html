@@ -9,6 +9,7 @@
 <script type="text/javascript" src="./config.js"></script>
 <script type="text/javascript" src="./tests_peter.js"></script>
 <script type="text/javascript" src="./tests_jeff.js"></script>
+<script type="text/javascript" src="./tests_codes.js"></script>
 <script type="text/javascript">
 
 var mute = true;
@@ -103,7 +104,10 @@ function send_test_to_ai()
 				else
 				if (data.success)
 				{
-					test.received = data.reply.split(':')[0];
+					if (!config.full_replies)
+						test.received = data.reply.split(':')[0];
+					else
+						test.received = data.reply;
 				}
 				else
 				{
@@ -155,7 +159,7 @@ function display_test_result(test)
 	else
 	{
 		let is_error =
-			   test.received == '[ERROR]'
+			   test.received.includes('[ERROR]')
 			|| test.received.includes('rp_999')
 
 		let is_mismatch = test.reply != test.received;

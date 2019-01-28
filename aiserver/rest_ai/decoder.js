@@ -11,6 +11,11 @@ exports.decode_reply = function(code)
 	if (!code)
 		throw Error("Code never set. Ensure that if you match a token, that 'state.result.code' is set to something.");
 
+	// Escape comments
+	if (   code.includes('comment')
+		|| code.includes('---'))
+		return '---comment---';
+
 	const data = self.code_data[code];
 	if (!data)
 		throw Error("Code not recognized: '" + code + "'. Unable to decode.");

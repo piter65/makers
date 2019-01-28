@@ -233,7 +233,7 @@ app.get('/ai', function(req, res)
 	var save_state = false;
 	switch (state.result.text_origin)
 	{
-		case 'system test':
+		// case 'system test':
 		case 'system check':
 			state.result.code = 'rp_0_check';
 			state.result.reply = state.result.code+':system is functional';
@@ -301,14 +301,35 @@ app.get('/ai', function(req, res)
 			state.result.reply = state.result.code+':Hey there cowboy';
 			break;
 
-		case 'system test all':
-		case 'sta':		// for peter's lazy typing
+		// case 'system test all':
+		// case 'sta':		// for peter's lazy typing
 
-			state.result.code = 'rp_0_system_test_all';
-			state.session.testall=1;				// let the testing begin!
-			state.session.testcount=0;				// let the testing begin!
+		// 	state.result.code = 'rp_0_system_test_all';
+		// 	state.session.testall=1;				// let the testing begin!
+		// 	state.session.testcount=0;				// let the testing begin!
 
-			save_state = true;			// we need to actually save data.
+		// 	save_state = true;			// we need to actually save data.
+		// 	break;
+
+		case 'system test next':
+		case 'system next test':
+
+			let codes = Object.keys(decoder.code_data);
+
+			if (state.session.testcount < codes.length)
+			{
+				state.result.code = codes[state.session.testcount];
+				state.result.reply = decoder.decode_reply(state.result.code);
+
+				++state.session.testcount;
+				save_state = true;			// we need to actually save data.
+			}
+			else
+			{
+				state.result.code = 'rp_0_system_test_no_more_codes';
+				state.result.reply = '---No more codes. Code count: '+state.session.testcount+'---';
+			}
+
 			break;
 
 		case 'system stop test':
@@ -319,8 +340,6 @@ app.get('/ai', function(req, res)
 			save_state = true;			// we need to actually save data.
 
 			break;
-
-
 
 
 		default:
@@ -353,7 +372,7 @@ app.get('/ai', function(req, res)
 		logger.log("_story_:date:"+getTimeStamp());
 
 		state.result.code = "rp_5_intro";
-		state.result.reply = decoder.decode_reply(state.result.code);	
+		state.result.reply = decoder.decode_reply(state.result.code);
 
 		if (state.result.tokens.includes('e_robot'))
 		{
