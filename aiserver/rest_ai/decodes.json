@@ -17,7 +17,7 @@
 		"direct":"Deleted initial Hi"
 		,"text":"This place must be new.  Looks great."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
-
+	}
 	,"rp_10_topppings_early":
 	{
 		"direct":"Need direction"
