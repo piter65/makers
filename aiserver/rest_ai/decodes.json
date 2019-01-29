@@ -331,7 +331,7 @@
 	,"rp_3_gluten_uncle":
 	{
 		"direct":"You know what?! is like she's just solving a puzzle."
-		,"text":"You know what? My uncle had the same problem. It turned out he had a gluten allergy.  Come to think of it, maybe I do too?  Maybe I should just avoid pizza."
+		,"text":"You know what? My uncle had the same problem and it turned out he had a gluten allergy."
 		,"animations":[{"face":"f_sad","body":"b_idle","delay":0,"duration":0}]
 	}
 
