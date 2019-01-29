@@ -1,9 +1,24 @@
 {
 
-"comment":"three sections - peter was here jan 27",
-"comment":"#1=we need audio (lines 1-350ish)",
-"comment":"#2=we have audio (lines 400-980ish)",
-"comment":"#3=we do not use (lines 1000+ish)"
+"comment":"four sections - peter was here jan 27",
+"comment":"#1=we need audio - these are lines we edited or created post the Jan script (lines 1-350ish)",
+"comment":"#2=we need audio - this is in the Jan script",
+"comment":"#3=we have audio",
+"comment":"#4=we do not use"
+
+
+
+
+
+
+,"-----comment":"==================================================================="
+,"-----comment":"==================================================================="
+,"-----comment":"==================================================================="
+,"-----comment":"==================================================================="
+,"-----comment":"==================================================================="
+,"-----comment":"==================================================================="
+,"-----comment":"==================================================================="
+,"-----comment":"==================================================================="
 
 	,"rp_1_ok":
 	{
@@ -66,7 +81,7 @@
 	,"rp_1_thats_nice":
 	{
 		"direct":"addon2-"
-		,"text": "Thats nice."
+		,"text": "That's nice."
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
 	}
 
@@ -315,7 +330,7 @@
 
 	,"rp_3_gluten_uncle":
 	{
-		"direct":"You know what?! is like she's just realizing this."
+		"direct":"You know what?! is like she's just solving a puzzle."
 		,"text":"You know what? My uncle had the same problem. It turned out he had a gluten allergy.  Come to think of it, maybe I do too?  Maybe I should just avoid pizza."
 		,"animations":[{"face":"f_sad","body":"b_idle","delay":0,"duration":0}]
 	}
