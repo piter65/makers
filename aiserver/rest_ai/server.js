@@ -141,7 +141,11 @@ app.get('/ai', function(req, res)
 		return;
 	}
 
-	const state_prev = sessions[id_session];
+
+// peter was here poking around...
+ const state_prev = sessions[id_session];
+
+
 	if(!state_prev)
 	{
 		logger.log("\tSession does not exist with the ID: $s", id_session);
@@ -301,15 +305,15 @@ app.get('/ai', function(req, res)
 			state.result.reply = state.result.code+':Hey there cowboy';
 			break;
 
-		// case 'system test all':
-		// case 'sta':		// for peter's lazy typing
+		 case 'system test all':
+		 case 'sta':		// for peter's lazy typing
 
-		// 	state.result.code = 'rp_0_system_test_all';
-		// 	state.session.testall=1;				// let the testing begin!
-		// 	state.session.testcount=0;				// let the testing begin!
+		 	state.result.code = 'rp_0_system_test_all';
+		 	state.session.testall=1;				// let the testing begin!
+		 	state.session.testcount=0;				// let the testing begin!
 
-		// 	save_state = true;			// we need to actually save data.
-		// 	break;
+		 	save_state = true;			// we need to actually save data.
+		 	break;
 
 		case 'system test next':
 		case 'system next test':
@@ -335,6 +339,7 @@ app.get('/ai', function(req, res)
 		case 'system stop test':
 		case 'system test stop':
 			state.result.code = 'rp_0_system_test_stop';
+			state.result.reply = '---testing stopped: '+state.session.testcount+'---';
 			state.session.testall=0;				// so sad, testing over.
 			state.session.testcount=0;			// just to be tidy.
 			save_state = true;			// we need to actually save data.
@@ -357,12 +362,31 @@ app.get('/ai', function(req, res)
 		state.result.code = 'rp_0_ib_testing';
 		state.result.reply = 'This is test#'+state.session.testcount+'\n';	
 
+		let codes = Object.keys(decoder.code_data);
+
+		if (state.session.testcount < codes.length)
+		{
+				state.result.code = codes[state.session.testcount];
+				state.result.reply = decoder.decode_reply(state.result.code);
+
+				++state.session.testcount;
+				save_state = true;			// we need to actually save data.
+		}
+		else
+		{
+				state.result.code = 'rp_0_system_test_no_more_codes';
+				state.result.reply = '---No more codes. Code count: '+state.session.testcount+'---';
+		}
+
+
 		state.session.testcount++;				// let the testing begin!
 		logger.log("................testall:"+state.session.testall+
 			"  testcount"+state.session.testcount+"\n");
+
+
+
+
 	}
-
-
 
     if (state.result.tokens.includes('e_newgame'))
     {

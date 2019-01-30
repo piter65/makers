@@ -51,12 +51,14 @@ exports.process = function(state)
 		state.session.oops_trig=1;			// opportunity to reduce damage
 
 	}
+/*
 	else if (f.hasAny(state.result.tokens, 'e_crap','e_dog','i_insult'))
 	{
 		state.result.code = 'rp_22_disgusted';
 		// state.result.reply = 'I dont like your sense of humour.  Good day.';
 		state.session.game_over = true;
 	}
+*/	
 	else 
 	if (state.result.tokens.includes('e_meat') )	
 	{
@@ -110,7 +112,7 @@ exports.process = function(state)
 	{
 		if (state.session.veg_tries<2)
 		{
-			state.result.code = 'rp_22_veg_hintb';				// what type is best?
+			state.result.code = 'rp_22_veg_hint';				// what type is best?
 		}
 		else 
 		{

@@ -3,15 +3,6 @@ test_sets['tests_peter'] =
 
 
 
-	{ input:"drink oddity  jan 27",reply:null},
-	{input:"new game peter", reply:"rp_5_intro"},
-	{input:"waga", reply:"rp_10_offeredhelp"},
-
-	{input:"wooga",reply:"rp_20_no_drink"},
-	{input:"sta",reply:"rp_20_no_drink"},
-	{input:"wigga",reply:"rp_20_no_drink"},
-	{input:"why did testall get reset to 7777?",reply:"rp_20_no_drink"},
-
 
 	{ input:"drink oddity  jan 27",reply:null},
 	{input:"new game jeff", reply:"rp_5_intro"},
@@ -20,6 +11,14 @@ test_sets['tests_peter'] =
 	{input:"would you like a drink with that",reply:"rp_20_no_drink"},
 	{input:"would you like a drink with that",reply:"rp_20_no_drink"},
 	{input:"would you like a drink with that",reply:"rp_20_no_drink"},
+
+	{input:"intro scott  jan 27",reply:null},
+
+	{input:"new game jeff", reply:"rp_5_intro"},
+	{input:"welcome to the pizza hut",reply:"rp_10_first_time"},
+	{input:"we have the best pizza in town",reply:"rp_10_first_time"},
+
+
 
 
 	{ input:"glutten oddity  jan 27",reply:null},
@@ -619,4 +618,31 @@ test_sets['tests_peter'] =
 { input:"#You probably had a diabetic reaction to the grease.",reply:"tokens"},
 
 { input:"#Depends on what you like.",reply:"tokens"},
+
+	{ input:"system test all  jan 27",reply:null},
+	{input:"new game peter", reply:"rp_5_intro"},
+	{input:"waga", reply:"rp_10_offeredhelp"},
+
+	{input:"wooga",reply:"rp_20_no_drink"},
+	{input:"system test all",reply:"rp_20_no_drink"},
+	{input:"wigga",reply:"rp_20_no_drink"},
+	{input:"why?",reply:"rp_20_no_drink"},
+	{input:"wagga",reply:"rp_20_no_drink"},
+	{input:"wagga",reply:"rp_20_no_drink"},
+	{input:"wagga",reply:"rp_20_no_drink"},
+	{input:"wagga",reply:"rp_20_no_drink"},
+	{input:"wagga",reply:"rp_20_no_drink"},
+	{input:"wagga",reply:"rp_20_no_drink"},
+	{input:"wagga",reply:"rp_20_no_drink"},
+	{input:"wagga",reply:"rp_20_no_drink"},
+	{input:"wagga",reply:"rp_20_no_drink"},
+	{input:"waggalast",reply:"rp_20_no_drink"},
+	{input:"system stop test",reply:"rp_20_no_drink"},
+	{input:"wagga",reply:"rp_20_no_drink"},
+
+
+
+
+
+
 ]

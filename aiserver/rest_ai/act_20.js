@@ -56,7 +56,7 @@ exports.process = function(state)
 						&&
 			f.hasAny(state.result.tokens, 'i_prefer','e_desire'))
 	{
-			state.result.code = 'rp_20_i_prefer_sausage';  // 
+			state.result.code = 'rp_20_decided_sausage';  // 
 			state.session.score_understand++;
 			state.session.act = 22;  // meat decided!  move on!	
 	}
@@ -78,7 +78,7 @@ exports.process = function(state)
 						&&
 			f.hasAny(state.result.tokens, 'i_prefer','e_desire') )
 	{
-			state.result.code = 'rp_20_i_prefer_mushroom';  // 
+			state.result.code = 'rp_20_decided_mushroom';  // 
 			state.session.score_understand++;
 			state.session.act = 24;  // veggie decided!  move on!	
 	}
@@ -232,15 +232,9 @@ exports.process = function(state)
 		state.session.trust -= 1;
 	}
 
-	else if (state.result.tokens.includes('i_discover'))
-	{
-		state.result.code = 'rp_20_self_discovery'; // 'it has been a while, but lets see. How about sausage and a veggie?';
-		state.session.trust += 2;
-	}
-
 	else if (state.result.tokens.includes('i_offerhelp'))
 	{
-		state.result.code = 'rp_20_order_please_twice_nice';    // was nodrink
+		state.result.code = 'rp_20_asked_twice_annoyed';    // was nodrink
 		state.session.score_listen--;
 	}
 	else if (state.result.tokens.includes( 'i_5sec') )

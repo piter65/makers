@@ -10,6 +10,7 @@ exports.process = function(state)
 {
 	logger.log('ACT 24 - start');
 
+// fix to suggest
 	if (   state.result.tokens.includes('e_sausage'))
 	{
 		state.result.code = 'rp_2_yes_sam';
@@ -74,12 +75,14 @@ exports.process = function(state)
 		state.session.score_listen--;
 
 	}
-
+/*
 	else if (f.hasAny(state.result.tokens, 'e_crap','e_dog','i_insult'))
 	{
 		state.result.code = 'rp_22_disgusted';  //'I dont like your sense of humour.  Good day.';
 		state.session.game_over = true;
 	}
+*/
+
 	else if (state.result.tokens.includes('e_veggie') )	
 	{
 			state.result.code = 'rp_24_frustrated_restate';  // I' already told you
@@ -128,7 +131,7 @@ exports.process = function(state)
 	{
 		if (state.session.meat_tries<2)
 		{
-			state.result.code = 'rp_24_meat_hintb';
+			state.result.code = 'rp_24_meat_hint';
 		}
 		else 
 		{

@@ -26,7 +26,7 @@ exports.process = function(state)
 		if (f.hasAny(state.result.tokens, 'e_sick','e_gluten',"i_dietary"))
 			{
 				// fix - make this an rp1 in future releases...
-				state.result.code = 'rp_3_remember_gluten';		// last time I got sick..
+				state.result.code = 'rp_3_remember_gluten_no_wait';		// last time I got sick..
 				state.session.score_understand++;
 				state.session.gluten_saga=2;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry

@@ -111,7 +111,7 @@ exports.process = function(state)
 	else
 	if (state.result.tokens.includes('e_rude'))
 	{
-		state.result.code = 'rp_990_rude';  // 'Um, I not quite comfortable with that.';
+		state.result.code = 'rp_10_insulted';  // 'Um, I not quite comfortable with that.';
 
 	}
 
