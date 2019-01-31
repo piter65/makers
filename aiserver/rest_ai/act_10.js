@@ -73,26 +73,19 @@ exports.process = function(state)
 		}
 		++state.session.count_greeting;
 	}
-	else if (state.result.tokens.includes('e_storebrand'))
-		{
-// 4bchance.   There has got to be an easy way to try this.
-// I just want a copy of the previous result to reduce repetitions.
-// this is when I hate oo stuff and want to build a globals file.
-
-/*
-			if (state_prev.result.code == 'rp_10_first_time')
-						state.result.code = "rp_10_store_clean";  // 'Thanks. store clean
-
-			else 
-*/
-
-				state.result.code = 'rp_10_first_time'; // 'Yep first time I\'ve enterred the place.';
-		}
 	else
-		if (state.result.tokens.includes('e_dressbrand'))
-		{
-			state.result.code = 'rp_10_first_time';  // first time I\'ve enterred the place.'
-		}
+	if (state.result.tokens.includes('e_storebrand'))
+	{
+		if (state.prev.result.code == 'rp_10_first_time')
+			state.result.code = "rp_10_store_clean";  // 'Thanks. store clean
+		else 
+			state.result.code = 'rp_10_first_time'; // 'Yep first time I\'ve enterred the place.';
+	}
+	else
+	if (state.result.tokens.includes('e_dressbrand'))
+	{
+		state.result.code = 'rp_10_first_time';  // first time I\'ve enterred the place.'
+	}
 	else
 	if (state.result.tokens.includes( 'i_insult') )
 	{

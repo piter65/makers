@@ -141,11 +141,7 @@ app.get('/ai', function(req, res)
 		return;
 	}
 
-
-// peter was here poking around...
- const state_prev = sessions[id_session];
-
-
+	const state_prev = sessions[id_session];
 	if(!state_prev)
 	{
 		logger.log("\tSession does not exist with the ID: $s", id_session);
@@ -162,9 +158,14 @@ app.get('/ai', function(req, res)
 		return;
 	}
 
+	const state = deepClone(state_prev);
+
+	// Store the previous state for reference.
+	state.prev = deepClone(state_prev);
+	state.prev.prev = null;
+
 	// If the session data is unset, initialize 
 	//   it with the default session data.
-	const state = deepClone(state_prev);
 	if (!state.session)
 	{
 		logger.log("--------------------- DEEP CLONING NEW CONNECTION ---------------------");
@@ -234,7 +235,7 @@ app.get('/ai', function(req, res)
 	// Extract intent and entities.
 	nlu.process(state);
 
-	var save_state = false;
+	let save_state = false;
 	switch (state.result.text_origin)
 	{
 		// case 'system test':
