@@ -284,7 +284,7 @@ app.get('/ai', function(req, res)
 		case 'system version':
 			state.result.code = 'rp_0_version';
 
-			state.result.reply += state.result.code+'\nversion Jan 25\n';
+			state.result.reply += state.result.code+'\nversion Jan 30\n';
 
 			break;
 

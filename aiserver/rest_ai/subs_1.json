@@ -46,10 +46,19 @@
 	," could be ":" "
 
 
+	," we can ":" i may "
+	," i can ":" i may "
+	," i will ":" i may "
+	," we will ":" i may "
+	," we may ":" i may "
 
 
 	," can i ":" may i "
+	," can i ":" may we "
+
 	," as well " : " too "
+	," also " : " too "
+
 
 	," what is ":" whats "
 	," that is ":" thats "
@@ -73,6 +82,7 @@
 	," would you like with ": " whatextra "
 	," do you want on ": " whatextra "
 	," do you want with ": " whatextra "
+
 
 
 
@@ -398,7 +408,12 @@
 
 	," what you like ":" preference "
 
-	,"xcomment":"----- end of file -----"
+	,"xcomment":"I can help you with that"
+
+	," i may help you with that ":" ok "
+	," i will help you with that ":" ok "
+	," i may help you ":" ok "
+	," i will help you ":" ok "
 
 
 	,"would":"should"

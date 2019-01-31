@@ -15,14 +15,14 @@ exports.process = function(state)
 		state.session.understand --;
 	}
 	else if (f.hasAll(state.result.tokens, 'e_mushroom','e_sausage')
-		&& (state.result.count_entities<3)   )// the only toppings were sausage and mushroom
+		&& 	(!f.hasAny(state.result.tokens, 'e_meat','e_veggie') ) )// the only toppings were sausage and mushroom
 	{
 		state.result.code = 'rp_2_decided_sam';  //'Yeah, . Ill have sausage and mushroom';
 		state.session.act = 30;  // move on!
 		if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 	}
 	else if (f.hasAll(state.result.tokens, 'e_mushroom','e_sausage')
-		&& (state.result.count_entities>2)  ) // Manytoppings including sausage and mushroom
+		&& (f.hasAny(state.result.tokens, 'e_meat','e_veggie')  ) ) // Manytoppings including sausage and mushroom
 	{
 		state.result.code = 'rp_2_sam_but_more';  //'a bit too much . Ill have sausage and mushroom';
 		state.session.act = 30;  // move on!

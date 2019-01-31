@@ -14,7 +14,7 @@ exports.process = function(state)
 			state.result.code = 'rp_3_decided_nogluten'; // state"A no gluten option?Lets do that! "
 			state.session.act = 40;  // move on!
 			state.session.score_exec++;
-			state.session.gluten_saga=4;		// just tag it was force solved for now
+			state.session.gluten_saga=5;		// just tag it was force solved for now
 	}
 	else if ( state.result.tokens.includes( 'i_5sec')	)
 	{
@@ -23,19 +23,35 @@ exports.process = function(state)
 		state.session.score_empathy = 0;
 		state.session.score_exec -= 1;
 	}
-	else if (f.includesAny(state.result.tokens,'e_shock','e_empathy','e_nofun','i_sorry'))
+	else if ( (state.session.gluten_saga<3)
+		  &&
+	 (f.includesAny(state.result.tokens,'e_shock','e_empathy','e_nofun','i_sorry','i_why','e_gluten')))
 	{
 		state.result.code = 'rp_3_gluten_uncle';
+		state.session.empathy_opportunity=true;   // looking for sorry
 		state.session.score_understand++;
 		state.session.score_listen++;	
+		state.session.gluten_saga=3;		// move it up
 	}
-	else if (f.includesAny(state.result.tokens, 'i_why','e_gluten') /* what do you think it was?  */ )
+
+	else if ( (state.session.gluten_saga==3)
+		  &&
+	 (f.includesAny(state.result.tokens,'e_shock','e_empathy','e_nofun','i_sorry','i_why','e_gluten')))
 	{
-		state.result.code = 'rp_3_gluten_uncle';
+		state.result.code = 'rp_1_thank_you';
+		state.session.empathy_opportunity=true;   // looking for sorry
 		state.session.score_understand++;
 		state.session.score_listen++;	
+		state.session.gluten_saga=4;		// move it up
+
 	}
-	else if (f.includesAny(state.result.tokens,'i_nopizza','i_9sec','e_rude'))
+
+
+	else if (
+				f.includesAny(state.result.tokens,'i_nopizza','i_9sec','e_rude')
+					||
+				(state.session.gluten_crisis>0)
+		)
 	{
 		state.result.code = 'rp_1_fed_up';     // "I guess this was a bad idea.  Thanks for your time."
 		state.session.score_empathy = 0;
@@ -43,6 +59,15 @@ exports.process = function(state)
 
 		state.session.game_over = true;
 	}
+
+	else if (state.result.tokens.length > 0)	// pretty much anything else...
+	{
+		state.result.code = 'rp_3_pizza_bad_idea';     // "I guess this was a bad idea.  Thanks for your time."
+		state.session.score_empathy = 0;
+		state.session.score_exec -= 2;
+		state.session.gluten_crisis ++;   // this is gonna end -- soon...
+	}
+
 /*
 	else
 	{

@@ -39,6 +39,7 @@ exports.session_defaults =
 	why_sick_ctx: 0,		// for the why in a sick
 
 	gluten_saga: 0,
+	gluten_crisis: 0,		// set non-zero when gluten problem is a problem.
 
 	score_exec:5,
 	score_listen:5,

@@ -1,6 +1,9 @@
 test_sets['tests_peter'] =
 [
 
+	{ input:"drink oddity  jan 27",reply:null},
+	{ input:"#thank you for coming to the pizza shop",reply:"tokens"},
+	{ input:"#what would you like on your gluten free slice?",reply:"tokens"},
 
 
 

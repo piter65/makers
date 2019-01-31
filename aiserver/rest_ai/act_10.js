@@ -29,7 +29,10 @@ exports.process = function(state)
 		state.session.act = 20;  // move on!
 	}
 
-	else if (f.hasAll(state.result.tokens, 'e_wtype','e_topping'))  
+	else if (f.hasAll(state.result.tokens, 'e_wtype')
+							&&
+			f.hasAny(state.result.tokens, 'e_topping','e_slice') )  // what type of topping or pizza
+
 	{
 		state.result.code = 'rp_10_topppings_early';   //move on...
 		state.session.act = 20;  // move on!
@@ -41,8 +44,15 @@ exports.process = function(state)
 		state.session.trust += 1;
 	}
 	else
-	if (   state.result.tokens.includes( 'i_greeting')
-		&& state.session.count_greeting == 0)
+	if (   
+			(state.session.count_greeting == 0)
+						&&
+		(
+		state.result.tokens.includes( 'i_greeting')
+					||
+		f.hasAll(state.result.tokens, 'e_thankyou','e_storebrand')	)  // thanks for coming to the piza shop		
+		)				
+
 	{
 		if (state.result.tokens.includes('e_storebrand'))
 		{

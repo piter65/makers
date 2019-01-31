@@ -69,7 +69,7 @@
 	,"rp_20_veg1":
 	{
 		"direct":"Need direction"
-		,"text":"I want some veggie, but not that one."
+		,"text":"Some veggie sounds good, any other vegetable good here?"
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -77,7 +77,7 @@
 	,"rp_20_meat1":
 	{
 		"direct":"Need direction"
-		,"text":"I want some meat, but not that one."
+		,"text":"Some meat sounds good, whats good here?"
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -303,8 +303,8 @@
 
 	,"rp_20_no_drink":
 	{
-		"direct":"we got this in no_drink_annoyed"
-		,"text": "Well, I don't really want a drink. I want a slice, but I can't decide on the toppings."
+		"direct":"annoyed"
+		,"text": "I already told you I don't want a drink. I want a slice, but I can't decide on the toppings."
 		,"animations": [{ "face":"f_smile","body":"b_idle" ,"delay":0 ,"duration":0 }]
 	}
 
@@ -472,8 +472,6 @@
 		,"animations": [{ "face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
-
-
 	,"rp_10_welcome":
 	{
 		"direct":"we got this"
@@ -581,14 +579,14 @@
 	,"rp_20_decide_sausage_veg":
 	{
 		"direct":"we got this "
-		,"text": "Some meat sounds good.  Maybe one meat, one veggie?  I got it.  Sausage and one veggie.  Any suggestion on the veggie?"
+		,"text": "I do want some meat, but not that one, and I want a veggie too.  I've got it. Sausage and one veggie.  Any suggestion on the veggie?"
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
 	,"rp_20_decide_mushroom_meat":
 	{
 		"direct":"we got this"
-		,"text":"A veggie sound good, but I want some meat, too.  I got it. Mushroom and one meat.  Any suggestion on the meat? "
+		,"text":"I do want a veggie, but not that one, and I want some meat too.  I've got it. Mushroom and one meat.  Any suggestion on the meat? "
 		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
 
@@ -1318,8 +1316,6 @@
 		,"text": "Ok, whatever, lets just finish up my order."
 		,"animations": [{ "face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
-
-
 
 
 ,"--- comment":"these are the approved anim names"

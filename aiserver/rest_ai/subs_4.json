@@ -19,7 +19,9 @@
 	,"pizza isnt you":"go away"
 	,"pizza is not you":"go away"
 
-	," what would you like on ":" whatextra "
-	," what would you like with ":" whatextra "
+	," what would you like on ":" whatextra toppings "
+	," what would you like with ":" whatextra topppings "
+	," whatextra it ":" whatextra toppings "
+
 	
 }
