@@ -36,7 +36,7 @@
 		,"text":"This place must be new.  Looks great."
 		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
 	}
-	,"rp_10_topppings_early":
+	,"rp_10_toppings_early":
 	{
 		"direct":"Need direction"
 		,"text":"Well, maybe one meat and one veggie, and no drink for me."
