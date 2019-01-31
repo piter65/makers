@@ -34,7 +34,7 @@ exports.process = function(state)
 			f.hasAny(state.result.tokens, 'e_topping','e_slice') )  // what type of topping or pizza
 
 	{
-		state.result.code = 'rp_10_topppings_early';   //move on...
+		state.result.code = 'rp_10_toppings_early';   //move on...
 		state.session.act = 20;  // move on!
 	}
 
