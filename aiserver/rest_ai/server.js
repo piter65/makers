@@ -281,6 +281,11 @@ app.get('/ai', function(req, res)
 
 			break;
 
+		case 'system_gametime':
+			state.result.code = 'rp_0_gametime';
+			state.result.reply = "240";
+			break;
+
 
 		case 'system version':
 			state.result.code = 'rp_0_version';

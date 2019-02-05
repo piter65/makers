@@ -6,11 +6,15 @@
 ,"-----comment":"Additions post Jan 29"
 
 
+,"--- stock anims":"happy sad upset angry conf bored norm"
+
+
 	,"rp_3_remember_gluten_no_wait":
 	{
 		"direct":"like she just realized this and is stopping the conversation."
 		,"text": "Now that I think about it, the last time I had pizza, I had a bad reaction."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		,"stock":"conf"
+
 	}
 
 
@@ -27,14 +31,14 @@
 	{
 		"direct":"neutral ok for a potential ok loop."
 		,"text":"Okay."
-		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		,"stock":"norm"
 	}
 
 	,"rp_10_greet":
 	{
 		"direct":"Deleted initial Hi"
 		,"text":"This place must be new.  Looks great."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		,"stock":"upset"
 	}
 	,"rp_10_toppings_early":
 	{
@@ -47,7 +51,7 @@
 	{
 		"direct":"In response to 'we just opened'"
 		,"text":"Yeah, looks nice."
-		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		,"stock":"happy"
 	}
 
 
@@ -55,7 +59,7 @@
 	{
 		"direct":"Jeff, help re-write DONE"
 		,"text": "You know what? I'll have a slice of sausage and mushroom."
-		,"animations":[{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		,"stock":"norm"
 	}
 
 
@@ -63,7 +67,7 @@
 	{
 		"direct":"she's being generous in light of a mishap"
 		,"text":"No problem."
-		,"animations": [{"face":"f_smile","body":"b_idle","delay":0,"duration":0}]
+		,"stock":"norm"
 	}
 
 	,"rp_20_veg1":
