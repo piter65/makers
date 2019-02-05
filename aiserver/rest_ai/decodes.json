@@ -259,9 +259,9 @@
 		,"text": "Hi there.  I've been wondering about this place.  I figured this would be a nice place to try out. By the way, nice uniform you got there."
 		,"animations":
 		[
-			 {"face":"f_conf","body":"b_phone","delay":1999,"duration":1999}
-			,{"face":"f_neutr","body":"b_engage","delay":3998,"duration":3998}
-			,{"face":"f_smile","body":"b_idle","delay":0,"duration":0}
+			 {"face":"f_smile","body":"b_phone","delay":1999,"duration":1999}
+			,{"face":"f_neutr","body":"b_idle","delay":3998,"duration":3998}
+			,{"face":"f_smile","body":"b_engage","delay":0,"duration":0}
 		]
 	}
 
