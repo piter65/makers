@@ -85,7 +85,7 @@ if (data.stock=='norm')
 		"%s:%s%s"
 		,code
 		,data.text
-		,animstr
+		,animstr+":timeout:240:"
 	);
 
 	return reply;
