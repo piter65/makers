@@ -645,14 +645,12 @@
 	{
 		"direct":"we got this"
 		,"text": "Are you even listening? I want sausage and a veggie."
-		,"animations":
 		,"stock":"conf"
 	}
 	,"rp_22_disgusted":
 	{
 		"direct":"we got this"
 		,"text":"I can totally do without your sense of humour.  Bye."
-		,"animations":
 		,"stock":"angry"
 	}
 

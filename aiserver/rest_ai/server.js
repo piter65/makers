@@ -377,11 +377,25 @@ app.get('/ai', function(req, res)
 
 				++state.session.testcount;
 				save_state = true;			// we need to actually save data.
+
+// make sure we keep trying till we get valid data...
+				while (state.result.reply[0] != 'r')
+				{
+					state.result.code = codes[state.session.testcount];
+					state.result.reply = decoder.decode_reply(state.result.code);
+
+					++state.session.testcount;
+				}
+
+
+
+
+
 		}
 		else
 		{
 				state.result.code = 'rp_0_system_test_no_more_codes';
-				state.result.reply = '---No more codes. Code count: '+state.session.testcount+'---';
+				state.result.reply = 'No more codes. Code count: '+state.session.testcount+'---';
 		}
 
 

@@ -61,19 +61,19 @@ if (data.animations)
 // ,"--- stock anims":"happy sad upset angry conf bored norm"
 
 if (data.stock=='happy')
-		animstr="f_happy:0:b_up:0:none:0:none:0:none:0:none:0";
+		animstr="f_smile:0:b_engage:0:none:0:none:0:none:0:none:0";
 
 if (data.stock=='sad')
-		animstr="f_sad:0:b_upset:0:none:0:none:0:none:0:none:0";
+		animstr="f_frown:0:b_idle:0:none:0:none:0:none:0:none:0";
 
 if (data.stock=='upset')
-		animstr="f_angry:0:b_upset:0:none:0:none:0:none:0:none:0";
+		animstr="f_frown:0:b_tap:0:none:0:none:0:none:0:none:0";
 if (data.stock=='angry')
 		animstr="f_angry:0:b_angry:0:none:0:none:0:none:0:none:0";
 if (data.stock=='conf')
-		animstr="f_conf:0:b_idle:0:none:0:none:0:none:0:none:0";
+		animstr="f_conf:0:b_bored:0:none:0:none:0:none:0:none:0";
 if (data.stock=='bored')
-		animstr="f_neutr:0:b_bored:0:none:0:none:0:none:0:none:0";
+		animstr="f_bored:0:b_phone:0:none:0:none:0:none:0:none:0";
 if (data.stock=='norm')
 		animstr="f_neutr:0:b_idle:0:none:0:none:0:none:0:none:0";
 
