@@ -36,7 +36,7 @@ exports.process = function(state)
 		}
 		else
 		{
-			state.result.code = 'rp_990_insulted_too_much';   // 'I think I'll go somewhere else for lunch.';
+			state.result.code = 'rp_go_insulted_too_much';   // 'I think I'll go somewhere else for lunch.';
 			state.session.game_over = true;
 			state.session.score_exec-=2;
 		}
@@ -56,7 +56,7 @@ exports.process = function(state)
 
 	else if (  state.result.tokens.includes( 'e_storeclean'))
 	{
-			state.result.code = "rp_10_store_clean";  // 'Thanks. I got it at .';	
+			state.result.code = "rp_1_store_clean";  // 'Thanks. I got it at .';	
 	}
 
 
@@ -83,7 +83,7 @@ exports.process = function(state)
 	if (state.result.tokens.includes('e_cuss'))
 	{
 		{
-			state.result.code = 'rp_990_cussed_out';  //'I\'m leaving!';
+			state.result.code = 'rp_go_cussed_out';  //'I\'m leaving!';
 			state.result.direction = 'very insulted';
 			state.session.trust += -3;
 			state.session.score_exec=0;

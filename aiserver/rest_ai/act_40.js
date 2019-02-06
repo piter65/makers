@@ -27,7 +27,7 @@ exports.process = function(state)
 	}
 	else if (state.session.count_write>=3)
 		{
-			state.result.code = 'rp_990_angry_leaving'  ;
+			state.result.code = 'rp_go_angry_leaving'  ;
 			state.session.score_listen=0;
 			state.session.score_exec-=2;
 			state.session.game_over = true;

@@ -77,7 +77,7 @@ exports.process = function(state)
 	if (state.result.tokens.includes('e_storebrand'))
 	{
 		if (state.prev.result.code == 'rp_10_first_time')
-			state.result.code = "rp_10_store_clean";  // 'Thanks. store clean
+			state.result.code = "rp_1_store_clean";  // 'Thanks. store clean
 		else 
 			state.result.code = 'rp_10_first_time'; // 'Yep first time I\'ve enterred the place.';
 	}
