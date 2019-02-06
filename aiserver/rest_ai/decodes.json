@@ -359,7 +359,7 @@
 	}
 
 
-	,"rp_1_fed_up":
+	,"rp_go_fed_up":
 	{
 	"direct":"feb good"
 	,"text":"Ok, well I definitely wont be visiting here again.  Bye."
@@ -474,20 +474,6 @@
 		,"stock":"happy"
 	}
 
-	,"rp_20_i_prefer_sausage":
-	{
-		"direct":"feb - missing - using old"
-		,"text": "Oh, thanks for asking. Actually, I've always enjoyed sausage, and, well, some kind of veggie"
-		,"stock":"happy"
-	}
-
-
-	,"rp_20_i_prefer_mushroom":
-	{
-		"direct":"feb - missing - using old"
-		,"text":"Oh, thanks for asking. Actually I've always enjoyed mushrooms and, well, some kind of meat."
-		,"stock":"happy"
-	}
 
 
 	,"rp_20_one_of_each":
@@ -559,12 +545,6 @@
 		,"stock":"conf"
 	}
 
-	,"rp_22_disgusted":
-	{
-		"direct":"feb missing - using old for now."
-		,"text":"I can totally do without your sense of humour.  Bye."
-		,"stock":"angry"
-	}
 
 	,"rp_22_frustrated":
 	{
@@ -576,16 +556,15 @@
 
 	,"rp_22_veg_hint":
 	{
-		"direct":"feb missing needed- old used for now"
+		"direct":"peter- recheck that this take is ok."
 		,"text":"I don't know, that doesn't sound good.  What goes better with sausage?"
 		,"stock":"sad"
 	}
 
 
-
 	,"rp_22_impatient":
 	{
-		"direct":"feb missing...using old .. was in script"
+		"direct":"feb missing...using old .. peter to recheck"
 		,"text": "I definitely want sausage.  Can you help me pick the veggies?"
 		,"stock":"happy"
 	}

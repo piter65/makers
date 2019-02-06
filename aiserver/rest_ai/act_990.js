@@ -135,7 +135,7 @@ exports.process = function(state)
 	else
 	if (state.result.tokens.includes( 'i_9sec') )
 	{
-		state.result.code = 'rp_1_fed_up';  //'I wont be visiting here again.  Good day.';
+		state.result.code = 'rp_go_fed_up';  //'I wont be visiting here again.  Good day.';
 		state.session.game_over = true;
 	}
 

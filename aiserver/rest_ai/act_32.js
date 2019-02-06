@@ -53,7 +53,7 @@ exports.process = function(state)
 				(state.session.gluten_crisis>0)
 		)
 	{
-		state.result.code = 'rp_1_fed_up';     // "I guess this was a bad idea.  Thanks for your time."
+		state.result.code = 'rp_go_fed_up';     // "I guess this was a bad idea.  Thanks for your time."
 		state.session.score_empathy = 0;
 		state.session.score_exec -= 2;
 

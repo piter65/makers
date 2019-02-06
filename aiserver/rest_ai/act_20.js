@@ -116,7 +116,7 @@ exports.process = function(state)
 							&&
 		f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
-		state.result.code = 'rp_20_i_prefer_mushroom';  // you almost actually care!
+		state.result.code = 'rp_20_i_decided_mushroom';  // you almost actually care!
 		state.session.score_understand+=1;
 		state.session.act = 24;  // veggie decided!  move on!
 	}
@@ -125,7 +125,7 @@ exports.process = function(state)
 									&&
 		f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
-		state.result.code = 'rp_20_i_prefer_sausage';  // you almost actually care!
+		state.result.code = 'rp_20_decided_sausage';  // you almost actually care!
 		state.session.score_understand+=1;
 		state.session.act = 22;  // meat decided!  move on!
 	}
@@ -244,7 +244,7 @@ exports.process = function(state)
 	}
 	else if (state.result.tokens.includes( 'i_9sec') )
 	{
-		state.result.code = 'rp_1_fed_up';  // 'I wont be visiting here again.  Good day.';
+		state.result.code = 'rp_go_fed_up';  // 'I wont be visiting here again.  Good day.';
 		state.session.trust -= 2;
 		state.session.game_over = true;
 	}
