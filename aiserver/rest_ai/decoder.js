@@ -64,7 +64,7 @@ if (data.stock=='happy')
 		animstr=":f_smile:0:b_engage:0:none:0:none:0:none:0:none:0";
 
 if (data.stock=='sad')
-		animstr=":f_frown:0:b_idle:0:none:0:none:0:none:0:none:0";
+		animstr=":f_sad:0:b_idle:0:none:0:none:0:none:0:none:0";
 
 if (data.stock=='upset')
 		animstr=":f_frown:0:b_tap:0:none:0:none:0:none:0:none:0";
@@ -73,7 +73,7 @@ if (data.stock=='angry')
 if (data.stock=='conf')
 		animstr=":f_conf:0:b_bored:0:none:0:none:0:none:0:none:0";
 if (data.stock=='bored')
-		animstr=":f_bored:0:b_phone:0:none:0:none:0:none:0:none:0";
+		animstr=":f_neutr:0:b_phone:0:none:0:none:0:none:0:none:0";
 if (data.stock=='norm')
 		animstr=":f_neutr:0:b_idle:0:none:0:none:0:none:0:none:0";
 
