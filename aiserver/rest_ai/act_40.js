@@ -16,11 +16,11 @@ exports.process = function(state)
 		)
 	{
 
-		if (state.session.score_overall>30) state.result.code = 'rp_go_finished_good1';
-		else if (state.session.score_overall>25) state.result.code = 'rp_go_finished_good2';
+		if (state.session.score_overall>25) state.result.code = 'rp_go_finished_good1';
+		else if (state.session.score_overall>22) state.result.code = 'rp_go_finished_good2';
 		else if (state.session.score_overall>20) state.result.code = 'rp_go_finished_med1';
-		else if (state.session.score_overall>15) state.result.code = 'rp_go_finished_med2';
-		else if (state.session.score_overall>10) state.result.code = 'rp_go_finished_bad1';
+		else if (state.session.score_overall>18) state.result.code = 'rp_go_finished_med2';
+		else if (state.session.score_overall>16) state.result.code = 'rp_go_finished_bad1';
 		else  state.result.code = 'rp_go_finished_bad2';
 		state.session.game_over = true;
 
