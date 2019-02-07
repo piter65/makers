@@ -58,7 +58,7 @@
 	,"rp_20_veg1":
 	{
 		"direct":"feb - what the f---"
-		,"text":"I'm down with a veggie, any other veggies good here?"
+		,"text":"I'm down with a veggie, but any other veggies good here?"
 		,"stock":"conf"
 	}
 
@@ -227,14 +227,14 @@
 	,"rp_3_remember_gluten":
 	{
 		"direct":"feb good"
-		,"text": "Wait a minute, now that I think about it, the last time I had pizza, I had a bad reaction."
+		,"text": "Wait a minute, now that I think of it, the last time I had pizza, I had a bad reaction."
 		,"stock":"conf"
 	}
 
 	,"rp_5_intro":
 	{
 		"direct":"feb good"
-		,"text": "Hey.  I've been wondering about this place.  I thought I'd give it a try. By the way, that's a sweet uniform you got there."
+		,"text": "Hey.  I've been wondering about this place.  I thought I'd give it a try. By the way, that's a sweet uniform you've got there."
 		,"animations":
 		[
 			 {"face":"f_smile","body":"b_phone","delay":3998,"duration":3998}
@@ -277,7 +277,7 @@
 	,"rp_3_gluten_uncle":
 	{
 		"direct":"Feb good."
-		,"text":"You know what? My uncle had the same problem with the slice he had last summer, and it turned out he had a gluten allergy."
+		,"text":"You know? My uncle had the same problem with the slice he had last summer, and it turned out he had a gluten allergy."
 		,"stock":"sad"
 	}
 
@@ -369,7 +369,7 @@
 	,"rp_2_giveup_sam":
 	{
 		"direct":"feb - almost, ok added to script"
-		,"text": "Ok, I'm like done.  Just get me sausage and mushrooms, okay?"
+		,"text": "Ok, I'm like done.  Just get me the sausage and mushrooms, okay?"
 		,"stock":"upset"
 	}
 
@@ -391,7 +391,7 @@
 	,"rp_3_decided_nogluten_early":
 	{
 		"direct":"feb clipped"
-		,"text":"You have gluten free?  That totallly works.  What toppings can I get with it?."
+		,"text":"You have gluten free?  That totallly works.  What toppings can I get with it?"
 		,"stock":"happy"
 	}
 
@@ -404,7 +404,7 @@
 
 	,"rp_10_welcome":
 	{
-	
+
 		"direct":"feb good"
 		,"text":"You are very welcome."
 		,"stock":"happy"
@@ -427,20 +427,20 @@
 	,"rp_10_insulted":
 	{
 		"direct":"feb good"
-		,"text":"Seriously? I'm not sure I like this place - or you."
+		,"text":"Seriously? I'm not sure if I like this place - or you."
 		,"stock":"angry"
 	}
 
 	,"rp_10_offeredhelp":
 	{
 		"direct":"feb good"
-		,"text":"I'd like a slice with no drink, but I can't decide on the toppings. What do you suggest?"
+		,"text":"I'd like a slice with no drink, but, I can't decide on the toppings. What do you suggest?"
 		,"stock":"conf"
 	}
 	,"rp_10_impatient":
 	{
 		"direct":"feb - sounds clipped"
-		,"text":"Hello?! Are you taking my order?"
+		,"text":"Hello? Are you taking my order?"
 		,"stock":"bored"
 	}
 
@@ -455,7 +455,7 @@
 	,"rp_20_asked_twice_annoyed":
 	{
 		"direct":"feb good"
-		,"text":"Like I said, I don't want a slice and no drink.  And I don't know about the toppings."
+		,"text":"Like I said, I want a slice and no drink.  And I don't know about the toppings."
 		,"stock":"upset"
 	}
 
@@ -470,7 +470,7 @@
 	,"rp_20_decided_sausage":
 	{
 		"direct":"good feb"
-		,"text":"Sausage sounds perfect, but I want a veggie too.  What veggie do you suggest?"
+		,"text":"Sausage sounds perfect, but I want a veggie, too.  What veggie do you suggest?"
 		,"stock":"happy"
 	}
 
@@ -487,14 +487,14 @@
 	,"rp_20_decide_sausage_veg":
 	{
 		"direct":"good feb "
-		,"text": "I do want a meat, but not that one, and I want a veggie too.  You know what, I'll have sausage and a veggie.  Any suggestions on the veggie?"
+		,"text": "I do want a meat, but not that one, and I want a veggie too.  You know what? I'll have sausage and one veggie.  Any suggestions on the veggie?"
 		,"stock":"happy"
 	}
 
 	,"rp_20_decide_mushroom_meat":
 	{
 		"direct":"good feb"
-		,"text":"I do want a veggie, but not that one, and I want a meat too.  You know what, I'll have mushrooms and a meat.  Any suggestions on the meat topping? "
+		,"text":"I do want a veggie, but not that one, and I want a meat too.  You know what? I'll have mushrooms and a meat.  Any suggestions on the meat topping? "
 		,"stock":"happy"
 	}
 
@@ -526,7 +526,7 @@
 	,"rp_20_considering_fish":
 	{
 		"direct":"feb  read changed "
-		,"text":"Anchovies are really gross, I'll definately pass on that."
+		,"text":"Anchovies are really gross. I'll definately pass on that."
 		,"stock":"upset"
 	}
 
@@ -587,7 +587,7 @@
 	,"rp_24_frustrated_restate":
 	{
 		"direct":"feb good"
-		,"text":"Really, I've already said I want mushroom and one meat. What meat goes well with mushrooms?"
+		,"text":"Really, I've already said I want mushrooms and one meat. What meat goes well with mushrooms?"
 		,"stock":"upset"
 	}
 
@@ -641,7 +641,7 @@
 	,"rp_40_write_it":
 	{
 		"direct":"feb - wait added"
-		,"text":"Wait, Can you repeat my order back to me?"
+		,"text":"Wait. Can you repeat my order back to me?"
 		,"stock":"conf"
 	}
 
@@ -685,7 +685,7 @@
 	,"rp_go_cussed_out":
 	{
 	"direct":"feb good"
-	,"text": "Really?! I'm out of here."
+	,"text": "Really? I'm out of here."
 	,"stock":"angry"
 	}
 
@@ -708,7 +708,7 @@
 	,"rp_990_regreeted":
 	{
 		"direct":"feb - script change- dunno"
-		,"text":"We covered that already, didn't we."
+		,"text":"We covered that already, didn't we?"
 		,"stock":"conf"
 	}
 
