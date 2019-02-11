@@ -38,6 +38,12 @@ exports.process = function(state)
 		state.session.game_over = true;
 
 	}
+
+	else if (f.includesAll(state.result.tokens, 'e_togo'))
+	{
+		state.result.code = 'rp_1_togo';  // special for act 40
+	}
+
 	else if (state.session.count_write>=3)
 		{
 			state.result.code = 'rp_go_angry_leaving'  ;
