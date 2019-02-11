@@ -226,9 +226,15 @@
 
 	,"rp_3_remember_gluten":
 	{
-		"direct":"feb good"
+		"direct":"feb good  findme"
 		,"text": "Wait a minute, now that I think of it, the last time I had pizza, I had a bad reaction."
-		,"stock":"conf"
+		,"animations":
+		[
+			 {"face":"f_conf","body":"b_tap","delay":3998,"duration":3998}
+			,{"face":"f_neutr","body":"b_idle","delay":1999,"duration":1999}
+			,{"face":"f_smile","body":"b_engage","delay":0,"duration":0}
+		]
+
 	}
 
 	,"rp_5_intro":
@@ -565,7 +571,7 @@
 	,"rp_22_impatient":
 	{
 		"direct":"feb missing...using old .. peter to recheck"
-		,"text": "I definitely want sausage.  Can you help me pick the veggies?"
+		,"text": "I definitely want sausage.  I just don't know what veggie to get?"
 		,"stock":"happy"
 	}
 
