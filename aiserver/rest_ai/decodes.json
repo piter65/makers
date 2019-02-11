@@ -38,7 +38,7 @@
 	{
 		"direct":"feb good"
 		,"text":"This place must be new.  It looks great."
-		,"stock":"happy"
+		,"stock":"h_look"
 	}
 	,"rp_10_toppings_early":
 	{
@@ -51,7 +51,7 @@
 	{
 		"direct":"feb- wait added."
 		,"text": "Wait, You know what? I'll have a slice of sausage and mushroom."
-		,"stock":"norm"
+		,"stock":{"face":"f_neutr","body":"b_talk"}
 	}
 
 
@@ -82,7 +82,7 @@
 	{
 		"direct":"feb good"
 		,"text":"Yeah, the place looks great."
-		,"stock":"happy"
+		,"stock":{"face":"f_smile","body":"b_look"}
 	}
 
 
@@ -141,7 +141,7 @@
 	{
 		"direct":"feb good"
 		,"text":"No!"
-		,"stock":"angry"
+		,"stock":"boredf"
 	}
 
 	,"rp_1_no_sarcastic":
@@ -156,7 +156,7 @@
 	{
 		"direct":"feb good"
 		,"text":"Yes."
-		,"stock":"norm"
+		,"stock":{"face":"f_confu","body":"b_idle"}
 	}
 
 	,"rp_1_yes_enthusiastic":
@@ -170,14 +170,14 @@
 	{
 		"direct":"feb good"
 		,"text":"I'll take it to go."
-		,"stock":"norm"
+		,"stock":"talksm"
 	}
 
 	,"rp_40_no_drink":
 	{
 		"direct":"feb good"
 		,"text": "I've already said that I don't want a drink.  Please read my order back to me."
-		,"stock":"upset"
+		,"stock":"boredf"
 	}
 
 	,"rp_40_dont_forget":
@@ -191,7 +191,7 @@
 	{
 		"direct":"feb good"
 		,"text":"Wait, that's a little bit personal, don't you think?"
-		,"stock":"upset"
+		,"stock":{"face":"f_angry","body":"b_talk"}
 	}
 
 
@@ -206,14 +206,14 @@
 	{
 		"direct":"feb good"
 		,"text":"No."
-		,"stock":"upset"
+		,"stock":{"face":"f_smile","body":"b_idle"}
 	}
 
 	,"rp_2_yes_sam":
 	{
 		"direct":"feb good"
 		,"text":"Definitely. I'll have a slice of mushrooms and sausage."
-		,"stock":"happy"
+		,"stock":"talksm"
 	}
 
 	,"rp_2_sam_but_more":
@@ -269,7 +269,7 @@
 	{
 		"direct":"feb bad.  peter angry."
 		,"text":"No, I don't do chicken, thanks."
-		,"stock":"bored"
+		,"stock":"boredf"
 	}
 
 
@@ -369,14 +369,14 @@
 	{
 	"direct":"feb good"
 	,"text":"Ok, well I definitely wont be visiting here again.  Bye."
-	,"stock":"angry"
+	,"stock":"boredf"
 	}
 
 	,"rp_2_giveup_sam":
 	{
 		"direct":"feb - almost, ok added to script"
 		,"text": "Ok, I'm like done.  Just get me the sausage and mushrooms, okay?"
-		,"stock":"upset"
+		,"stock":{"face":"f_frown","body":"b_angry"}
 	}
 
 
@@ -397,14 +397,14 @@
 	,"rp_3_decided_nogluten_early":
 	{
 		"direct":"feb clipped"
-		,"text":"You have gluten free?  That totallly works.  What toppings can I get with it?"
+		,"text":"You have gluten free?  That totally works.  What toppings can I get with it?"
 		,"stock":"happy"
 	}
 
 	,"rp_3_decided_nogluten":
 	{
 		"direct":"feb good"
-		,"text":"Really, you have gluten-free?  That totallly works.  I'll get that."
+		,"text":"Really, you have gluten-free?  That totally works.  I'll get that."
 		,"stock":"happy"
 	}
 
@@ -420,7 +420,7 @@
 	{
 		"direct":"feb good"
 		,"text": "This is the first time I've been here."
-		,"stock":"happy"
+		,"stock":{"face":"f_neutr","body":"b_look"}
 	}
 	,"rp_10_customer_initiates":
 	{
@@ -434,7 +434,7 @@
 	{
 		"direct":"feb good"
 		,"text":"Seriously? I'm not sure if I like this place - or you."
-		,"stock":"angry"
+		,"stock":{"face":"f_angry","body":"b_talk"}
 	}
 
 	,"rp_10_offeredhelp":
@@ -447,7 +447,7 @@
 	{
 		"direct":"feb - sounds clipped"
 		,"text":"Hello? Are you taking my order?"
-		,"stock":"bored"
+		,"stock":{"face":"f_frown","body":"b_idle"}
 	}
 
 	,"rp_20_no_drink_annoyed":
@@ -462,7 +462,7 @@
 	{
 		"direct":"feb good"
 		,"text":"Like I said, I want a slice and no drink.  And I don't know about the toppings."
-		,"stock":"upset"
+		,"stock":{"face":"f_frown","body":"b_idle_slouch"}
 	}
 
 
@@ -477,7 +477,7 @@
 	{
 		"direct":"good feb"
 		,"text":"Sausage sounds perfect, but I want a veggie, too.  What veggie do you suggest?"
-		,"stock":"happy"
+		,"stock":"talksm"
 	}
 
 
@@ -494,14 +494,18 @@
 	{
 		"direct":"good feb "
 		,"text": "I do want a meat, but not that one, and I want a veggie too.  You know what? I'll have sausage and one veggie.  Any suggestions on the veggie?"
-		,"stock":"happy"
+		,"stock":
+		{"face":"f_confu","body":"b_bored","delay":1998,"duration":1998}
+	  {"face":"f_smile","body":"b_talk","delay":0,"duration":0}
 	}
 
 	,"rp_20_decide_mushroom_meat":
 	{
 		"direct":"good feb"
 		,"text":"I do want a veggie, but not that one, and I want a meat too.  You know what? I'll have mushrooms and a meat.  Any suggestions on the meat topping? "
-		,"stock":"happy"
+		,"stock":
+		{"face":"f_confu","body":"b_bored","delay":1998,"duration":1998}
+	  {"face":"f_smile","body":"b_talk","delay":0,"duration":0}
 	}
 
 
@@ -515,25 +519,25 @@
 	{
 		"direct":"feb good"
 		,"text":"No way, too sweet for me."
-		,"stock":"upset"
+		,"stock":"boredf"
 	}
 	,"rp_20_considering_combo":
 	{
 		"direct":"We got this"
 		,"text":"Too much stuff. I want something simpler."
-		,"stock":"upset"
+		,"stock":{"face":"f_neutr","body":"b_bored"}
 	}
 	,"rp_20_considering_silly":
 	{
 		"direct":"feb good"
 		,"text":"Seriosusly? No thanks."
-		,"stock":"upset"
+		,"stock":{"face":"f_angry","body":"b_bored"}
 	}
 	,"rp_20_considering_fish":
 	{
 		"direct":"feb  read changed "
-		,"text":"Anchovies are really gross. I'll definately pass on that."
-		,"stock":"upset"
+		,"text":"Anchovies are really gross. I'll definitely pass on that."
+		,"stock":{"face":"f_sad","body":"b_bored"}
 	}
 
 
@@ -541,14 +545,14 @@
 	{
 		"direct":"feb good"
 		,"text":"I just don't know what toppings I want."
-		,"stock":"conf"
+		,"stock":{"face":"f_frown","body":"b_engag"}
 	}
 
 	,"rp_22_wrong_toppings":
 	{
 		"direct":"feb wait added to read"
 		,"text": "Wait, are you even listening? I want sausage and a veggie."
-		,"stock":"conf"
+		,"stock":"boredf"
 	}
 
 
@@ -556,30 +560,37 @@
 	{
 		"direct":"feb good"
 		,"text": "I've already said I want sausage and one veggie. What veggie is good with sausage?"
-		,"stock":"conf"
+		,"stock":{"face":"f_frown","body":"b_talk_slouch"}
 	}
-
 
 	,"rp_22_veg_hint":
 	{
 		"direct":"peter- recheck that this take is ok."
 		,"text":"I don't know, that doesn't sound good.  What goes better with sausage?"
-		,"stock":"sad"
+		,"stock":
+		{"face":"f_confu","body":"b_bored","delay":1998,"duration":1998}
+	  {"face":"f_smile","body":"b_engag","delay":0,"duration":0}
 	}
 
+	,"rp_22_veg_hint_second":
+	{
+		"direct":"4Peter - I added this new line from Scott's script"
+		,"text":"I don't know. What goes better with sausage?"
+		,"stock":"confen"
+	}
 
 	,"rp_22_impatient":
 	{
 		"direct":"feb missing...using old .. peter to recheck"
 		,"text": "I definitely want sausage.  I just don't know what veggie to get?"
-		,"stock":"happy"
+		,"stock":"norm"
 	}
 
 	,"rp_24_impatient":
 	{
 		"direct":"feb good"
 		,"text": "I definitely want mushrooms.  I just don't know what meat to choose?"
-		,"stock":"happy"
+		,"stock":"norm"
 	}
 
 
@@ -587,14 +598,23 @@
 	{
 		"direct":"feb good"
 		,"text": "I don't know, that's not doing it.  What goes better with mushrooms?"
-		,"stock":"conf"
+		,"stock":{"face":"f_confu","body":"b_bored"}
 	}
+
+	,"rp_24_meat_hint_second":
+	{
+		"direct":"feb good"
+		,"text": "I don't know, that's not doing it."
+		,"stock":"confen"
+	}
+
+
 
 	,"rp_24_frustrated_restate":
 	{
 		"direct":"feb good"
 		,"text":"Really, I've already said I want mushrooms and one meat. What meat goes well with mushrooms?"
-		,"stock":"upset"
+		,"stock":{"face":"f_frown","body":"b_talk_slouch"}
 	}
 
 
@@ -604,7 +624,7 @@
 	{
 		"direct":"feb good"
 		,"text": "Perfect.  I'm so ready for that slice.  This place is chill.  I'll definitely be back!"
-		,"stock":"happy"
+		,"stock":"talksm"
 	}
 
 
@@ -612,28 +632,30 @@
 	{
 		"direct":"feb good"
 		,"text":"That's perfect. You've been so helpful! I'm definitely writing a great review on Yelp. See you soon!"
-		,"stock":"happy"
+		,"stock":"talksm"
 	}
 
 	,"rp_go_finished_med1":
 	{
 		"direct":"feb good"
 		,"text": "Thanks. I have to say this was a bit awkward, but I'm glad we finally figured it all out."
-		,"stock":"norm"
+		,"stock":{"face":"f_neutr","body":"b_talk"}
 	}
 
 	,"rp_go_finished_med2":
 	{
 		"direct":"feb good"
 		,"text": "Thanks. This whole thing was a little sketchy, but I'm glad we worked it out."
-		,"stock":"norm"
+		,"stock":"confen"
 	}
 
 	,"rp_go_finished_bad1":
 	{
 		"direct":"feb good"
 		,"text": "Ok, I never thought ordering a slice could be this difficult.  You people seriously need to improve the service here."
-		,"stock":"angry"
+		,"stock":
+		{"face":"f_angry","body":"b_tap","delay":1998,"duration":1998}
+		{"face":"f_frown","body":"b_talk","delay":0,"duration":0}
 	}
 
 	,"rp_go_finished_bad2":
@@ -648,14 +670,14 @@
 	{
 		"direct":"feb - wait added"
 		,"text":"Wait. Can you repeat my order back to me?"
-		,"stock":"conf"
+		,"stock":{"face":"f_frown","body":"b_idle_slouch"}
 	}
 
 	,"rp_40_restate_order":
 	{
 		"direct":"feb good"
 		,"text":"How hard can this be?  I want a gluten free slice of sausage and mushrooms.  Can you please read my order back to me?"
-		,"stock":"upset"
+		,"stock":{"face":"f_angry","body":"b_talk_slouch"}
 	}
 
 
@@ -671,14 +693,14 @@
 	{
 		"direct":"feb - clipped"
 		,"text":"Excuse me?"
-		,"stock":"upset"
+		,"stock":{"face":"f_angry","body":"b_bored"}
 	}
 
 	,"rp_go_insulted_too_much":
 	{
 		"direct":"feb good"
 		,"text":"You know, I think I'll go somewhere else for lunch."
-		,"stock":"angry"
+		,"stock":{"face":"f_frown","body":"b_angry"}
 	}
 
 	,"rp_go_angry_leaving":
