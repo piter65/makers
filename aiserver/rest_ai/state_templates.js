@@ -43,8 +43,12 @@ exports.session_defaults =
 
 	score_exec:5,
 	score_listen:5,
-	score_understand:5,
+	score_discovery:5,
 	score_empathy:5,
+	score_overcome:5,		// overcoming objections...
+	score_language:5,
+
+
 	score_overall:0,
 
 

@@ -21,14 +21,14 @@ exports.process = function(state)
 
 		state.result.choice_done = true;
 	}
-	else if (	f.hasAll(state.result.tokens,'e_meatclass')
+	else if (	f.hasAny(state.result.tokens,'e_meatclass','e_bird')
 							&&
 			f.hasAny(state.result.tokens, 'i_prefer','i_desire','i_suggest') 
 			)
 
 	{
 			state.result.code = 'rp_2_sausage_sam';  // 
-			state.session.score_understand++;
+			state.session.score_discovery++;
 			state.session.act = 30;  // move on!	
 			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 	}
@@ -53,7 +53,7 @@ exports.process = function(state)
 			f.includesAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
 			state.result.code = 'rp_24_frustrated_restate';  // I' already told you';  // 
-			state.session.score_understand--;
+			state.session.score_discovery--;
 			state.session.oops_trig=1;			// opportunity to reduce damage
 
 	}
@@ -68,7 +68,7 @@ exports.process = function(state)
 
 
 	}
-	else if (f.hasAny(state.result.tokens, 'e_bird','e_herb','e_hawaiin','e_fish'))	
+	else if (f.hasAny(state.result.tokens, 'e_herb','e_hawaiin','e_fish'))	
 	{
 		state.result.code = 'rp_24_frustrated_restate';   // 'Arent you listening,
 		state.session.count_tries++;

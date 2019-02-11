@@ -12,7 +12,7 @@ exports.process = function(state)
 	if (state.result.tokens.includes( 'i_close') )
 	{
 		state.result.code = 'rp_20_dont_know_toppings';  // I don't know toppings
-		state.session.understand --;
+		state.session.score_discovery --;
 	}
 	else if (f.hasAll(state.result.tokens, 'e_mushroom','e_sausage')
 		&& 	(!f.hasAny(state.result.tokens, 'e_meat','e_veggie') ) )// the only toppings were sausage and mushroom
@@ -34,14 +34,14 @@ exports.process = function(state)
 			f.hasAny(state.result.tokens, 'i_prefer','e_desire','i_suggest') )
 	{
 		state.result.code = 'rp_20_one_of_each';  // you actually sorta care!
-		state.session.score_understand+=1;
+		state.session.score_discovery+=1;
 	}
 
 // added late january 27 just because scott asks "what would you like on your pizza"
 	else if (f.hasAll(state.result.tokens,'e_wtype','e_slice'))
 	{
 		state.result.code = 'rp_20_one_of_each';  // you actually sorta care!
-		state.session.score_understand+=1;
+		state.session.score_discovery+=1;
 	}
 
 
@@ -49,57 +49,69 @@ exports.process = function(state)
 	else if (   state.result.tokens.includes('i_offerhelp')		)
 	{
 		state.result.code = 'rp_20_asked_twice_annoyed';  // Um.   yeah...
-		state.session.score_understand--;
+		state.session.score_discovery--;
 	}
-
+/*   -- peter changed 2/10 for scott.
 	else if (f.hasAll(state.result.tokens,  'e_wtype' ,'e_meatclass')
 						&&
 			f.hasAny(state.result.tokens, 'i_prefer','e_desire'))
 	{
 			state.result.code = 'rp_20_decided_sausage';  // 
-			state.session.score_understand++;
+			state.session.score_discovery++;
 			state.session.act = 22;  // meat decided!  move on!	
 	}
+*/
 
 	else if (f.hasAll(state.result.tokens, 'e_wtype' , 'e_meatclass')
 								||
 			f.hasAll(state.result.tokens, 'e_what','e_meatclass')
+								||
+
+			f.hasAll(state.result.tokens, 'e_prefer','e_meatclass')
+								||
+			f.hasAll(state.result.tokens, 'e_desire','e_meatclass')
 								||
 			f.hasAll(state.result.tokens, 'i_suggest','e_meatclass')
 		)
 //		&& state.session.one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
 	{
 			state.result.code = 'rp_20_i_like_sausage';  // 
-			state.session.score_understand++;
+			state.session.score_discovery++;
 			state.session.act = 22;  // meat decided!  move on!	
 	}
 
+/* changing feb 10 
 	else if (f.hasAll(state.result.tokens, 'e_wtype','e_vegclass')
 						&&
 			f.hasAny(state.result.tokens, 'i_prefer','e_desire') )
 	{
 			state.result.code = 'rp_20_decided_mushroom';  // 
-			state.session.score_understand++;
+			state.session.score_discovery++;
 			state.session.act = 24;  // veggie decided!  move on!	
 	}
+*/	
 
 	else if (f.hasAll(state.result.tokens, 'e_wtype','e_vegclass')
 								||
 			f.hasAll(state.result.tokens, 'e_what','e_vegclass')
 								||
 			f.hasAll(state.result.tokens, 'i_suggest','e_vegclass')	  // how about veggies?						
+								||
+			f.hasAll(state.result.tokens, 'e_prefer','e_vegclass')
+								||
+			f.hasAll(state.result.tokens, 'e_desire','e_vegclass')
 		)
 
 //			&& state.session.one_meat_one_veggie_ctx>0)		// context is just said one meat one veggie
 	{
 			state.result.code = 'rp_20_i_like_mushroom';  // 
-			state.session.score_understand++;
+			state.session.score_discovery++;
 			state.session.act = 24;  // veggie decided!  move on!	
 	}
 	else if (f.hasAll(state.result.tokens, 'i_prefer','e_wtype'))
 	{
 			state.result.code = 'rp_20_one_of_each';  // one of each
-			state.session.score_understand++;
+			state.session.score_discovery++;
 			state.session.one_meat_one_veggie_trig=1;				// set the one meat one veggie context for next round...
 	}
 
@@ -109,7 +121,7 @@ exports.process = function(state)
 			f.hasAny(state.result.tokens, 'e_topping') )
 	{
 		state.result.code = 'rp_20_one_of_each';  // you actually sorta care!
-		state.session.score_understand+=1;
+		state.session.score_discovery+=1;
 	}
 
 	else if (f.hasAll(state.result.tokens,'e_vegclass')
@@ -117,7 +129,7 @@ exports.process = function(state)
 		f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
 		state.result.code = 'rp_20_i_decided_mushroom';  // you almost actually care!
-		state.session.score_understand+=1;
+		state.session.score_discovery+=1;
 		state.session.act = 24;  // veggie decided!  move on!
 	}
 
@@ -126,7 +138,7 @@ exports.process = function(state)
 		f.hasAny(state.result.tokens, 'i_prefer','i_desire') )
 	{
 		state.result.code = 'rp_20_decided_sausage';  // you almost actually care!
-		state.session.score_understand+=1;
+		state.session.score_discovery+=1;
 		state.session.act = 22;  // meat decided!  move on!
 	}
 

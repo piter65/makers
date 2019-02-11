@@ -27,7 +27,7 @@ exports.process = function(state)
 			{
 				// fix - make this an rp1 in future releases...
 				state.result.code = 'rp_3_remember_gluten_no_wait';		// last time I got sick..
-				state.session.score_understand++;
+				state.session.score_discovery++;
 				state.session.gluten_saga=2;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry
 				state.session.why_sick_trig=1;  // she says she was sick
@@ -39,14 +39,14 @@ exports.process = function(state)
 			if (f.hasAny(state.result.tokens, 'e_gluten','i_why'))	// look for gluten only
 				{
 				state.result.code = 'rp_3_gluten_uncle';		// last time I got sick..
-				state.session.score_understand++;
+				state.session.score_discovery++;
 				state.session.gluten_saga=3;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry
 				}
 			else if (f.hasAny(state.result.tokens, 'i_sorry','e_shock','e_empathy','e_nofun'))	// look for gluten only
 				{
 				state.result.code = 'rp_3_gluten_uncle';		// last time I got sick..
-				state.session.score_understand++;
+				state.session.score_discovery++;
 				state.session.gluten_saga=3;		// move it up
 				state.session.empathy_opportunity=true;   // looking for sorry
 				}
@@ -64,7 +64,7 @@ exports.process = function(state)
 		//		state.session.game_over = true;   // peter thinks the game should end
 				state.session.score_exec--;
 				state.session.score_listen--;
-				state.session.score_understand--;		
+				state.session.score_discovery--;		
 				}
 			
 		}	
@@ -77,7 +77,7 @@ exports.process = function(state)
 				state.result.code = 'rp_1_I_dont_know';		// last time I got sick..
 //				state.result.code = 'rp_1_asked_twice'; // state"A no gluten option?Lets do that! "
 				state.session.score_listen--;
-				state.session.score_understand-=2;
+				state.session.score_discovery-=2;
 //				state.session.oops_trig=1;			// opportunity to reduce damage
 
 			}

@@ -32,6 +32,9 @@ if (data.animations)
 	for (; index_anim < data.animations.length; ++index_anim)
 	{
 		let anim = data.animations[index_anim];
+		if (!anim.delay) anim.delay=0;  // pa - pad non-entries
+		if (!anim.duration) anim.duration=0;  // pa - pad non-entries
+
 		anim_strings.push(util.format
 		(
 			":%s:%d:%s:%d"
@@ -62,10 +65,8 @@ if (data.animations)
 
 if (data.stock=='happy')
 		animstr=":f_smile:0:b_engage:0:none:0:none:0:none:0:none:0";
-
 if (data.stock=='sad')
 		animstr=":f_sad:0:b_idle:0:none:0:none:0:none:0:none:0";
-
 if (data.stock=='upset')
 		animstr=":f_frown:0:b_tap:0:none:0:none:0:none:0:none:0";
 if (data.stock=='angry')
@@ -76,7 +77,19 @@ if (data.stock=='bored')
 		animstr=":f_neutr:0:b_phone:0:none:0:none:0:none:0:none:0";
 if (data.stock=='norm')
 		animstr=":f_neutr:0:b_idle:0:none:0:none:0:none:0:none:0";
-
+// --- new ones
+if (data.stock=='gross')
+		animstr=":f_frown:0:b_look:0:none:0:none:0:none:0:none:0";
+if (data.stock=='h_look')
+		animstr=":f_smile:0:b_look:0:none:0:none:0:none:0:none:0";
+if (data.stock=='u_look')
+		animstr=":f_frown:0:b_look:0:none:0:none:0:none:0:none:0";
+if (data.stock=='boredf')
+		animstr=":f_frown:0:b_bored:0:none:0:none:0:none:0:none:0";
+if (data.stock=='talksm')
+		animstr=":f_smile:0:b_talk:0:none:0:none:0:none:0:none:0";
+if (data.stock=='confen')
+		animstr=":f_confu:0:b_engag:0:none:0:none:0:none:0:none:0";
 
 
 

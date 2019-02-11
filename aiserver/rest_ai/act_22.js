@@ -22,7 +22,7 @@ exports.process = function(state)
 			f.hasAny(state.result.tokens, 'i_prefer','i_desire','i_suggest') )
 	{
 			state.result.code = 'rp_2_u_know_sam';  // 
-			state.session.score_understand++;
+			state.session.score_discovery++;
 			state.session.act = 30;  // move on!
 			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 	}
@@ -30,7 +30,7 @@ exports.process = function(state)
 	else if (f.hasAll(state.result.tokens,'e_wtype','e_sausage'))
 	{
 			state.result.code = 'rp_2_u_know_sam';  // 
-			state.session.score_understand++;
+			state.session.score_discovery++;
 			state.session.act = 30;  // move on!
 			if (state.session.gluten_saga>4) state.session.act = 40;  // move on!
 	}
@@ -40,7 +40,7 @@ exports.process = function(state)
 			f.hasAny(state.result.tokens, 'i_prefer','i_desire','i_suggest') )
 	{
 			state.result.code = 'rp_22_frustrated';  // I' already told you';  // 
-			state.session.score_understand--;
+			state.session.score_discovery--;
 			state.session.oops_trig=1;			// opportunity to reduce damage
 	
 	}

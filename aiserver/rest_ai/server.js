@@ -52,6 +52,8 @@ function getTimeStamp() {
                  : (now.getSeconds())));
 }
 
+
+
 // Start server with empty object of sessions.
 var sessions = {};
 
@@ -64,6 +66,7 @@ logger.log_clear();
 logger.log("did clear ");
 
 var extratext="This is extra!";
+
 
 
 const subs_1 = JSON.parse(fs.readFileSync('subs_1.json'));
@@ -109,6 +112,23 @@ app.get('/ai/start-session', function(req, res)
 	res.set('Access-Control-Allow-Origin', '*');
 	res.send(id_session);
 });
+
+
+function calcBigScore()
+{
+
+// approved methodology 2/10a   - 
+		state.session.score_overall = 
+			(state.session.score_exec*100)+
+			(state.session.score_listen*250)+	
+			(state.session.score_discovery*350)+
+			(state.session.score_empathy*150)+
+			(state.session.score_overcome*100)+
+			(state.session.score_language*50);
+
+}
+
+
 
 app.get('/ai', function(req, res)
 {
@@ -253,31 +273,39 @@ app.get('/ai', function(req, res)
 
 		case 'system score':
 // refigure....			
-			state.session.score_overall = 
-			state.session.score_exec+state.session.score_listen+	
-			state.session.score_understand+state.session.score_empathy;
 
-
+// approved methodology 2/10a   - 
+		state.session.score_overall = 
+			(state.session.score_exec*100)+
+			(state.session.score_listen*250)+	
+			(state.session.score_discovery*350)+
+			(state.session.score_empathy*150)+
+			(state.session.score_overcome*100)+
+			(state.session.score_language*50);
 
 			state.result.code = 'rp_0_score';
 
-			state.result.reply = 'score #'+(state.session.score_overall*100)+'\n:';
+			state.result.reply = 'score #'+state.session.score_overall+'\n:';
 			state.result.reply += state.result.code+';\nCommunication Style:'+state.session.score_exec+'\n';
 			state.result.reply += 'Active Listening:'+state.session.score_listen+'\n';
-			state.result.reply += 'Understanding:'+state.session.score_understand+'\n';
+			state.result.reply += 'Understanding:'+state.session.score_discovery+'\n';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+'\n';
 
 			break;
 
 		case 'system_vscore':
 		case 'system vscore':
-// refigure....			
-			state.session.score_overall = 
-			state.session.score_exec+state.session.score_listen+	
-			state.session.score_understand+state.session.score_empathy;
+// approved methodology 2/10a   - 
+		state.session.score_overall = 
+			(state.session.score_exec*100)+
+			(state.session.score_listen*250)+	
+			(state.session.score_discovery*350)+
+			(state.session.score_empathy*150)+
+			(state.session.score_overcome*100)+
+			(state.session.score_language*50);
 
 			state.result.code = 'rp_0_score';
-			state.result.reply = "score:"+state.session.score_overall*100;
+			state.result.reply = "score:"+state.session.score_overall;
 
 			break;
 
@@ -570,12 +598,16 @@ function process_ai(state)
 	state.result.reply = decoder.decode_reply(state.result.code);
 
 
+// approved methodology 2/10a   - 
+		state.session.score_overall = 
+			(state.session.score_exec*100)+
+			(state.session.score_listen*250)+	
+			(state.session.score_discovery*350)+
+			(state.session.score_empathy*150)+
+			(state.session.score_overcome*100)+
+			(state.session.score_language*50);
 
-	state.session.score_overall = 
-		state.session.score_exec+	
-		state.session.score_listen+	
-		state.session.score_understand+
-		state.session.score_empathy;
+
 
 // ---------------------------------- Peter hacking in last pass
 //
@@ -583,8 +615,9 @@ function process_ai(state)
 //    "b_idle b_look b_engage b_bored b_tap b_phone b_angry"
 //    "f_neutr f_smile f_frown f_conf f_angry f_sad"
 
+/*
 
-if (state.session.score_overall <18)
+if (state.session.score_overall <4700)
  {	// not very happy
 	 if (state.result.reply!=null)
  		{
@@ -598,7 +631,7 @@ if (state.session.score_overall <18)
  }
 
 
- if (state.session.score_overall <15)
+ if (state.session.score_overall <4500)
  {	// not very happy
 	 if (state.result.reply!=null)
  		{
@@ -618,15 +651,14 @@ if (state.session.score_overall <18)
 		}
  }
 
-
-
+*/
 
 	if (state.session.game_over)
 	{
 			state.result.reply += '\nGAME OVER-\n';
 			state.result.reply += 'Executive Presence:'+state.session.score_exec+' ';
 			state.result.reply += 'Active Listening:'+state.session.score_listen+' ';
-			state.result.reply += 'Understanding:'+state.session.score_understand+' ';
+			state.result.reply += 'Understanding:'+state.session.score_discovery+' ';
 			state.result.reply += 'Empathy:'+state.session.score_empathy+' ';
 			state.result.reply += 'Overall:'+(state.session.score_overall*100)+' ';
 

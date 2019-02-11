@@ -16,11 +16,24 @@ exports.process = function(state)
 		)
 	{
 
-		if (state.session.score_overall>25) state.result.code = 'rp_go_finished_good1';
-		else if (state.session.score_overall>22) state.result.code = 'rp_go_finished_good2';
-		else if (state.session.score_overall>20) state.result.code = 'rp_go_finished_med1';
-		else if (state.session.score_overall>18) state.result.code = 'rp_go_finished_med2';
-		else if (state.session.score_overall>16) state.result.code = 'rp_go_finished_bad1';
+		if (state.session.count_write==0)
+					state.session.score_overcome += 2;	// succeeded overcoming objections...
+
+// approved methodology 2/10a   - refigure before final
+		state.session.score_overall = 
+			(state.session.score_exec*100)+
+			(state.session.score_listen*250)+	
+			(state.session.score_discovery*350)+
+			(state.session.score_empathy*150)+
+			(state.session.score_overcome*100)+
+			(state.session.score_language*50);
+
+
+		if (state.session.score_overall>5500) state.result.code = 'rp_go_finished_good1';
+		else if (state.session.score_overall>5250) state.result.code = 'rp_go_finished_good2';
+		else if (state.session.score_overall>=5000) state.result.code = 'rp_go_finished_med1';
+		else if (state.session.score_overall>4750) state.result.code = 'rp_go_finished_med2';
+		else if (state.session.score_overall>4500) state.result.code = 'rp_go_finished_bad1';
 		else  state.result.code = 'rp_go_finished_bad2';
 		state.session.game_over = true;
 
@@ -65,14 +78,14 @@ exports.process = function(state)
 	
 			state.session.score_listen--;
 			state.session.score_exec--;
-			state.session.score_understanding--;
+			state.session.score_discovery--;
 
 			state.session.count_write++;	
 	}
 	else if (state.session.count_write<2)
 	{
 		state.result.code = 'rp_40_write_it'  ;
-		state.session.score_understanding--;
+		state.session.score_discovery--;
 
 		state.session.count_write++;
 	}
@@ -83,7 +96,7 @@ exports.process = function(state)
 	
 		state.session.score_listen--;
 		state.session.score_exec--;
-		state.session.score_understanding--;
+		state.session.score_discovery--;
 
 		state.session.count_write++;		
 	}

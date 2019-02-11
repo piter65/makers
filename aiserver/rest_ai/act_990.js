@@ -30,7 +30,7 @@ exports.process = function(state)
 		{
 			state.result.code = 'rp_990_insulted';  //'Excuse me?';
 			state.session.trust += -2;
-			state.session.score_understand-=2;
+			state.session.score_discovery-=2;
 			state.session.oops_trig=1;			// opportunity to reduce damage
 
 		}
@@ -63,7 +63,7 @@ exports.process = function(state)
 	else if (state.result.tokens.includes('i_nopizza'))
 	{
 		state.result.code = 'rp_990_insulted';  //'Excuse me?';
-		state.session.score_understand-=2;
+		state.session.score_discovery-=2;
 		state.session.oops_trig=1;			// opportunity to reduce damage
 
 	}
@@ -88,7 +88,7 @@ exports.process = function(state)
 			state.session.trust += -3;
 			state.session.score_exec=0;
 			state.session.score_listen-=2;
-			state.session.score_understand-=2;
+			state.session.score_discovery-=2;
 
 			state.session.game_over = true;
 		}
