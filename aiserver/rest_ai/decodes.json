@@ -2,7 +2,7 @@
 
 "comment":"four sections - Jeff was here Feb 7"
 
-
+I
 ,"-----comment":"Additions post Jan 29"
 
 
@@ -156,7 +156,7 @@
 	{
 		"direct":"feb good"
 		,"text":"Yes."
-		,"animations":[{"face":"f_confu","body":"b_idle"}]
+		,"animations":[{"face":"f_conf","body":"b_idle"}]
 	}
 
 	,"rp_1_yes_enthusiastic":
@@ -495,7 +495,7 @@
 		"direct":"good feb "
 		,"text": "I do want a meat, but not that one, and I want a veggie too.  You know what? I'll have sausage and one veggie.  Any suggestions on the veggie?"
 		,"animations":
-		{"face":"f_confu","body":"b_bored","delay":0,"duration":0}
+		{"face":"f_conf","body":"b_bored","delay":0,"duration":0}
 	}
 
 	,"rp_20_decide_mushroom_meat":
@@ -503,7 +503,7 @@
 		"direct":"good feb"
 		,"text":"I do want a veggie, but not that one, and I want a meat too.  You know what? I'll have mushrooms and a meat.  Any suggestions on the meat topping? "
 		,"animations":
-		{"face":"f_confu","body":"b_bored","delay":0,"duration":0}
+		{"face":"f_conf","body":"b_bored","delay":0,"duration":0}
 
 	}
 
@@ -565,9 +565,9 @@
 	,"rp_22_veg_hint":
 	{
 		"direct":"peter- recheck that this take is ok."
-		,"text":"I don't know, that doesn't sound good.  What goes better with sausage?"
+		,"text":"I don't know, what goes better with sausage?"
 		,"animations":
-		{"face":"f_confu","body":"b_bored","delay":0,"duration":0}
+		{"face":"f_conf","body":"b_bored","delay":0,"duration":0}
 	}
 
 	,"rp_22_veg_hint_second":
@@ -595,8 +595,8 @@
 	,"rp_24_meat_hint":
 	{
 		"direct":"feb good"
-		,"text": "I don't know, that's not doing it.  What goes better with mushrooms?"
-		,"animations":[{"face":"f_confu","body":"b_bored"}]
+		,"text": "I don't know, that's not doing it."
+		,"animations":[{"face":"f_conf","body":"b_bored"}]
 	}
 
 	,"rp_24_meat_hint_second":
