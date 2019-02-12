@@ -37,7 +37,7 @@ I
 	,"rp_10_greet":
 	{
 		"direct":"feb good"
-		,"text":"This place must be new.  It looks great."
+		,"text":"This place must be new."
 		,"stock":"h_look"
 	}
 	,"rp_10_toppings_early":

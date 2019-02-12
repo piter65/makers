@@ -89,7 +89,7 @@ if (data.stock=='boredf')
 if (data.stock=='talksm')
 		animstr=":f_smile:0:b_talk:0:none:0:none:0:none:0:none:0";
 if (data.stock=='confen')
-		animstr=":f_confu:0:b_engag:0:none:0:none:0:none:0:none:0";
+		animstr=":f_conf:0:b_engag:0:none:0:none:0:none:0:none:0";
 
 
 
