@@ -91,8 +91,6 @@ if (data.stock=='talksm')
 if (data.stock=='confen')
 		animstr=":f_conf:0:b_engag:0:none:0:none:0:none:0:none:0";
 
-
-
 	const reply = util.format
 	(
 		"%s:%s%s"
