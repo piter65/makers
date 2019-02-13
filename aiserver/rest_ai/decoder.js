@@ -22,7 +22,6 @@ exports.decode_reply = function(code)
 		throw Error("Code not recognized: '" + code + "'. Unable to decode.");
 
 
-
 if (data.animations)
 
 {{
@@ -89,7 +88,7 @@ if (data.stock=='boredf')
 if (data.stock=='talksm')
 		animstr=":f_smile:0:b_talk:0:none:0:none:0:none:0:none:0";
 if (data.stock=='confen')
-		animstr=":f_conf:0:b_engag:0:none:0:none:0:none:0:none:0";
+		animstr=":f_conf:0:b_engage:0:none:0:none:0:none:0:none:0";
 
 	const reply = util.format
 	(
